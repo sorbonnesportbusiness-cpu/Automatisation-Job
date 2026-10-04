@@ -13,35 +13,44 @@ Le skill produit chaque semaine :
 ## Ce qu'il y a dans ce repo
 
 ```
-.claude/skills/veille-ssb/
+skills/veille-ssb/
 ├── SKILL.md                  → les instructions complètes de la veille (règles, portails, format)
 ├── scripts/build_outputs.py  → génère le .xlsx + le .json à partir d'une liste d'offres
 └── references/portails.md    → mémoire collective : portails qui marchent / stériles / à tester
 ```
 
+Le dossier est rangé sous `skills/` (sans point devant) à la racine du repo, et pas
+directement sous `.claude/skills/`. Chaque personne le copie ensuite là où son Claude
+l'attend (voir ci-dessous).
+
 ## Installer le skill dans son propre Claude
 
-### Option A — Claude Code (ou Cowork avec accès à un dépôt de code)
+### Option A — Claude Code
 
-1. Clone ce repo (ou copie juste le dossier `.claude/skills/veille-ssb/`) à la racine du
-   projet sur lequel tu ouvres Claude Code :
-   ```bash
-   git clone <URL_DE_CE_REPO> veille-ssb-automation
-   # ou, si tu as déjà un projet Claude Code :
-   cp -r veille-ssb-automation/.claude/skills/veille-ssb mon-projet/.claude/skills/
-   ```
-2. Ouvre Claude Code dans ce dossier. Le skill apparaît automatiquement dans la liste des
+1. Clone ce repo (ou télécharge-le en zip depuis GitHub : bouton vert "Code" → "Download
+   ZIP") :
+```bash
+   git clone https://github.com/sorbonnesportbusiness-cpu/Automatisation-Job.git
+```
+2. Dans le projet où tu ouvres Claude Code, copie le dossier du skill sous `.claude/skills/` :
+```bash
+   mkdir -p mon-projet/.claude/skills
+   cp -r Automatisation-Job/skills/veille-ssb mon-projet/.claude/skills/
+```
+3. Ouvre Claude Code dans `mon-projet`. Le skill apparaît automatiquement dans la liste des
    skills disponibles (`veille-ssb`).
-3. Installe les dépendances Python une fois (`pip install openpyxl`), si ton
+4. Installe les dépendances Python une fois (`pip install openpyxl`), si ton
    environnement ne les a pas déjà.
-4. Lance-le en tapant simplement, par exemple : *"Lance la veille SSB"* ou invoque le skill
+5. Lance-le en tapant simplement, par exemple : *"Lance la veille SSB"* ou invoque le skill
    explicitement si ton interface le permet.
 
 ### Option B — Cowork (claude.ai, sans repo de code)
 
-1. Télécharge le fichier `SKILL.md` (et le dossier `scripts/`) depuis GitHub.
-2. Dans Cowork, ajoute-le comme skill personnalisé (selon les réglages autorisés par ton
-   organisation — upload du fichier depuis l'interface).
+1. Sur la page du repo GitHub, ouvre `skills/veille-ssb/SKILL.md`, clique sur le bouton
+   "Raw" puis enregistre la page (Ctrl/Cmd+S) sous le nom `SKILL.md` — ou télécharge tout
+   le dossier `skills/veille-ssb/` via "Download ZIP" et dézippe-le.
+2. Dans Cowork, ajoute-le comme skill personnalisé si ton organisation autorise les
+   skills personnalisés (upload du fichier depuis l'interface des paramètres).
 3. Demande à Claude : *"Lance la veille SSB"*.
 
 Dans les deux cas, Claude a besoin d'un accès à la **recherche web** (WebSearch/WebFetch)
@@ -66,8 +75,9 @@ dépendre d'une infrastructure partagée.
 
 Le skill est versionné ici. Quand quelqu'un améliore les règles, ajoute un portail fiable
 ou corrige un bug du script :
-1. Modifier les fichiers dans `.claude/skills/veille-ssb/`.
+1. Modifier les fichiers dans `skills/veille-ssb/`.
 2. Ouvrir une Pull Request et la faire relire par un autre membre du bureau.
 3. Une fois mergée, chaque membre doit retélécharger/re-copier le dossier mis à jour dans
    son propre Claude (il n'y a pas de synchronisation automatique entre ce repo et
    l'installation de chacun).
+
