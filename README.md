@@ -87,3 +87,5 @@ ou corrige un bug du script :
   d'exécution manuelle via une tâche planifiée Claude. Portails validés et stériles au
   2026-09-28 consignés dans `skills/veille-ssb/references/portails.md`.
 
+  Important : il faut utiliser la recherche internet avec claude sinon cela ne va pas fonctionner.
+
