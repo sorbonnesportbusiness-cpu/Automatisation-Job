@@ -81,3 +81,9 @@ ou corrige un bug du script :
    son propre Claude (il n'y a pas de synchronisation automatique entre ce repo et
    l'installation de chacun).
 
+   ## Historique
+
+- 2026-10-04 : premier export du skill depuis une session Cowork, après plusieurs semaines
+  d'exécution manuelle via une tâche planifiée Claude. Portails validés et stériles au
+  2026-09-28 consignés dans `skills/veille-ssb/references/portails.md`.
+
