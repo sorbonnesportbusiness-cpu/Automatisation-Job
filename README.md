@@ -71,21 +71,3 @@ ou corrige un bug du script :
 3. Une fois mergée, chaque membre doit retélécharger/re-copier le dossier mis à jour dans
    son propre Claude (il n'y a pas de synchronisation automatique entre ce repo et
    l'installation de chacun).
-
-## Et le CRM ?
-
-Le CRM de l'association n'existe pas encore. Le script `build_outputs.py` est déjà prêt à
-s'y brancher : il lit une variable d'environnement `SSB_CRM_WEBHOOK_URL` et, si elle est
-renseignée, envoie automatiquement le JSON des offres à cette URL en plus d'écrire les
-fichiers locaux. Tant que cette variable n'est pas définie, rien ne change par rapport à
-aujourd'hui. Quand le CRM existera, il suffira :
-1. de créer un endpoint qui accepte un POST JSON de la forme `{"date_execution": "...",
-   "nombre_offres": N, "offres": [...]}`,
-2. de renseigner `SSB_CRM_WEBHOOK_URL` avec l'URL de cet endpoint avant de lancer le
-   script (ou de demander à Claude de le faire).
-
-## Historique
-
-- 2026-10-04 : premier export du skill depuis une session Cowork, après plusieurs semaines
-  d'exécution manuelle via une tâche planifiée Claude. Portails validés et stériles au
-  2026-09-28 consignés dans `references/portails.md`.
