@@ -44,9 +44,10 @@ fraîcheur exacte.
 
 ## Règle de diversité
 
-Maximum 2 offres par employeur, et au moins 4 employeurs différents dans la liste finale.
-Si un portail est très fourni, on n'en prend que les 2 meilleures offres et on va chercher
-ailleurs.
+Maximum 5 offres par employeur AU TOTAL sur le tableau en ligne (en comptant celles déjà
+présentes dans `data/offres.json`), et au moins 4 employeurs différents par veille. Si un
+portail est très fourni (Alpes 2030, FFT, LFP...), on prend les 5 meilleures offres et on
+va chercher ailleurs.
 
 ## Règle de lien — la plus importante
 
@@ -72,15 +73,24 @@ Les API JSON publiques qu'une page carrières appelle elle-même sans authentifi
 (Workday, SmartRecruiters, Teamtailor, Welcome Kit, Taleez, Flatchr, Lever, Ashby, Breezy,
 DigitalRecruiters...) sont autorisées : elles donnent souvent la date exacte de publication.
 
-Familles de sources à couvrir, idéalement en parallèle (un sous-agent par famille) :
+Familles de sources à couvrir, en parallèle (un sous-agent par famille) :
 1. Portails validés de `references/portails.md` (clubs, ligues, fédérations, organisateurs).
-2. Marques, équipementiers et sponsors (activation, partenariats, marketing sport).
+2. Marques, équipementiers et sponsors (activation, partenariats, marketing sport), y compris
+   les équipes sponsoring des grands annonceurs hors sport : banques, assurances, énergie,
+   télécoms, automobile, distribution (ex. Crédit Agricole, « Stage - Chargé(e) de
+   communication sponsoring »).
 3. Agences, médias sport, paris sportifs, sportstech.
 4. Institutions publiques : choisirleservicepublic.gouv.fr, emploi-territorial.fr, Ville de Paris.
 5. Droit et finance du sport : Village de la Justice, Law Profiler, sites carrières des
    éditeurs juridiques et des opérateurs de paris.
 6. Agrégateurs : HelloWork trié par date, La Bonne Alternance, Meent, Sport Stratégies,
-   GlobalSportsJobs, recherche LinkedIn sans connexion pour la détection.
+   GlobalSportsJobs.
+7. Recherche LinkedIn sans connexion, balayée systématiquement (25 requêtes et plus :
+   stage sponsoring, stage marketing sportif, alternance événementiel sport, stage club
+   football/rugby/basket, stage esport, stage juriste sport...). C'est là que publient les
+   clubs, ligues et petites agences. Retracer vers la source employeur quand elle existe.
+8. Startups, sportstech, esport, fitness et outdoor via les API publiques de leurs ATS
+   (Ashby, Lever, Greenhouse, Teamtailor, Recruitee, Breezy, Personio, SmartRecruiters).
 
 ## Filtres
 
@@ -105,7 +115,7 @@ que celle affichée (republication), garder la plus ancienne.
 
 ## Méthode
 
-1. Balayer les familles de sources ci-dessus (plafond 2 offres/employeur).
+1. Balayer les familles de sources ci-dessus (plafond 5 offres par employeur au total).
 2. Ouvrir 2-3 nouveaux employeurs de la liste "À tester" de `references/portails.md` et
    consigner le résultat (positif ou négatif).
 3. Retracer chaque offre trouvée sur un agrégateur vers la source de l'employeur.
@@ -206,10 +216,12 @@ Le tableau (`data/offres.json`) garde les offres des veilles précédentes tant 
 sont ouvertes. Une veille automatique se déroule ainsi :
 1. `git pull` dans `~/Automatisation-Job`, puis `date +%F`.
 2. Chercher de NOUVELLES offres avec la méthode ci-dessus. Exclure tout lien déjà présent
-   dans `data/offres.json` ou dans `references/historique.md`. Plafond de 2 offres par
-   employeur pour les nouvelles offres de la veille.
-3. Écrire ces nouvelles offres dans `out/nouvelles-AAAA-MM-JJ.json` (format ci-dessus,
-   avec `date_iso` et `categorie`), avec un bilan.
+   dans `data/offres.json` ou dans `references/historique.md`. Plafond de 5 offres par
+   employeur au total sur le tableau.
+3. Chaque sous-agent écrit ses offres dans `out/lots/AAAA-MM-JJ/<famille>.json` (format
+   ci-dessus, avec `date_iso` et `categorie`). Les fusionner avec
+   `scripts/merge_lots.py out/lots/AAAA-MM-JJ/*.json --board data/offres.json --history references/historique.md --cap 5 --out out/nouvelles-AAAA-MM-JJ.json`
+   (doublons, liens déjà livrés et plafond par employeur traités par le script).
 4. Lancer `site/publish.sh out/nouvelles-AAAA-MM-JJ.json AAAA-MM-JJ`. Le script revérifie
    les offres déjà au tableau (retire celles qui sont closes, mortes ou publiées il y a
    plus de 60 jours), ajoute les nouvelles, régénère l'Excel, le CSV et la page, met en
