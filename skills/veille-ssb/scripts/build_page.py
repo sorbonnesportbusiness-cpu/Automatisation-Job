@@ -115,6 +115,15 @@ ol.offers { list-style: none; margin: 0; padding: 0; }
 .infos { color: var(--muted); font-size: 13.5px; }
 .side { display: grid; gap: 4px; justify-items: start; font-size: 13.5px; color: var(--muted); min-width: 0; }
 .side .src { font: 500 11.5px/1.3 var(--mono); overflow-wrap: anywhere; }
+.new { font: 600 11.5px/1 var(--font); color: var(--accent); background: var(--accent-soft); border-radius: 6px; padding: 5px 7px; }
+.dl { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.btn { font: 600 14px/1 var(--font); text-decoration: none; color: var(--bg); background: var(--ink); border: 1px solid var(--ink);
+  border-radius: 10px; padding: 11px 14px; cursor: pointer; }
+.btn.ghost { color: var(--ink); background: transparent; border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--ink); }
+.gs { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; max-width: 75ch; }
+.gs ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.gs code { font: 500 12.5px/1.4 var(--mono); overflow-wrap: anywhere; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 2px 6px; }
 .flag { font: 600 11.5px/1 var(--font); color: var(--warn); background: var(--warn-soft); border-radius: 6px; padding: 5px 7px; }
 .empty { padding: 40px 0; color: var(--muted); }
 
@@ -134,6 +143,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
     <h1>Offres sport business</h1>
     <p class="lede">Stages, alternances et premiers postes dans l'industrie du sport en France : clubs, ligues, fédérations, marques, agences, médias, institutions, droit et finance. Chaque lien a été ouvert et vérifié le jour de la veille.</p>
     <div class="figures" id="figures"></div>
+__DOWNLOADS__
   </header>
 
   <section class="filters" aria-label="Filtres">
@@ -146,6 +156,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
     <div class="row" role="group" aria-label="Type de contrat" id="contracts"></div>
     <div class="row" role="group" aria-label="Zone et fraîcheur">
       <button class="chip" id="idf" aria-pressed="false" type="button">Île-de-France</button>
+      <button class="chip" id="fresh" aria-pressed="false" type="button" hidden>Nouvelles depuis la dernière veille</button>
       <button class="chip" id="week" aria-pressed="false" type="button">Publiées ces 7 derniers jours</button>
       <button class="chip" id="soon" aria-pressed="false" type="button">Clôture dans les 10 jours</button>
     </div>
@@ -170,7 +181,8 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
   const MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
   const DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
   const CONTRACTS = ["Stage", "Alternance", "CDI", "CDD", "Freelance"];
-  const state = { q: "", cat: "", contracts: new Set(), idf: false, week: false, soon: false };
+  const state = { q: "", cat: "", contracts: new Set(), idf: false, week: false, soon: false, fresh: false };
+  const SCHEDULE = "__SCHEDULE__";
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -202,11 +214,14 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
     cBox.appendChild(b);
   });
   const toggle = (id, key) => { const b = document.getElementById(id); b.addEventListener("click", () => { state[key] = !state[key]; b.setAttribute("aria-pressed", state[key]); render(); }); };
-  toggle("idf", "idf"); toggle("week", "week"); toggle("soon", "soon");
+  toggle("idf", "idf"); toggle("week", "week"); toggle("soon", "soon"); toggle("fresh", "fresh");
+  const isNew = o => o.ajoutee_le === RUN;
+  const nNew = offers.filter(isNew).length;
+  if (nNew && nNew < offers.length) { const b = document.getElementById("fresh"); b.hidden = false; b.textContent = `Nouvelles depuis la dernière veille · ${nNew}`; }
   document.getElementById("q").addEventListener("input", e => { state.q = norm(e.target.value.trim()); render(); });
   catSel.addEventListener("change", e => { state.cat = e.target.value; render(); });
   document.getElementById("reset").addEventListener("click", () => {
-    Object.assign(state, { q: "", cat: "", idf: false, week: false, soon: false }); state.contracts.clear();
+    Object.assign(state, { q: "", cat: "", idf: false, week: false, soon: false, fresh: false }); state.contracts.clear();
     document.getElementById("q").value = ""; catSel.value = "";
     document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", "false"));
     render();
@@ -218,6 +233,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
     if (state.cat && o.categorie !== state.cat) return false;
     if (state.contracts.size && !state.contracts.has(o.contrat)) return false;
     if (state.idf && !IDF.test(o.localisation || "")) return false;
+    if (state.fresh && !isNew(o)) return false;
     if (state.week && !(o._pub && daysBetween(o._pub, runDate) <= 7)) return false;
     if (state.soon) { const d = soonDays(o); if (d === null || d < 0 || d > 10) return false; }
     return true;
@@ -248,7 +264,7 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
             <div class="who">${esc(o.entreprise)}${o.categorie ? ` <span class="cat">· ${esc(o.categorie)}</span>` : ""}</div>
             ${o.infos ? `<div class="infos">${esc(o.infos)}</div>` : ""}
           </div>
-          <div class="side"><span>${esc(o.localisation)}</span>${flag}<span class="src">${esc(o.source)}</span></div>
+          <div class="side"><span>${esc(o.localisation)}</span>${isNew(o) && nNew < offers.length ? `<span class="new">Nouvelle</span>` : ""}${flag}<span class="src">${esc(o.source)}</span></div>
         </li>`; }).join("")}</ol></section>`;
     }).join("");
     document.getElementById("count").textContent = `${shown.length} offre${shown.length > 1 ? "s" : ""} sur ${offers.length}`;
@@ -259,11 +275,34 @@ footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line);
   const stages = offers.filter(o => o.contrat === "Stage").length;
   document.getElementById("figures").innerHTML =
     `<span><b>${offers.length}</b> offres</span><span><b>${employers}</b> employeurs</span><span><b>${stages}</b> stages</span><span><b>${week}</b> publiées ces 7 derniers jours</span>`;
-  document.getElementById("meta").textContent = `Veille du ${runDate.getDate()} ${MONTHS[runDate.getMonth()]} ${runDate.getFullYear()}. Les offres changent vite : vérifiez la date limite sur la page de l'employeur avant de postuler.`;
+  document.getElementById("meta").textContent = `Mise à jour du ${DAYS[runDate.getDay()]} ${runDate.getDate()} ${MONTHS[runDate.getMonth()]} ${runDate.getFullYear()}.${SCHEDULE ? ` Veille relancée automatiquement ${SCHEDULE}.` : ""} Les offres changent vite : vérifiez la date limite sur la page de l'employeur avant de postuler.`;
+  const gsBtn = document.getElementById("gs");
+  if (gsBtn) {
+    const formula = `=IMPORTDATA("${location.origin}${location.pathname.replace(/[^/]*$/, "")}offres.csv")`;
+    document.getElementById("gs-formula").textContent = formula;
+    gsBtn.addEventListener("click", () => { const h = document.getElementById("gs-help"); h.hidden = !h.hidden; gsBtn.setAttribute("aria-expanded", !h.hidden); });
+    document.getElementById("gs-copy").addEventListener("click", async e => {
+      try { await navigator.clipboard.writeText(formula); e.target.textContent = "Formule copiée"; }
+      catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("gs-formula")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); e.target.textContent = "Formule sélectionnée : Cmd+C"; }
+    });
+  }
   render();
 })();
 </script>
 """
+
+DOWNLOADS = """    <div class="dl">
+      <a class="btn" href="veille-ssb.xlsx" download="veille-ssb-__RUN__.xlsx">Télécharger l'Excel</a>
+      <button class="btn ghost" id="gs" type="button" aria-expanded="false" aria-controls="gs-help">Ouvrir dans Google Sheets</button>
+      <a class="btn ghost" href="offres.csv" download="offres-ssb-__RUN__.csv">CSV</a>
+    </div>
+    <div class="gs" id="gs-help" hidden>
+      <ol>
+        <li>Créez une feuille vide : <a href="https://sheets.new" target="_blank" rel="noopener">sheets.new</a>.</li>
+        <li>Collez cette formule dans la case A1 : <code id="gs-formula"></code> <button class="linkbtn" id="gs-copy" type="button">Copier la formule</button></li>
+      </ol>
+      <p style="margin:0">La feuille reprend toutes les offres et se met à jour toute seule après chaque veille.</p>
+    </div>"""
 
 STANDALONE = """<!doctype html>
 <html lang="fr">
@@ -293,16 +332,21 @@ def main():
     parser.add_argument("--date", help="Date de la veille AAAA-MM-JJ (défaut : aujourd'hui)")
     parser.add_argument("--out", required=True, help="Fichier HTML à écrire")
     parser.add_argument("--standalone", action="store_true", help="Document HTML complet")
+    parser.add_argument("--downloads", action="store_true",
+                        help="Boutons Excel / CSV / Google Sheets (page hébergée avec veille-ssb.xlsx et offres.csv à côté)")
+    parser.add_argument("--schedule", help="Rythme affiché en pied de page, ex. « le lundi et le jeudi à 8 h »")
     args = parser.parse_args()
 
     data = json.load(open(args.input_json, encoding="utf-8"))
     run = args.date or data.get("date_execution") or datetime.date.today().isoformat()
-    keep = ("titre", "entreprise", "categorie", "secteur", "localisation", "contrat", "date_iso", "lien", "source")
+    keep = ("titre", "entreprise", "categorie", "secteur", "localisation", "contrat", "date_iso", "ajoutee_le", "lien", "source")
     offers = [{**{k: o.get(k, "") for k in keep}, "infos": infos(o)} for o in data.get("offres", [])]
     offers.sort(key=lambda o: o.get("date_iso") or "", reverse=True)
 
     payload = json.dumps(offers, ensure_ascii=False).replace("</", "<\\/")
-    page = PAGE.replace("__DATA__", payload).replace("__RUN__", html.escape(run))
+    downloads = DOWNLOADS.replace("__RUN__", html.escape(run)) if args.downloads else ""
+    page = (PAGE.replace("__DOWNLOADS__", downloads).replace("__DATA__", payload)
+            .replace("__RUN__", html.escape(run)).replace("__SCHEDULE__", html.escape(args.schedule or "")))
     if args.standalone:
         head_end = page.index("</style>") + len("</style>")
         page = STANDALONE.format(page_head=page[:head_end], page_body=page[head_end:])

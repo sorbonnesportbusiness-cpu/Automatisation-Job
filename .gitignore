@@ -4,3 +4,7 @@ out/
 !**/references/*.json
 __pycache__/
 *.pyc
+!data/*.json
+site/public/
+.venv/
+.wrangler/

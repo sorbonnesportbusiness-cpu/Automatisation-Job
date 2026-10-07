@@ -196,6 +196,30 @@ découverts, et la date d'exécution.
 (Le script `scripts/build_outputs.py` implémente déjà tout ce formatage — ne pas le
 réécrire à la main, juste lui fournir le JSON des offres.)
 
+## Mode automatique : le tableau en ligne
+
+La veille alimente une page publique : https://veille-ssb.gererseul-avis-worker.workers.dev
+(boutons Excel, CSV et Google Sheets inclus). Elle est relancée par une tâche planifiée
+Claude sur le Mac de Tom, le lundi et le jeudi à 8 h, depuis le clone `~/Automatisation-Job`.
+
+Le tableau (`data/offres.json`) garde les offres des veilles précédentes tant qu'elles
+sont ouvertes. Une veille automatique se déroule ainsi :
+1. `git pull` dans `~/Automatisation-Job`, puis `date +%F`.
+2. Chercher de NOUVELLES offres avec la méthode ci-dessus. Exclure tout lien déjà présent
+   dans `data/offres.json` ou dans `references/historique.md`. Plafond de 2 offres par
+   employeur pour les nouvelles offres de la veille.
+3. Écrire ces nouvelles offres dans `out/nouvelles-AAAA-MM-JJ.json` (format ci-dessus,
+   avec `date_iso` et `categorie`), avec un bilan.
+4. Lancer `site/publish.sh out/nouvelles-AAAA-MM-JJ.json AAAA-MM-JJ`. Le script revérifie
+   les offres déjà au tableau (retire celles qui sont closes, mortes ou publiées il y a
+   plus de 60 jours), ajoute les nouvelles, régénère l'Excel, le CSV et la page, met en
+   ligne, puis commit et pousse `data/` et `references/` sur `main`.
+5. Mettre à jour `references/portails.md` si de nouveaux portails ont été trouvés, puis
+   commit et push.
+
+Zéro nouvelle offre est un résultat valable : lancer quand même `publish.sh` avec un
+fichier `{"offres": [], "bilan": {...}}` pour que les offres closes soient retirées.
+
 ## Point d'intégration CRM (à venir)
 
 Le CRM de l'association n'existe pas encore. Le script accepte dès maintenant une variable

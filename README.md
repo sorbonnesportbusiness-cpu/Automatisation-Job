@@ -12,6 +12,18 @@ Le skill produit chaque semaine :
 - un export JSON brut des mêmes offres (`offres-<date>.json`), pensé pour être repris plus
   tard par le CRM de l'association dès qu'il existera.
 
+## La page en ligne
+
+**https://veille-ssb.gererseul-avis-worker.workers.dev** : toutes les offres ouvertes, triées
+de la plus récente à la plus ancienne, avec recherche et filtres. Depuis la page, on peut
+télécharger l'Excel ou le CSV, ou ouvrir une feuille Google Sheets qui se met à jour toute
+seule (formule `IMPORTDATA`).
+
+La veille est relancée automatiquement le lundi et le jeudi à 8 h par une tâche planifiée
+Claude sur le Mac de Tom (qui doit être allumé, avec l'app Claude ouverte). Chaque passage
+retire les offres closes, ajoute les nouvelles, remet la page en ligne et pousse les données
+dans `data/offres.json`.
+
 ## Ce qu'il y a dans ce repo
 
 ```
@@ -19,8 +31,11 @@ skills/veille-ssb/
 ├── SKILL.md                  → les instructions complètes de la veille (règles, portails, format)
 ├── scripts/build_outputs.py  → génère le .xlsx + le .json à partir d'une liste d'offres
 ├── scripts/build_page.py     → génère la page web filtrable à partir de la même liste
+├── scripts/update_board.py   → tient le tableau des offres d'une veille à l'autre
 ├── references/portails.md    → mémoire collective : portails qui marchent / stériles / à tester
 └── references/historique.md  → liens déjà livrés, à ne pas reproposer
+data/offres.json              → le tableau en ligne (offres ouvertes)
+site/                         → hébergement Cloudflare (wrangler.toml) et publish.sh
 ```
 
 Le dossier est rangé sous `skills/` (sans point devant) à la racine du repo, et pas

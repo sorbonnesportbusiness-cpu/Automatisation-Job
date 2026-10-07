@@ -32,6 +32,7 @@ alors exactement comme avant, sans rien envoyer.
 """
 
 import argparse
+import csv
 import datetime
 import json
 import os
@@ -202,6 +203,21 @@ def build_workbook(offers, bilan, run_date_fr, run_date_iso):
     return wb
 
 
+def write_csv(offers, path):
+    """CSV UTF-8 des offres (mêmes colonnes que l'Excel), lisible par IMPORTDATA de Google Sheets."""
+    fr = lambda iso: datetime.date.fromisoformat(iso).strftime("%d/%m/%Y") if iso else ""
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Publiée le", "Ajoutée le", "Intitulé du poste", "Entreprise / Organisation",
+                    "Catégorie", "Secteur", "Localisation", "Type de contrat", "Début / clôture",
+                    "Lien vers l'offre", "Source"])
+        for o in offers:
+            w.writerow([fr(o.get("date_iso")), fr(o.get("ajoutee_le")), o.get("titre", ""),
+                        o.get("entreprise", ""), o.get("categorie", ""), o.get("secteur", ""),
+                        o.get("localisation", ""), o.get("contrat", ""), _infos(o),
+                        o.get("lien", ""), o.get("source", "")])
+
+
 def maybe_push_to_crm(payload):
     """Envoie le JSON au CRM si SSB_CRM_WEBHOOK_URL est défini. No-op sinon."""
     url = os.environ.get("SSB_CRM_WEBHOOK_URL", "").strip()
@@ -248,6 +264,7 @@ def main():
 
     xlsx_path = out_dir / f"veille-ssb-{run_date_iso}.xlsx"
     json_path = out_dir / f"offres-{run_date_iso}.json"
+    csv_path = out_dir / f"offres-{run_date_iso}.csv"
 
     wb = build_workbook(offers, bilan, run_date_fr, run_date_iso)
     wb.save(xlsx_path)
@@ -260,10 +277,13 @@ def main():
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(export_payload, f, ensure_ascii=False, indent=2)
 
+    write_csv(offers, csv_path)
+
     crm_status = maybe_push_to_crm(export_payload)
 
     print(f"Excel généré : {xlsx_path}")
     print(f"JSON généré  : {json_path}")
+    print(f"CSV généré   : {csv_path}")
     print(f"CRM          : {crm_status}")
 
 
