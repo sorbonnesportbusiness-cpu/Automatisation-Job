@@ -62,7 +62,14 @@ def link_status(url):
         return "mort" if exc.code in (404, 410) else "inconnu"
     except Exception:  # noqa: BLE001 - réseau capricieux : ne pas retirer l'offre pour ça
         return "inconnu"
-    return "mort" if any(m in body for m in CLOSED_MARKERS) else "ok"
+    return "mort" if any(m in visible_text(body) for m in CLOSED_MARKERS) else "ok"
+
+
+def visible_text(html):
+    """Texte affiché de la page : sans scripts, styles ni balises. Les messages d'erreur
+    rangés dans les bundles JS (« l'offre n'est plus en ligne ») ne doivent pas compter."""
+    html = re.sub(r"(?is)<(script|style|noscript|template)\b.*?</\1>", " ", html)
+    return re.sub(r"\s+", " ", re.sub(r"(?s)<[^>]+>", " ", html))
 
 
 def main():
