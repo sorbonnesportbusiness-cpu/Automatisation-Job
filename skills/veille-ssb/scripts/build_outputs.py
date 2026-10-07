@@ -204,8 +204,9 @@ def build_workbook(offers, bilan, run_date_fr, run_date_iso):
 
 
 def write_csv(offers, path):
-    """CSV UTF-8 des offres (mêmes colonnes que l'Excel), lisible par IMPORTDATA de Google Sheets."""
-    fr = lambda iso: datetime.date.fromisoformat(iso).strftime("%d/%m/%Y") if iso else ""
+    """CSV UTF-8 des offres (mêmes colonnes que l'Excel), lisible par IMPORTDATA de Google Sheets.
+    Dates en AAAA-MM-JJ : sans ambiguïté quelle que soit la langue de la feuille."""
+    fr = lambda iso: iso or ""
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["Publiée le", "Ajoutée le", "Intitulé du poste", "Entreprise / Organisation",

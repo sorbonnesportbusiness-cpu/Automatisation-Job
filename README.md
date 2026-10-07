@@ -16,8 +16,13 @@ Le skill produit chaque semaine :
 
 **https://veille-ssb.gererseul-avis-worker.workers.dev** : toutes les offres ouvertes, triées
 de la plus récente à la plus ancienne, avec recherche et filtres. Depuis la page, on peut
-télécharger l'Excel ou le CSV, ou ouvrir une feuille Google Sheets qui se met à jour toute
-seule (formule `IMPORTDATA`).
+télécharger l'Excel ou le CSV, ou ouvrir le Google Sheet de l'équipe, qui se remplit tout seul
+depuis la page (formule `IMPORTDATA`) :
+https://docs.google.com/spreadsheets/d/1dq0GyY7BNuiMfmkkJChm4dLw6iJzSyfR4Q6hkTm0GmU/edit
+
+Pour envoyer les offres aux adhérents : cocher les offres voulues dans le tableau, puis
+« Message adhérents ». La page prépare le message WhatsApp (modifiable), à copier ou à
+ouvrir directement dans WhatsApp. La sélection reste mémorisée dans le navigateur.
 
 La veille est relancée automatiquement le lundi et le jeudi à 8 h par une tâche planifiée
 Claude sur le Mac de Tom (qui doit être allumé, avec l'app Claude ouverte). Chaque passage

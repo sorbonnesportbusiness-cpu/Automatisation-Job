@@ -15,7 +15,9 @@ PY=.venv/bin/python
 $PY "$SK/scripts/update_board.py" "$NEW" --date "$DATE" --board data/offres.json --history "$SK/references/historique.md"
 $PY "$SK/scripts/build_outputs.py" data/offres.json --date "$DATE" --out-dir out
 $PY "$SK/scripts/build_page.py" data/offres.json --date "$DATE" --out site/public/index.html \
-    --standalone --downloads --schedule "le lundi et le jeudi à 8 h"
+    --standalone --downloads --schedule "le lundi et le jeudi à 8 h" \
+    --site-url "https://veille-ssb.gererseul-avis-worker.workers.dev/" \
+    --sheet-url "https://docs.google.com/spreadsheets/d/1dq0GyY7BNuiMfmkkJChm4dLw6iJzSyfR4Q6hkTm0GmU/edit"
 cp "out/veille-ssb-$DATE.xlsx" site/public/veille-ssb.xlsx
 cp "out/offres-$DATE.csv" site/public/offres.csv
 cp data/offres.json site/public/offres.json
