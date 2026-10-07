@@ -6,9 +6,23 @@ pour l'association. Chaque membre du bureau peut l'installer dans son propre Cla
 l'exécuter — pas besoin de centraliser l'exécution sur une seule personne.
 
 Le skill produit chaque semaine :
-- un fichier Excel coloré et prêt à diffuser (`veille-ssb-<date>.xlsx`),
+- un fichier Excel coloré et prêt à diffuser (`veille-ssb-<date>.xlsx`), trié de l'offre la
+  plus récente à la plus ancienne,
+- une page web filtrable des mêmes offres (`veille-ssb-<date>.html`),
 - un export JSON brut des mêmes offres (`offres-<date>.json`), pensé pour être repris plus
   tard par le CRM de l'association dès qu'il existera.
+
+## La page en ligne
+
+**https://veille-ssb.gererseul-avis-worker.workers.dev** : toutes les offres ouvertes, triées
+de la plus récente à la plus ancienne, avec recherche et filtres. Depuis la page, on peut
+télécharger l'Excel ou le CSV, ou ouvrir une feuille Google Sheets qui se met à jour toute
+seule (formule `IMPORTDATA`).
+
+La veille est relancée automatiquement le lundi et le jeudi à 8 h par une tâche planifiée
+Claude sur le Mac de Tom (qui doit être allumé, avec l'app Claude ouverte). Chaque passage
+retire les offres closes, ajoute les nouvelles, remet la page en ligne et pousse les données
+dans `data/offres.json`.
 
 ## Ce qu'il y a dans ce repo
 
@@ -16,7 +30,12 @@ Le skill produit chaque semaine :
 skills/veille-ssb/
 ├── SKILL.md                  → les instructions complètes de la veille (règles, portails, format)
 ├── scripts/build_outputs.py  → génère le .xlsx + le .json à partir d'une liste d'offres
-└── references/portails.md    → mémoire collective : portails qui marchent / stériles / à tester
+├── scripts/build_page.py     → génère la page web filtrable à partir de la même liste
+├── scripts/update_board.py   → tient le tableau des offres d'une veille à l'autre
+├── references/portails.md    → mémoire collective : portails qui marchent / stériles / à tester
+└── references/historique.md  → liens déjà livrés, à ne pas reproposer
+data/offres.json              → le tableau en ligne (offres ouvertes)
+site/                         → hébergement Cloudflare (wrangler.toml) et publish.sh
 ```
 
 Le dossier est rangé sous `skills/` (sans point devant) à la racine du repo, et pas
@@ -81,11 +100,15 @@ ou corrige un bug du script :
    son propre Claude (il n'y a pas de synchronisation automatique entre ce repo et
    l'installation de chacun).
 
-   ## Historique
+## Historique
 
 - 2026-10-04 : premier export du skill depuis une session Cowork, après plusieurs semaines
   d'exécution manuelle via une tâche planifiée Claude. Portails validés et stériles au
   2026-09-28 consignés dans `skills/veille-ssb/references/portails.md`.
+- 2026-10-07 : veille élargie à toute l'industrie du sport (institutions, droit, finance,
+  marques, sportstech) : 106 offres chez 85 employeurs. Excel trié par date avec colonnes
+  Catégorie et Début / clôture, nouvelle page web, historique des liens livrés, liste des
+  portails refaite.
 
-  Important : il faut utiliser la recherche internet avec claude sinon cela ne va pas fonctionner.
-
+Important : il faut utiliser la recherche internet avec Claude, sinon la veille ne
+fonctionne pas.

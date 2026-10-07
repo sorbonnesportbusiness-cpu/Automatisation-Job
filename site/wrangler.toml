@@ -1,0 +1,8 @@
+# Page en ligne de la veille : https://veille-ssb.gererseul-avis-worker.workers.dev
+# Compte Cloudflare perso de Tom. Déploiement : site/publish.sh (ou `npx wrangler deploy` depuis ce dossier).
+name = "veille-ssb"
+account_id = "e2d939d2a4a4c9453d118a18388bfcb4"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./public"

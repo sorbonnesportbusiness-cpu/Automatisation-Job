@@ -32,9 +32,11 @@ alors exactement comme avant, sans rien envoyer.
 """
 
 import argparse
+import csv
 import datetime
 import json
 import os
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -67,14 +69,24 @@ CONTRACT_COLORS = {
 }
 
 COLUMN_WIDTHS = {
-    "A": 5, "B": 45, "C": 30, "D": 18, "E": 25,
-    "F": 18, "G": 18, "H": 55, "I": 25, "J": 15,
+    "A": 5, "B": 13, "C": 45, "D": 30, "E": 16, "F": 22,
+    "G": 24, "H": 13, "I": 30, "J": 50, "K": 24, "L": 12,
 }
 
 HEADERS = [
-    "N°", "Intitulé du poste", "Entreprise / Organisation", "Secteur", "Localisation",
-    "Type de contrat", "Date de publication", "Lien vers l'offre", "Source", "Vérifié le",
+    "N°", "Publiée le", "Intitulé du poste", "Entreprise / Organisation", "Catégorie",
+    "Secteur", "Localisation", "Type de contrat", "Début / clôture", "Lien vers l'offre",
+    "Source", "Vérifié le",
 ]
+COL_CONTRACT, COL_LINK = 8, 10
+
+
+def _infos(offer):
+    """Début / clôture : champ `infos`, sinon le contenu entre parenthèses de date_pub."""
+    if offer.get("infos"):
+        return offer["infos"]
+    m = re.search(r"\((.*)\)", offer.get("date_pub", ""))
+    return m.group(1) if m else ""
 
 
 def build_workbook(offers, bilan, run_date_fr, run_date_iso):
@@ -93,24 +105,26 @@ def build_workbook(offers, bilan, run_date_fr, run_date_iso):
     for i, offer in enumerate(offers, start=1):
         row = i + 1
         fill = EVEN_FILL if i % 2 == 0 else ODD_FILL
+        pub = offer.get("date_iso")
         values = [
-            i, offer.get("titre", ""), offer.get("entreprise", ""),
-            offer.get("secteur", ""), offer.get("localisation", ""),
-            offer.get("contrat", ""), offer.get("date_pub", ""),
-            offer.get("lien", ""), offer.get("source", ""), run_date_fr,
+            i, datetime.date.fromisoformat(pub) if pub else "n.c.",
+            offer.get("titre", ""), offer.get("entreprise", ""), offer.get("categorie", ""),
+            offer.get("secteur", ""), offer.get("localisation", ""), offer.get("contrat", ""),
+            _infos(offer), offer.get("lien", ""), offer.get("source", ""), run_date_fr,
         ]
         for col_idx, value in enumerate(values, start=1):
             cell = ws.cell(row=row, column=col_idx, value=value)
             cell.font = Font(name=FONT_NAME, size=11)
             cell.fill = fill
             cell.border = THIN_BORDER
-            cell.alignment = Alignment(vertical="center", wrap_text=(col_idx in (2, 3, 8)))
+            cell.alignment = Alignment(vertical="center", wrap_text=(col_idx in (3, 4, 9, 10)))
+        ws.cell(row=row, column=2).number_format = "DD/MM/YYYY"
 
-        contract_cell = ws.cell(row=row, column=6)
+        contract_cell = ws.cell(row=row, column=COL_CONTRACT)
         color = CONTRACT_COLORS.get(offer.get("contrat", ""), "000000")
         contract_cell.font = Font(name=FONT_NAME, size=11, bold=True, color=color)
 
-        link_cell = ws.cell(row=row, column=8)
+        link_cell = ws.cell(row=row, column=COL_LINK)
         if offer.get("lien"):
             link_cell.hyperlink = offer["lien"]
             link_cell.font = Font(name=FONT_NAME, size=11, color="1155CC", underline="single")
@@ -119,7 +133,7 @@ def build_workbook(offers, bilan, run_date_fr, run_date_iso):
         ws.column_dimensions[col].width = width
 
     ws.freeze_panes = "A2"
-    ws.auto_filter.ref = f"A1:J{len(offers) + 1}"
+    ws.auto_filter.ref = f"A1:L{len(offers) + 1}"
 
     # Onglet Bilan
     bilan_ws = wb.create_sheet("Bilan")
@@ -189,6 +203,21 @@ def build_workbook(offers, bilan, run_date_fr, run_date_iso):
     return wb
 
 
+def write_csv(offers, path):
+    """CSV UTF-8 des offres (mêmes colonnes que l'Excel), lisible par IMPORTDATA de Google Sheets."""
+    fr = lambda iso: datetime.date.fromisoformat(iso).strftime("%d/%m/%Y") if iso else ""
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Publiée le", "Ajoutée le", "Intitulé du poste", "Entreprise / Organisation",
+                    "Catégorie", "Secteur", "Localisation", "Type de contrat", "Début / clôture",
+                    "Lien vers l'offre", "Source"])
+        for o in offers:
+            w.writerow([fr(o.get("date_iso")), fr(o.get("ajoutee_le")), o.get("titre", ""),
+                        o.get("entreprise", ""), o.get("categorie", ""), o.get("secteur", ""),
+                        o.get("localisation", ""), o.get("contrat", ""), _infos(o),
+                        o.get("lien", ""), o.get("source", "")])
+
+
 def maybe_push_to_crm(payload):
     """Envoie le JSON au CRM si SSB_CRM_WEBHOOK_URL est défini. No-op sinon."""
     url = os.environ.get("SSB_CRM_WEBHOOK_URL", "").strip()
@@ -216,6 +245,8 @@ def main():
         data = json.load(f)
 
     offers = data.get("offres", [])
+    # Plus récentes d'abord (date_iso = AAAA-MM-JJ de publication), offres sans date en bas.
+    offers.sort(key=lambda o: o.get("date_iso") or "", reverse=True)
     bilan = data.get("bilan", {})
 
     if len(offers) < 7:
@@ -233,6 +264,7 @@ def main():
 
     xlsx_path = out_dir / f"veille-ssb-{run_date_iso}.xlsx"
     json_path = out_dir / f"offres-{run_date_iso}.json"
+    csv_path = out_dir / f"offres-{run_date_iso}.csv"
 
     wb = build_workbook(offers, bilan, run_date_fr, run_date_iso)
     wb.save(xlsx_path)
@@ -245,10 +277,13 @@ def main():
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(export_payload, f, ensure_ascii=False, indent=2)
 
+    write_csv(offers, csv_path)
+
     crm_status = maybe_push_to_crm(export_payload)
 
     print(f"Excel généré : {xlsx_path}")
     print(f"JSON généré  : {json_path}")
+    print(f"CSV généré   : {csv_path}")
     print(f"CRM          : {crm_status}")
 
 
