@@ -3,6 +3,11 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-08 (2 offres)
+
+- 2026-10-05 | Stage | Stellantis (Peugeot) | Stage - Chef de projet Événementiel et Relations Presse (Peugeot : lancements, 24 Heures du Mans) | https://fr.linkedin.com/jobs/view/4473676125
+- 2026-10-02 | Stage | Crédit Agricole S.A. | Stage - Chargé(e) de communication sponsoring (FFF, France Judo, Team Vitality) | https://groupecreditagricole.jobs/fr/nos-offres-emploi/579-170468-122-stage---chargee-de-communication-sponsoring-hf-reference--2026-116109--/
+
 ## Veille du 2026-10-08 (106 offres)
 
 - 2026-10-08 | Stage | Paris FC | Assistant(e) Marketing de l'Offre - Activation Sponsoring (stage) | https://www.hellowork.com/fr-fr/emplois/83088925.html
