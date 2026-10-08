@@ -62,6 +62,27 @@ Dernière mise à jour : 2026-10-07 (veille élargie : 106 offres, 85 employeurs
   Espacer les appels de 5 secondes ou plus (429 sinon). Ne livrer le lien LinkedIn que si
   l'employeur n'a pas de fiche ailleurs. Les petits clubs ne publient souvent que là.
 
+## Ajouts du 2026-10-08 (veille élargie, 212 offres)
+
+- **Sitemaps des sites carrières Teamtailor** (jobs.fft.fr, carrieres.lfp.fr, carrieres.alpes2030.org) :
+  ils listent toutes les offres, la page d'accueil n'en montre que 9. Flux `/jobs.rss` aussi.
+- **API publiques à interroger à chaque veille** : Workday PSG et Havas (`/wday/cxs/.../jobs`),
+  DigitalRecruiters (Decathlon, Lacoste), Breezy Betclic (`/json`), Ashby EGYM et ScorePlay,
+  Lever Trainsweateat et Winamax, SmartRecruiters (Salomon, Courir, Red Bull, Continental),
+  Flatchr FFR, Welcome Kit (`<slug>.welcomekit.co` : Nutripure, Team Vitality, EBRA).
+- **GlobalSportsJobs** (`hub.globalsportsjobs.com/api/vacancy`, filtre France) : seule porte
+  d'entrée lisible vers Sportfive (Groupama Stadium, clubs commercialisés par Sportfive).
+- **Crédit Agricole** : `groupecreditagricole.jobs/fr/nos-offres/mot-cles/<mot>/` (couvre LCL,
+  CA Assurances, Amundi, caisses régionales). Seul grand annonceur avec un stage sponsoring sport ouvert.
+- **LinkedIn sans connexion** : 10 cartes par page (paginer start=0, 10, 20). Requêtes les plus
+  productives : partenariats, marketing sportif, événementiel sportif, communication club, club
+  football, juriste sport. Bruit : billetterie, hospitalités, paris sportifs, golf, cyclisme.
+- **Fédérations** : l'API WordPress media (`/wp-json/wp/v2/media?search=offre`) repère les fiches
+  de poste PDF datées (FFHG, CPSF). careers.fia.com/rss.php pour la FIA.
+- **Stériles ce jour** : Taleez (CNOSF, FFF, OM) refuse les connexions ; Jooble, TeamWork Online,
+  Work In Sports (403) ; Hitmarker, Jobijoba, Meteojob (JS) ; ligues régionales *.fff.fr (403) ;
+  sites carrières de SG, BPCE, EDF, Orange, TotalEnergies, SNCF (aucun poste sponsoring).
+
 ## Portails stériles ou bloqués (à retester occasionnellement)
 
 - **Bloqués** : welcometothejungle.com (403, ce qui cache l'esport, la sportstech et les petites
