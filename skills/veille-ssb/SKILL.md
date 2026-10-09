@@ -208,7 +208,7 @@ réécrire à la main, juste lui fournir le JSON des offres.)
 
 ## Mode automatique : le tableau en ligne
 
-La veille alimente une page publique : https://veille-ssb.gererseul-avis-worker.workers.dev
+La veille alimente une page publique : https://veille.sorbonnesportbusiness.com
 (boutons Excel, CSV et Google Sheets inclus). Elle est relancée par une tâche planifiée
 Claude sur le Mac de Tom, le lundi et le jeudi à 8 h, depuis le clone `~/Automatisation-Job`.
 

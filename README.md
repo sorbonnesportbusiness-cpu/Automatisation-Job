@@ -14,7 +14,7 @@ Le skill produit chaque semaine :
 
 ## La page en ligne
 
-**https://veille-ssb.gererseul-avis-worker.workers.dev** : toutes les offres ouvertes, triées
+**https://veille.sorbonnesportbusiness.com** : toutes les offres ouvertes, triées
 de la plus récente à la plus ancienne, avec recherche et filtres. Depuis la page, on peut
 télécharger l'Excel ou le CSV, ou ouvrir le Google Sheet de l'équipe, qui se remplit tout seul
 depuis la page (formule `IMPORTDATA`) :

@@ -8,3 +8,4 @@ __pycache__/
 site/public/
 .venv/
 .wrangler/
+site/.env

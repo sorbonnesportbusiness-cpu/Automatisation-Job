@@ -1,8 +1,10 @@
-# Page en ligne de la veille : https://veille-ssb.gererseul-avis-worker.workers.dev
-# Compte Cloudflare perso de Tom. Déploiement : site/publish.sh (ou `npx wrangler deploy` depuis ce dossier).
+# Page en ligne de la veille : https://veille.sorbonnesportbusiness.com
+# Compte Cloudflare de SSB (celui de la zone sorbonnesportbusiness.com) : CLOUDFLARE_ACCOUNT_ID et
+# CLOUDFLARE_API_TOKEN sont lus dans site/.env (jamais commité) par site/publish.sh.
 name = "veille-ssb"
-account_id = "e2d939d2a4a4c9453d118a18388bfcb4"
 compatibility_date = "2026-09-01"
+routes = [{ pattern = "veille.sorbonnesportbusiness.com", custom_domain = true }]
+workers_dev = false
 
 [assets]
 directory = "./public"
