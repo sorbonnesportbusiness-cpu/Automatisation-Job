@@ -44,10 +44,10 @@ fraîcheur exacte.
 
 ## Règle de diversité
 
-Maximum 5 offres par employeur AU TOTAL sur le tableau en ligne (en comptant celles déjà
-présentes dans `data/offres.json`), et au moins 4 employeurs différents par veille. Si un
-portail est très fourni (Alpes 2030, FFT, LFP...), on prend les 5 meilleures offres et on
-va chercher ailleurs.
+Pas de plafond par employeur (levé le 2026-10-09 à la demande de Tom) : toutes les offres
+valides d'un portail très fourni (Alpes 2030, FFT, LFP, Sportfive, CANAL+...) entrent au
+tableau. Balayer quand même toutes les familles de sources : un gros portail ne dispense
+pas de chercher ailleurs.
 
 ## Règle de lien — la plus importante
 
@@ -115,7 +115,7 @@ que celle affichée (republication), garder la plus ancienne.
 
 ## Méthode
 
-1. Balayer les familles de sources ci-dessus (plafond 5 offres par employeur au total).
+1. Balayer les familles de sources ci-dessus (pas de plafond par employeur).
 2. Ouvrir 2-3 nouveaux employeurs de la liste "À tester" de `references/portails.md` et
    consigner le résultat (positif ou négatif).
 3. Retracer chaque offre trouvée sur un agrégateur vers la source de l'employeur.
@@ -214,14 +214,14 @@ Claude sur le Mac de Tom, le lundi et le jeudi à 8 h, depuis le clone `~/Automa
 
 Le tableau (`data/offres.json`) garde les offres des veilles précédentes tant qu'elles
 sont ouvertes. Une veille automatique se déroule ainsi :
-1. `git pull` dans `~/Automatisation-Job`, puis `date +%F`.
+1. `site/pull.sh` dans `~/Automatisation-Job` (pull + date du jour).
 2. Chercher de NOUVELLES offres avec la méthode ci-dessus. Exclure tout lien déjà présent
-   dans `data/offres.json` ou dans `references/historique.md`. Plafond de 5 offres par
-   employeur au total sur le tableau.
+   dans `data/offres.json` ou dans `references/historique.md`. Pas de plafond par
+   employeur.
 3. Chaque sous-agent écrit ses offres dans `out/lots/AAAA-MM-JJ/<famille>.json` (format
    ci-dessus, avec `date_iso` et `categorie`). Les fusionner avec
-   `scripts/merge_lots.py out/lots/AAAA-MM-JJ/*.json --board data/offres.json --history references/historique.md --cap 5 --out out/nouvelles-AAAA-MM-JJ.json`
-   (doublons, liens déjà livrés et plafond par employeur traités par le script).
+   `scripts/merge_lots.py out/lots/AAAA-MM-JJ/*.json --board data/offres.json --history references/historique.md --out out/nouvelles-AAAA-MM-JJ.json`
+   (doublons et liens déjà livrés traités par le script).
 4. Lancer `site/publish.sh out/nouvelles-AAAA-MM-JJ.json AAAA-MM-JJ`. Le script revérifie
    les offres déjà au tableau (retire celles qui sont closes, mortes ou publiées il y a
    plus de 60 jours), ajoute les nouvelles, régénère l'Excel, le CSV et la page, met en

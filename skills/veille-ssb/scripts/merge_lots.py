@@ -6,12 +6,12 @@ fichier de nouvelles offres, prêt pour site/publish.sh.
 
 - supprime les doublons (même lien, ou même employeur + même intitulé) ;
 - écarte les liens déjà au tableau (data/offres.json) ou déjà livrés (historique.md) ;
-- applique le plafond d'offres par employeur, en comptant celles déjà au tableau ;
+- applique un plafond d'offres par employeur si --cap est donné (aucun par défaut) ;
 - fusionne les bilans.
 
 Usage :
     python3 merge_lots.py out/lots/*.json --board data/offres.json \
-        --history skills/veille-ssb/references/historique.md --cap 5 --out out/nouvelles-2026-10-08.json
+        --history skills/veille-ssb/references/historique.md --out out/nouvelles-2026-10-08.json
 """
 
 import argparse
@@ -37,7 +37,7 @@ def main():
     p.add_argument("lots", nargs="+", help="Fichiers JSON des sous-agents")
     p.add_argument("--board", required=True)
     p.add_argument("--history")
-    p.add_argument("--cap", type=int, default=5)
+    p.add_argument("--cap", type=int, default=0, help="Plafond par employeur, 0 = aucun")
     p.add_argument("--out", required=True)
     args = p.parse_args()
 
@@ -65,7 +65,7 @@ def main():
         if o["lien"] in seen_links or pair in seen_pairs:
             dropped.append(f"Doublon : {o['titre']} - {o.get('entreprise')}")
             continue
-        if per_employer[pair[0]] >= args.cap:
+        if args.cap and per_employer[pair[0]] >= args.cap:
             dropped.append(f"Plafond de {args.cap} atteint : {o['titre']} - {o.get('entreprise')}")
             continue
         seen_links.add(o["lien"]); seen_pairs.add(pair); per_employer[pair[0]] += 1
@@ -82,7 +82,7 @@ def main():
 
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps({"offres": offers, "bilan": bilan}, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"{len(offers)} nouvelles offres retenues ({len(dropped)} doublons ou hors plafond) -> {args.out}")
+    print(f"{len(offers)} nouvelles offres retenues ({len(dropped)} écartées) -> {args.out}")
     print("Par employeur :", ", ".join(f"{k} {v}" for k, v in Counter(o['entreprise'] for o in offers).most_common(8)))
 
 

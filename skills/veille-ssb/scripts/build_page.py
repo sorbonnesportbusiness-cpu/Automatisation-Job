@@ -239,7 +239,7 @@ __GSHELP__
   <p class="empty" id="empty" hidden>Aucune offre ne correspond à ces filtres. Cliquez sur « Effacer les filtres ».</p>
 
   <footer>
-    <p>Règles de la veille : offres non expirées, vérifiées sur leur page individuelle, publiées depuis moins de deux mois, cinq offres au maximum par employeur, lien vers le site de l'employeur dès qu'il existe.</p>
+    <p>Règles de la veille : offres non expirées, vérifiées sur leur page individuelle, publiées depuis moins de deux mois, lien vers le site de l'employeur dès qu'il existe.</p>
     <p id="meta"></p>
   </footer>
 </div>
