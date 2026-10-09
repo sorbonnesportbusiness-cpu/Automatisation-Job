@@ -5,7 +5,7 @@ le skill met à jour cette liste (portails qui ont donné des offres, portails d
 stériles, nouveaux portails découverts). Le skill `veille-ssb` lit ce fichier comme
 référence avant de choisir où chercher.
 
-Dernière mise à jour : 2026-10-07 (veille élargie : 106 offres, 85 employeurs).
+Dernière mise à jour : 2026-10-09 (89 nouvelles offres, au lendemain d'une veille à 213).
 
 ## Portails employeurs validés (accès libre, fiables)
 
@@ -83,6 +83,35 @@ Dernière mise à jour : 2026-10-07 (veille élargie : 106 offres, 85 employeurs
   Work In Sports (403) ; Hitmarker, Jobijoba, Meteojob (JS) ; ligues régionales *.fff.fr (403) ;
   sites carrières de SG, BPCE, EDF, Orange, TotalEnergies, SNCF (aucun poste sponsoring).
 
+## Ajouts du 2026-10-09
+
+- **Nouveaux portails productifs** : campsider.welcomekit.co (marketplace sport d'occasion, 4 stages) ;
+  lawprofiler.com (et non .fr) `?page=offres&keyword=sport`, offres droit du sport datées (LFP, FFF) ;
+  recrutement.angers.fr `/wp-json/wp/v2/job?per_page=100` ; fftri.com/nosoffres/bourse-a-lemploi (PDF datés) ;
+  ffvolley.org/la-ffvb/emploi (PDF, dater par Last-Modified) ; ffs.fr/carrieres ; urbansoccer.softy.pro/offres.
+- **group.bnpparibas** : 403 pour curl et WebFetch, mais les fiches se lisent dans le navigateur intégré
+  (stage sponsoring tennis trouvé ainsi). L'API Workday BNP répond 422.
+- **Accès précisés** :
+  - GlobalSportsJobs : `api/vacancy?search=*&filter={"country":"France"}` (URL-encodé), ou la page
+    `hub.globalsportsjobs.com/company/sportfive` pour Sportfive.
+  - La Bonne Alternance : API publique `/api/v1/search?q=<mots>&hitsPerPage=100`.
+  - emploi-territorial : `&page=N` renvoie N×20 offres d'un coup (familles C5, A6).
+  - choisirleservicepublic : le filtre débutant ne marche que dans l'ordre
+    `/domaine/3507/experience/1835/date-de-publication/14_derniers_jours/`.
+  - CANAL+ : jobs.canalplus.com en 403, les stages se lisent sur HelloWork (« Canal Plus »).
+  - Eurosport : POST `careers.wbd.com/widgets` avec le pays France.
+  - FDJ United : `careers.fdjunited.com/fr/search-jobs/results?RecordsPerPage=300` (en-tête X-Requested-With).
+  - fff.taleez.com/api/careez répond de nouveau.
+- **ATS testés sans offre utile** : Infront (Teamtailor), Wasserman et Dentsu/MKTG (Workday), Fever et
+  Genius Sports (Greenhouse), DAZN (RSS, rien en France), UTMB (Flatchr), Lagardère (RSS), France
+  Télévisions, Basic-Fit (Workday, postes en club), Petzl (Flatchr), alltricks et webedia (Welcome Kit).
+- **Bloqués ce jour** : sofoot.com, seetickets.com, jobs.layan.eu (Rossignol), ekoi.fr, unibet.fr, AXA,
+  Allianz, RATP, Back Market (403) ; welcomekit.co en 429 après quelques appels ; HelloWork en 403
+  au-delà de 8 requêtes parallèles (0,7 s entre fiches passe).
+- **Stériles** : Village de la Justice (466 fiches, rien en sport), cabinets avec pratique sport, PMU
+  (0 offre, passe par JobTeaser), ligues LNR/LNB/LNH/LNV, FFBB, Agence nationale du Sport, CDOS, INSEP,
+  Ville de Paris (576 offres lues), annonceurs hors Crédit Agricole et BNP Paribas.
+
 ## Portails stériles ou bloqués (à retester occasionnellement)
 
 - **Bloqués** : welcometothejungle.com (403, ce qui cache l'esport, la sportstech et les petites
@@ -99,5 +128,6 @@ Dernière mise à jour : 2026-10-07 (veille élargie : 106 offres, 85 employeurs
 
 ## À tester
 
-FFBB (portail en 403 au fetch), Golazo (cookies à accepter), Karmine Corp et Solary (hors WTTJ),
-Mouratoglou Academy (Taleez en JS), Compagnie des Alpes, Sodexo Live!, Weezevent.
+Golazo (cookies à accepter), Mouratoglou Academy (Taleez en JS), Sodexo Live! (SmartRecruiters : 0 offre en
+France), Alltricks (reposts à surveiller), Compagnie des Alpes (offres seulement sur LinkedIn le 2026-10-09).
+Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezevent.

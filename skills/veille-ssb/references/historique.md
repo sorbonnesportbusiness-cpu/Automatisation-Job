@@ -3,6 +3,98 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-09 (89 offres)
+
+- 2026-10-09 | Alternance | Plebicom / Ma Petite Sponso | Commercial(e) Développement Partenariats Sportifs (alternance) | https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6ac816caf1f38f567279900b/commercial-e-developpement-partenariats-sportifs-h-f
+- 2026-10-09 | Stage | Union Bordeaux Bègles (UBB) | Stage Assistant Commercial & Relation Partenaires | https://www.linkedin.com/jobs/view/4477644226
+- 2026-10-09 | Stage | Alltricks | Catalog Leader Running, Bikewear & Outdoor - Stage | https://www.linkedin.com/jobs/view/4476254732
+- 2026-10-09 | CDD | A.S.O. (Amaury Sport Organisation) | CDD - Chargé de Relations Partenaires - Cyclisme | https://carrieres.aso.fr/jobs/8522948-cdd-charge-de-relations-partenaires-cyclisme-h-f
+- 2026-10-09 | CDI | Nutripure | Commercial.e B2B compléments alimentaires - marché espagnol | https://nutripure.welcomekit.co/jobs/commercial-e-b2b-marche-espagnol_toulouse
+- 2026-10-09 | Stage | Campsider | Marketing / Growth - Stage | https://campsider.welcomekit.co/jobs/stage-account-management-6-mois_paris
+- 2026-10-08 | Stage | Sportfive | Stage Assistant(e) ADV Billetterie CSE | https://hub.globalsportsjobs.com/vacancy/stage-assistant-adv-billetterie-cse-fr-glap140030
+- 2026-10-08 | Stage | Chambéry Savoie Mont Blanc Handball | Stage - Assistant(e) Merchandising & E-commerce | https://www.sportstrategies.com/offre-emploi/assistant-e-merchandising-e-commerce/
+- 2026-10-08 | CDI | Paris Saint-Germain | CRM Life Cycle Manager F/H | https://parissaintgermain.wd3.myworkdayjobs.com/fr-FR/rejoigneznous/job/BOULOGNE-BILLANCOURT/CRM-LIFE-CYCLE-MANAGER-F-H_014862
+- 2026-10-08 | CDI | ANJ (Autorité Nationale des Jeux) | Référent juridique (données personnelles, contrats, droit public) | https://fr.linkedin.com/jobs/view/4475959091
+- 2026-10-08 | Stage | Domaines Skiables de France | Stage - Chargé(e) de communication | https://www.linkedin.com/jobs/view/4477187493
+- 2026-10-08 | CDD | Ligue de Football Nouvelle-Aquitaine (LFNA) | Agent de développement - Pôle Accompagnement, Développement, Engagement (emploi et insertion des clubs) | https://www.linkedin.com/jobs/view/4477402514
+- 2026-10-08 | Stage | PUMA France | Stage Comptable Fournisseurs | https://www.linkedin.com/jobs/view/4477443361
+- 2026-10-08 | Stage | Lacoste | Stage - Assistant(e) Chef de Produit Sport Training | https://careers.lacoste.com/fr/annonce/4636883-stage-assistant-e-chef-de-produit-sport-training-75016-paris
+- 2026-10-08 | Stage | Decathlon (Decathlon Pulse) | Investment Analyst - Decathlon Pulse (stage) | https://joinus.decathlon.fr/fr/annonce/4637949-investment-analyst-decathlon-pulse-59650-villeneuve-dascq
+- 2026-10-08 | Stage | GL events Sports | Stagiaire Assistant(e) Communication (GL events Sports / LOU Rugby) | https://inrecruitingfr.intervieweb.it/glevents/jobs/stagiaire-assistante-communication-fh-145465/fr/
+- 2026-10-08 | Stage | Campsider | Ventes/Sales B2C Sport - Stage | https://campsider.welcomekit.co/jobs/marketing-intern-stage-station-f_paris
+- 2026-10-07 | CDI | Fédération Française de Triathlon | Juriste Junior (F/H) | https://drive.google.com/file/d/1KSLmC_Inu23f7w_8numP9kruuP9azwVz/view
+- 2026-10-07 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Assistant(e) création de contenus RH | https://carrieres.alpes2030.org/jobs/8509784-stage-assistant-e-creation-de-contenus-rh
+- 2026-10-06 | Stage | CANAL+ | Stage - Journaliste Golf | https://www.hellowork.com/fr-fr/emplois/84150126.html
+- 2026-10-06 | Stage | CANAL+ | Stage - Journaliste Créateur / Créatrice Digital (Rédaction des Sports) | https://www.hellowork.com/fr-fr/emplois/84150149.html
+- 2026-10-06 | CDD | Fédération Française de Tennis (Roland-Garros) | Responsable Retail Marketing & Commercial F/H (boutiques) | https://jobs.fft.fr/jobs/8507709-reponsable-retail-marketing-commercial-f-h
+- 2026-10-06 | Stage | Paris Saint-Germain | Stagiaire Graphiste / Motion Designer - Octobre 2026 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-GRAPHISTE---MOTION-DESIGNER--H-F----SEPTEMBRE-2026_014626
+- 2026-10-05 | Stage | Babasport | Community Manager - Stage | https://www.linkedin.com/jobs/view/4473613333
+- 2026-10-05 | Stage | Nivéales / Cie des Médias (Skieur Magazine) | Journaliste (stage rémunéré) - Skieur Magazine | https://www.linkedin.com/jobs/view/4475591244
+- 2026-10-05 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Assistant Logistique | https://carrieres.alpes2030.org/jobs/8500681-stage-assistant-logistique-f-h
+- 2026-10-03 | CDD | Ekosport | Assistant Category Manager - Trail & Running | https://www.hellowork.com/fr-fr/emplois/82940493.html
+- 2026-10-02 | Stage | Betclic Group | Stage - Assistant Juriste Contentieux Consommation | https://betclic-group.breezy.hr/p/220aa5fe0e7901-stage-assistant-juriste-contentieux-consommation-f-m
+- 2026-10-02 | Stage | Betclic Group | Stage - Assistant Juriste | https://betclic-group.breezy.hr/p/128781acf0cb01-stage-assistant-juriste-f-m
+- 2026-10-02 | Stage | Betclic Group | Stage - Financial Controller Assistant / Contrôleur de Gestion Junior | https://betclic-group.breezy.hr/p/16f1af55af1101-stage-financial-controller-assistant-controleur-de-gestion-junior-f-m
+- 2026-10-02 | CDI | SEVABEL (Compagnie des Alpes) | Contrôleur de gestion (domaine skiable Les Menuires / Saint-Martin-de-Belleville) | https://fr.linkedin.com/jobs/view/4474712751
+- 2026-10-02 | CDD | Red Bull France | Business & Shopper Insights Specialist - CDD 11 mois | https://jobs.smartrecruiters.com/RedBull/744000153139208
+- 2026-10-02 | CDI | Decathlon | Corporate Social Media Specialist | https://joinus.decathlon.fr/fr/annonce/4094191-corporate-social-media-specialist-tous-genres-59650-villeneuve-dascq
+- 2026-10-01 | Stage | Sportfive | Stage - Chargé(e) de Mission Hospitalité | https://hub.globalsportsjobs.com/vacancy/stage-charge-e-de-mission-hospitalite-fr-glap139380
+- 2026-10-01 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Product Management Digital - Janvier 2027 | https://jobs.fft.fr/jobs/8486574-stage-product-management-digital-janvier-2027
+- 2026-10-01 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage juridique - Propriété Intellectuelle et Droit des Technologies de l'Information | https://carrieres.alpes2030.org/jobs/8487391-stage-juridique-propriete-intellectuelle-et-droit-des-technologies-de-l-information
+- 2026-10-01 | CDI | Alpes 2030 (COJOP Jeux d'hiver) | Social Media Manager / Content Creator (CDI) | https://carrieres.alpes2030.org/jobs/8484063-social-media-manager-content-creator-f-h-cdi
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Auditeur interne (Direction de la Conformité) | https://carrieres.alpes2030.org/jobs/8478264-stage-auditeur-interne-f-h
+- 2026-09-30 | Stage | Compagnie des Alpes (domaines skiables, parcs de loisirs) | Stagiaire Droit des Affaires (élève-avocat) | https://fr.linkedin.com/jobs/view/4473734799
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - PMO Villages et Hébergement | https://carrieres.alpes2030.org/jobs/8477735-stage-pmo-villages-et-hebergement-f-h
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - PMO Cleaning & Waste - Food & Beverage | https://carrieres.alpes2030.org/jobs/8478142-stage-pmo-cleaning-waste-food-beverage-f-h
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Planification opérationnelle | https://carrieres.alpes2030.org/jobs/8479963-stage-planification-operationnelle-f-h
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Livraison des compétitions - pôle de glace | https://carrieres.alpes2030.org/jobs/8480361-stage-livraison-des-competitions-pole-de-glace-f-h
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Hébergement | https://carrieres.alpes2030.org/jobs/8478288-stage-hebergement-f-h
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Coordination et suivi des activités services aux comités nationaux Olympique et Paralympique | https://carrieres.alpes2030.org/jobs/8480471-stage-coordination-et-suivi-des-activites-services-aux-comites-nationaux-olympique-et-paralympique-f
+- 2026-09-30 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Planification et gestion de projet | https://carrieres.alpes2030.org/jobs/8480165-stage-planification-et-gestion-de-projet-f-h
+- 2026-09-30 | CDI | Alpes 2030 (COJOP Jeux d'hiver) | Chargé de mission événements CIO/IPC (CDI) | https://carrieres.alpes2030.org/jobs/8480634-charge-de-mission-evenements-cio-ipc-f-h-cdi
+- 2026-09-29 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - PMO Transport - Arrivées & Départs | https://carrieres.alpes2030.org/jobs/8472715-stage-pmo-transport-arrivees-departs-f-h
+- 2026-09-29 | Stage | Undrtd Sport (Underrated Sport) | Stage Communication, Événementiel & Engagement sportif (6 mois) | https://www.linkedin.com/jobs/view/4471784160
+- 2026-09-29 | CDD | Communauté d'agglomération Arlysère (Halle Olympique) | Chef de projets événementiels - Halle Olympique d'Albertville (H/F) | https://www.emploi-territorial.fr/offre/o073260929000040-chef-projets-evenementiels
+- 2026-09-28 | CDI | Sportfive | Account Executive - Brand Solutions (compte EA SPORTS) | https://www.linkedin.com/jobs/view/4471538906
+- 2026-09-28 | Stage | Lacoste | Stage - Assistant(e) Chef de Produit Sport Performance | https://careers.lacoste.com/fr/annonce/4619019-stage-assistante-chef-de-produit-sport-performance-fh-75016-paris
+- 2026-09-25 | Stage | BNP Paribas | Stage - Chef de projet sponsoring tennis junior - H/F | https://group.bnpparibas/emploi-carriere/offre-emploi/stage-chef-de-projet-sponsoring-tennis-junior-h-f
+- 2026-09-24 | Stage | Babolat | Stagiaire Assistant Sales Analyst | https://www.hellowork.com/fr-fr/emplois/82596527.html
+- 2026-09-24 | Stage | Babolat | Stagiaire Assistant Graphiste (Brand Activation) | https://www.hellowork.com/fr-fr/emplois/82596500.html
+- 2026-09-24 | Stage | Babolat | Stagiaire Chargé de Missions Digital (CRM, web, e-commerce) | https://www.hellowork.com/fr-fr/emplois/82596529.html
+- 2026-09-23 | Alternance | Intersport (Saint-Père-sur-Loire) | Commercial en alternance (Clubs sportifs, collectivités et entreprises) | https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6ab450967caaafd3f59713cd/commercial-en-alternance-h-f-clubs-sportifs-collectivites-et-entreprises
+- 2026-09-23 | CDD | ARCHE Agglo | Chargé(e) de mission tourisme sport nature | https://www.emploi-territorial.fr/offre/o007260923001090-chargE-e-mission-tourisme-sport-nature
+- 2026-09-23 | Stage | EGYM Wellpass (ex-Gymlib) | Customer Success & Marketing Specialist - Stage (6 mois) | https://jobs.ashbyhq.com/egym/55bc4f37-dc0d-49b8-a4e0-8d7ae885a19e
+- 2026-09-22 | Stage | CANAL+ | Stage - Assistant(e) Acquisitions Sports | https://www.hellowork.com/fr-fr/emplois/83657345.html
+- 2026-09-22 | Stage | Red Bull France | Stage Contrôle de Gestion | https://jobs.smartrecruiters.com/RedBull/744000151046098
+- 2026-09-21 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Assistant(e) Ski Freestyle & Snowboard | https://carrieres.alpes2030.org/jobs/8430536-stage-assistant-e-ski-freestyle-snowboard
+- 2026-09-21 | Stage | Decathlon | Stage - Assistant(e) Product Growth / Chef(fe) de projet digital | https://joinus.decathlon.fr/fr/annonce/4607997-assistant-e-product-growth-chef-fe-de-projet-digital-hf-74940-annecy
+- 2026-09-20 | CDI | Babolat | Chargé d'Activation Padel (partenariats All In Padel, 4Padel...) | https://www.hellowork.com/fr-fr/emplois/80398359.html
+- 2026-09-18 | Stage | Babolat | Stagiaire Assistant Chef de Produit - Chaussures | https://www.hellowork.com/fr-fr/emplois/83510127.html
+- 2026-09-18 | Stage | Ville d'Angers | Stage - Chargé de Projet Événementiel Sportif - Village des Sports (Tout Angers Bouge 2027) | https://www.hellowork.com/fr-fr/emplois/83506975.html
+- 2026-09-18 | Stage | Trainsweateat | Stage - Account Manager | https://jobs.lever.co/trainsweateat/f9009e84-359b-4aa3-a98b-8b4e28701c63
+- 2026-09-17 | Stage | Club Sportif Étudiants Sénégal France (CSESF) | Stagiaire Stratégie Marketing Digitale (app Jeu Égal Connect) | https://www.hellowork.com/fr-fr/emplois/81380655.html
+- 2026-09-17 | CDI | LFP (Ligue de Football Professionnel) | Juriste droit du sport et/ou droit du travail - Département des Compétitions (pôle Contrats) | https://www.lawprofiler.com/offres-emploi-juridique-lfp-ligue-de-football-professionnel-cdi-juriste-droit-du-sport-et-ou-droit-du-travail-3-ans-min-d-exp-h-f-15220.html
+- 2026-09-17 | Stage | FFT (Roland-Garros) | Stage - Service Clients - Février 2027 | https://jobs.fft.fr/jobs/8393393-stage-service-clients-fevrier-2027
+- 2026-09-17 | CDD | Trainsweateat | Account Manager - CDD 6 mois (remplacement congé maternité) | https://jobs.lever.co/trainsweateat/79c0de9e-3be7-4415-8b14-094c8deb2b7a
+- 2026-09-16 | Stage | Babolat | Stagiaire Assistant Sales Opérations | https://www.hellowork.com/fr-fr/emplois/83435883.html
+- 2026-09-16 | CDI | Sportfive | Sponsorship Sales Manager | https://hub.globalsportsjobs.com/vacancy/sponsorship-sales-manager-fr-glap137714
+- 2026-09-16 | Stage | FFT (Roland-Garros) | Stage - Expérience Clients & Dispositif Cadeaux - Mars 2027 | https://jobs.fft.fr/jobs/8387232-stage-experience-clients-dispositif-cadeaux-mars-2027
+- 2026-09-16 | Stage | Decathlon | Stage événementiel - Chargé(e) de projet Vitalsport (mi-mars / mi-septembre 2027) | https://joinus.decathlon.fr/fr/annonce/4602025-stage-evenementiel-charge-e-de-projet-vitalsport-mi-mars-mi-septembre-2027-35830-betton
+- 2026-09-15 | Stage | FFT (Roland-Garros) | Stage - Expérience Clients & Univers Gastronomie - Janvier 2027 | https://jobs.fft.fr/jobs/8381388-stage-experience-clients-univers-gastronomie-janvier-2027
+- 2026-09-15 | Stage | UrbanSoccer | Stage assistant opérationnel - UrbanSoccer Lyon Brignais | https://urbansoccer.softy.pro/offers/221588
+- 2026-09-15 | Stage | Campsider | Sport Account Manager (Stage) | https://campsider.welcomekit.co/jobs/sales-account-management-stage-h-f_paris
+- 2026-09-15 | Stage | Campsider | Bras-droit CEO (Stage) | https://campsider.welcomekit.co/jobs/bras-droit-ceo-stage_paris
+- 2026-09-14 | Stage | Fédération Française de Volley | Stage - Événementiel : Responsabilité sociétale des événements (mars 2027) | https://www.ffvolley.org/data/Files/ffvb/emploi/FFvolley_Offre_de_stage_Secteur_EVE_mars_2027-2.pdf
+- 2026-09-14 | Stage | Fédération Française de Volley | Stage - Événementiel : Coordination opérationnelle des événements (mars 2027) | https://www.ffvolley.org/data/Files/ffvb/emploi/FFvolley_Offre_de_stage_Secteur_EVE_mars_2027-3.pdf
+- 2026-09-14 | Stage | Fédération Française de Volley | Stage - Événementiel : Service aux équipes (mars 2027) | https://www.ffvolley.org/data/Files/ffvb/emploi/FFvolley_Offre_de_stage_Secteur_EVE_mars_2027-4.pdf
+- 2026-09-11 | Stage | Sportfive | Stage - Assistant(e) ADV | https://hub.globalsportsjobs.com/vacancy/stage-assistant-e-adv-fr-glap137291
+- 2026-09-10 | Stage | Paris Saint-Germain | Stagiaire Audit Interne - Janvier 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/fr-FR/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-AUDIT-INTERNE-F-H---JANVIER-2027_014713
+- 2026-09-08 | Stage | FFT (Roland-Garros) | Stage - Relations Institutionnelles & Coordination de Projets - Janvier 2027 | https://jobs.fft.fr/jobs/8339111-stage-relations-institutionnelles-coordination-de-projets-janvier-2027
+- 2026-09-08 | CDI | Automobile Club de l'Ouest (24 Heures du Mans) | Chargé(e) de développement e-commerce (merchandising) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtdkNsZjVY
+- 2026-09-03 | Stage | FFT (Roland-Garros) | Stage - Cabinet du Président - Février 2027 | https://jobs.fft.fr/jobs/8316551-stage-cabinet-du-president-fevrier-2027
+- 2026-08-10 | CDI | Fédération Française de Rugby | Chargé de mission - Autorité de régulation du rugby (A2R) | https://careers.flatchr.io/fr/company/ffr/vacancy/l5kdwnbxko5pyawr-charge-de-mission-autorite-de-regulation-du-rugby-h-f/
+- n.c. | CDD | Picture Organic Clothing | Chargé(e) de Contenu SEO/GEO & Support E-Commerce - CDD | https://www.picture-organic-clothing.com/fr-fr/pages/join-us
+
 ## Veille du 2026-10-08 (2 offres)
 
 - 2026-10-05 | Stage | Stellantis (Peugeot) | Stage - Chef de projet Événementiel et Relations Presse (Peugeot : lancements, 24 Heures du Mans) | https://fr.linkedin.com/jobs/view/4473676125
