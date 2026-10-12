@@ -5,7 +5,7 @@ le skill met à jour cette liste (portails qui ont donné des offres, portails d
 stériles, nouveaux portails découverts). Le skill `veille-ssb` lit ce fichier comme
 référence avant de choisir où chercher.
 
-Dernière mise à jour : 2026-10-09 (89 nouvelles offres, au lendemain d'une veille à 213).
+Dernière mise à jour : 2026-10-12 (26 nouvelles offres : la plupart des sources étaient déjà épuisées par les veilles des 7-9 octobre).
 
 ## Portails employeurs validés (accès libre, fiables)
 
@@ -112,6 +112,38 @@ Dernière mise à jour : 2026-10-09 (89 nouvelles offres, au lendemain d'une vei
   (0 offre, passe par JobTeaser), ligues LNR/LNB/LNH/LNV, FFBB, Agence nationale du Sport, CDOS, INSEP,
   Ville de Paris (576 offres lues), annonceurs hors Crédit Agricole et BNP Paribas.
 
+## Ajouts du 2026-10-12
+
+- **HelloWork** : le JSON-LD est écrit `type="application/ld&#x2B;json"` (adapter les regex). `datePosted` est
+  rafraîchi à chaque republication : l'identifiant donne l'ancienneté réelle (~84,3 M au 12/10, ~82,2 M vers le 12/08).
+- **Accès corrigés** :
+  - Havas : `wd3.myworkdaysite.com/wday/cxs/havas/GroupExternalCareerSite/jobs` (l'ancienne adresse répond 404).
+  - DigitalRecruiters (Decathlon, Lacoste) : POST `api.digitalrecruiters.com/public/v1/careers-site/job-ads?domainName=<domaine>&limit=100&page=N&locale=fr_FR`
+    corps `{"filters":{}}` ; fiche datée par GET `/job-ads/<id>?...&withJsonld=1`.
+  - FDJ United : `/search-jobs/results` vide ; utiliser `careers.fdjunited.com/en/sitemap.xml` (fiche FR en remplaçant
+    `/en/job/` par `/fr/emploi/`) ou paginer `/fr/search-jobs?p=N`.
+  - ACO (recrutement.lemans.org) : rendu JS, lire au navigateur intégré.
+  - GlobalSportsJobs : date et lien d'origine seulement sur `/vacancy/<slug>` (l'id UUIDv7 encode aussi la date).
+  - La Bonne Alternance : ajouter `type_filter_label=Offres d'emploi partenaires` (sinon candidatures spontanées).
+  - Meent : offres et publishDate embarquées dans le HTML de `/nos-offres`.
+  - choisirleservicepublic : recherche `/nos-offres/filtres/mot-cles/<mot>/date-de-publication/14_derniers_jours/page/N/`.
+  - emploi-territorial : `?search-type-contrat=06` (stages), `05` (apprentissage), combinable avec `&page=N`.
+  - Village de la Justice : `browse.php?cat=20&offset=N` liste toutes les annonces.
+- **Nouveaux portails** : compagniedesalpes.softy.pro/offers?page=N (domaines skiables, JSON dans `data-page`) ;
+  SmartRecruiters `Ubisoft2` (et non `Ubisoft`) ; fftir.org `/wp-json/wp/v2/posts?search=offre` (PDF image) ;
+  ffhandball.fr `/wp-json/wp/v2/internal-ad` et `external-ad` ; Fever Greenhouse `feverup` ; Workable
+  (`apply.workable.com/api/v3/accounts/<slug>/jobs`, Two Circles) ; FFA Recruitee ; PMU `pmu-recrute.talent-soft.com`
+  (0 offre) ; ANJ `choisirleservicepublic.gouv.fr/employeurs/330_autorite-nationale-des-jeux-anj_1/` ; TotalEnergies
+  RSS `jobs.totalenergies.com/fr_FR/careers/SearchJobs/<mot>/feed/` ; Allianz, Orange et Société Générale lisibles au navigateur intégré.
+- **LinkedIn** : « stage agence événementielle sport » fait remonter les petites agences (Eventeam, Ball'N Connect) ;
+  les employeurs relayés par Profession Sport & Loisirs (ex. OSARC) ne publient que là.
+- **Stériles ou bloqués ce jour** : Taleez CNOSF/OM/Mouratoglou (connexion refusée ; fff.taleez.com répond), Welcome
+  to the Jungle (403), recrutement.fff.fr et ligues *.fff.fr (403), recrutement.ffe.com (Cloudflare), Macif (403),
+  21 pages Welcome Kit de startups vides (Karmine Corp, Gymlib, Kiplin, Weezevent, Onefootball...), Eurosport via WBD,
+  Sodexo Live!, Golazo (rien en France), Compagnie des Alpes sur JobTeaser (403, mais softy.pro marche), sites emploi
+  des grandes villes (404 ou sans liste), Village de la Justice et Law Profiler (rien de nouveau en sport).
+- **FFBB** : descriptions en image de PDF, missions et expérience invérifiables : offres écartées.
+
 ## Portails stériles ou bloqués (à retester occasionnellement)
 
 - **Bloqués** : welcometothejungle.com (403, ce qui cache l'esport, la sportstech et les petites
@@ -128,6 +160,6 @@ Dernière mise à jour : 2026-10-09 (89 nouvelles offres, au lendemain d'une vei
 
 ## À tester
 
-Golazo (cookies à accepter), Mouratoglou Academy (Taleez en JS), Sodexo Live! (SmartRecruiters : 0 offre en
-France), Alltricks (reposts à surveiller), Compagnie des Alpes (offres seulement sur LinkedIn le 2026-10-09).
+Mouratoglou Academy (Taleez refuse les connexions le 2026-10-12), Alltricks (republications en masse, dates de début passées).
+Testés le 2026-10-12 : Sodexo Live! et Golazo (rien en France), Compagnie des Alpes (validé via softy.pro).
 Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezevent.

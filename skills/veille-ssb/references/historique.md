@@ -3,6 +3,35 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-12 (26 offres)
+
+- 2026-10-12 | CDI | Sport Market (séjours et stages sportifs) | Assistant Chef de Projet (H/F) | https://www.hellowork.com/fr-fr/emplois/84328437.html
+- 2026-10-12 | Alternance | Extraterrien (média et podcast sport) | Alternance Montage Vidéo - Média Sport & Podcast | https://www.linkedin.com/jobs/view/4475680713
+- 2026-10-10 | Alternance | UTMB Group | Alternance Assistant RSE (H/F) - UTMB World Series | https://www.hellowork.com/fr-fr/emplois/84308696.html
+- 2026-10-10 | CDD | Guingamp-Paimpol Agglomération | Chargé de mission sport (sports de pleine nature, équipements, événements sportifs) | https://www.emploi-territorial.fr/offre/o022261009001411-charge-mission-sport
+- 2026-10-09 | CDI | Office des sports de l'Agglomération de la Région de Compiègne (OSARC) | Chargé de communication, animation et coordination (H/F) | https://www.linkedin.com/jobs/view/4476858269
+- 2026-10-09 | Stage | FDJ United | Stage - Assistant(e) E-merchandising ParionsSport Point de Vente | https://careers.fdjunited.com/fr/emploi/boulogne-billancourt/assistant-e-merchandising-parionssport-point-de-vente-f-h-stage/3226/45738131200
+- 2026-10-09 | Stage | Decathlon | Stage organisation du Vitalsport (Decathlon Puilboreau) | https://joinus.decathlon.fr/fr/annonce/4639051-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-17138-puilboreau
+- 2026-10-09 | Alternance | Fédération Française de Voile | Alternance - Chargé(e) d'accompagnement des structures (Destination Voile, labels et marques FFVoile) | https://www.linkedin.com/jobs/view/4476850566
+- 2026-10-09 | Stage | Salomon (Amer Sports) | Internship - Product Innovation & Consumer Insights Assistant M/F/X | https://jobs.smartrecruiters.com/Salomon/744000154717934-internship-product-innovation-consumer-insights-assistant-m-f-x
+- 2026-10-09 | CDD | Rectorat de Paris (SDJES de la Seine-Saint-Denis) | Chargé de mission développement des politiques sportives (F/H) - SDJES 93 | https://choisirleservicepublic.gouv.fr/offre-emploi/charge-de-mission-developpement-des-politiques-sportives---bobigny-93-fh-reference-MENJ-01-2026-48644/
+- 2026-10-08 | Stage | Eventeam Group (Eventeam Live) | Stage - Assistant(e) Service Client (hospitalités grands événements sportifs) | https://www.linkedin.com/jobs/view/4475992761
+- 2026-10-08 | CDI | FC Lorient | CM Esport - Assistant Team Manager | https://www.hellowork.com/fr-fr/emplois/84205631.html
+- 2026-10-08 | CDD | Autorité nationale des jeux (ANJ) | Référent juridique H/F (données personnelles, agréments des opérateurs de jeux en ligne) | https://choisirleservicepublic.gouv.fr/offre-emploi/referent-juridique-hf-reference-MEF_2026-33204/
+- 2026-10-08 | Stage | Feelfree Gear Europe | Stage Communication & Marketing digital (Route du Rhum 2026) | https://www.linkedin.com/jobs/view/4477159804
+- 2026-10-07 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage | PMO Broadcast & Presse (F/H) | https://carrieres.alpes2030.org/jobs/8512394-stage-pmo-broadcast-presse-f-h
+- 2026-10-06 | CDI | Fédération Française de Volley | Assistant(e) au pôle Performance (équipes de France, DTN) | https://www.ffvolley.org/data/Files/ffvb/emploi/FFvolley_Offre_Emploi_Assistante_Pole_Performance.pdf
+- 2026-10-05 | Stage | Fédération Française de Tir | Stage - Organisation des compétitions et championnats (OCC) au Centre National de Tir Sportif | https://www.fftir.org/offre-de-stage-chateauroux-deols-cnts/
+- 2026-10-05 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage | Assistant Production des Sites - Villages (F/H) | https://carrieres.alpes2030.org/jobs/8500502-stage-assistant-production-des-sites-villages-f-h
+- 2026-10-05 | Stage | Compagnie des Alpes | Stagiaire chargé d'études marketing et stratégie tarifaire (H/F) - domaines skiables | https://compagniedesalpes.softy.pro/offers/220559
+- 2026-09-25 | CDD | Domaine Skiable de Serre Chevalier (Compagnie des Alpes) | Assistant marketing & commercial (H/F) - CDD 6 mois | https://compagniedesalpes.softy.pro/offers/222264
+- 2026-09-21 | Stage | Marathon des Sables (MDS) | Stage - Assistant(e) Chef de projet bénévoles | https://www.sportstrategies.com/offre-emploi/assistant-chef-de-projet-benevole/
+- 2026-09-20 | CDD | Comité Départemental Handisport du Tarn | Chargé.e de mission (développement et structuration du handisport) | https://www.linkedin.com/jobs/view/4469387646
+- 2026-09-15 | Stage | CANAL+ | Stage - Assistant(e) d'Édition - Journaliste Sport CANAL+ Afrique | https://www.hellowork.com/fr-fr/emplois/83401971.html
+- 2026-09-15 | Stage | Lacoste | Stage - Global Footwear Trade Marketing Assistant (H/F) | https://careers.lacoste.com/fr/annonce/4598693-stage-global-footwear-trade-marketing-assistant-hf-75016-paris
+- 2026-09-15 | Stage | EssilorLuxottica (Oakley) | Stage - Assistant(e) Trade Marketing Ray-Ban & Oakley (H/F) | https://careers.essilorluxottica.com/job/Paris-STAGE-Assistant%28e%29-Trade-Marketing-Ray-Ban-&-Oakley-%28HF%29/1437240633/
+- 2026-09-09 | Stage | ACO (Automobile Club de l'Ouest, 24 Heures du Mans) | Stage Assistant(e) Commercial(e) - ACO Formations (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtWExDM0Nv
+
 ## Veille du 2026-10-09 (89 offres)
 
 - 2026-10-09 | Alternance | Plebicom / Ma Petite Sponso | Commercial(e) Développement Partenariats Sportifs (alternance) | https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6ac816caf1f38f567279900b/commercial-e-developpement-partenariats-sportifs-h-f
