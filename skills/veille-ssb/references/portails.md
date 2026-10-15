@@ -232,6 +232,10 @@ Dernière mise à jour : 2026-10-15 au soir (moissonneur d'API et offres à l'é
   Novabox ; JSON avec en-tête Origin), talent.com (date sur la fiche, lien employeur derrière un anti-robot : retrouver
   l'offre par son intitulé), lesportrecrute.fr de nouveau lisible en curl, France Travail (liste en curl, détail au
   navigateur), fac de sport de Strasbourg (RSS F3S).
+- **Clubs pros (sondage de 78 entités le 16/10)** : aucun ATS public avec des offres. Ils publient sur HelloWork par lots
+  (multidiffuseur) : chercher le NOM DU CLUB seul sur HelloWork (Stade Rennais, FC Lorient, FC Metz, Stade Toulousain,
+  Stade Rochelais...) et sur LinkedIn. Taleez coupe l'IP une quinzaine de minutes après une dizaine de requêtes.
+  Bourse de l'emploi FFGolf : HTML, 77 offres, filtres marketing et stage. Racing 92 : join.com vide.
 - **Bloqués ou stériles** : optioncarriere, jobted (anti-robot JS) ; cadremploi, keljob, emploi.lefigaro, monster, AXA,
   intersport.fr, Fidal, Fieldfisher, Kearney (403) ; iquesta (connexion) ; Village de la Justice encore en 403 le 16/10 ;
   Workday 422 pour Live Nation/Ticketmaster, Renault, L'Oréal ; écoles (AMOS, ISC, ESSCA, ESSEC) via JobTeaser seulement.

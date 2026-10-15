@@ -892,6 +892,26 @@
    "categorie": "Marque / Sponsor",
    "secteur": "Transport",
    "note": "Flux RSS Talentsoft : 20 dernières offres datées, beaucoup de stages (data, revenue management) ; rien de sport ce jour."
+  },
+  {
+   "nom": "FFHandball (annonces internes du siège)",
+   "ats": "wordpress",
+   "url": "https://www.ffhandball.fr/wp-json/wp/v2/internal-ad",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Handball",
+   "note": "Connue de portails.md mais absente de sources.json. 3 annonces datées le 2026-10-16 (stage vidéaste du 18/09, apprentissages contrôle de gestion). Le type voisin external-ad (4 annonces) ne relaie que des postes d'éducateurs de clubs : ne pas l'ajouter."
+  },
+  {
+   "nom": "FFA (Fédération Française d'Athlétisme)",
+   "ats": "recruitee",
+   "slug": "federationfrancaisedathletisme",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Athlétisme",
+   "note": "Lien affiché sur athle.fr/emplois. API /api/offers/ testée le 2026-10-16 : une seule offre, la candidature spontanée du 13/04/2026. Source peu productive mais vivante, gardée pour capter les prochains postes du siège."
   }
  ]
 }

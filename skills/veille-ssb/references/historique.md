@@ -3,6 +3,10 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-16 (1 offres)
+
+- 2026-10-15 | CDD | Stade Rennais FC | Comptable H/F | https://www.hellowork.com/fr-fr/emplois/84467531.html
+
 ## Veille du 2026-10-16 (13 offres)
 
 - 2026-10-14 | Stage | Eventeam Group (KENEO) | STAGE - Assistant(e) Chef(fe) de projet événementiel | https://recrutement.eventeam-group.com/jobs/8547219-stage-assistant-e-chef-fe-de-projet-evenementiel
