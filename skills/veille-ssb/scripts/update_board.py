@@ -6,8 +6,9 @@ Met à jour le tableau en ligne des offres (data/offres.json) après une veille.
 Le tableau garde les offres des veilles précédentes tant qu'elles sont ouvertes,
 et y ajoute les nouvelles. À chaque passage :
   - une offre déjà au tableau est retirée si sa date de clôture est passée, si elle
-    a été publiée il y a plus de --max-age jours, ou si son lien est mort (404/410
-    ou page « offre expirée / plus disponible ») ;
+    a été publiée il y a plus de --max-age jours, ou si son lien est mort (404/410,
+    page « offre expirée / plus disponible », ou redirection vers une page qui ne
+    porte plus l'identifiant de l'offre, typiquement la liste des offres) ;
   - les nouvelles offres sont ajoutées avec ajoutee_le = date de la veille ;
   - leurs liens sont ajoutés en tête de references/historique.md.
 
@@ -39,6 +40,10 @@ CLOSED_MARKERS = (
     "n’accepte plus de candidatures", "this job is no longer available",
 )
 CLOSING_RE = re.compile(r"(cl[ôo]ture|jusqu'au)\s*(?:le\s*)?(\d{2})/(\d{2})(?:/(\d{4}))?", re.I)
+# Identifiant d'offre dans le chemin d'une URL : un UUID, ou un mot qui contient au moins
+# 4 chiffres d'affilée (8380861, glap140030, 1370323355, o049261013000729...).
+OFFER_ID_RE = re.compile(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}|[a-z]*\d{4,}[a-z0-9]*", re.I)
+YEAR_RE = re.compile(r"(19|20)\d\d")
 
 
 def closing_date(offer, year):
@@ -53,16 +58,47 @@ def closing_date(offer, year):
 
 def link_status(url):
     """'ok', 'mort' ou 'inconnu' (erreur réseau, 403, 429 : on garde l'offre)."""
+    return check_link(url)[0]
+
+
+def check_link(url):
+    """(statut, motif, URL finale après redirections)."""
     safe = urllib.parse.quote(url, safe=":/?=&%#~-_.()+,")
     req = urllib.request.Request(safe, headers={"User-Agent": UA, "Accept-Encoding": "identity"})
     try:
         with urllib.request.urlopen(req, timeout=25) as resp:
+            final = resp.geturl()
             body = resp.read(400_000).decode("utf-8", "ignore").lower()
     except urllib.error.HTTPError as exc:
-        return "mort" if exc.code in (404, 410) else "inconnu"
+        return ("mort" if exc.code in (404, 410) else "inconnu"), f"HTTP {exc.code}", url
     except Exception:  # noqa: BLE001 - réseau capricieux : ne pas retirer l'offre pour ça
-        return "inconnu"
-    return "mort" if any(m in visible_text(body) for m in CLOSED_MARKERS) else "ok"
+        return "inconnu", "erreur réseau", url
+    if redirect_lost_offer_id(url, final):
+        return "mort", "redirigée vers une page sans l'offre", final
+    if any(m in visible_text(body) for m in CLOSED_MARKERS):
+        return "mort", "page « offre fermée »", final
+    return "ok", "", final
+
+
+def offer_ids(url):
+    """Identifiants d'offre lus dans le chemin de l'URL (les années seules ne comptent pas)."""
+    path = urllib.parse.unquote(urllib.parse.urlsplit(url).path)
+    return [i for i in OFFER_ID_RE.findall(path) if not YEAR_RE.fullmatch(i)]
+
+
+def redirect_lost_offer_id(url, final):
+    """Vrai si une redirection a perdu l'identifiant de l'offre pour finir sur une page
+    sans identifiant d'offre, typiquement la liste des offres : elle répond 200 et
+    passerait pour un lien vivant (anciens liens hub.globalsportsjobs.com/vacancy/...,
+    redirigés vers /jobs). Une redirection vers une autre fiche (join.com renumérote
+    ses offres) n'est pas comptée."""
+    if final == url:
+        return False
+    ids = offer_ids(url)
+    if not ids:
+        return False  # pas d'identifiant reconnaissable : on ne peut pas trancher
+    target = urllib.parse.unquote(final).lower()
+    return not any(i.lower() in target for i in ids) and not offer_ids(final)
 
 
 def visible_text(html):
