@@ -213,6 +213,8 @@ __GSHELP__
     <div class="row" role="group" aria-label="Filtres rapides">
       <span id="contracts" class="row"></span>
       <button class="chip" id="idf" aria-pressed="false" type="button">Île-de-France</button>
+      <button class="chip" id="france" aria-pressed="false" type="button" hidden>En France</button>
+      <button class="chip" id="abroad" aria-pressed="false" type="button" hidden>À l'étranger</button>
       <button class="chip" id="fresh" aria-pressed="false" type="button" hidden>Nouvelles</button>
       <button class="chip" id="week" aria-pressed="false" type="button">Publiées ces 7 derniers jours</button>
       <button class="chip" id="soon" aria-pressed="false" type="button">Clôture dans les 10 jours</button>
@@ -239,7 +241,7 @@ __GSHELP__
   <p class="empty" id="empty" hidden>Aucune offre ne correspond à ces filtres. Cliquez sur « Effacer les filtres ».</p>
 
   <footer>
-    <p>Règles de la veille : offres non expirées, vérifiées sur leur page individuelle, publiées depuis moins de deux mois, lien vers le site de l'employeur dès qu'il existe.</p>
+    <p>Règles de la veille : offres non expirées, vérifiées sur leur page individuelle, publiées depuis moins de deux mois, en France et à l'étranger (Europe surtout), lien vers le site de l'employeur dès qu'il existe.</p>
     <p id="meta"></p>
   </footer>
 </div>
@@ -287,7 +289,7 @@ __GSHELP__
   const MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
   const DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
   const CONTRACTS = ["Stage", "Alternance", "CDI", "CDD", "Freelance"];
-  const state = { q: "", cat: "", contracts: new Set(), idf: false, week: false, soon: false, fresh: false, sort: "date", dir: -1 };
+  const state = { q: "", cat: "", contracts: new Set(), idf: false, france: false, abroad: false, week: false, soon: false, fresh: false, sort: "date", dir: -1 };
   const $ = id => document.getElementById(id);
 
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -308,6 +310,8 @@ __GSHELP__
     o._hay = norm([o.titre, o.entreprise, o.categorie, o.secteur, o.localisation, o.contrat, o.source, o.infos].join(" "));
   });
   const isNew = o => o.ajoutee_le === RUN;
+  const isAbroad = o => !!o.pays && o.pays !== "France";
+  const nAbroad = offers.filter(isAbroad).length;
   const nNew = offers.filter(isNew).length;
   const showNew = nNew > 0 && nNew < offers.length;
   const soonDays = o => o._close ? daysBetween(runDate, o._close) : null;
@@ -329,12 +333,21 @@ __GSHELP__
     $("contracts").appendChild(b);
   });
   const toggle = (id, key) => $(id).addEventListener("click", e => { state[key] = !state[key]; e.currentTarget.setAttribute("aria-pressed", state[key]); render(); });
-  ["idf", "week", "soon", "fresh"].forEach(k => toggle(k, k));
+  ["idf", "france", "abroad", "week", "soon", "fresh"].forEach(k => toggle(k, k));
+  // France et étranger s'excluent : activer l'un éteint l'autre.
+  [["france", "abroad"], ["abroad", "france"]].forEach(([k, other]) => $(k).addEventListener("click", () => {
+    state[other] = false; $(other).setAttribute("aria-pressed", "false"); render();
+  }));
+  if (nAbroad) {
+    $("france").hidden = $("abroad").hidden = false;
+    $("france").textContent = `En France · ${offers.length - nAbroad}`;
+    $("abroad").textContent = `À l'étranger · ${nAbroad}`;
+  }
   if (showNew) { $("fresh").hidden = false; $("fresh").textContent = `Nouvelles depuis la dernière veille · ${nNew}`; }
   $("q").addEventListener("input", e => { state.q = norm(e.target.value.trim()); render(); });
   $("cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
   $("reset").addEventListener("click", () => {
-    Object.assign(state, { q: "", cat: "", idf: false, week: false, soon: false, fresh: false }); state.contracts.clear();
+    Object.assign(state, { q: "", cat: "", idf: false, france: false, abroad: false, week: false, soon: false, fresh: false }); state.contracts.clear();
     $("q").value = ""; $("cat").value = "";
     document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", "false"));
     render();
@@ -345,6 +358,8 @@ __GSHELP__
     if (state.cat && o.categorie !== state.cat) return false;
     if (state.contracts.size && !state.contracts.has(o.contrat)) return false;
     if (state.idf && !IDF.test(o.localisation || "")) return false;
+    if (state.france && isAbroad(o)) return false;
+    if (state.abroad && !isAbroad(o)) return false;
     if (state.fresh && !isNew(o)) return false;
     if (state.week && !(o._pub && daysBetween(o._pub, runDate) <= 7)) return false;
     if (state.soon) { const d = soonDays(o); if (d === null || d < 0 || d > 10) return false; }
@@ -502,11 +517,10 @@ STANDALONE = """<!doctype html>
 
 
 def infos(offer):
-    """Début / clôture : champ `infos`, sinon le contenu entre parenthèses de date_pub."""
-    if offer.get("infos"):
-        return offer["infos"]
+    """Début / clôture : le contenu entre parenthèses de date_pub, puis le champ `infos`."""
     m = re.search(r"\((.*)\)", offer.get("date_pub", ""))
-    return m.group(1) if m else ""
+    parts = [m.group(1) if m else "", offer.get("infos", "")]
+    return " · ".join(dict.fromkeys(x.strip() for x in parts if x and x.strip()))
 
 
 def main():
@@ -524,7 +538,7 @@ def main():
 
     data = json.load(open(args.input_json, encoding="utf-8"))
     run = args.date or data.get("date_maj") or data.get("date_execution") or datetime.date.today().isoformat()
-    keep = ("titre", "entreprise", "categorie", "secteur", "localisation", "contrat", "date_iso", "ajoutee_le", "lien", "source")
+    keep = ("titre", "entreprise", "categorie", "secteur", "localisation", "pays", "contrat", "date_iso", "ajoutee_le", "lien", "source")
     offers = [{**{k: o.get(k, "") for k in keep}, "infos": infos(o)} for o in data.get("offres", [])]
     offers.sort(key=lambda o: o.get("date_iso") or "", reverse=True)
 

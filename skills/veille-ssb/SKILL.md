@@ -35,6 +35,12 @@ merchandising, esport, médias sport, paris sportifs, droit du sport (juristes, 
 cabinets avec une pratique sport), finance du sport, politiques sportives (État,
 collectivités). Une veille complète en donne facilement 50 à 100.
 
+Zone : la France d'abord, et l'étranger pour les stages et postes juniors des grands clubs,
+instances (UEFA, FIFA, CIO, ligues), marques et agences, en Europe surtout (Royaume-Uni,
+Espagne, Italie, Allemagne, Suisse, Benelux, Portugal, Monaco, Irlande). Hors d'Europe,
+seulement si le programme est ouvert aux étudiants étrangers. Toujours le segment sport
+business : un poste à l'étranger n'est pas une raison d'élargir les métiers.
+
 Écarter : encadrement sportif (coach, éducateur, MNS, CTS), postes techniques, IT,
 entretien, sécurité, vente en magasin, postes demandant 4-5 ans d'expérience ou plus,
 annonces d'écoles sans employeur nommé, services civiques, bénévolat.
@@ -65,6 +71,16 @@ quand c'est possible.
 - Si on ne parvient pas à retrouver une source libre d'une offre, on ne la livre pas.
 
 ## Où chercher
+
+**D'abord le moissonneur d'API.** `scripts/harvest.py` interroge en une minute toutes les
+sources de `references/sources.json` (Workday, SmartRecruiters, Lever, Greenhouse, Ashby,
+Teamtailor, Workable, Breezy, Recruitee, Personio, flux RSS) et écrit les offres candidates
+déjà triées (moins de 60 jours, niveau junior, métiers sport business, Europe seulement hors
+de France, liens pas encore livrés). Un sous-agent relit ensuite chaque candidate avant
+qu'elle n'entre au tableau. Toute nouvelle source à API trouvée pendant une veille s'ajoute
+à `references/sources.json` (format en tête du fichier et de `harvest.py`) : elle sera
+interrogée automatiquement à chaque veille suivante. Une source bruyante se règle avec
+`"filtre": "sport"` (employeur hors sport), `"pays_filtre"` ou `"exclure"` (regex sur l'intitulé).
 
 La liste à jour des portails qui marchent, des agrégateurs utiles et des sources stériles
 est dans `references/portails.md`. La mettre à jour à chaque veille.
@@ -97,7 +113,9 @@ Familles de sources à couvrir, en parallèle (un sous-agent par famille) :
 1. Fraîcheur : publication dans les 2 derniers mois maximum (priorité absolue reste la
    non-expiration). Une prise de poste future est valable ; une offre dont la date de
    DÉBUT ou la date limite est déjà passée est à écarter.
-2. Localisation : France entière.
+2. Localisation : France entière, plus l'étranger (voir « Zone ») pour les stages, graduate
+   programmes et postes juniors. Noter dans `infos` la langue exigée et le droit de travail
+   quand l'offre l'impose (Royaume-Uni, États-Unis).
 3. Offre réellement ouverte, vérifiée sur la page individuelle (jamais sur une page de
    liste/recherche).
 4. Date de publication relevée précisément (JSON-LD `datePosted`, date affichée, champ de
@@ -151,7 +169,9 @@ où `offres.json` est un fichier que tu écris toi-même, de la forme :
       "date_iso": "2026-09-15",
       "date_pub": "15/09/2026 (début janv. 2027, clôture 30/11/2026)",
       "lien": "https://jobs.fft.fr/jobs/8380861-...",
-      "source": "jobs.fft.fr"
+      "source": "jobs.fft.fr",
+      "pays": "France",
+      "infos": "anglais courant exigé"
     }
   ],
   "bilan": {
@@ -172,6 +192,12 @@ où `offres.json` est un fichier que tu écris toi-même, de la forme :
   dans la colonne « Début / clôture ». Écrire « clôture JJ/MM/AAAA » quand la date limite
   est connue : la page web signale alors les offres qui ferment dans les 10 jours.
 - `contrat` : Stage, Alternance, CDI, CDD ou Freelance (contractuel de la fonction publique = CDD).
+  À l'étranger : internship/placement/Praktikum/prácticas = Stage, graduate programme = CDI.
+- `pays` : « France », ou le pays en français (« Royaume-Uni », « Suisse »...). La page web
+  s'en sert pour les filtres « En France » et « À l'étranger ». À l'étranger, écrire aussi le
+  pays dans `localisation` : « Londres (Royaume-Uni) ».
+- `infos` (facultatif) : langue, droit de travail, durée. Affiché avec la date de début ou
+  de clôture.
 
 Les scripts produisent, dans `out/` :
 - `veille-ssb-YYYY-MM-DD.xlsx` — le fichier Excel pour l'association (voir format ci-dessous).
@@ -215,19 +241,24 @@ Claude sur le Mac de Tom, le lundi et le jeudi à 8 h, depuis le clone `~/Automa
 Le tableau (`data/offres.json`) garde les offres des veilles précédentes tant qu'elles
 sont ouvertes. Une veille automatique se déroule ainsi :
 1. `site/pull.sh` dans `~/Automatisation-Job` (pull + date du jour).
-2. Chercher de NOUVELLES offres avec la méthode ci-dessus. Exclure tout lien déjà présent
-   dans `data/offres.json` ou dans `references/historique.md`. Pas de plafond par
-   employeur.
+2. Lancer le moissonneur :
+   `.venv/bin/python skills/veille-ssb/scripts/harvest.py --sources skills/veille-ssb/references/sources.json --board data/offres.json --history skills/veille-ssb/references/historique.md --date AAAA-MM-JJ --out out/candidats/AAAA-MM-JJ-api.json`
+   Un sous-agent relit les candidates (intitulé, `_extrait`, page de l'offre en cas de doute),
+   écarte ce qui sort du segment sport business ou du niveau junior, corrige catégorie et
+   contrat, et écrit `out/lots/AAAA-MM-JJ/api.json`.
+   En parallèle, les autres sous-agents cherchent de NOUVELLES offres dans les familles
+   sans API (méthode ci-dessus), en France et à l'étranger. Exclure tout lien déjà présent
+   dans `data/offres.json` ou dans `references/historique.md`. Pas de plafond par employeur.
 3. Chaque sous-agent écrit ses offres dans `out/lots/AAAA-MM-JJ/<famille>.json` (format
    ci-dessus, avec `date_iso` et `categorie`). Les fusionner avec
    `scripts/merge_lots.py out/lots/AAAA-MM-JJ/*.json --board data/offres.json --history references/historique.md --out out/nouvelles-AAAA-MM-JJ.json`
    (doublons et liens déjà livrés traités par le script).
-4. Lancer `site/publish.sh out/nouvelles-AAAA-MM-JJ.json AAAA-MM-JJ`. Le script revérifie
+4. Mettre à jour `references/portails.md` si de nouveaux portails ont été trouvés, et
+   `references/sources.json` pour toute nouvelle source à API validée.
+5. Lancer `site/publish.sh out/nouvelles-AAAA-MM-JJ.json AAAA-MM-JJ`. Le script revérifie
    les offres déjà au tableau (retire celles qui sont closes, mortes ou publiées il y a
    plus de 60 jours), ajoute les nouvelles, régénère l'Excel, le CSV et la page, met en
    ligne, puis commit et pousse `data/` et `references/` sur `main`.
-5. Mettre à jour `references/portails.md` si de nouveaux portails ont été trouvés, puis
-   commit et push.
 
 Zéro nouvelle offre est un résultat valable : lancer quand même `publish.sh` avec un
 fichier `{"offres": [], "bilan": {...}}` pour que les offres closes soient retirées.

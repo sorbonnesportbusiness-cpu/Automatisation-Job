@@ -69,7 +69,7 @@ def main():
             dropped.append(f"Plafond de {args.cap} atteint : {o['titre']} - {o.get('entreprise')}")
             continue
         seen_links.add(o["lien"]); seen_pairs.add(pair); per_employer[pair[0]] += 1
-        offers.append(o)
+        offers.append({k: v for k, v in o.items() if not k.startswith("_")})
     for _, lot in lots:
         b = {"ecartees": lot.get("ecartees", []), "portails_steriles": lot.get("portails_steriles", []),
              "nouveaux_portails": lot.get("nouveaux_portails", [])}

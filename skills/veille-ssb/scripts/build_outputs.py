@@ -82,11 +82,10 @@ COL_CONTRACT, COL_LINK = 8, 10
 
 
 def _infos(offer):
-    """Début / clôture : champ `infos`, sinon le contenu entre parenthèses de date_pub."""
-    if offer.get("infos"):
-        return offer["infos"]
+    """Début / clôture : le contenu entre parenthèses de date_pub, puis le champ `infos`."""
     m = re.search(r"\((.*)\)", offer.get("date_pub", ""))
-    return m.group(1) if m else ""
+    parts = [m.group(1) if m else "", offer.get("infos", "")]
+    return " · ".join(dict.fromkeys(x.strip() for x in parts if x and x.strip()))
 
 
 def build_workbook(offers, bilan, run_date_fr, run_date_iso):
