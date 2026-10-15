@@ -5,7 +5,7 @@ le skill met à jour cette liste (portails qui ont donné des offres, portails d
 stériles, nouveaux portails découverts). Le skill `veille-ssb` lit ce fichier comme
 référence avant de choisir où chercher.
 
-Dernière mise à jour : 2026-10-15 (49 nouvelles offres ; GlobalSportsJobs a migré, voir plus bas).
+Dernière mise à jour : 2026-10-15 au soir (moissonneur d'API et offres à l'étranger, voir plus bas).
 
 ## Portails employeurs validés (accès libre, fiables)
 
@@ -178,6 +178,41 @@ Dernière mise à jour : 2026-10-15 (49 nouvelles offres ; GlobalSportsJobs a mi
   (584 offres) ; Agence nationale du Sport (page emploi 404) ; France Télévisions, JobTeaser, Ironman, Le Public
   Système, Auditoire, Uniteam (403 ou connexion refusée) ; lesportrecrute.fr, recrutement.ffe.com, *.fff.fr ; Taleez
   Mouratoglou ; Société Générale (JS) ; BNP Paribas (403) ; CANAL+ (aucun stage sport).
+
+## Ajouts du 2026-10-15 (soir) : moissonneur d'API et étranger
+
+- **Moissonneur** : `scripts/harvest.py` lit toutes les sources de `references/sources.json` (55 au 15/10) en une
+  minute et écrit les candidates dans `out/candidats/<date>-api.json`. Types gérés : workday, smartrecruiters, lever,
+  greenhouse, ashby, teamtailor, workable, breezy, recruitee, personio, pinpoint, jobylon, schema_feed (softgarden),
+  rss / successfactors_rss, globalsportsjobs. Ne plus interroger ces sources à la main : chercher ailleurs et ajouter
+  toute nouvelle source à API dans `sources.json`.
+- **GlobalSportsJobs** : branché dans le moissonneur, 12 pays européens, `careerStage=0` (stages et jobs étudiants) ;
+  `q=intern` filtre par mot-clé. Le lien livré est l'`applicationUrl` de l'employeur (fiche GSJ réservée aux membres).
+- **Étranger, sources validées (API)** : UEFA et EFC (Jobylon 2972 et 3210), FIFA (`jobs.fifa.com/jobs.rss`), CIO
+  (RSS SuccessFactors `ioc.jobs.hr.cloud.sap`), OBS, Formula E, Premier League et Manchester United (Pinpoint, sans date :
+  la relever sur la fiche), Borussia Dortmund (`karriere.bvb.de/jobs.feed.json`), PSV (Recruitee `psv`), Arsenal et
+  Juventus (Teamtailor), City Football Group (RSS), DFB (Personio), Infront (Teamtailor), Red Bull (SmartRecruiters
+  mondial, très bruyant : regex `exclure`), Sportradar, Entain, PUMA, Nike, The North Face, CAA, IMG, Wasserman,
+  Two Circles, Riot, ESL FACEIT, Genius Sports, On, Strava, WHOOP, Amer Sports, DAZN.
+- **Étranger, HTML ou navigateur seulement** : Eintracht Frankfurt `klub.eintracht.de/jobs/ag/` (dates de clôture,
+  pas de publication) ; Atlético de Madrid `/ofertas` (date en clair) ; Club Brugge `jobs.clubbrugge.be/en` ; Everton
+  (sitemap + JSON-LD) ; Ajax (AFAS, JS) ; Tottenham (iTrent) ; West Ham (inRecruiting, jeton CSRF) ; Chelsea (API UKG
+  Ready sans date) ; World Rugby / RWC 2027 (XML SuccessFactors sans date) ; WADA (BambooHR `wada.bamboohr.com/careers/list`) ;
+  World Aquatics (Lucca) ; UK Sport `uksport.gov.uk/jobs-in-sport/search-all-vacancies?pg=N` (34 pages, agrégateur
+  britannique lisible) ; adidas `jobs.adidas-group.com/search/?q=intern&locationsearch=Herzogenaurach&sortColumn=referencedate&sortDirection=desc`.
+- **LinkedIn à l'étranger** : même recherche sans connexion avec `location=<pays en anglais>&f_E=1` (stages). La date
+  exacte est dans `<time datetime>` des cartes de recherche ; `id >> 22` ne marche pas sur les ID `/jobs/view`.
+  Employeurs trouvés ainsi : FC Bayern, Werder Brême, 1. FC Köln, Lidl-Trek, Würth, HYROX, Wimbledon, NAC Breda,
+  Albert Heijn (stage sponsoring), Sportium.
+- **Règle étranger** : Europe seulement (France, Royaume-Uni, Espagne, Italie, Allemagne, Suisse, Benelux, Portugal,
+  Monaco, Irlande, Autriche, pays nordiques, Pologne), postes juniors explicites. Les stages américains (PGA Tour, MLB,
+  ESPN, Nike Beaverton, LA28) exigent le droit de travailler aux États-Unis : écartés.
+- **France, nouveaux** : BOOST (cabinet de recrutement 100 % sport, Teamtailor, mandats AJ Auxerre, ESTAC, Winamax,
+  Asics), TOCA Social (Workable), Sorare (Ashby, tech seulement).
+- **Bloqués ou stériles** : jobsinfootball, sportbusiness.com, teamworkonline, workinsports (403) ; Formula 1 (Workday 422) ;
+  ATP, DP World Tour, America's Cup (403) ; Bayern et Feyenoord (timeout) ; Real Madrid et AC Milan (pas de portail) ;
+  LaLiga, WADA, World Athletics (aucune offre ouverte hors candidature spontanée) ; clubs de Ligue 1 et Top 14 toujours
+  sans ATS (LinkedIn seulement) ; stades français sans site carrières.
 
 ## Portails stériles ou bloqués (à retester occasionnellement)
 

@@ -3,6 +3,105 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-15 (96 offres)
+
+- 2026-10-15 | Stage | Sportradar | Sportradar's International Graduate Programme 2027/2028 (m/f/d) | https://jobs.smartrecruiters.com/Sportradar/744000155748244
+- 2026-10-15 | Stage | SmartWorkout (équipement de fitness, groupe Luni) | Assistant·e Marketing - Stage non rémunéré Décembre 2026 - Janvier 2027 | https://www.linkedin.com/jobs/view/4471451488
+- 2026-10-15 | CDI | City Football Group | Company Secretary Executive | https://careers.cityfootballgroup.com/job/Manchester-Company-Secretary-Executive/1448094133/
+- 2026-10-15 | CDI | Sportradar | Associate Ad Operations Specialist | https://jobs.smartrecruiters.com/Sportradar/744000155746839-associate-ad-operations-specialist
+- 2026-10-15 | CDD | UEFA | LED & VBR Operations Coordinator | https://emp.jobylon.com/jobs/390469-uefa-led-vbr-operations-coordinator/
+- 2026-10-14 | Stage | Paris Saint-Germain | STAGIAIRE BUSINESS ANALYST (F/H) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-BUSINESS-ANALYST--F-H----JANVIER-2027_014969
+- 2026-10-14 | Stage | Salomon | STAGE - Stagiaire Assistant Chef de Produit Bags & Packs M/F/X | https://jobs.smartrecruiters.com/Salomon/744000155555889
+- 2026-10-14 | Stage | Creative Artists Agency (CAA) | Brand Consulting Intern | https://caa.wd1.myworkdayjobs.com/Careers/job/London-United-Kingdom/Brand-Consulting-Intern_JR9294
+- 2026-10-14 | Stage | Creative Artists Agency (CAA) | CAA Base Intern | https://caa.wd1.myworkdayjobs.com/Careers/job/London-United-Kingdom-Fitzrovia/CAA-Base-Intern_JR9275
+- 2026-10-14 | Stage | Creative Artists Agency (CAA) | Creators Intern | https://caa.wd1.myworkdayjobs.com/Careers/job/London-United-Kingdom-Fitzrovia/Creators-Intern_JR9278
+- 2026-10-14 | Stage | PUMA | Accountant Intern | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/Barcelona-Office/Accountant-Intern_R43918/apply
+- 2026-10-14 | Stage | The Walt Disney Company (ESPN) | ESPN Content Sales Internship | https://www.linkedin.com/jobs/view/4478401886
+- 2026-10-14 | Stage | UEFA | Commercial Sustainability Intern | https://www.linkedin.com/jobs/view/4476648632
+- 2026-10-14 | Stage | PSV Eindhoven | Stage Match Operations Academy | https://werkenbij.psv.nl/o/stage-match-operations-academy
+- 2026-10-14 | Stage | PSV Eindhoven | Stage E-Commerce | https://werkenbij.psv.nl/o/stage-e-commerce
+- 2026-10-14 | CDI | Two Circles | Marketing Analyst (Early Careers Programme 2027) | https://apply.workable.com/j/EFF3A1D282
+- 2026-10-14 | CDI | Premier League (Premier League Studios) | Production Assistant | https://premierleague.pinpointhq.com/en/postings/e74843ba-3c44-493f-bec8-dd0c8aedc2e6
+- 2026-10-13 | Stage | Paris Saint-Germain | STAGIAIRE ASSISTANT CHEF DE PROJET SPONSORING (H/F) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-CHEF-DE-PROJET-SPONSORING--H-F----JANVIER-2027_014928
+- 2026-10-13 | Alternance | Infront Sports & Media | Dualer (Master) Student (m/w/d) im Bereich Eventorganisation | https://infrontsportsmediaag.teamtailor.com/de/jobs/8535186-dualer-master-student-m-w-d-im-bereich-eventorganisation
+- 2026-10-13 | Stage | SV Werder Bremen | Pflichtpraktikant*in (m/w/d) Marke, Marketing & Erlebnis – Events & Stadionerlebnis | https://www.linkedin.com/jobs/view/4476452239
+- 2026-10-13 | Stage | 1. FC Köln | Praktikum PreSales im Bereich B2B-Vermarktung beim 1. FC Köln (m/w/d) | https://www.linkedin.com/jobs/view/4476400737
+- 2026-10-13 | CDD | UEFA Events SA | Ticketing Venue Configuration Assistant | https://emp.jobylon.com/jobs/389729-uefa-ticketing-venue-configuration-assistant/
+- 2026-10-13 | CDD | UEFA | EURO Central Services Coordinator | https://emp.jobylon.com/jobs/384417-uefa-euro-central-services-coordinator/
+- 2026-10-12 | CDI | Red Bull | Paid, Earned, Managed and Owned Channels (PEMO) Graduate - 18 Month Program | https://jobs.smartrecruiters.com/RedBull/744000154958849
+- 2026-10-12 | CDI | Red Bull | Partnerships & Event Marketing Graduate - 18 Month Program | https://jobs.smartrecruiters.com/RedBull/744000154958569
+- 2026-10-12 | CDD | Betclic Group | CDD - Legal Counsel – Marketing F/M (Fixed-term 6 months) | https://betclic-group.breezy.hr/p/62e1d60a769501-cdd-legal-counsel-marketing-f-m-fixed-term-6-months
+- 2026-10-12 | Stage | PUMA | Internship Product Line Management CORE Footwear | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Headquarters/Internship-Product-Line-Management-CORE-Footwear_R43817
+- 2026-10-12 | Stage | Infront Sports & Media | Praktikant (m/w/d) Vertrieb & Organisation | https://infrontsportsmediaag.teamtailor.com/jobs/8532066-praktikant-m-w-d-vertrieb-organisation
+- 2026-10-12 | Stage | Infront Sports & Media | Praktikant (m/w/d) Eventumsetzung | https://infrontsportsmediaag.teamtailor.com/jobs/8531859-praktikant-m-w-d-eventumsetzung
+- 2026-10-12 | Stage | DFB (Fédération allemande de football) | Praktikum Digital Content - Video Production (m/w/d) | https://dfb.jobs.personio.de/job/2838366
+- 2026-10-12 | CDD | The All England Lawn Tennis Club (Wimbledon) | Championships Development Programme 2027 | https://www.linkedin.com/jobs/view/4478586013
+- 2026-10-12 | Stage | Lidl International | Praktikum Global Sports Partnerships im Radsport / Lidl-Trek | https://www.linkedin.com/jobs/view/4476074139
+- 2026-10-09 | Stage | EGYM Wellpass (ex-Gymlib) | Werkstudent Data Management Business Development (m/w/d) | https://jobs.ashbyhq.com/egym/4ceff566-f988-4ab6-ac22-96709092b9ce
+- 2026-10-09 | Stage | PUMA | Internship Sports Marketing Running | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Headquarters/Internship-Sports-Marketing-Running_R43792
+- 2026-10-09 | CDI | Nike | Sales Rep, Sport Spec, France | https://nike.wd1.myworkdayjobs.com/nke/job/Paris-France/Sales-Rep--Sport-Spec--France_R-92758
+- 2026-10-09 | CDI | CIO (Comité international olympique) | Promotion Events Trainee (Musée olympique) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Promotion-Events-Trainee-VD/1445958733/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS
+- 2026-10-09 | Stage | Sportium (CIRSA) | Prácticas curriculares en Comunicación o Marketing | https://www.linkedin.com/jobs/view/4475222329
+- 2026-10-09 | CDI | Sportradar | Sales Development Representative (SDR) - Spanish Speaking | https://jobs.smartrecruiters.com/Sportradar/744000154680429-sales-development-representative-sdr-spanish-speaking
+- 2026-10-09 | CDD | UEFA Events SA | Ticketing Operations Coordinator | https://emp.jobylon.com/jobs/389115-uefa-ticketing-operations-coordinator/
+- 2026-10-08 | Stage | Betclic Group | Stage - Data Analytics F/M | https://betclic-group.breezy.hr/p/ea81cc6d098601-stage-data-analytics-f-m
+- 2026-10-08 | Stage | PSV Eindhoven | Stage Allround Filmmaker | https://werkenbij.psv.nl/o/stage-allround-filmmaker
+- 2026-10-08 | Stage | Borussia Dortmund | Praktikant (m/w/d) Mädchen- und Frauenfußball | https://bvb.career.softgarden.de/jobs/67652187/Praktikant-m-w-d-M%C3%A4dchen--und-Frauenfu%C3%9Fball/
+- 2026-10-08 | CDI | Six Nations Rugby | Business Development Executive | https://www.linkedin.com/jobs/view/4476767290/
+- 2026-10-07 | Stage | Salomon | INTERNSHIP - Trade Marketing Trainee - M/F/X | https://jobs.smartrecruiters.com/Salomon/744000154072669
+- 2026-10-07 | Stage | Würth Deutschland | Praktikum Sportsponsoring - Event- und Projektmanagement (m/w/d) | https://www.linkedin.com/jobs/view/4467807318
+- 2026-10-07 | Stage | Albert Heijn | Stage Sportsponsoring | https://www.linkedin.com/jobs/view/4467748303
+- 2026-10-07 | CDD | Riot Games | Esports Admin and Sponsorship Account Executive (12 Month Contract) | https://www.riotgames.com/en/work-with-us/job/8259795?gh_jid=8259795
+- 2026-10-06 | Stage | Paris Saint-Germain | STAGIAIRE CHARGE(E) DE VEILLE & E-REPUTATION (H/F) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-CHARGE-E--DE-VEILLE---E-REPUTATION--H-F----JANVIER-2027_014856
+- 2026-10-06 | Stage | Red Bull | Internship Project Manager - Team Rottensteiner | https://jobs.redbull.com/int-en/internship-project-manager-team-rottensteiner--ref34532y
+- 2026-10-06 | Stage | Sportfive | Werkstudentin oder Werkstudent Marketing - Deutscher Handballbund | https://jobs.sportfive.com/job/Hamburg-Werkstudentin-oder-Werkstudent-%28wmd%29-Marketing-Deutscher-Handballbund-22087/1330170455/
+- 2026-10-06 | Stage | FC Bayern München | Praktikant Digital Activations & Content Sales (m|w|d) | https://www.linkedin.com/jobs/view/4474046187
+- 2026-10-06 | Stage | NAC Breda | NAC ZOEKT ALLROUND COMMUNICATIE STAGIAIR(E) | https://www.linkedin.com/jobs/view/4476354809
+- 2026-10-05 | Stage | HYROX | Intern Marketing (m/f/d) | https://www.linkedin.com/jobs/view/4473655327
+- 2026-10-02 | CDI | Red Bull | Motorsports Specialist (H/F) | https://jobs.smartrecruiters.com/RedBull/744000153137980
+- 2026-10-02 | Stage | Courir | Juriste Droit des Affaires Junior - F/H | https://jobs.smartrecruiters.com/Courir/744000153181700
+- 2026-10-02 | Stage | Sportfive | Finance Intern | https://jobs.sportfive.com/job/Altrincham-Finance-Intern-WA14-1RN/1370232055/
+- 2026-10-02 | Stage | British Rowing | Communications Internship | https://www.linkedin.com/jobs/view/4473140995
+- 2026-10-02 | Stage | FC Bayern München | Praktikant International Activation, Tours & Friendlies (m|w|d) | https://www.linkedin.com/jobs/view/4473110834
+- 2026-10-02 | CDI | Manchester City (City Football Group) | Activation Executive | https://careers.cityfootballgroup.com/job/Manchester-Activation-Executive/1443651033/
+- 2026-10-01 | Stage | Red Bull | Trainee Creators Marketing | https://jobs.smartrecruiters.com/RedBull/744000152991554
+- 2026-10-01 | Stage | Red Bull | Intern Culture Marketing | https://jobs.smartrecruiters.com/RedBull/744000152918629
+- 2026-10-01 | CDI | Red Bull | Sports Marketing Trainee (Graduate Program) | https://jobs.smartrecruiters.com/RedBull/744000152865869
+- 2026-10-01 | CDI | Red Bull | Media Network Trainee (Graduate Program) | https://jobs.smartrecruiters.com/RedBull/744000152865299
+- 2026-10-01 | CDI | Red Bull | Motorsports Marketing Trainee (Graduate Program) | https://jobs.smartrecruiters.com/RedBull/744000152865259
+- 2026-10-01 | CDI | Red Bull | Brand Marketing Trainee (Graduate Program) | https://jobs.smartrecruiters.com/RedBull/744000152863400
+- 2026-10-01 | Stage | Courir | Chargé(e) de Marketing Local - Stage de 6 mois - F/H | https://jobs.smartrecruiters.com/Courir/744000152885489
+- 2026-10-01 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage - Chargé(e) de mission planification stratégique & opérationnelle (F/H) | https://carrieres.alpes2030.org/jobs/8487133-stage-charge-e-de-mission-planification-strategique-operationnelle-f-h
+- 2026-10-01 | Stage | Entain | Praktikant:in Content Creation – Social Media & Activations | https://entaincareers.com/job-search/
+- 2026-09-30 | Stage | adidas | Internship - Creative Direction - Brand Identity | https://jobs.adidas-group.com/job/Herzogenaurach-INTERNSHIP-CREATIVE-DIRECTION-BRAND-IDENTITY-%28MFD%29-BY/1442907533/
+- 2026-09-30 | Stage | Infront Sports & Media | Praktikant (m/w/d) im Bereich Sponsoring | https://infrontsportsmediaag.teamtailor.com/jobs/8476257-praktikant-m-w-d-im-bereich-sponsoring
+- 2026-09-30 | CDI | Sportradar | Junior Digital Marketing Manager – Programmatic Trader | https://jobs.smartrecruiters.com/Sportradar/744000152623358
+- 2026-09-30 | Stage | adidas | Internship Opportunities - DTC Merchandising & Account Operations Franchise | https://jobs.adidas-group.com/job/Herzogenaurach-INTERNSHIP-OPPORTUNITIES-DTC-MERCHANDISING-&-ACCOUNT-OPERATIONS-FRANCHISE-%28MFD%29-BY/1442865333/
+- 2026-09-30 | Stage | adidas | Internship Opportunities - Finance, Controlling & Audit | https://jobs.adidas-group.com/job/Herzogenaurach-INTERNSHIP-OPPORTUNITIES-FINANCE%2C-CONTROLLING-&-AUDIT-%28MFD%29-BY/1442911533/
+- 2026-09-30 | Stage | DFB (Fédération allemande de football) | Praktikum Nachhaltigkeit (m/w/d) | https://dfb.jobs.personio.de/job/2821126
+- 2026-09-30 | Stage | adidas | Internship Opportunities - Sales | https://jobs.adidas-group.com/job/Herzogenaurach-INTERNSHIP-OPPORTUNITIES-SALES-%28MFD%29-BY/1442901733/
+- 2026-09-30 | Stage | Borussia Dortmund | Praktikant (m/w/d) BVB Fußballakademie | https://bvb.career.softgarden.de/jobs/67783072/Praktikant-m-w-d-BVB-Fu%C3%9Fballakademie-/
+- 2026-09-30 | Stage | ESL FACEIT Group | Working Student Commercial Planning & Inventory | https://eslfaceitgroup.com/career/job/4963994101?gh_jid=4963994101
+- 2026-09-28 | CDI | ESL FACEIT Group | Ticketing Operations Specialist | https://eslfaceitgroup.com/career/job/4988157101?gh_jid=4988157101
+- 2026-09-24 | CDI | DFB (Fédération allemande de football) | Junior Manager*in Spielbetrieb & Fußballangebote | https://dfb.jobs.personio.de/job/2813765
+- 2026-09-23 | Stage | The North Face | eCommerce Intern | https://vfc.wd5.myworkdayjobs.com/northface_careers/job/EMEA--CHE--Stabio--VF-Campus-VF1/eCommerce-Intern_R-20260820-0023
+- 2026-09-22 | Stage | DFB (Fédération allemande de football) | Praktikum Teammanagement Frauen | https://dfb.jobs.personio.de/job/2807807
+- 2026-09-22 | CDI | European Football Clubs (EFC, ex-ECA) | Strategic Financial Affairs Coordinator | https://emp.jobylon.com/jobs/384178-european-football-clubs-strategic-financial-affairs-coordinator/
+- 2026-09-21 | Stage | Aroma-Zone | Stagiaire Chargé de Projet Mécénat et Partenariats F/H | https://careers.aroma-zone.com/jobs/8428032-stagiaire-charge-de-projet-mecenat-et-partenariats-f-h
+- 2026-09-21 | Stage | PUMA | Internship Product Management Innovation Footwear | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Headquarters/Internship-Product-Management-Innovation-Footwear_R43433
+- 2026-09-18 | Stage | International Paralympic Committee (IPC) | Editorial Content Internship | https://www.paralympic.org/sites/default/files/2026-10/2026_10%20Editorial%20Content%20Internship%20Ad.pdf
+- 2026-09-17 | Stage | LALIGA | LALIGA Incluyo 2026 - Programa de prácticas | https://career2.successfactors.eu/career?company=liganacion&career_ns=job_application&rid=3735
+- 2026-09-17 | Stage | LALIGA | Beca de Contabilidad y Finanzas | https://career2.successfactors.eu/career?company=liganacion&career_ns=job_application&rid=3804
+- 2026-09-15 | Stage | DFL / Bundesliga International | Praktikant/in Media Days | https://dfl-group.careers.hibob.com/jobs/6a289993-4d32-4d53-8c18-905ffacbdc8a
+- 2026-09-11 | Stage | Sportfive | (Pflicht-)Praktikantin / Praktikant Marketing Team Hannover 96 | https://jobs.sportfive.com/job/Hannover-%28Pflicht-%29Praktikantin-Praktikant-Marketing-Team-Hannover-96-%28wmd%29-30169/1164477155/
+- 2026-09-04 | Stage | The North Face | Strategic Accounts Marketing Intern | https://vfc.wd5.myworkdayjobs.com/northface_careers/job/EMEA--CHE--Stabio--VF-Campus-VF1/Strategic-Accounts-Marketing-Intern_R-20260827-0009
+- 2026-09-04 | Stage | Red Bull | Working Student Owned Media – Red Bull TV | https://jobs.redbull.com/int-en/working-student-owned-media-red-bull-tv-ref33729e
+- 2026-09-03 | Stage | The North Face | Product Merchandising DTC Intern | https://vfc.wd5.myworkdayjobs.com/northface_careers/job/EMEA--CHE--Stabio--VF-Campus-VF1/Product-Merchandising-DTC-Intern_R-20260818-0008
+- 2026-09-01 | CDI | Salomon | EMEA Trade Terms Specialist | https://jobs.smartrecruiters.com/Salomon/744000146668410
+- 2026-08-27 | Stage | DFB (Fédération allemande de football) | Praktikum DFB-Campus Veranstaltungsmanagement (m/w/d) | https://dfb.jobs.personio.de/job/2771065
+- 2026-08-26 | Stage | DAZN | Internship - Advertising Sales | https://careers.dazn.com/en/postings/fc7cac34-a3f7-4bf5-8b8e-1bd930db9ee4
+- 2026-08-18 | Stage | Infront Sports & Media | Praktikant (gn) zur Unterstützung im Bereich Partnerships - Team SV Sandhausen | https://infrontsportsmediaag.teamtailor.com/de/jobs/8236519-praktikant-gn-zur-unterstutzung-im-bereich-partnerships-team-sv-sandhausen
+
 ## Veille du 2026-10-15 (49 offres)
 
 - 2026-10-15 | Stage | Decathlon | Stage organisation du Vitalsport (Decathlon Wittenheim) | https://joinus.decathlon.fr/fr/annonce/4647575-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-68270-wittenheim

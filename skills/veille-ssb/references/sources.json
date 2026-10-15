@@ -1,0 +1,567 @@
+{
+ "_doc": "Sources interrogées par scripts/harvest.py à chaque veille. Format décrit en tête de harvest.py et dans portails.md.",
+ "sources": [
+  {
+   "nom": "Paris Saint-Germain",
+   "ats": "workday",
+   "host": "parissaintgermain.wd3.myworkdayjobs.com",
+   "tenant": "parissaintgermain",
+   "site": "rejoigneznous",
+   "pays": "France",
+   "categorie": "Club",
+   "secteur": "Football",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Havas (Havas Play)",
+   "ats": "workday",
+   "host": "wd3.myworkdaysite.com",
+   "tenant": "havas",
+   "site": "GroupExternalCareerSite",
+   "pays_filtre": "France",
+   "categorie": "Agence",
+   "secteur": "Marketing sportif",
+   "filtre": "sport"
+  },
+  {
+   "nom": "Red Bull",
+   "ats": "smartrecruiters",
+   "company": "RedBull",
+   "pays": "Monde",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Marketing sportif",
+   "filtre": "tout",
+   "exclure": "musketeer|marketeer|striker|activator|reacher|aussendienst|chef de secteur|field sales|on premise|off premise|hors-domicile|gms|chr|rayonmanager|horeca|mosquet|account|category|sales controller|regional marketing manager|car captain|editorial assistant|platform manager|festival & event manager"
+  },
+  {
+   "nom": "Salomon",
+   "ats": "smartrecruiters",
+   "company": "Salomon",
+   "pays": "Monde",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Outdoor",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Courir",
+   "ats": "smartrecruiters",
+   "company": "Courir",
+   "pays": "France",
+   "pays_filtre": "France",
+   "categorie": "Retail sport",
+   "secteur": "Retail",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Accor",
+   "ats": "smartrecruiters",
+   "company": "AccorHotel",
+   "pays_filtre": "France",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Sponsoring",
+   "filtre": "sport"
+  },
+  {
+   "nom": "Winamax",
+   "ats": "lever",
+   "slug": "winamax",
+   "pays": "France",
+   "categorie": "Paris sportifs",
+   "secteur": "Paris sportifs",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Trainsweateat",
+   "ats": "lever",
+   "slug": "trainsweateat",
+   "pays": "France",
+   "categorie": "Sportstech",
+   "secteur": "Fitness",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Betclic Group",
+   "ats": "breezy",
+   "slug": "betclic-group",
+   "pays": "Monde",
+   "categorie": "Paris sportifs",
+   "secteur": "Paris sportifs",
+   "filtre": "tout"
+  },
+  {
+   "nom": "EGYM Wellpass (ex-Gymlib)",
+   "ats": "ashby",
+   "org": "egym",
+   "pays": "Monde",
+   "categorie": "Sportstech",
+   "secteur": "Fitness",
+   "filtre": "tout"
+  },
+  {
+   "nom": "ScorePlay",
+   "ats": "ashby",
+   "org": "scoreplay",
+   "pays": "Monde",
+   "categorie": "Sportstech",
+   "secteur": "Médias",
+   "filtre": "tout"
+  },
+  {
+   "nom": "FFT (Roland-Garros)",
+   "ats": "teamtailor",
+   "url": "https://jobs.fft.fr",
+   "pays": "France",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Tennis",
+   "filtre": "tout"
+  },
+  {
+   "nom": "LFP Media",
+   "ats": "teamtailor",
+   "url": "https://carrieres.lfp.fr",
+   "pays": "France",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Alpes 2030 (COJOP Jeux d'hiver)",
+   "ats": "teamtailor",
+   "url": "https://carrieres.alpes2030.org",
+   "pays": "France",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Olympisme",
+   "filtre": "tout"
+  },
+  {
+   "nom": "A.S.O. (Amaury Sport Organisation)",
+   "ats": "teamtailor",
+   "url": "https://carrieres.aso.fr",
+   "pays": "France",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Événementiel",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Groupe Amaury (L'Équipe)",
+   "ats": "teamtailor",
+   "url": "https://carrieres.amaury.com",
+   "pays": "France",
+   "categorie": "Média",
+   "secteur": "Médias",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Aroma-Zone",
+   "ats": "teamtailor",
+   "url": "https://careers.aroma-zone.com",
+   "pays": "France",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Sponsoring",
+   "filtre": "sport"
+  },
+  {
+   "nom": "Two Circles",
+   "ats": "workable",
+   "slug": "twocircles",
+   "pays": "Monde",
+   "categorie": "Agence",
+   "secteur": "Marketing sportif",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Fever",
+   "ats": "greenhouse",
+   "board": "feverup",
+   "pays": "Monde",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Événementiel",
+   "filtre": "sport"
+  },
+  {
+   "nom": "GlobalSportsJobs (agrégateur)",
+   "ats": "globalsportsjobs",
+   "pays": "Monde",
+   "pays_liste": [
+    "France",
+    "United Kingdom",
+    "Spain",
+    "Switzerland",
+    "Germany",
+    "Italy",
+    "Netherlands",
+    "Belgium",
+    "Portugal",
+    "Monaco",
+    "Ireland",
+    "Austria"
+   ],
+   "categorie": "",
+   "secteur": "",
+   "filtre": "tout",
+   "note": "Stages et jobs étudiants (careerStage=0). Le lien livré est l'applicationUrl de l'employeur."
+  },
+  {
+   "nom": "BOOST",
+   "ats": "teamtailor",
+   "url": "https://boost-1743083678.teamtailor.com",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Agence",
+   "secteur": "Recrutement sport multisport",
+   "note": "Flux /jobs.rss de 14 offres : stages internes BOOST (recrutement, L&D) et mandats pour des clubs et marques (AJ Auxerre, ESTAC, SORIO, Padelshot, FFCO, Winamax, Asics) ; beaucoup de postes seniors à filtrer."
+  },
+  {
+   "nom": "TOCA Social",
+   "ats": "workable",
+   "slug": "toca-social",
+   "pays": "France",
+   "pays_filtre": "France",
+   "filtre": "tout",
+   "categorie": "Loisirs sportifs",
+   "secteur": "Football / entertainment",
+   "note": "Widget public de 17 offres (Londres, Birmingham, Paris) ; en France un Sales Executive New Business (3 ans min.) et des postes bar et maintenance à écarter."
+  },
+  {
+   "nom": "Sorare",
+   "ats": "ashby",
+   "org": "sorare",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Sportstech",
+   "secteur": "Football / fantasy",
+   "note": "API Ashby de 2 offres, toutes deux tech senior à Paris ce jour ; à garder pour les stages marketing et partenariats."
+  },
+  {
+   "nom": "Creative Artists Agency (CAA)",
+   "ats": "workday",
+   "host": "caa.wd1.myworkdayjobs.com",
+   "tenant": "caa",
+   "site": "Careers",
+   "pays": "Monde",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "75 résultats pour searchText=intern le 15/10/2026 (Londres : Brand Consulting Intern, CAA Base Intern ; Los Angeles : programme d'été 2027) ; CAA couvre aussi musique et cinéma, d'où le filtre sport."
+  },
+  {
+   "nom": "PUMA",
+   "ats": "workday",
+   "host": "puma.wd502.myworkdayjobs.com",
+   "tenant": "puma",
+   "site": "Jobs_at_Puma",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Équipementier",
+   "note": "181 résultats pour searchText=intern : stages au siège d'Herzogenaurach (sports marketing running, product management) et à Barcelone ; beaucoup de vente en magasin à écarter."
+  },
+  {
+   "nom": "The North Face (VF Corporation)",
+   "ats": "workday",
+   "host": "vfc.wd5.myworkdayjobs.com",
+   "tenant": "vfc",
+   "site": "northface_careers",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Outdoor",
+   "note": "212 résultats pour searchText=intern ; stages du programme VF EMEA à Stabio (Suisse) en marketing, e-commerce et merchandising, beaucoup de retail US à écarter."
+  },
+  {
+   "nom": "Nike",
+   "ats": "workday",
+   "host": "nike.wd1.myworkdayjobs.com",
+   "tenant": "nike",
+   "site": "nke",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Équipementier",
+   "note": "189 résultats pour searchText=intern ; stages MBA/master à Beaverton et Boston (marketing, finance, stratégie, durabilité), beaucoup de retail et d'ingénierie à écarter.",
+   "exclure": "retail|athlete|store|distribution|manufacturing"
+  },
+  {
+   "nom": "DFB (Fédération allemande de football)",
+   "ats": "personio",
+   "slug": "dfb",
+   "domain": "jobs.personio.de",
+   "pays": "Allemagne",
+   "filtre": "tout",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "note": "17 offres dans le XML le 15/10/2026 dont 4 Praktika à Francfort (Digital Content, Nachhaltigkeit, DFB-Campus Veranstaltungsmanagement, Sicherheit)."
+  },
+  {
+   "nom": "Infront Sports & Media",
+   "ats": "teamtailor",
+   "url": "https://infrontsportsmediaag.teamtailor.com",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "17 offres dans le flux RSS, surtout l'Allemagne (stages sponsoring, événements running B2Run à Munich et Cologne, master en alternance) ; rien en France le 07/10."
+  },
+  {
+   "nom": "Arsenal FC",
+   "ats": "teamtailor",
+   "url": "https://careers.arsenal.com",
+   "pays": "Royaume-Uni",
+   "filtre": "tout",
+   "categorie": "Club",
+   "secteur": "Football",
+   "note": "Flux /jobs.rss testé le 2026-10-15 : 3 offres (psychologue, facilities, IT), rien de sport business aujourd'hui."
+  },
+  {
+   "nom": "Juventus FC",
+   "ats": "teamtailor",
+   "url": "https://careers.juventus.com",
+   "pays": "Italie",
+   "filtre": "tout",
+   "categorie": "Club",
+   "secteur": "Football",
+   "note": "Flux /jobs.rss testé le 2026-10-15 : 1 offre (steward), portail officiel des offres du club."
+  },
+  {
+   "nom": "City Football Group / Manchester City",
+   "ats": "successfactors_rss",
+   "url": "https://careers.cityfootballgroup.com/services/rss/job/?locale=en_GB&keywords=",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Club",
+   "secteur": "Football",
+   "note": "RSS SuccessFactors (pubDate fiable) : 12 offres, dont Activation Executive et Company Secretary Executive à Manchester."
+  },
+  {
+   "nom": "PSV Eindhoven",
+   "ats": "recruitee",
+   "slug": "psv",
+   "pays": "Pays-Bas",
+   "filtre": "tout",
+   "categorie": "Club",
+   "secteur": "Football",
+   "note": "18 offres avec published_at, dont 3 stages sport business (match operations, e-commerce, filmmaker) ; écarter les volunteer et oproepkracht."
+  },
+  {
+   "nom": "Sportradar",
+   "ats": "smartrecruiters",
+   "company": "Sportradar",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Sportstech",
+   "secteur": "Data sportive / paris",
+   "note": "95 offres (Vienne, Londres, Ljubljana, Munich...) dont l'International Graduate Programme 2027/2028 ; beaucoup de tech et d'opérateurs data à filtrer."
+  },
+  {
+   "nom": "Entain",
+   "ats": "smartrecruiters",
+   "company": "Entain",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Paris sportifs",
+   "secteur": "Paris sportifs",
+   "note": "252 offres, surtout boutiques UK (Retail Customer Service) ; stages et CDD marketing à Munich et Gibraltar."
+  },
+  {
+   "nom": "Riot Games",
+   "ats": "greenhouse",
+   "board": "riotgames",
+   "pays": "Monde",
+   "filtre": "sport",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Esport",
+   "note": "169 offres, surtout jeu vidéo et tech ; postes esports/sponsoring EMEA à Berlin (filtre sport = ne garder que esports)."
+  },
+  {
+   "nom": "ESL FACEIT Group",
+   "ats": "greenhouse",
+   "board": "eslfaceitgrouplimited",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Esport",
+   "note": "26 offres (Cologne, Londres, Katowice, Riyad) dont working student commercial et billetterie ; board embarqué en EU mais l'API boards-api.greenhouse.io répond."
+  },
+  {
+   "nom": "Genius Sports",
+   "ats": "greenhouse",
+   "board": "geniussports",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Sportstech",
+   "secteur": "Data sportive / paris",
+   "note": "38 offres (Londres, Tallinn, Sofia, Amériques), surtout seniors."
+  },
+  {
+   "nom": "On",
+   "ats": "greenhouse",
+   "board": "onrunning",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Running",
+   "note": "210 offres, presque toutes en boutique ; à garder pour les stages du siège de Zurich."
+  },
+  {
+   "nom": "Fanatics",
+   "ats": "greenhouse",
+   "board": "fanaticsinc",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Retail sport",
+   "secteur": "Merchandising / licensing",
+   "note": "21 offres, directeurs aux États-Unis et en Asie le 15/10."
+  },
+  {
+   "nom": "Strava",
+   "ats": "ashby",
+   "org": "strava",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Sportstech",
+   "secteur": "Running / vélo",
+   "note": "34 offres (San Francisco, Londres, Dublin), surtout tech et seniors."
+  },
+  {
+   "nom": "WHOOP",
+   "ats": "ashby",
+   "org": "whoop",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Sportstech",
+   "secteur": "Wearables",
+   "note": "172 offres, quasi toutes à Boston et en tech."
+  },
+  {
+   "nom": "Amer Sports",
+   "ats": "workable",
+   "slug": "amer-sports",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Équipement sportif",
+   "note": "46 offres, surtout boutiques en Australie et Nouvelle-Zélande."
+  },
+  {
+   "nom": "WME Group / IMG",
+   "ats": "workday",
+   "host": "wmeimg.wd1.myworkdayjobs.com",
+   "tenant": "wmeimg",
+   "site": "WMEGRP",
+   "pays": "Monde",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "41 offres WME (cinéma, musique) et IMG, rien en Europe le 15/10 ; filtre sport pour écarter le divertissement."
+  },
+  {
+   "nom": "Wasserman",
+   "ats": "workday",
+   "host": "teamwass.wd5.myworkdayjobs.com",
+   "tenant": "teamwass",
+   "site": "wassermancareers",
+   "pays": "Monde",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "119 offres dont stages US et 48 résultats pour « London » ; csm.com redirige désormais vers the.team ; mêle musique et sport."
+  },
+  {
+   "nom": "FIFA",
+   "ats": "teamtailor",
+   "url": "https://jobs.fifa.com",
+   "pays": "Monde",
+   "filtre": "tout",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "note": "Flux /jobs.rss testé le 2026-10-15 : 54 offres avec département, type de contrat et lieu dans content:encoded. Surtout la Coupe du monde féminine 2027 (Brésil), aussi Miami et Zurich. Aucun stage ouvert ce jour."
+  },
+  {
+   "nom": "CIO (Comité international olympique)",
+   "ats": "successfactors_rss",
+   "url": "https://ioc.jobs.hr.cloud.sap/services/rss/job/?locale=en_GB&keywords=",
+   "pays": "Suisse",
+   "filtre": "tout",
+   "categorie": "Institution",
+   "secteur": "Multisport / JO",
+   "note": "Flux RSS SAP SuccessFactors avec pubDate : 10 entrées le 2026-10-15 (chaque offre en double, EN et FR). Le sitemap https://ioc.jobs.hr.cloud.sap/sitemap.xml donne la même liste. Stages appelés Trainee, date limite écrite dans la fiche."
+  },
+  {
+   "nom": "Formula E",
+   "ats": "teamtailor",
+   "url": "https://careers.fiaformulae.com",
+   "pays": "Royaume-Uni",
+   "filtre": "tout",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Sport automobile",
+   "note": "Flux /jobs.rss : 8 offres le 2026-10-15 (Londres, Austin), partenariats et billetterie mais niveau manager ce jour. Programme de stage de 10 mois annoncé chaque année."
+  },
+  {
+   "nom": "Olympic Broadcasting Services (OBS)",
+   "ats": "teamtailor",
+   "url": "https://careers.obs.tv",
+   "pays": "Espagne",
+   "filtre": "tout",
+   "categorie": "Média",
+   "secteur": "Multisport / JO",
+   "note": "Flux /jobs.rss : 2 offres le 2026-10-15 (Madrid), toutes deux confirmées (4 ans et plus). Sert aussi Olympic Channel Services."
+  },
+  {
+   "nom": "UEFA",
+   "ats": "jobylon",
+   "company_id": "2972",
+   "pays": "Suisse",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "filtre": "tout",
+   "note": "Nyon. Inclut UC3. Stages jusqu'à 6 mois, étudiants et jeunes diplômés."
+  },
+  {
+   "nom": "European Football Clubs (ex-ECA)",
+   "ats": "jobylon",
+   "company_id": "3210",
+   "pays": "Suisse",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Premier League",
+   "ats": "pinpoint",
+   "slug": "premierleague",
+   "pays": "Royaume-Uni",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "filtre": "tout",
+   "note": "Pas de date dans l'API : la relever sur la fiche (JSON-LD datePosted)."
+  },
+  {
+   "nom": "DAZN",
+   "ats": "pinpoint",
+   "slug": "dazn",
+   "pays": "Monde",
+   "categorie": "Média",
+   "secteur": "Médias",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Manchester United",
+   "ats": "pinpoint",
+   "url": "https://careers.manutd.com/postings.json",
+   "pays": "Royaume-Uni",
+   "categorie": "Club",
+   "secteur": "Football",
+   "filtre": "tout",
+   "note": "Pas de date dans l'API : la relever sur la fiche."
+  },
+  {
+   "nom": "Borussia Dortmund",
+   "ats": "schema_feed",
+   "url": "https://karriere.bvb.de/jobs.feed.json",
+   "pays": "Allemagne",
+   "categorie": "Club",
+   "secteur": "Football",
+   "filtre": "tout"
+  }
+ ]
+}
