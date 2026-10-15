@@ -523,7 +523,7 @@ def run_source(s, run, max_age, seen_links):
 
 def to_offer(j, s):
     loc = j["localisation"] or s.get("ville", "")
-    if j["pays"] not in ("France", "?") and j["pays"] and j["pays"] not in loc:
+    if j["pays"] not in ("France", "?") and j["pays"] and j["pays"] not in loc and country_of(loc) != j["pays"]:
         loc = f"{loc} ({j['pays']})" if loc else j["pays"]
     o = {"titre": j["titre"], "entreprise": j.get("_entreprise") or s["nom"],
          "categorie": j.get("_categorie") or s.get("categorie", ""), "secteur": s.get("secteur", ""),
