@@ -3,6 +3,22 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-16 (13 offres)
+
+- 2026-10-14 | Stage | Eventeam Group (KENEO) | STAGE - Assistant(e) Chef(fe) de projet événementiel | https://recrutement.eventeam-group.com/jobs/8547219-stage-assistant-e-chef-fe-de-projet-evenementiel
+- 2026-10-13 | Stage | Decathlon | STAGE EVENEMENTIEL | https://joinus.decathlon.fr/fr/annonce/4644911-stage-evenementiel-76000-rouen
+- 2026-10-12 | CDD | Spartner Travel (groupe SSM) | Operation Assistant Stages Sportifs B to C (H/F) | https://ssm-jobs.talentview.io/jobs/ncc10m
+- 2026-10-06 | Alternance | Intersport France | Assistant commercial Clubs & Collectivités VAUCLUSE (alternance) | https://recrutement.intersport.fr/2026/10/06/assistant-commercial-clubs-collectivites-vaucluse-alternance/
+- 2026-10-02 | CDD | Eventeam Group (KENEO) | CDD - Comptable Client | https://recrutement.eventeam-group.com/jobs/8494596-cdd-comptable-client
+- 2026-09-29 | Stage | VMATCH | Stage Assistant(e) Chef de Projets | https://www.vmatch.fr/vmatch-recrute-ses-nouveaux-stagiaires-pour-le-2nd-semestre-2026-3/
+- 2026-09-29 | Stage | VMATCH | Stage Assistant(e) Responsable du Développement Commercial | https://f3s.unistra.fr/actualites/assistante-responsable-du-developpement-commercial/
+- 2026-09-22 | Alternance | Intersport France | Commercial en alternance H/F (Clubs sportifs, collectivités et entreprises) | https://recrutement.intersport.fr/2026/09/22/commercial-en-alternance-h-f-clubs-sportifs-collectivites-et-entreprises/
+- 2026-09-22 | CDI | Intersport France | Business Analyst H/F | https://recrutement.intersport.fr/2026/09/22/business-analyst-h-f/
+- 2026-08-26 | Stage | RnK (groupe SSM / Spartner) | Stagiaire Assistant·e marketing & partenariats (H/F) | https://ssm-jobs.talentview.io/jobs/mls3ak
+- 2026-08-26 | Stage | RnK (groupe SSM / Spartner) | Stagiaire Assistant·e conseil et développement – grands événements sportifs (H/F) | https://ssm-jobs.talentview.io/jobs/3uvg1p
+- 2026-08-25 | Stage | Decathlon | Rejoins-nous en stage pour l'organisation du Vitalsport ! | https://joinus.decathlon.fr/fr/annonce/4563243-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-38700-la-tronche
+- 2026-08-24 | Alternance | Intersport France | Alternance -Communication (Intersport) | https://recrutement.intersport.fr/2026/08/24/alternance-communication-intersport/
+
 ## Veille du 2026-10-15 (96 offres)
 
 - 2026-10-15 | Stage | Sportradar | Sportradar's International Graduate Programme 2027/2028 (m/f/d) | https://jobs.smartrecruiters.com/Sportradar/744000155748244

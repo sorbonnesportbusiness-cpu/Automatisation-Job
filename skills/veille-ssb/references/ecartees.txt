@@ -1,0 +1,51 @@
+# Offres refusées à la relecture (hors cible, senior, début passé, hors Europe, langue)
+# Le moissonneur ne les repropose pas. Une ligne par offre : date | employeur | intitulé | lien
+
+- 2026-10-16 | Eventeam Group (KENEO, Eventeam Live, hospitalités) | CDI - Chef(fe) de projet événementiel | https://recrutement.eventeam-group.com/jobs/8547038-cdi-chef-fe-de-projet-evenementiel
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Chef(fe) de Projet Cérémonies (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8516342-chef-fe-de-projet-ceremonies-f-h-cdi
+- 2026-10-16 | JD Sports France | Assistant accueil et administration du personnel H/F | https://job-boards.eu.greenhouse.io/jdsportsfr/jobs/5000837101
+- 2026-10-16 | Eventeam Group (KENEO, Eventeam Live, hospitalités) | STAGE – ASSISTANT(E) SERVICE CLIENT | https://recrutement.eventeam-group.com/jobs/8517281-stage-assistant-e-service-client
+- 2026-10-16 | Red Bull | Stage Procurement (H/F) | https://jobs.smartrecruiters.com/RedBull/744000154034831
+- 2026-10-16 | Paris Saint-Germain | CHEF DE PROJET CONTENUS STADIUM REVENUES & ENGAGEMENT F/H | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/CHEF-DE-PROJET-CONTENUS-STADIUM-REVENUES---ENGAGEMENT-F-H_014830
+- 2026-10-16 | JD Sports France | Superviseur de rayon H/F | https://job-boards.eu.greenhouse.io/jdsportsfr/jobs/4998685101
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Contrôleur de Gestion (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8486774-controleur-de-gestion-f-h-cdi
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Coordinateur des Opérations Territoriales - Pôle Haute-Savoie (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8484765-coordinateur-des-operations-territoriales-pole-haute-savoie-f-h-cdi
+- 2026-10-16 | CIO (Comité international olympique) | Apprentissage - Employé/e de commerce (Lausanne, VD, CH) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Apprentissage-Employ%C3%A9e-de-commerce-VD/1443270233/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS
+- 2026-10-16 | CIO (Comité international olympique) | Apprentissage - Agent/e en information documentaire (Lausanne, VD, CH) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Apprentissage-Agente-en-information-documentaire-VD/1443272433/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS
+- 2026-10-16 | Nike | Visual Merchansiding & Styling Specialist Nike - H / F - CDD/Stretch | https://nike.wd1.myworkdayjobs.com/nke/job/Paris-France/Visual-Merchansiding---Styling-Specialist-Nike---H---F---CDD-Stretch_R-94519-1
+- 2026-10-16 | FFT (Roland-Garros) | Gestionnaire de formation et de certifications professionnelles F/H | https://jobs.fft.fr/jobs/8474699-gestionnaire-de-formation-et-de-certifications-professionnelles-f-h
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Juriste aux Affaires Juridiques et Commerciales (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8453047-juriste-aux-affaires-juridiques-et-commerciales-f-h-cdi
+- 2026-10-16 | Intersport France | Assistant(e) de gestion (H/F) | https://recrutement.intersport.fr/2026/09/25/assistante-de-gestion-h-f/
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Juriste Propriété Intellectuelle (PI) / Propriété Littéraire et Artistique (PLA) (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8451931-juriste-propriete-intellectuelle-pi-propriete-litteraire-et-artistique-pla-f-h-cdi
+- 2026-10-16 | Courir | Assistant(e) Administration du Personnel International - F/H | https://jobs.smartrecruiters.com/Courir/744000151094569
+- 2026-10-16 | Red Bull | Junior Personalverrechner / Personaladministration | https://jobs.smartrecruiters.com/RedBull/744000150707572
+- 2026-10-16 | TOCA Social | Sales Executive - New Business | https://apply.workable.com/j/0F1D94231A
+- 2026-10-16 | Intersport France | ALTERNANCE | https://recrutement.intersport.fr/2026/08/24/alternance/
+- 2026-10-16 | PUMA | Internship Global Go-To-Market Commercial | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Headquarters/Internship-Global-Go-To-Market-Commercial_R43925-1
+- 2026-10-16 | Wasserman | Spring 2027 Internship - Partnerships, Creators | https://teamwass.wd5.myworkdayjobs.com/wassermancareers/job/USA-TX---Dallas-Office/Spring-2027-Internship---Partnerships--Creators_R5632
+- 2026-10-16 | Wasserman | Spring 2027 Internship - Team Sports Operations Intern | https://teamwass.wd5.myworkdayjobs.com/wassermancareers/job/USA-CA---Los-Angeles-HQ/Spring-2027-Internship---Team-Sports-Operations-Intern_R5628
+- 2026-10-16 | Paris Saint-Germain | STAGIAIRE COMPLIANCE OFFICER (H/F) - SEPTEMBRE 2026 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-COMPLIANCE-OFFICER--H-F----JUILLET-2026_014475
+- 2026-10-16 | EGYM Wellpass (ex-Gymlib) | Praktikant Zoll & Außenhandel (m/w/d) | https://jobs.ashbyhq.com/egym/f38325e0-ce6b-4f11-93ea-7e2cedbaa9d9
+- 2026-10-16 | Warner Bros. Discovery | Stage - Journalisme CNN (janvier 2027) | https://warnerbros.wd5.myworkdayjobs.com/global/job/Paris---CNN-85-Rue-Jouffroy-DAbbans/Stage---Journalisme-CNN_R000106091
+- 2026-10-16 | Red Bull | Red Bull Student Marketeer - Strathclyde University | https://jobs.redbull.com/int-en/red-bull-student-marketeer-strathclyde-university-ref34614j
+- 2026-10-16 | Betclic Group | Internship - Poker Operations Assistant F/M | https://betclic-group.breezy.hr/p/0815e75de81f01-internship-poker-operations-assistant-f-m
+- 2026-10-16 | Genius Sports | Junior Media Buying Executive | https://boards.greenhouse.io/geniussports/jobs/8017154003?gh_jid=8017154003
+- 2026-10-16 | PSV Eindhoven | Stage Veiligheid | https://werkenbij.psv.nl/o/stage-veiligheid
+- 2026-10-16 | TOCA Social | Barman/ Barmaid | https://apply.workable.com/j/423616F565
+- 2026-10-16 | Nike | NIKE, Inc. Footwear Product Creation Undergraduate Internship | https://nike.wd1.myworkdayjobs.com/nke/job/Beaverton-Oregon/NIKE--Inc-Footwear-Product-Creation-Undergraduate-Internship_R-94410
+- 2026-10-16 | Alpes 2030 (COJOP Jeux d'hiver) | Chef de Projet Hébergement Clients – Détenteurs de droits médias & Presse (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8450202-chef-de-projet-hebergement-clients-detenteurs-de-droits-medias-presse-f-h-cdi
+- 2026-10-16 | BOOST | Directeur·trice Général·e | [Confidentiel] | https://boost-1743083678.teamtailor.com/jobs/8451190-directeur-trice-general-e-confidentiel
+- 2026-10-16 | Nike | NIKE, Inc. N7 Undergraduate Internship | https://nike.wd1.myworkdayjobs.com/nke/job/Beaverton-Oregon/NIKE--Inc-N7-Undergraduate-Internship_R-92659
+- 2026-10-16 | LALIGA | Beca Diseño Creativo Digital e IA | https://career2.successfactors.eu/career?company=liganacion&career_ns=job_application&rid=3789
+- 2026-10-16 | LALIGA | Beca compras | https://career2.successfactors.eu/career?company=liganacion&career_ns=job_application&rid=3805
+- 2026-10-16 | The North Face (VF Corporation) | Working Student (mwd - 20 hrs) | https://vfc.wd5.myworkdayjobs.com/northface_careers/job/EMEA--DEU--Frankfurt--Retail---TNF/Working-Student--mwd---20-hrs-_R-20260713-0010-1
+- 2026-10-16 | Nike | NIKE, Inc. Global Sustainability Graduate Internship | https://nike.wd1.myworkdayjobs.com/nke/job/Beaverton-Oregon/NIKE--Inc-Global-Sustainability-Graduate-Internship_R-92069
+- 2026-10-16 | Paris Saint-Germain | STAGIAIRE REDACTEUR / EDITEUR (H/F) - SEPTEMBRE 2026 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-REDACTEUR---EDITEUR--H-F----SEPTEMBRE-2026_014720
+- 2026-10-16 | Nike | NIKE, Inc. Digital Growth Graduate Internship | https://nike.wd1.myworkdayjobs.com/nke/job/Beaverton-Oregon/NIKE--Inc-Digital-Growth-Graduate-Internship_R-92073-1
+- 2026-10-16 | Borussia Dortmund | Werkstudent (m/w/d) BVB FanWelt | https://bvb.career.softgarden.de/jobs/67215695/Werkstudent-m-w-d-BVB-FanWelt/
+- 2026-10-16 | Winamax | STAGE - Assistant Chef de Produit Offre Poker (H/F) | https://jobs.lever.co/winamax/9aabfb97-ffaa-43f4-a193-5f421ef863ae
+- 2026-10-16 | Winamax | STAGE - Assistant Chef de Produit Poker (H/F) | https://jobs.lever.co/winamax/c77aff8f-f8e2-4987-ad8a-118b5d0bff62
+- 2026-10-16 | FFT (Roland-Garros) | Stage - Opérations Billetterie & Expérience Clients - Septembre 2026 | https://jobs.fft.fr/jobs/8261549-stage-operations-billetterie-experience-clients-septembre-2026
+- 2026-10-16 | Red Bull | Student Marketeer – PH Luzern | https://jobs.redbull.com/int-en/student-marketeer-ph-luzern-ref33249l
+- 2026-10-16 | Red Bull | Student Marketeer – BFH Biel | https://jobs.redbull.com/int-en/student-marketeer-bfh-biel-ref33251m
+- 2026-10-16 | Manchester United | Junior Sous Chef | https://careers.manutd.com/en/postings/c43e5577-fbbc-45a4-babf-f24e2a68d549

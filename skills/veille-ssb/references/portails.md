@@ -218,6 +218,24 @@ Dernière mise à jour : 2026-10-15 au soir (moissonneur d'API et offres à l'é
   LaLiga, WADA, World Athletics (aucune offre ouverte hors candidature spontanée) ; clubs de Ligue 1 et Top 14 toujours
   sans ATS (LinkedIn seulement) ; stades français sans site carrières.
 
+## Ajouts du 2026-10-16 : France
+
+- **Moissonneur** : 84 sources. Nouveaux lecteurs : DigitalRecruiters (Decathlon, Lacoste), Taleez (FFF, OM, CNOSF ;
+  refuse parfois les connexions), Flatchr (FFR), WordPress (Intersport, VMATCH, CVsportsjob). Mémoire des refus :
+  `references/ecartees.txt` (le moissonneur ne repropose pas une offre déjà refusée à la relecture).
+- **Nouvelles sources France** : Intersport France (WordPress, 885 offres, regex `exclure` pour le magasin) ; Eventeam
+  Group / KENEO (Teamtailor `recrutement.eventeam-group.com`) ; JD Sports France (Greenhouse `jdsportsfr`) ; Basic-Fit
+  (Workday, surtout clubs) ; annonceurs en filtre « sport » : Pernod Ricard, Mondelez, Coca-Cola (Workday), ENGIE,
+  TotalEnergies (flux « sponsoring »), MAIF, Groupama Gan, Matmut, Air France (RSS Talentsoft, 20 dernières offres) ;
+  conseil : Roland Berger (SmartRecruiters), PwC (Workday), BearingPoint, Comexposium, RELX/LexisNexis.
+- **Agrégateurs** : Wizbii (page entreprise + offre en JSON sans compte), Talentview (groupe SSM : Spartner, RnK,
+  Novabox ; JSON avec en-tête Origin), talent.com (date sur la fiche, lien employeur derrière un anti-robot : retrouver
+  l'offre par son intitulé), lesportrecrute.fr de nouveau lisible en curl, France Travail (liste en curl, détail au
+  navigateur), fac de sport de Strasbourg (RSS F3S).
+- **Bloqués ou stériles** : optioncarriere, jobted (anti-robot JS) ; cadremploi, keljob, emploi.lefigaro, monster, AXA,
+  intersport.fr, Fidal, Fieldfisher, Kearney (403) ; iquesta (connexion) ; Village de la Justice encore en 403 le 16/10 ;
+  Workday 422 pour Live Nation/Ticketmaster, Renault, L'Oréal ; écoles (AMOS, ISC, ESSCA, ESSEC) via JobTeaser seulement.
+
 ## Portails stériles ou bloqués (à retester occasionnellement)
 
 - **Bloqués** : welcometothejungle.com (403, ce qui cache l'esport, la sportstech et les petites

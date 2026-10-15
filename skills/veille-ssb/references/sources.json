@@ -562,6 +562,336 @@
    "categorie": "Club",
    "secteur": "Football",
    "filtre": "tout"
+  },
+  {
+   "nom": "Decathlon",
+   "ats": "digitalrecruiters",
+   "domain": "joinus.decathlon.fr",
+   "pays": "France",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Retail sport",
+   "filtre": "tout",
+   "exclure": "commerce|decouverte|seconde|troisieme|caisse|rayon|\\bcdd\\b|operat|monteu|ergonome|renfort|hote|sports collectifs|cycle|velo|conseill|vente|vendeu|magasin|omnicanal|logisti|preparat|cariste|atelier|technicien|responsable|tax|process",
+   "note": "815 offres, surtout magasin : exclure filtre les stages commerce en magasin."
+  },
+  {
+   "nom": "Lacoste",
+   "ats": "digitalrecruiters",
+   "domain": "careers.lacoste.com",
+   "pays": "France",
+   "pays_filtre": "France",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Marketing sportif",
+   "filtre": "sport"
+  },
+  {
+   "nom": "Fédération Française de Football",
+   "ats": "taleez",
+   "slug": "fff",
+   "pays": "France",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Football",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Olympique de Marseille",
+   "ats": "taleez",
+   "slug": "olympique-de-marseille",
+   "pays": "France",
+   "categorie": "Club",
+   "secteur": "Football",
+   "filtre": "tout"
+  },
+  {
+   "nom": "CNOSF",
+   "ats": "taleez",
+   "slug": "cnosf",
+   "pays": "France",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Olympisme",
+   "filtre": "tout"
+  },
+  {
+   "nom": "Fédération Française de Rugby",
+   "ats": "flatchr",
+   "slug": "ffr",
+   "pays": "France",
+   "categorie": "Ligue / Fédération",
+   "secteur": "Rugby",
+   "filtre": "tout"
+  },
+  {
+   "nom": "JD Sports France",
+   "ats": "greenhouse",
+   "board": "jdsportsfr",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Retail sport",
+   "secteur": "Multisport",
+   "note": "702 offres le 16/10/2026, surtout en magasin (à exclure par mots-clés). Le siège à Paris et Marcq-en-Barœul publie des stages RH, graphisme, photo et e-commerce, et un poste senior de marketing pour les marques partenaires."
+  },
+  {
+   "nom": "Faculté des sciences du sport de Strasbourg (offres de stages et d'emplois)",
+   "ats": "rss",
+   "url": "https://f3s.unistra.fr/actualites/feed.xml",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Institution",
+   "secteur": "Multisport",
+   "note": "30 items datés (pubDate), offres mêlées aux actualités. Y figuraient le 16/10/2026 deux stages VMATCH (partenariats sportifs) et des stages hummel et ASPTT ; garder seulement les items sous /actualites/ qui ressemblent à une offre.",
+   "junior_obligatoire": true
+  },
+  {
+   "nom": "VMATCH (agence de conseil et d'activation de partenariats sportifs)",
+   "ats": "wordpress",
+   "url": "https://www.vmatch.fr/wp-json/wp/v2/posts?search=recrute",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "Articles datés « VMATCH recrute... » : deux stages ouverts pour janvier 2027 (chef de projets et développement commercial), publiés le 29/09/2026.",
+   "junior_obligatoire": true
+  },
+  {
+   "nom": "CVsportsjob (job board sport)",
+   "ats": "wordpress",
+   "url": "https://www.cvsportsjob.com/wp-json/wp/v2/offre-emploi",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Agence",
+   "secteur": "Multisport",
+   "note": "Type WordPress « offre-emploi » daté. Peu actif : dernière offre le 31/07/2026 (stage Family Sport Agency, stage ASVEL en juin).",
+   "junior_obligatoire": true
+  },
+  {
+   "nom": "Sport Buzz Business (rubrique offres d'emplois et stages)",
+   "ats": "rss",
+   "url": "https://www.sportbuzzbusiness.fr/category/sport-rh/offres-emplois-stages/feed",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Média",
+   "secteur": "Multisport",
+   "note": "Flux RSS lisible avec des offres sport business (Infront, PSG, FFR, FFT), mais la dernière date du 15/01/2026 : source en sommeil, à garder au cas où elle reprendrait.",
+   "junior_obligatoire": true
+  },
+  {
+   "nom": "Eventeam Group (KENEO, Eventeam Live, hospitalités)",
+   "ats": "teamtailor",
+   "url": "https://recrutement.eventeam-group.com",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Agence",
+   "secteur": "Événementiel sportif / hospitalités",
+   "note": "Flux /jobs.rss de 5 offres le 16/10 (2 stages assistant chef de projet événementiel KENEO, stage service client, CDI chef de projet, CDD comptable client) ; employeur jusqu'ici noté « LinkedIn seulement », les fiches portent datePosted en JSON-LD."
+  },
+  {
+   "nom": "Roland Berger (conseil en stratégie)",
+   "ats": "smartrecruiters",
+   "company": "RolandBerger",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Conseil en stratégie",
+   "note": "API publique de 212 offres dans le monde, 10 en France (stagiaire consultant 2027, junior consultant 2027, stage marketing digital) ; aucune ne parle de sport ce jour, à garder pour une mission ou un stage sport."
+  },
+  {
+   "nom": "PwC (dont la pratique Sport et méga-événements de PwC France)",
+   "ats": "workday",
+   "host": "pwc.wd3.myworkdayjobs.com",
+   "tenant": "pwc",
+   "site": "Global_Experienced_Careers",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Audit / conseil",
+   "note": "API Workday publique, les offres de Neuilly-sur-Seine y figurent ; la recherche « sport France » ne renvoie que de l'audit et du SAP. Site mondial volumineux : passer searchText=sport si le moissonneur le permet."
+  },
+  {
+   "nom": "PwC (campus : stages et graduate)",
+   "ats": "workday",
+   "host": "pwc.wd3.myworkdayjobs.com",
+   "tenant": "pwc",
+   "site": "Global_Campus_Careers",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Audit / conseil",
+   "note": "Site campus de PwC sur la même API Workday ; répond avec des offres (1 seule pour « sport France », hors France). À tester sans mot-clé pour voir s'il porte les stages français."
+  },
+  {
+   "nom": "BearingPoint France",
+   "ats": "teamtailor",
+   "url": "https://carrieresfrance.bearingpoint.com",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Agence",
+   "secteur": "Conseil",
+   "note": "Flux /jobs.rss de 100 offres France ; aucune en sport, et le mot « sport » n'y matche que dans « transport » : le filtre doit chercher le mot entier."
+  },
+  {
+   "nom": "RELX (LexisNexis France, salons RX France)",
+   "ats": "workday",
+   "host": "relx.wd3.myworkdayjobs.com",
+   "tenant": "relx",
+   "site": "relx",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Média",
+   "secteur": "Édition juridique / salons",
+   "note": "API Workday publique : 360 offres pour « Paris » (LexisNexis : éditeur droit des affaires, alternance communication ; RX : salons MIPIM, IT Partners) ; rien en sport ce jour."
+  },
+  {
+   "nom": "Comexposium (organisateur de salons)",
+   "ats": "teamtailor",
+   "url": "https://comexposium.teamtailor.com",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Organisateur / Événement",
+   "secteur": "Salons professionnels",
+   "note": "Flux /jobs.rss de 34 offres (beaucoup de stages et d'alternances en marketing, relation exposants et projets) ; aucun salon sport ce jour."
+  },
+  {
+   "nom": "Intersport France",
+   "ats": "wordpress",
+   "url": "https://recrutement.intersport.fr/wp-json/wp/v2/posts",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Retail sport",
+   "secteur": "Distribution d'articles de sport",
+   "exclure": "vente|vendeu|magasin|caiss|cycle|skiman|logisti|manutention|polyvalent|receptio|rayon|merchandis|achats?|approvision|saisie|paie|administrati|\\bsav\\b|hse|etudiant|conseiller technique|production graphique|flux|chef de departement|gestionnaire|gestion financiere|itinerant",
+   "note": "Site WordPress de 885 offres datées (posts, champ date) ; surtout magasins, quelques postes du siège de Longjumeau (finance, data, RSE, juridique) et des alternances commerciales clubs et collectivités. Candidature via Jobaffinity."
+  },
+  {
+   "nom": "Basic-Fit France",
+   "ats": "workday",
+   "host": "basicfit.wd103.myworkdayjobs.com",
+   "tenant": "basicfit",
+   "site": "BasicFit_Career_Site_France",
+   "pays": "France",
+   "filtre": "tout",
+   "categorie": "Loisirs sportifs",
+   "secteur": "Fitness",
+   "exclure": "accueil|club manager|assistant club|coach|technicien",
+   "note": "API Workday testée le 2026-10-16 : 320 offres, quasi toutes en club (agents d'accueil) ; aucune offre stage ou alternance ce jour. Citée dans portails.md mais absente de sources.json."
+  },
+  {
+   "nom": "Pernod Ricard",
+   "ats": "workday",
+   "host": "pernodricard.wd3.myworkdayjobs.com",
+   "tenant": "pernodricard",
+   "site": "pernod-ricard",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Sponsoring",
+   "recherche": [
+    "sponsoring",
+    "partenariat",
+    "sport"
+   ],
+   "note": "API Workday : 169 offres pour la recherche France, nombreux stages à Paris, Marseille et Cognac ; aucun poste sponsoring sportif ce jour. Citée dans portails.md mais absente de sources.json."
+  },
+  {
+   "nom": "Mondelez International",
+   "ats": "workday",
+   "host": "mdlz.wd3.myworkdayjobs.com",
+   "tenant": "mdlz",
+   "site": "External",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Grande consommation",
+   "recherche": [
+    "sponsoring",
+    "partenariat",
+    "sport"
+   ],
+   "note": "API Workday mondiale (1 355 offres) ; une dizaine de stages de janvier 2027 à Boulogne-Billancourt (marketing, trade, category), aucun lié au sport ce jour."
+  },
+  {
+   "nom": "The Coca-Cola Company",
+   "ats": "workday",
+   "host": "coke.wd1.myworkdayjobs.com",
+   "tenant": "coke",
+   "site": "coca-cola-careers",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Sponsoring",
+   "recherche": [
+    "sponsorship",
+    "sponsoring"
+   ],
+   "note": "API Workday mondiale, surtout États-Unis et Asie ; aucune offre en France ce jour (la France relève de Coca-Cola Europacific Partners, autre employeur). Citée dans portails.md mais absente de sources.json."
+  },
+  {
+   "nom": "ENGIE",
+   "ats": "successfactors_rss",
+   "url": "https://jobs.engie.com/services/rss/job/?locale=fr_FR&keywords=",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Énergie",
+   "note": "Flux RSS SuccessFactors : 20 offres les plus récentes, monde entier ; le paramètre keywords est ignoré. Rien de sport ce jour."
+  },
+  {
+   "nom": "TotalEnergies",
+   "ats": "rss",
+   "url": "https://jobs.totalenergies.com/fr_FR/careers/SearchJobs/sponsoring/feed/",
+   "pays": "Monde",
+   "pays_filtre": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Sponsoring",
+   "note": "Flux Avature filtré sur « sponsoring » (adresse connue de portails.md, absente de sources.json) : 1 offre le 2026-10-16, un Werkstudent communication en Allemagne."
+  },
+  {
+   "nom": "MAIF",
+   "ats": "rss",
+   "url": "https://recrutement.maif.fr/handlers/offerRss.ashx?LCID=1036",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Assurance",
+   "note": "Flux RSS Talentsoft : 20 dernières offres datées (pubDate), dont un stage M&A ; rien de sport ce jour."
+  },
+  {
+   "nom": "Groupama Gan",
+   "ats": "rss",
+   "url": "https://groupama-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=1036",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Assurance",
+   "note": "Flux RSS Talentsoft : 20 dernières offres datées, liens vers groupama-gan-recrute.com ; surtout conseillers en agence, rien de sport ce jour."
+  },
+  {
+   "nom": "Matmut",
+   "ats": "rss",
+   "url": "https://recrutement.matmut.fr/handlers/offerRss.ashx?LCID=1036",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Assurance",
+   "note": "Flux RSS Talentsoft : 20 dernières offres datées ; conseillers et informatique, rien de sport ce jour."
+  },
+  {
+   "nom": "Air France",
+   "ats": "rss",
+   "url": "https://recrutement.airfrance.com/handlers/offerRss.ashx?LCID=1036",
+   "pays": "France",
+   "filtre": "sport",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Transport",
+   "note": "Flux RSS Talentsoft : 20 dernières offres datées, beaucoup de stages (data, revenue management) ; rien de sport ce jour."
   }
  ]
 }
