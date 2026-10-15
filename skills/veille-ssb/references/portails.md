@@ -204,6 +204,10 @@ Dernière mise à jour : 2026-10-15 au soir (moissonneur d'API et offres à l'é
   exacte est dans `<time datetime>` des cartes de recherche ; `id >> 22` ne marche pas sur les ID `/jobs/view`.
   Employeurs trouvés ainsi : FC Bayern, Werder Brême, 1. FC Köln, Lidl-Trek, Würth, HYROX, Wimbledon, NAC Breda,
   Albert Heijn (stage sponsoring), Sportium.
+- **Règle de langue (2026-10-16)** : intitulé et contenu en français ou en anglais, sinon l'offre est écartée.
+  Conséquence : la plupart des clubs et fédérations allemands, néerlandais et espagnols (DFB, DFL, Bayern, BVB,
+  PSV, LaLiga, Infront Allemagne) ne donnent rien ; les sources utiles à l'étranger sont celles qui recrutent en
+  anglais (UEFA, FIFA, CIO, Premier League, clubs anglais, Red Bull graduate programmes, adidas, PUMA, agences).
 - **Règle étranger** : Europe seulement (France, Royaume-Uni, Espagne, Italie, Allemagne, Suisse, Benelux, Portugal,
   Monaco, Irlande, Autriche, pays nordiques, Pologne), postes juniors explicites. Les stages américains (PGA Tour, MLB,
   ESPN, Nike Beaverton, LA28) exigent le droit de travailler aux États-Unis : écartés.
