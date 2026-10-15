@@ -5,7 +5,7 @@ le skill met à jour cette liste (portails qui ont donné des offres, portails d
 stériles, nouveaux portails découverts). Le skill `veille-ssb` lit ce fichier comme
 référence avant de choisir où chercher.
 
-Dernière mise à jour : 2026-10-12 (26 nouvelles offres : la plupart des sources étaient déjà épuisées par les veilles des 7-9 octobre).
+Dernière mise à jour : 2026-10-15 (49 nouvelles offres ; GlobalSportsJobs a migré, voir plus bas).
 
 ## Portails employeurs validés (accès libre, fiables)
 
@@ -144,6 +144,41 @@ Dernière mise à jour : 2026-10-12 (26 nouvelles offres : la plupart des source
   des grandes villes (404 ou sans liste), Village de la Justice et Law Profiler (rien de nouveau en sport).
 - **FFBB** : descriptions en image de PDF, missions et expérience invérifiables : offres écartées.
 
+## Ajouts du 2026-10-15
+
+- **GlobalSportsJobs a migré** : `hub.globalsportsjobs.com/vacancy/...` et `/api/vacancy` sont morts (redirection 200
+  vers la liste `www.globalsportsjobs.com/jobs`, que la revérification de `publish.sh` prend pour une page vivante).
+  Nouvelle API : `api.globalsportsjobs.com/api/jobs?location=France&limit=50` (max 50, paginer avec `nextCursor`),
+  détail `api.globalsportsjobs.com/api/jobs/<id>` (status, isExpired, postedAt, applicationUrl). Les fiches
+  `www.globalsportsjobs.com/jobs/<id>` sont en JS et `isGated` : livrer l'`applicationUrl` de l'employeur.
+  Les 6 offres Sportfive encore ouvertes du tableau ont été repointées vers jobs.sportfive.com (403 en curl, lisible
+  au navigateur intégré) ; le stage ADV Billetterie CSE, absent de l'API, a été retiré.
+- **Nouveaux portails productifs** : hopscotch-recrute.talent-soft.com (Hopscotch Sport, Sport & Co, Le Public Système) ;
+  careers.aroma-zone.com (Teamtailor, `/jobs.rss`, stage événementiel sportif) ; careers.danone.com (sitemap, équipe
+  Sponsorship) ; FFBaD `frontwebservice.ffbad.org/api/career` (API datée) ; FFVoile `ffvoile_recrute.asp` (offres du
+  siège, certains PDF morts) ; jobs.fft.fr héberge aussi les ligues et comités de tennis ; Accor Arena sur Teamtailor
+  (`/jobs.rss`).
+- **Accès précisés** :
+  - softy.pro : offres dans `<script data-page="app">`, lien public par `softy_id` (pas `id`).
+  - Workable : `GET apply.workable.com/api/v1/widget/accounts/<slug>` donne tout sans 429 (Two Circles = `twocircles`).
+  - Welcome Kit : `datePosted` dans le code de la fiche ; le slug d'URL peut mentir sur l'intitulé (Campsider).
+  - DigitalRecruiters : la fiche détaillée se lit avec `job_ad_id` seul.
+  - emploi-territorial : `?adv-search=<mot>&page=N` trouve des postes sport hors famille C5 ; la référence
+    `O<dép><AAMMJJ>` donne la date de première publication (repère les republications).
+  - choisirleservicepublic : filtre ministère des Sports `/nos-offres/filtres/organisme/44/`.
+  - LinkedIn : l'ID d'un post donne sa date (`id >> 22` = millisecondes). 105 requêtes à 5-9 s passent sans 429 bloquant.
+  - Ecofoot : les boutons « Voir l'offre » mènent directement chez l'employeur (Workday PSG, careers.ol.fr, jobs.fft.fr).
+  - orange.jobs : POST `/widgets` ; API Workday publiques de Coca-Cola, Renault et Pernod Ricard ; SmartRecruiters Accor.
+- **Employeurs qui ne publient que sur LinkedIn** : GiG (stages paris sportifs à Labège), KENEO/Eventeam, Spartner,
+  STRADA Marketing (commerciaux teamwear adidas), Aono (présentation sportive), Potel et Chabot (Roland-Garros, Hosco refuse).
+- **Slugs ATS valides mais sans offre utile** : Ashby fnatic ; Lever teamsnap ; Greenhouse catapultsports, riotgames,
+  kambi, betsson ; Teamtailor shotgun, teamliquid, endeavor ; Breezy img ; Recruitee ticketswap.
+- **Stériles ou bloqués ce jour** : Village de la Justice (fiches « rubrique Emploi désactivée » après une attaque,
+  retour annoncé le 16/10) ; Law Profiler (31 mots-clés, rien) ; Meent, La Bonne Alternance (bruit) ; Ville de Paris
+  (584 offres) ; Agence nationale du Sport (page emploi 404) ; France Télévisions, JobTeaser, Ironman, Le Public
+  Système, Auditoire, Uniteam (403 ou connexion refusée) ; lesportrecrute.fr, recrutement.ffe.com, *.fff.fr ; Taleez
+  Mouratoglou ; Société Générale (JS) ; BNP Paribas (403) ; CANAL+ (aucun stage sport).
+
 ## Portails stériles ou bloqués (à retester occasionnellement)
 
 - **Bloqués** : welcometothejungle.com (403, ce qui cache l'esport, la sportstech et les petites
@@ -160,6 +195,7 @@ Dernière mise à jour : 2026-10-12 (26 nouvelles offres : la plupart des source
 
 ## À tester
 
-Mouratoglou Academy (Taleez refuse les connexions le 2026-10-12), Alltricks (republications en masse, dates de début passées).
+Mouratoglou Academy (Taleez refuse encore les connexions le 2026-10-15), Village de la Justice (retour annoncé le 16/10),
+Alltricks (republications en masse : 3 stages retenus le 2026-10-15 avec début au 01/11).
 Testés le 2026-10-12 : Sodexo Live! et Golazo (rien en France), Compagnie des Alpes (validé via softy.pro).
 Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezevent.

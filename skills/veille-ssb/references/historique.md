@@ -3,6 +3,58 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-15 (49 offres)
+
+- 2026-10-15 | Stage | Decathlon | Stage organisation du Vitalsport (Decathlon Wittenheim) | https://joinus.decathlon.fr/fr/annonce/4647575-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-68270-wittenheim
+- 2026-10-15 | CDD | Haras national du Pin | Assistant(e) de direction du Pôle International de Sports Équestres | https://www.hellowork.com/fr-fr/emplois/84457919.html
+- 2026-10-15 | CDD | Ville de Saint-Herblain (Direction Sports, jeunesses et vie associative) | Conseiller projets sportifs - CDD 1 an (H/F) | https://www.emploi-territorial.fr/offre/o044261015000294-conseiller-projets-sportifs-cdd-1-an
+- 2026-10-15 | Stage | Association Du Sport et Plus | Stagiaire Communication Digitale | https://www.linkedin.com/jobs/view/4479842473
+- 2026-10-15 | Stage | KENEO (Eventeam Group) | Stage - Assistant(e) Chef(fe) de projet événementiel (avril-septembre 2027) | https://www.linkedin.com/jobs/view/4478837030
+- 2026-10-15 | Stage | KENEO (Eventeam Group) | Stage - Assistant(e) Chef(fe) de projet événementiel (mars-juillet 2027) | https://www.linkedin.com/jobs/view/4478829299
+- 2026-10-14 | Stage | Hopscotch Sport (Groupe Hopscotch) | Stage - Assistant(e) Marketing (Business Intelligence & Activations) | https://hopscotch-recrute.talent-soft.com/offre-de-emploi/stage-assistant-e-marketing-h-f_632.aspx
+- 2026-10-14 | Stage | Paris Saint-Germain | Stagiaire Business Analyst (revenus stade, pricing/yield) - Janvier 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/fr-FR/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-BUSINESS-ANALYST--F-H----JANVIER-2027_014969
+- 2026-10-14 | Stage | OL Lyonnes (Eagle Football Group) | Stage - Assistant(e) Relations Presse | https://careers.ol.fr/job/Stage-Assistant-relations-presse-%28HF%29/1374815557/
+- 2026-10-14 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Juriste Sites & Infrastructures - Janvier 2027 | https://jobs.fft.fr/jobs/8543948-stage-juriste-sites-infrastructures-janvier-2027
+- 2026-10-14 | Stage | Gaming Innovation Group (GiG) | Sports Data Analyst - Internship (Sportsbook) | https://www.linkedin.com/jobs/view/4478430683
+- 2026-10-14 | CDI | Fédération Française de Rugby | Chargé(e) de mission - Vie fédérale et accompagnement des élus (H/F) | https://careers.flatchr.io/fr/company/ffr/vacancy/b56rb9ajeogponzq-chargee-de-mission-vie-federale-et-accompagnement-des-elus-h-f/
+- 2026-10-14 | CDI | Ligue Grand Est de Tennis (FFT) | Conseiller en Développement (F/H) - Ligue Grand Est (Mulhouse) | https://jobs.fft.fr/jobs/8545895-conseiller-en-developpement-f-h-ligue-grand-est-mulhouse
+- 2026-10-14 | Freelance | Paris Basketball | Rédacteur ou Rédactrice sportif ou sportive (Basketball 101) | https://jobs.world.luccasoftware.com/rejoignez-le-paris-basketball-et-participez-a-son-developpement-ambitieux/redacteur-ou-redactrice-sportif-ou-sportive-30cc6a03-8c88-4155-86d1-09da69c5fd87
+- 2026-10-14 | Alternance | FDJ United | Alternant Analyste M&A | https://careers.fdjunited.com/fr/emploi/boulogne-billancourt/alternant-analyste-m-and-a/3226/45888621632
+- 2026-10-14 | Stage | Salomon (Amer Sports) | STAGE - Stagiaire Assistant Chef de Produit Bags & Packs | https://jobs.smartrecruiters.com/Salomon/744000155555889-stage-stagiaire-assistant-chef-de-produit-bags-packs-m-f-x
+- 2026-10-13 | Stage | Paris Saint-Germain | Stagiaire Assistant(e) Chef de Projet Sponsoring - Janvier 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/fr-FR/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-CHEF-DE-PROJET-SPONSORING--H-F----JANVIER-2027_014928
+- 2026-10-13 | Stage | AccroCamp (parcs accrobranche) | Stagiaire Référent(e) Community Manager & Opérateur(trice) polyvalent(e) sur parc | https://www.sportstrategies.com/offre-emploi/stagiaire-referente-community-manager-operateur-trice-polyvalente-h-f-stage-4-a-6-mois-sur-parc/
+- 2026-10-13 | CDD | Amiens SC | Chargé(e) de communication sportive & création de contenus | https://www.linkedin.com/posts/lamiens-sporting-club-recherche-sonsa-futur-share-7515822445157826560-cRZ-/
+- 2026-10-13 | Stage | Aono (offre relayée par Profession Sport & Loisirs) | Stage : Assistant(e) Présentation Sportive (Stadium Expérience) | https://www.linkedin.com/jobs/view/4477991215
+- 2026-10-13 | Stage | Danone | Stage - Sponsorship Coordinator - Janvier 2027 | https://careers.danone.com/fr/fr/jobs/stage-sponsorship-coordinator-janvier-2027-h-f-28435-fr-fr.html
+- 2026-10-13 | CDD | A.S.O. (Amaury Sport Organisation) | CDD - Chargé de Projet - Digital H/F | https://carrieres.aso.fr/jobs/8541521-cdd-charge-de-projet-digital-h-f
+- 2026-10-13 | Stage | Mouratoglou Academy | Stagiaire Chargé commercial | https://www.linkedin.com/jobs/view/4477989007
+- 2026-10-13 | CDD | Angers Loire Métropole | Référent des évènements du Parc de Loisirs du Lac de Maine | https://www.emploi-territorial.fr/offre/o049261013000729-referent-evenements-parc-loisirs-lac-maine
+- 2026-10-13 | CDD | Clermont Auvergne Métropole (Direction des sports) | Coordinateur administratif et promotion de la politique sportive (F/H) | https://www.emploi-territorial.fr/offre/o063261012000946-coordinateur-administratif-promotion-politique-sportive-h
+- 2026-10-13 | CDD | Ville d'Auxerre | Référent administratif et pédagogique pour le service des Sports H/F | https://www.emploi-territorial.fr/offre/o089261013001678-referent-administratif-pedagogique-pour-le-service-sports
+- 2026-10-12 | Stage | Aroma-Zone | Stagiaire Assistant(e) Marketing et Évènementiel Sportif | https://careers.aroma-zone.com/jobs/8532252-stagiaire-assistant-e-marketing-et-evenementiel-sportif-h-f
+- 2026-10-12 | Stage | UrbanSoccer | Stage assistant commercial - UrbanSoccer / UrbanPadel Bordeaux | https://urbansoccer.softy.pro/offers/224771
+- 2026-10-12 | Stage | Spartner Event & Consulting | Stage - Assistant·e Project Manager (BU Event) | https://www.linkedin.com/jobs/view/4478576320
+- 2026-10-12 | Stage | Spartner Event & Consulting | Consultant·e Stagiaire (BU Consulting) | https://www.linkedin.com/jobs/view/4478578305
+- 2026-10-12 | CDI | STRADA Marketing (pour adidas) | Commercial clubs et sports collectifs - adidas (Auvergne-Rhône-Alpes) | https://www.linkedin.com/jobs/view/4476041082
+- 2026-10-12 | CDI | STRADA Marketing (pour adidas) | Commercial clubs et sports collectifs - adidas (Quart Sud-Ouest) | https://www.linkedin.com/jobs/view/4476026846
+- 2026-10-12 | Stage | Campsider (marketplace de matériel de sport d'occasion) | Merchandising / E-Commerce Marketing - Stage | https://campsider.welcomekit.co/jobs/service-client-sport-cdi_CAMPS_1dj4qP5
+- 2026-10-12 | CDD | Ville d'Angers | Responsable Unité manifestations sportives | https://www.emploi-territorial.fr/offre/o049261012001003-responsable-unite-manifestations-sportives
+- 2026-10-09 | Stage | Lacoste | Stage - Assistant Sport Marketing (activation tennis, golf, olympique) | https://www.hellowork.com/fr-fr/emplois/84278722.html
+- 2026-10-09 | Stage | FDJ United (ParionsSport) | Graphiste - F/H - Stage (studio ParionsSport) | https://careers.fdjunited.com/fr/emploi/boulogne-billancourt/graphiste-f-h-stage/3226/45738131136
+- 2026-10-09 | Stage | Alltricks | Rédacteur Web Running, Bikewear & Outdoor (H/F) - Stage | https://alltricks.welcomekit.co/jobs/redacteur-web-running-bikewear-outdoor-h-f-stage_montigny-le-bretonneux
+- 2026-10-09 | Stage | Alltricks | E-merchandiser Cycle (H/F) - Stage | https://alltricks.welcomekit.co/jobs/e-merchandiser-cycle-h-f-stage_montigny-le-bretonneux
+- 2026-10-09 | Stage | Alltricks | Catalog Leader Cycle (H/F) - Stage | https://alltricks.welcomekit.co/jobs/catalog-leader-cycle-h-f-stage_montigny-le-bretonneux
+- 2026-10-08 | CDD | Conseil départemental de la Savoie | Chargé de mission clauses sociales - JOP 2030 (H/F) - Réf. 33008 | https://www.emploi-territorial.fr/offre/o073261008001598-chargE-mission-clauses-sociales-jop-2030-ref-33008
+- 2026-10-02 | Stage | Potel et Chabot | Stagiaires Chef de Projets - Roland-Garros (9 postes) | https://www.linkedin.com/jobs/view/4473371589
+- 2026-09-30 | Stage | Compagnie des Alpes (domaines skiables, parcs) | Stagiaire Droit des Affaires - H/F | https://compagniedesalpes.softy.pro/offers/223163
+- 2026-09-29 | Stage | Comité National Olympique et Sportif Français (CNOSF) | Stagiaire Commission des Athlètes de Haut Niveau | https://taleez.com/apply/stagiaire-commission-des-athletes-de-haut-niveau-paris-comite-national-olympique-et-sportif-francais-cnosf
+- 2026-09-29 | CDD | Ville de Rennes | Responsable planification des équipements sportifs (F/H) | https://www.emploi-territorial.fr/offre/o035260929001936-responsable-planification-equipements-sportifs-h
+- 2026-09-23 | CDD | Groupe Amaury (Amaury Média / L'Équipe) | CDD 6 mois - Assistant(e) ADV (F-H) - Amaury Média (régie de L'Équipe) | https://carrieres.amaury.com/jobs/8441407-cdd-6-mois-assistant-e-adv-f-h
+- 2026-09-21 | CDD | Parc naturel régional de la Montagne de Reims | Chargé(e) de projet Valorisation de la randonnée & événementiel | https://www.hellowork.com/fr-fr/emplois/83705641.html
+- 2026-09-21 | CDI | EGYM Wellpass (ex-Gymlib) | Operations Manager (h/f/d) - partenaires sportifs | https://jobs.ashbyhq.com/egym/a84599cb-df50-402a-ab5c-32cf664e24f6
+- 2026-09-18 | Stage | Red Bull France | Stage Data Specialist Hors-Domicile (H/F) | https://jobs.smartrecruiters.com/RedBull/744000150305009-stage-data-specialist-hors-domicile-h-f-
+- 2026-09-15 | CDD | Commune de Baie-Mahault | Chargé(e) des relations associatives et sportives | https://www.emploi-territorial.fr/offre/o971260915001545-charge-e-relations-associatives-sportives
+
 ## Veille du 2026-10-12 (26 offres)
 
 - 2026-10-12 | CDI | Sport Market (séjours et stages sportifs) | Assistant Chef de Projet (H/F) | https://www.hellowork.com/fr-fr/emplois/84328437.html
