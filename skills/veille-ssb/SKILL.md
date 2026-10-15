@@ -251,7 +251,8 @@ sont ouvertes. Une veille automatique se déroule ainsi :
    `.venv/bin/python skills/veille-ssb/scripts/harvest.py --sources skills/veille-ssb/references/sources.json --board data/offres.json --history skills/veille-ssb/references/historique.md --date AAAA-MM-JJ --out out/candidats/AAAA-MM-JJ-api.json`
    Un sous-agent relit les candidates (intitulé, `_extrait`, page de l'offre en cas de doute),
    écarte ce qui sort du segment sport business ou du niveau junior, corrige catégorie et
-   contrat, et écrit `out/lots/AAAA-MM-JJ/api.json`.
+   contrat, et écrit `out/lots/AAAA-MM-JJ/api.json`. Chaque candidate refusée est ajoutée à
+   `references/ecartees.txt` : le moissonneur ne la repropose plus.
    En parallèle, les autres sous-agents cherchent de NOUVELLES offres dans les familles
    sans API (méthode ci-dessus), en France et à l'étranger. Exclure tout lien déjà présent
    dans `data/offres.json` ou dans `references/historique.md`. Pas de plafond par employeur.

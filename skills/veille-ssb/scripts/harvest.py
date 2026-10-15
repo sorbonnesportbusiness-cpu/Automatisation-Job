@@ -3,12 +3,15 @@
 """
 Moissonne les API publiques des sites carrières listés dans references/sources.json
 (Workday, SmartRecruiters, Lever, Greenhouse, Ashby, Teamtailor, Workable, Breezy,
-Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, DigitalRecruiters, Taleez, Flatchr, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
+Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, DigitalRecruiters, Taleez, Flatchr, WordPress, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
 
 Le script ne fait que le gros du tri : offres de moins de 60 jours, niveau junior,
 métiers sport business, intitulé et extrait en français ou en anglais, pas déjà au
 tableau ni déjà livrées. Un sous-agent relit
 ensuite les candidates (champ `_extrait`) avant qu'elles n'entrent au tableau.
+
+Une source d'actualités (blog, flux RSS d'une fac) porte "junior_obligatoire": true : seuls
+les intitulés de stage, d'alternance ou de poste junior sont gardés.
 
 Chaque source peut porter "exclure" : une expression régulière appliquée à l'intitulé
 normalisé (minuscules, sans accents) pour écarter le bruit propre à cet employeur.
@@ -77,8 +80,9 @@ OFF_TARGET = re.compile(
     r"(footwear|apparel|material) development|product testing|quality|workplace management|trainer\w*|"
     r"sicherheit|anwendersupport|information technology|customer service|allocator|music|marketeer|"
     r"barman|barmaid|sous chef|veiligheid|poker|journalism\w*|visual merchandis\w*)\b")
-SPORT = re.compile(r"(\bsport|sponsor|partenariat|partnership|parrainage|athlet|olymp|paralymp|football|"
-                   r"rugby|tennis|basket|cyclisme|golf|e-?sport|stade|stadium|club|league|ligue)")
+# Pour un employeur hors sport, l'offre doit parler explicitement de sport ou de sponsoring.
+SPORT = re.compile(r"(\bsports?\b|sportif|sportive|sponsor|parrainage|athlet|olymp|paralymp|football|rugby|"
+                   r"tennis|basket|cyclisme|e-?sport|stadium)")
 
 MONTHS_FR_EN = {"jan": 1, "fev": 2, "feb": 2, "mar": 3, "avr": 4, "apr": 4, "mai": 5, "may": 5, "juin": 6,
                 "june": 6, "juil": 7, "july": 7, "aou": 8, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
@@ -160,6 +164,8 @@ def keep(job, src):
     if src.get("exclure") and re.search(src["exclure"], t):
         return False, "exclu pour cette source"
     junior = bool(JUNIOR.search(t)) or job.get("_niveau") in ("internship", "intern")
+    if src.get("junior_obligatoire") and not junior:
+        return False, "pas un stage ni un poste junior (source d'actualités)"
     if job["pays"] != "France" and not junior:
         return False, "étranger : pas un poste junior"
     if job["pays"] not in ("France", "?") and job["pays"] not in EUROPE and not src.get("hors_europe"):
@@ -433,6 +439,28 @@ def read_schema_feed(s, run):
     return out
 
 
+def read_wordpress(s, run):
+    """API REST WordPress d'un site carrières (posts ou type d'offre daté), 60 derniers jours."""
+    after = (run - timedelta(days=62)).isoformat() + "T00:00:00"
+    out, page = [], 1
+    while page <= 15:
+        sep = "&" if "?" in s["url"] else "?"
+        try:
+            d = get_json(f"{s['url']}{sep}per_page=100&page={page}&after={after}&_fields=title,link,date,excerpt,content")
+        except urllib.error.HTTPError as exc:
+            if exc.code == 400:  # au-delà de la dernière page
+                break
+            raise
+        for p in d:
+            body = (p.get("content") or {}).get("rendered", "") or (p.get("excerpt") or {}).get("rendered", "")
+            out.append(job((p.get("title") or {}).get("rendered", ""), p.get("link", ""), iso(p.get("date")),
+                           s.get("ville", ""), s.get("pays") if s.get("pays") != "Monde" else None, extrait=body))
+        if len(d) < 100:
+            break
+        page += 1
+    return out
+
+
 DR = "https://api.digitalrecruiters.com/public/v1/careers-site/job-ads"
 
 
@@ -547,7 +575,7 @@ READERS = {"workday": read_workday, "smartrecruiters": read_smartrecruiters, "le
            "greenhouse": read_greenhouse, "ashby": read_ashby, "teamtailor": read_rss, "rss": read_rss,
            "successfactors_rss": read_rss, "workable": read_workable, "breezy": read_breezy,
            "recruitee": read_recruitee, "personio": read_personio, "pinpoint": read_pinpoint, "jobylon": read_jobylon, "schema_feed": read_schema_feed,
-           "digitalrecruiters": read_digitalrecruiters, "taleez": read_taleez, "flatchr": read_flatchr,
+           "digitalrecruiters": read_digitalrecruiters, "wordpress": read_wordpress, "taleez": read_taleez, "flatchr": read_flatchr,
            "globalsportsjobs": read_globalsportsjobs}
 
 # --- Programme ----------------------------------------------------------------
@@ -620,6 +648,7 @@ def main():
     p.add_argument("--sources", required=True)
     p.add_argument("--board", required=True)
     p.add_argument("--history")
+    p.add_argument("--rejected", help="Liens refusés aux relectures précédentes (défaut : ecartees.txt à côté de --history)")
     p.add_argument("--date", default=date.today().isoformat())
     p.add_argument("--max-age", type=int, default=60)
     p.add_argument("--only", help="Nom d'une source à tester seule")
@@ -635,6 +664,9 @@ def main():
     seen = {o["lien"] for o in json.load(open(a.board, encoding="utf-8"))["offres"]}
     if a.history and Path(a.history).exists():
         seen |= set(re.findall(r"https?://\S+", Path(a.history).read_text(encoding="utf-8")))
+    rejected = Path(a.rejected) if a.rejected else (Path(a.history).with_name("ecartees.txt") if a.history else None)
+    if rejected and rejected.exists():
+        seen |= set(re.findall(r"https?://\S+", rejected.read_text(encoding="utf-8")))
 
     offers, bilan = [], {"detail_ecartees": [], "portails_steriles": [], "nouveaux_portails": [], "sources": []}
     with ThreadPoolExecutor(max_workers=8) as pool:
