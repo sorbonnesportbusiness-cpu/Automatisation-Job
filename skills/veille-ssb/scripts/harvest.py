@@ -6,7 +6,8 @@ Moissonne les API publiques des sites carrières listés dans references/sources
 Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
 
 Le script ne fait que le gros du tri : offres de moins de 60 jours, niveau junior,
-métiers sport business, pas déjà au tableau ni déjà livrées. Un sous-agent relit
+métiers sport business, intitulé et extrait en français ou en anglais, pas déjà au
+tableau ni déjà livrées. Un sous-agent relit
 ensuite les candidates (champ `_extrait`) avant qu'elles n'entrent au tableau.
 
 Chaque source peut porter "exclure" : une expression régulière appliquée à l'intitulé
@@ -31,6 +32,9 @@ import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from langue import offre_ok  # noqa: E402
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/129.0 Safari/537.36")
@@ -150,6 +154,9 @@ def keep(job, src):
     t = norm(job["titre"])
     if OFF_TARGET.search(t):
         return False, "métier hors cible"
+    ok, why = offre_ok(job["titre"], job.get("_extrait", ""))
+    if not ok:
+        return False, why
     if src.get("exclure") and re.search(src["exclure"], t):
         return False, "exclu pour cette source"
     junior = bool(JUNIOR.search(t)) or job.get("_niveau") in ("internship", "intern")

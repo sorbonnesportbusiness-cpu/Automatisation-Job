@@ -6,6 +6,8 @@ fichier de nouvelles offres, prêt pour site/publish.sh.
 
 - supprime les doublons (même lien, ou même employeur + même intitulé) ;
 - écarte les liens déjà au tableau (data/offres.json) ou déjà livrés (historique.md) ;
+- écarte les offres dont l'intitulé ou le contenu n'est ni en français ni en anglais
+  (le contenu est relu sur la page de l'offre pour les offres hors de France) ;
 - applique un plafond d'offres par employeur si --cap est donné (aucun par défaut) ;
 - fusionne les bilans.
 
@@ -17,9 +19,14 @@ Usage :
 import argparse
 import json
 import re
+import sys
 import unicodedata
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from langue import offre_ok, page_text  # noqa: E402
 
 
 def key(text):
@@ -39,6 +46,7 @@ def main():
     p.add_argument("--history")
     p.add_argument("--cap", type=int, default=0, help="Plafond par employeur, 0 = aucun")
     p.add_argument("--out", required=True)
+    p.add_argument("--no-lang-fetch", action="store_true", help="Ne pas relire les pages étrangères pour la langue")
     args = p.parse_args()
 
     board = json.load(open(args.board, encoding="utf-8")) if Path(args.board).exists() else {"offres": []}
@@ -58,8 +66,19 @@ def main():
     # Offres les plus récentes d'abord, pour que le plafond garde les plus fraîches.
     candidates = [o for _, lot in lots for o in lot.get("offres", [])]
     candidates.sort(key=lambda o: o.get("date_iso") or "", reverse=True)
-    for o in candidates:
+    def lang_check(o):
+        if o.get("pays") in (None, "", "France") or args.no_lang_fetch:
+            return offre_ok(o.get("titre", ""))
+        ok, why = offre_ok(o.get("titre", ""))
+        return offre_ok(o["titre"], page_text(o["lien"])) if ok and o.get("lien") else (ok, why)
+
+    with ThreadPoolExecutor(8) as pool:
+        verdicts = list(pool.map(lang_check, candidates))
+    for o, (ok, why) in zip(candidates, verdicts):
         if not o.get("lien") or not o.get("titre"):
+            continue
+        if not ok:
+            dropped.append(f"Langue : {o['titre']} - {o.get('entreprise')} ({why})")
             continue
         pair = (employer(o), key(o["titre"]))
         if o["lien"] in seen_links or pair in seen_pairs:

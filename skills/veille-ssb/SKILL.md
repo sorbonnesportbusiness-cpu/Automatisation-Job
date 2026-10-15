@@ -35,6 +35,12 @@ merchandising, esport, médias sport, paris sportifs, droit du sport (juristes, 
 cabinets avec une pratique sport), finance du sport, politiques sportives (État,
 collectivités). Une veille complète en donne facilement 50 à 100.
 
+Langue : l'intitulé ET le contenu de l'offre doivent être en français ou en anglais (règle de
+Tom du 2026-10-16). Une annonce en allemand, espagnol, néerlandais, italien ou portugais est
+écartée, même avec un intitulé anglais : les étudiants de SSB ne pourraient pas y postuler.
+`scripts/langue.py` applique la règle dans le moissonneur et dans `merge_lots.py` (qui relit
+la page des offres hors de France).
+
 Zone : la France d'abord, et l'étranger pour les stages et postes juniors des grands clubs,
 instances (UEFA, FIFA, CIO, ligues), marques et agences, en Europe surtout (Royaume-Uni,
 Espagne, Italie, Allemagne, Suisse, Benelux, Portugal, Monaco, Irlande). Hors d'Europe,
