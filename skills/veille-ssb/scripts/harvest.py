@@ -3,7 +3,7 @@
 """
 Moissonne les API publiques des sites carrières listés dans references/sources.json
 (Workday, SmartRecruiters, Lever, Greenhouse, Ashby, Teamtailor, Workable, Breezy,
-Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
+Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, DigitalRecruiters, Taleez, Flatchr, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
 
 Le script ne fait que le gros du tri : offres de moins de 60 jours, niveau junior,
 métiers sport business, intitulé et extrait en français ou en anglais, pas déjà au
@@ -433,6 +433,71 @@ def read_schema_feed(s, run):
     return out
 
 
+DR = "https://api.digitalrecruiters.com/public/v1/careers-site/job-ads"
+
+
+def read_digitalrecruiters(s, run):
+    """DigitalRecruiters (Decathlon, Lacoste) : liste sans date, la date est lue au détail."""
+    out, page = [], 1
+    while len(out) < s.get("max", 1500):
+        qs = urllib.parse.urlencode({"domainName": s["domain"], "limit": 100, "page": page, "locale": "fr_FR"})
+        d = get_json(f"{DR}?{qs}", {"filters": {}})
+        for p in d.get("items", []):
+            j = job(p.get("title", ""), f"https://{s['domain']}/fr/annonce/{p.get('url', '')}", None,
+                    p.get("location", ""), "France", p.get("contract", ""))
+            j["_dr_id"] = p.get("job_ad_id")
+            out.append(j)
+        if page * 100 >= d.get("count", 0) or not d.get("items"):
+            break
+        page += 1
+    return out
+
+
+def detail_digitalrecruiters(s, j):
+    qs = urllib.parse.urlencode({"domainName": s["domain"], "locale": "fr_FR", "withJsonld": 1})
+    d = get_json(f"{DR}/{j['_dr_id']}?{qs}")
+    j["date_iso"] = iso((d.get("jsonld") or {}).get("datePosted")) or iso(d.get("republished_at"))
+    j["_extrait"] = strip_tags(d.get("description", ""))[:400]
+
+
+def read_taleez(s, run):
+    d = get_json(f"https://{s['slug']}.taleez.com/api/careez")
+    out = []
+    for p in d.get("jobs", []):
+        loc = p.get("location") or {}
+        out.append(job(p.get("label", ""), f"https://{s['slug']}.taleez.com/jobs/{p.get('slug', '')}",
+                       iso(p.get("publishDate") or p.get("creationDate")),
+                       f"{loc.get('city', '')} ({loc.get('departmentCode', '')})" if loc.get("city") else p.get("officeName", ""),
+                       country_of(loc.get("country", "")) or "France", p.get("contract", "")))
+    return out
+
+
+def read_flatchr(s, run):
+    """Flatchr : les offres sont dans le __NEXT_DATA__ de la page entreprise."""
+    page = fetch(f"https://careers.flatchr.io/fr/company/{s['slug']}/")
+    m = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', page, re.S)
+    out, seen = [], set()
+
+    def walk(o):
+        if isinstance(o, dict):
+            v = o.get("vacancy")
+            if isinstance(v, dict) and v.get("slug") and v.get("title") and v["slug"] not in seen:
+                seen.add(v["slug"])
+                addr = (v.get("company") or {}).get("address") or v.get("address") or {}
+                out.append(job(v["title"], f"https://careers.flatchr.io/fr/company/{s['slug']}/vacancy/{v['slug']}/",
+                               iso(o.get("publish_date") or o.get("created_at")),
+                               addr.get("locality", "") if isinstance(addr, dict) else "", "France",
+                               str(v.get("contract_type", "")), v.get("description", "")))
+            for x in o.values():
+                walk(x)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    if m:
+        walk(json.loads(m.group(1)))
+    return out
+
+
 GSJ = "https://api.globalsportsjobs.com/api/jobs"
 GSJ_SECTORS = {"clubs": "Club", "leagues": "Ligue / Fédération", "federations": "Ligue / Fédération",
                "governing_bodies": "Ligue / Fédération", "agencies": "Agence", "media": "Média",
@@ -482,6 +547,7 @@ READERS = {"workday": read_workday, "smartrecruiters": read_smartrecruiters, "le
            "greenhouse": read_greenhouse, "ashby": read_ashby, "teamtailor": read_rss, "rss": read_rss,
            "successfactors_rss": read_rss, "workable": read_workable, "breezy": read_breezy,
            "recruitee": read_recruitee, "personio": read_personio, "pinpoint": read_pinpoint, "jobylon": read_jobylon, "schema_feed": read_schema_feed,
+           "digitalrecruiters": read_digitalrecruiters, "taleez": read_taleez, "flatchr": read_flatchr,
            "globalsportsjobs": read_globalsportsjobs}
 
 # --- Programme ----------------------------------------------------------------
@@ -511,6 +577,12 @@ def run_source(s, run, max_age, seen_links):
                 ok, why = False, "GSJ : détail illisible"
             if ok and j["lien"] in seen_links:
                 continue
+        if ok and s["ats"] == "digitalrecruiters":
+            try:
+                detail_digitalrecruiters(s, j)
+                ok, why = keep(j, s)
+            except Exception:  # noqa: BLE001
+                pass
         if ok and s["ats"] == "workday":
             try:
                 detail_workday(s, j)
