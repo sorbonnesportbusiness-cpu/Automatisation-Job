@@ -47,6 +47,12 @@ accessible aux étudiants).
   `skills/veille-ssb/scripts/harvest.py`, voir son en-tête) est à proposer dans
   `out/sources-proposees/AAAA-MM-JJ-<famille>.json`, au format de `sources.json`.
 - N'écris aucun autre fichier.
+- Personne n'est là pour approuver une commande : une commande refusée ne sera jamais
+  acceptée. Avec Bash, une seule commande simple par appel : pas de `&` (arrière-plan),
+  pas de chaînes avec `;`, `&&`, `|` ni de `$(...)`, pas de `cd`. Pour espacer deux
+  requêtes, un appel `sleep 7` à part. Pour lire une page, WebFetch ; pour écrire un
+  fichier, Write plutôt que `echo >` ou `cat <<`. Si une commande est refusée, passe par
+  un autre outil plutôt que d'abandonner la famille.
 
 ## Familles de recherche
 
