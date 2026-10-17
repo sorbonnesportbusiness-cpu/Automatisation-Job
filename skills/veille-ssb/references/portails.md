@@ -275,3 +275,13 @@ Mouratoglou Academy (Taleez refuse encore les connexions le 2026-10-15), Village
 Alltricks (republications en masse : 3 stages retenus le 2026-10-15 avec début au 01/11).
 Testés le 2026-10-12 : Sodexo Live! et Golazo (rien en France), Compagnie des Alpes (validé via softy.pro).
 Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezevent.
+
+## Mise à jour du 2026-10-17 (relecture)
+
+- **Nouveaux portails** : Ecofoot de nouveau lisible (59 offres, liens employeurs) ; HelloWork par nom de club (Eagle Football Group/OL
+  publie par lots) ; HelloWork k=fédération française&st=date (158 offres, relais FFVolley, FFR, FFHG, FFT) ; LinkedIn
+  jobs-guest/jobs/api/seeMoreJobPostings/search (HTML) et jobPosting/<id> via WebFetch, sans connexion (429 si requêtes enchaînées).
+- **Stériles ou bloqués ce jour** : carrieres.amaury.com, sportstrategies.com, joinus.canalplus.com (WebFetch refusé) ; indeed (403) ;
+  wearemeent.com ; careers.accorarena.com/jobs.rss ; fff.taleez.com (vide) ; ffvolley.org/la-ffvb/emploi ; LinkedIn Suisse (429) ;
+  FFBaD career API (encadrement seulement) ; Lawprofiler et Lefebvre Dalloz (seniors ou hors sport) ; Greenhouse gymshark, zwift,
+  peloton, hudl, twitch (sans offre utile) ; choisirleservicepublic et emploi-territorial (rien de junior).

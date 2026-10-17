@@ -3,6 +3,33 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-17 (24 offres)
+
+- 2026-10-16 | Stage | SPORTFIVE | Stage - Assistant.e Chef.ffe de Projet Social Media & Contenus F/H | https://fr.linkedin.com/jobs/view/4479392128
+- 2026-10-16 | Stage | SPORTFIVE | Stage - Assistant.e Business Développement Olympisme F/H | https://fr.linkedin.com/jobs/view/4479332830
+- 2026-10-16 | Stage | SPORTFIVE | Stage - Junior Project Manager F/H | https://fr.linkedin.com/jobs/view/4479328924
+- 2026-10-16 | Stage | R&OCEAN DÉVELOPPEMENT | Stagiaire Community Manager & Créateur de contenus – Sport & Innovation (H/F) | https://fr.linkedin.com/jobs/view/4480377260
+- 2026-10-15 | Stage | Jacobs Douwe Egberts | Stage Chef de Projet - Senseo X Tour de France | https://www.hellowork.com/fr-fr/emplois/83358770.html
+- 2026-10-15 | Stage | The Walt Disney Company (ESPN UK) | ESPN Editorial Internship (placement year 2027) | https://www.linkedin.com/jobs/view/4479108851
+- 2026-10-15 | CDD | Fédération Française de Hockey sur Glace | Chargé de Communication Digitale | https://www.hellowork.com/fr-fr/emplois/83359865.html
+- 2026-10-14 | CDD | A.S.O. - Amaury Sport Organisation | CDD - Chargé de Projet - Digital H/F | https://fr.linkedin.com/jobs/view/4478449608
+- 2026-10-14 | Stage | The Walt Disney Company (ESPN UK) | ESPN Digital Production and Social Content Internship (placement year 2027) | https://www.linkedin.com/jobs/view/4478421120
+- 2026-10-12 | Stage | Fédération Française de Volley-ball | Assistant Marketing - Activation Partenariat (stage) | https://www.hellowork.com/fr-fr/emplois/84360509.html
+- 2026-10-12 | Stage | Spartner (Event & Consulting) | Consultant·e Stagiaire H/F | https://fr.linkedin.com/jobs/view/4478568681
+- 2026-10-10 | CDD | LTA (Lawn Tennis Association) | Event Assistant - HSBC Championships (FTC novembre 2026 - juillet 2027) | https://www.linkedin.com/jobs/view/4473693354
+- 2026-10-10 | Stage | LFP - Ligue de Football Professionnel (LFP Media) | Stage - Assistant(e) Chef de Projets Relations Presse et Réseaux Sociaux Internationaux (H/F) | https://fr.linkedin.com/jobs/view/4475115059
+- 2026-10-10 | Stage | LFP - Ligue de Football Professionnel (LFP Media) | Stage - Business Developper Billetterie CSE et Groupes (H/F) | https://fr.linkedin.com/jobs/view/4475138678
+- 2026-10-10 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Services aux Publics - Janvier 2027 | https://fr.linkedin.com/jobs/view/4475156048
+- 2026-10-10 | Stage | CANAL+ Group | STAGE - COMMUNITY MANAGER FOOTBALL - (F/H/X) | https://fr.linkedin.com/jobs/view/4476168410
+- 2026-10-10 | Stage | Alpes 2030 (COJOP) | Stage | Chargé de mission Fan Expérience (F/H) | https://fr.linkedin.com/jobs/view/4474624232
+- 2026-10-10 | Stage | Alpes 2030 (COJOP) | Stage | Chargé(e) de développement des partenariats (F/H) | https://fr.linkedin.com/jobs/view/4474956582
+- 2026-10-09 | Stage | Lacoste | Stage - Assistant·e Chef de Produit - Sport - Training | https://www.hellowork.com/fr-fr/emplois/84278696.html
+- 2026-10-08 | Stage | Paris Saint-Germain | Stagiaire Assistant Chef de Projet Activation de Marque | https://www.hellowork.com/fr-fr/emplois/83116187.html
+- 2026-09-29 | Stage | Ligue de Football Professionnel (LFP Media) | Stage - Assistant Chef de Projet Partenariats & Esport | https://www.hellowork.com/fr-fr/emplois/83878647.html
+- 2026-09-29 | Stage | Fédération Française de Rugby | Assistant Data & Développement des Territoires (stage conventionné 6 mois) | https://www.hellowork.com/fr-fr/emplois/83878660.html
+- 2026-09-28 | Stage | Paris Saint-Germain | Stagiaire Événementiel PSG Academy | https://www.hellowork.com/fr-fr/emplois/83819583.html
+- 2026-09-28 | Stage | AS Monaco | Stagiaire Partenariats | https://www.hellowork.com/fr-fr/emplois/83819582.html
+
 ## Veille du 2026-10-17 (29 offres)
 
 - 2026-10-17 | Stage | Electronic Arts (EA) | EA SPORTS FC Franchise Campaign Marketing Intern | https://jobs.ea.com/en_US/careers/JobDetail/FC-Franchise-Campaign-Marketing-Intern/216355
