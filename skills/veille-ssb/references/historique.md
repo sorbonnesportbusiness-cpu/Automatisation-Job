@@ -3,6 +3,21 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-17 (12 offres)
+
+- n.c. | Stage | Sportfive | Stage - Assistant.e Marketing Partenariats & Marques F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-marketing-partenariats-marques-f-h-at-sportfive-4479351041
+- n.c. | Stage | Sportfive | Stage - Assistant.e Marketing Omnisports F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-marketing-omnisports-f-h-at-sportfive-4479392127
+- 2026-10-01 | Stage | Sportfive | Stage Assistant.e Account Manager Football & Rugby | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Account-Manager-Football-&-Rugby-%28FH%29-92100/1370104955/
+- 2026-10-17 | Alternance | SCHOOL OF SPORTS | Chargé de Partenariats Sportifs (alternance Bac+4/5) | https://www.hellowork.com/fr-fr/emplois/78003877.html
+- 2026-10-16 | Stage | Paris Saint-Germain | Stagiaire Assistant(e) Brand Retail | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-E--BRAND-RETAIL--H-F-_014494
+- 2026-10-14 | Stage | UEFA | Commercial Sustainability Intern | https://emp.jobylon.com/jobs/386636-uefa-commercial-sustainability-intern/
+- n.c. | CDI | Nova Lead | Business Developer junior - Sport & Partenariats H/F | https://www.francetravail.fr/offres/recherche/detail/215CWRD
+- 2026-10-14 | Stage | Eventeam Group (KENEO) | STAGE - Assistant(e) Chef(fe) de projet événementiel | https://recrutement.eventeam-group.com/jobs/8547177-stage-assistant-e-chef-fe-de-projet-evenementiel
+- n.c. | Stage | Sportfive | Stage - Assistant.e Chef.fe de Projet Digital & Contenus Marques F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-ffe-de-projet-digital-contenus-marques-f-h-at-sportfive-4479334807
+- 2026-10-16 | Stage | TF1 (TF1 Pub) | Stage Chargé·e d'Études Marketing Multiscreen Info & Sport | https://www.hellowork.com/fr-fr/emplois/84523918.html
+- 2026-10-16 | Stage | OL Lyonnes (Eagle Football Group) | Stage - Rédaction digitale | https://careers.ol.fr/job/OL-Lyonnes-Stage-REDACTION-DIGITALE-%28HF%29/1375074257/
+- n.c. | Stage | Lacoste | Stage - Assistant(e) Chef de Produits Lunettes, Montres & Bijoux | https://careers.lacoste.com/fr/annonce/4644521-stage-assistante-chef-de-produits-lunettes-montres-bijoux-75016-paris
+
 ## Veille du 2026-10-16 (1 offres)
 
 - 2026-10-15 | CDD | Stade Rennais FC | Comptable H/F | https://www.hellowork.com/fr-fr/emplois/84467531.html
