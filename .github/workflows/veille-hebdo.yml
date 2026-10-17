@@ -1,0 +1,85 @@
+# Veille hebdomadaire : chaque lundi à 8 h (heure de Paris), Claude Code cherche les
+# nouvelles offres selon consigne.md et écrit veille/AAAA-MM-JJ.md, puis le workflow
+# l'enregistre dans le dépôt.
+
+name: Veille hebdomadaire
+
+on:
+  schedule:
+    # GitHub ne connaît que l'heure UTC. 8 h à Paris = 6 h UTC en été, 7 h UTC en hiver.
+    # On programme les deux, et l'étape "Heure de Paris" ne garde que la bonne.
+    - cron: "0 6 * * 1"
+    - cron: "0 7 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Heure de Paris
+        id: heure
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          OFFSET=$(TZ=Europe/Paris date +%z)
+          RUN=true
+          if [ "$SCHEDULE" = "0 6 * * 1" ] && [ "$OFFSET" != "+0200" ]; then RUN=false; fi
+          if [ "$SCHEDULE" = "0 7 * * 1" ] && [ "$OFFSET" != "+0100" ]; then RUN=false; fi
+          echo "run=$RUN" >> "$GITHUB_OUTPUT"
+          echo "date=$(TZ=Europe/Paris date +%F)" >> "$GITHUB_OUTPUT"
+          echo "Décalage Paris : $OFFSET, déclencheur : ${SCHEDULE:-manuel}, on lance : $RUN"
+
+      - uses: actions/checkout@v4
+        if: steps.heure.outputs.run == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.heure.outputs.run == 'true'
+        with:
+          node-version: 22
+
+      - name: Installer Claude Code
+        if: steps.heure.outputs.run == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Lancer la veille
+        if: steps.heure.outputs.run == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          PROMPT="$(cat consigne.md)
+
+          ---
+          Date du jour : $DATE.
+          Écris le résultat dans le fichier veille/$DATE.md (et uniquement ce fichier)."
+          claude -p "$PROMPT" \
+            --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep" \
+            --permission-mode dontAsk
+
+      - name: Vérifier que le fichier existe
+        if: steps.heure.outputs.run == 'true'
+        env:
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          test -s "veille/$DATE.md" || { echo "Claude n'a pas écrit veille/$DATE.md"; exit 1; }
+          cat "veille/$DATE.md"
+
+      - name: Enregistrer dans le dépôt
+        if: steps.heure.outputs.run == 'true'
+        env:
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add veille/
+          git commit -m "Veille hebdo du $DATE" || { echo "Rien de nouveau"; exit 0; }
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -28,5 +28,8 @@ cp data/offres.json site/public/offres.json
 git add data "$SK/references"
 git commit -q -m "Veille du $DATE" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || echo "Rien à committer"
 TOKEN="$(gh auth token --user tpetitvallois-web)"
-git -c http.extraheader="Authorization: Basic $(printf 'x-access-token:%s' "$TOKEN" | base64)" push -q origin HEAD:main
+AUTH="Authorization: Basic $(printf 'x-access-token:%s' "$TOKEN" | base64)"
+# Le workflow GitHub Actions du lundi pousse aussi sur main (veille/) : on récupère son commit avant de pousser.
+git -c http.extraheader="$AUTH" pull -q --rebase origin main
+git -c http.extraheader="$AUTH" push -q origin HEAD:main
 echo "En ligne : https://veille.sorbonnesportbusiness.com"
