@@ -22,7 +22,7 @@ concurrency:
 jobs:
   veille:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - name: Heure de Paris
         id: heure
@@ -63,18 +63,54 @@ jobs:
         if: steps.heure.outputs.run == 'true'
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Lancer la veille
+      # Une recherche par ligne de la section "Sources à couvrir" de consigne.md :
+      # un seul appel s'arrêtait après deux ou trois sources.
+      - name: Chercher source par source
         if: steps.heure.outputs.run == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           DATE: ${{ steps.heure.outputs.date }}
         run: |
-          PROMPT="$(cat consigne.md)
+          # Relancée le même jour, la veille repart de zéro au lieu de se croire déjà faite.
+          rm -f "veille/$DATE.md"
+          touch out/trouvailles.md
+          awk '/^## /{on=($0 ~ /^## Sources à couvrir/)} on && /^- /{sub(/^- /,""); print}' consigne.md > out/sources.txt
+          echo "Sources : $(wc -l < out/sources.txt)"
+          while IFS= read -r SOURCE; do
+            echo "::group::$SOURCE"
+            claude -p "$(cat consigne.md)
 
           ---
           Date du jour : $DATE.
-          Écris le résultat dans le fichier veille/$DATE.md (et uniquement ce fichier)."
-          claude -p "$PROMPT" \
+          TA TÂCHE : cherche les offres correspondant aux critères sur cette source uniquement : $SOURCE.
+          Ouvre chaque annonce pour vérifier qu'elle est en ligne et récente.
+          Écarte les offres déjà connues, et celles déjà dans out/trouvailles.md.
+          Ajoute chaque offre retenue à la fin de out/trouvailles.md, au format d'une offre (sans numéro).
+          Termine en ajoutant une ligne « Source : $SOURCE, N offres retenues » et une phrase sur ce que tu as pu consulter ou non.
+          N'écris aucun autre fichier." \
+              --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep" \
+              --permission-mode dontAsk < /dev/null || echo "::warning::Recherche échouée : $SOURCE"
+            echo "::endgroup::"
+          done < out/sources.txt
+
+      - name: Écrire le récapitulatif
+        if: steps.heure.outputs.run == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          claude -p "$(cat consigne.md)
+
+          ---
+          Date du jour : $DATE.
+          TA TÂCHE : écrire le récapitulatif de la semaine dans veille/$DATE.md (et uniquement ce fichier).
+          Tu as deux listes de départ :
+          1. out/trouvailles.md : les offres trouvées source par source, déjà vérifiées, avec une ligne de bilan par source.
+          2. out/candidats.json : des offres récentes relevées directement sur les sites carrières de 80 employeurs du sport.
+             Relis chacune (champ _extrait, ouvre le lien en cas de doute) et garde celles qui correspondent aux critères.
+          Écarte les offres déjà connues et les doublons entre les deux listes.
+          Garde les 15 plus pertinentes au maximum, classées, au format du fichier de la semaine.
+          Dans « Sources consultées », reprends les bilans de out/trouvailles.md et ajoute le moissonnage des sites carrières." \
             --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep" \
             --permission-mode dontAsk
 
