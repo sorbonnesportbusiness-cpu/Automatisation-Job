@@ -1,4 +1,4 @@
-# Veille hebdomadaire : chaque lundi à 8 h (heure de Paris), Claude Code cherche les
+# Veille : chaque lundi et chaque jeudi à 3 h (heure de Paris), Claude Code cherche les
 # nouvelles offres selon consigne.md et écrit veille/AAAA-MM-JJ.md, puis le workflow
 # l'enregistre dans le dépôt.
 
@@ -6,10 +6,10 @@ name: Veille hebdomadaire
 
 on:
   schedule:
-    # GitHub ne connaît que l'heure UTC. 8 h à Paris = 6 h UTC en été, 7 h UTC en hiver.
+    # GitHub ne connaît que l'heure UTC. 3 h à Paris = 1 h UTC en été, 2 h UTC en hiver.
     # On programme les deux, et l'étape "Heure de Paris" ne garde que la bonne.
-    - cron: "0 6 * * 1"
-    - cron: "0 7 * * 1"
+    - cron: "0 1 * * 1,4"
+    - cron: "0 2 * * 1,4"
   workflow_dispatch: {}
 
 permissions:
@@ -31,8 +31,8 @@ jobs:
         run: |
           OFFSET=$(TZ=Europe/Paris date +%z)
           RUN=true
-          if [ "$SCHEDULE" = "0 6 * * 1" ] && [ "$OFFSET" != "+0200" ]; then RUN=false; fi
-          if [ "$SCHEDULE" = "0 7 * * 1" ] && [ "$OFFSET" != "+0100" ]; then RUN=false; fi
+          if [ "$SCHEDULE" = "0 1 * * 1,4" ] && [ "$OFFSET" != "+0200" ]; then RUN=false; fi
+          if [ "$SCHEDULE" = "0 2 * * 1,4" ] && [ "$OFFSET" != "+0100" ]; then RUN=false; fi
           echo "run=$RUN" >> "$GITHUB_OUTPUT"
           echo "date=$(TZ=Europe/Paris date +%F)" >> "$GITHUB_OUTPUT"
           echo "Décalage Paris : $OFFSET, déclencheur : ${SCHEDULE:-manuel}, on lance : $RUN"
