@@ -3,6 +3,38 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-17 (29 offres)
+
+- 2026-10-17 | Stage | Electronic Arts (EA) | EA SPORTS FC Franchise Campaign Marketing Intern | https://jobs.ea.com/en_US/careers/JobDetail/FC-Franchise-Campaign-Marketing-Intern/216355
+- 2026-10-16 | Stage | RMC BFM Ads (RMC Sport) | STAGE – Assistant Partenariats Sport – RMC (F/H) | https://fr.linkedin.com/jobs/view/stage-%E2%80%93-assistant-partenariats-sport-rmc-f-h-at-rmc-bfm-ads-4480395640
+- 2026-10-16 | Stage | SPORTFIVE | Stage - Chargé.e de Gestion ADV F/H | https://fr.linkedin.com/jobs/view/4479335717
+- 2026-10-16 | Stage | Prematch | Business Development Intern - France Expansion (Football Teamwear) | https://fr.linkedin.com/jobs/view/4477705300
+- 2026-10-16 | Stage | SPORTFIVE | Stage - Sponsoring Junior Project Manager F/H | https://fr.linkedin.com/jobs/view/stage-sponsoring-junior-project-manager-f-h-at-sportfive-4479328922
+- 2026-10-16 | CDI | FFHandball (annonces internes du siège) | Chargé de communication LFH (H/F) | https://www.ffhandball.fr/annonce-interne/__trashed_duplicated/
+- 2026-10-16 | Stage | Fédération Française de Cyclisme (FFC) | Stagiaire chargé(e) de missions BMX Racing & projets transversaux (Direction des évènements et de la règlementation sportive) | https://federation-francaise-de-cyclisme.welcomekit.co/jobs/stagiaire-charge-de-missions-bmx-racing-projets-transversaux-a-la-direction-des-evenements-et-de-la-reglementation-sportive_montigny-le-bretonneux
+- 2026-10-16 | Stage | MatchWornShirt | Performance Marketing Internship | https://nl.linkedin.com/jobs/view/performance-marketing-internship-at-matchwornshirt-4480381855
+- 2026-10-15 | CDI | Headline Events | Sports and Music Events Sales Support Executive | https://uk.linkedin.com/jobs/view/sports-and-music-events-sales-support-executive-at-headline-events-4480116346
+- 2026-10-14 | Stage | Hopscotch Sport (Groupe Hopscotch) | Stage - Assistant(e) Marketing (agence Hopscotch Sport) | https://hopscotch-recrute.talent-soft.com/offre-de-emploi/emploi-x_632.aspx
+- 2026-10-13 | Stage | Danone | STAGE – Sponsorship Coordinator – JANVIER 2027 (H/F) | https://fr.linkedin.com/jobs/view/stage-sponsorship-coordinator-janvier-2027-h-f-at-danone-4479066487
+- 2026-10-13 | Stage | Aroma-Zone | Stagiaire Assistant(e) Marketing et Évènementiel Sportif (H/F) | https://fr.linkedin.com/jobs/view/stagiaire-assistant-e-marketing-et-%C3%A9v%C3%A8nementiel-sportif-h-f-at-aroma-zone-4478707217
+- 2026-10-12 | Stage | KCO Event (groupe Pelham Media) | [STAGE] Chargé(e) de projet événementiel (pôle Sport) | https://jobs.makesense.org/fr/jobs/kco-event-stage-chargee-de-projet-evenementiel-pfcmvHmW1R5K5sElNQIh
+- 2026-10-12 | Stage | LFP Media (Ligue de Football Professionnel) | Business Developer Billetterie CSE & Groupes (stage 6 mois) | https://www.hellowork.com/fr-fr/emplois/84360477.html
+- 2026-10-12 | Stage | LFP Media (Ligue de Football Professionnel) | Assistant Chef de Projets Relations Presse & Réseaux Sociaux Internationaux (stage 6 mois) | https://www.hellowork.com/fr-fr/emplois/84360508.html
+- 2026-10-12 | CDI | Playfly Sports (Playfly International) | Account Executive, Sponsorship Activation | https://uk.linkedin.com/jobs/view/account-executive-sponsorship-activation-at-playfly-sports-4477934082
+- 2026-10-12 | CDI | Newcastle United Football Club | Fan Engagement and Events Coordinator | https://uk.linkedin.com/jobs/view/fan-engagement-and-events-coordinator-at-newcastle-united-football-club-4478515166
+- 2026-10-09 | Stage | CIO (Comité international olympique) | Promotion Events Trainee (Lausanne, VD, CH) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Promotion-Events-Trainee-VD/1445958833/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS
+- 2026-10-08 | CDI | P11 Group | Junior Sports Sponsorship Broker | https://uk.linkedin.com/jobs/view/junior-sports-broker-at-p11-group-4477165179
+- 2026-10-07 | CDI | Leeds United | Partnerships Activation Executive | https://uk.linkedin.com/jobs/view/partnerships-activation-executive-at-leeds-united-4476702583
+- 2026-10-07 | CDI | Norwich City Community Sports Foundation | Marketing and Communications Officer | https://uk.linkedin.com/jobs/view/marketing-and-communications-officer-at-norwich-city-community-sports-foundation-4476714750
+- 2026-10-05 | CDI | The Jockey Club (Cheltenham Racecourse) | Partnerships Executive | https://uk.linkedin.com/jobs/view/partnerships-executive-at-the-jockey-club-4475552348
+- 2026-10-05 | CDI | Tottenham Hotspur Football Club | Sales Executive - Stadium Events & Premium Hospitality | https://uk.linkedin.com/jobs/view/sales-executive-stadium-events-premium-hospitality-at-tottenham-hotspur-football-club-4473673001
+- 2026-09-29 | Stage | Fédération Française de Rugby | Assistant Commercial & Production (stage conventionné, 6 mois) | https://www.hellowork.com/fr-fr/emplois/83878655.html
+- 2026-09-21 | CDI | FC Metz | Assistant Paramétrage Analyses Billetterie & Contrôle d'Accès | https://www.hellowork.com/fr-fr/emplois/83576766.html
+- 2026-09-21 | CDI | FC Lorient | Chargé Back-Office Commercial | https://www.hellowork.com/fr-fr/emplois/83576816.html
+- 2026-09-17 | Stage | LFP Media (Ligue de Football Professionnel) | Assistant Études Marketing (stage) | https://www.hellowork.com/fr-fr/emplois/83495792.html
+- 2026-09-17 | CDI | Eagle Football Group (Olympique Lyonnais) | Assistant Chef de Projet Événementiel | https://www.hellowork.com/fr-fr/emplois/83495788.html
+- 2026-08-18 | Alternance | Fédération Française de Badminton | Assistant Partenariats & Marketing (apprentissage) | https://frontwebservice.ffbad.org/storage/documents/offres/Offre%20d%E2%80%99apprentissage%20-%20Assistant%20partenariats%20%26%20marketing.pdf
+
 ## Veille du 2026-10-17 (12 offres)
 
 - n.c. | Stage | Sportfive | Stage - Assistant.e Marketing Partenariats & Marques F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-marketing-partenariats-marques-f-h-at-sportfive-4479351041

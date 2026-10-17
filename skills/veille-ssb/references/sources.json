@@ -912,6 +912,15 @@
    "categorie": "Ligue / Fédération",
    "secteur": "Athlétisme",
    "note": "Lien affiché sur athle.fr/emplois. API /api/offers/ testée le 2026-10-16 : une seule offre, la candidature spontanée du 13/04/2026. Source peu productive mais vivante, gardée pour capter les prochains postes du siège."
+  },
+  {
+   "nom": "Wellhub (ex-Gympass)",
+   "ats": "greenhouse",
+   "board": "gympass",
+   "pays_filtre": "France",
+   "categorie": "Sportstech",
+   "secteur": "Fitness",
+   "filtre": "tout"
   }
  ]
 }

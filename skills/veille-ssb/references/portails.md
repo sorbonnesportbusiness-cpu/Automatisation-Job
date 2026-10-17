@@ -254,6 +254,21 @@ Dernière mise à jour : 2026-10-15 au soir (moissonneur d'API et offres à l'é
   sport), cabinets d'avocats (Racine, De Gaulle Fleurance, Joffe, Delsol), Riot, DAZN, Octagon,
   Two Circles, Puma, Nike France (retail seulement), PASS (stages de la fonction publique).
 
+## Mise à jour du 2026-10-17
+
+- **Nouveaux portails** : Wellhub (Greenhouse gympass, ajouté à sources.json) ; Paris La Défense Arena (join.com, createdAt dans
+  __NEXT_DATA__) ; careers.lagardere.com/jobs.rss (Teamtailor) ; jobs.makesense.org (JSON-LD, relaye KCO et agences événementielles) ;
+  Hopscotch (talent-soft, flux offerRss.ashx?LCID=1036) ; FFC et FF Cyclisme Welcome Kit (datePosted en JSON-LD) ;
+  FFBaD frontwebservice.ffbad.org/api/career (JSON daté, pas de type harvest.py) ; GL events get_hr_data (JSON, peu de sport) ;
+  careers.ol.fr (/search/?q=&sortColumn=referencedate&sortDirection=desc) ; Ville de Paris : travaillerpourparis.rec.paris.fr/search.
+- **Stériles ou bloqués ce jour** : ecofoot.fr (connexion en échec), talent.com (anti-robot), lesportrecrute.fr (SPA illisible en curl),
+  Village de la Justice (404), ffgolf.org (404), fftri, ffvoile, ffbb, ffjudo, ffhandball, cnosf, cros-idf, ffs.fr (JS), Club Brugge,
+  Atlético (espagnol), Everton, UK Sport, adidas Herzogenaurach, Paris Entertainment Company, Lefebvre Dalloz, recrutement.lemans.org (JS),
+  Paris Basketball (Lucca, JS), Octagon (postes Asie-Pacifique), Law Profiler (rien de nouveau), emploi-territorial et choisirleservicepublic
+  (encadrement seulement).
+- **Clubs anglais sans ATS public** (Leeds, Newcastle, Tottenham, Norwich) : LinkedIn sans connexion avec « partnerships assistant »,
+  « fan engagement intern ».
+
 ## À tester
 
 Mouratoglou Academy (Taleez refuse encore les connexions le 2026-10-15), Village de la Justice (retour annoncé le 16/10),
