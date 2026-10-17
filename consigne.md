@@ -6,8 +6,8 @@ changer les critères : le workflow le relit à chaque lancement.
 
 ## Critères de recherche
 
-- **Secteur** : sport business (clubs, ligues, fédérations, équipementiers, agences
-  de marketing sportif, organisateurs d'événements, médias sportifs).
+- **Secteur** : sport business (clubs, ligues, fédérations, équipementiers,
+  agences de marketing sportif, organisateurs d'événements, médias sportifs).
 - **Types de contrat** : stage, alternance, CDI junior, VIE.
 - **Métiers** : marketing, partenariats, communication, événementiel, développement
   commercial.
@@ -16,13 +16,40 @@ changer les critères : le workflow le relit à chaque lancement.
 - **Niveau** : Bac+5, jeune diplômé.
 - **Sources à privilégier** : Welcome to the Jungle, JobTeaser, Sport Stratégies,
   sites carrières des clubs et des fédérations, France Travail.
-  Le fichier `skills/veille-ssb/references/portails.md` liste les portails qui ont
-  déjà donné des résultats : lis-le pour gagner du temps.
 
-## Avant de chercher
+## Ce qui est déjà connu (à ne pas reprendre)
 
-Lis tous les fichiers du dossier `veille/`. Toute offre qui y figure déjà (même lien,
-ou même intitulé chez la même entreprise) ne doit pas être reprise.
+Une offre est déjà connue si son lien, ou le même intitulé chez la même entreprise,
+figure dans l'un de ces fichiers :
+- les fichiers du dossier `veille/` (les semaines précédentes) ;
+- `data/offres.json` (les offres déjà sur le site veille.sorbonnesportbusiness.com) ;
+- `skills/veille-ssb/references/historique.md` (les liens déjà livrés).
+
+Ces fichiers sont gros : ne les lis pas en entier, cherche-y le lien ou le nom de
+l'entreprise avec Grep avant de retenir une offre.
+
+## Comment chercher
+
+Prends le temps : une veille sérieuse dure 15 à 30 minutes. Ne t'arrête pas après
+deux ou trois sources.
+
+1. **Pars de `out/candidats.json`.** Le workflow vient d'interroger directement les
+   sites carrières de plus de 80 employeurs du sport. Ce fichier contient les offres
+   récentes qui ne sont pas encore sur le site. Relis chacune (champ `_extrait`, et
+   ouvre le lien en cas de doute) et garde celles qui correspondent aux critères.
+2. **Complète par la recherche web**, en couvrant au minimum :
+   - Welcome to the Jungle, JobTeaser, HelloWork, Indeed, France Travail, LinkedIn
+     (recherches du type « stage marketing sport Paris », « alternance partenariats
+     club », « VIE sport marketing ») ;
+   - Sport Stratégies (offres d'emploi) et les job boards sport (Jobs in Sports,
+     GlobalSportsJobs) ;
+   - les sites carrières des grands acteurs : LFP, FFF, FFR, FFT, PSG, OM, OL,
+     Stade Toulousain, Paris 2024 / Alpes 2030, ASO, Decathlon, adidas, Nike,
+     Puma, beIN Sports, Canal+, L'Équipe, Sportfive, Infront, Havas Sport,
+     Lagardère Sports.
+   Le fichier `skills/veille-ssb/references/portails.md` liste les portails qui ont
+   déjà donné des résultats et ceux qui ne marchent pas : lis-le d'abord.
+3. Continue jusqu'à avoir 15 offres retenues ou avoir couvert toutes ces sources.
 
 ## Règles
 
@@ -47,4 +74,10 @@ N nouvelles offres, classées par pertinence.
 - **Publiée le** : JJ/MM/AAAA (ou « non indiquée »)
 - **Lien** : https://...
 - **Pourquoi** : une phrase sur ce qui correspond aux critères.
+
+(... les autres offres ...)
+
+## Sources consultées
+
+Une ligne par source, avec le nombre d'offres retenues (0 compris).
 ```

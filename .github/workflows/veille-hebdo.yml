@@ -37,13 +37,27 @@ jobs:
           echo "date=$(TZ=Europe/Paris date +%F)" >> "$GITHUB_OUTPUT"
           echo "Décalage Paris : $OFFSET, déclencheur : ${SCHEDULE:-manuel}, on lance : $RUN"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: steps.heure.outputs.run == 'true'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: steps.heure.outputs.run == 'true'
         with:
           node-version: 22
+
+      # Interroge directement les sites carrières listés dans sources.json (Workday,
+      # SmartRecruiters, GlobalSportsJobs...) et garde les offres qui ne sont ni sur le
+      # site de la veille ni déjà livrées. Claude relit ensuite cette liste.
+      - name: Moissonner les sites carrières
+        if: steps.heure.outputs.run == 'true'
+        env:
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          S=skills/veille-ssb
+          mkdir -p out
+          python3 "$S/scripts/harvest.py" --sources "$S/references/sources.json" \
+            --board data/offres.json --history "$S/references/historique.md" \
+            --date "$DATE" --out out/candidats.json
 
       - name: Installer Claude Code
         if: steps.heure.outputs.run == 'true'
