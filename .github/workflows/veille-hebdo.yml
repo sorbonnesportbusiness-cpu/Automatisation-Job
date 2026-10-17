@@ -1,6 +1,7 @@
-# Veille : chaque lundi et chaque jeudi à 3 h (heure de Paris), Claude Code cherche les
-# nouvelles offres selon consigne.md et écrit veille/AAAA-MM-JJ.md, puis le workflow
-# l'enregistre dans le dépôt.
+# Veille : chaque lundi et chaque jeudi à 3 h (heure de Paris).
+# Même méthode que la tâche planifiée du Mac : moissonneur d'API, puis une recherche
+# Claude par famille de consigne.md (en parallèle), fusion, mise à jour des références,
+# récapitulatif dans veille/AAAA-MM-JJ.md, puis mise en ligne du site (site/publish.sh).
 
 name: Veille hebdomadaire
 
@@ -22,7 +23,7 @@ concurrency:
 jobs:
   veille:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     steps:
       - name: Heure de Paris
         id: heure
@@ -37,8 +38,12 @@ jobs:
           echo "date=$(TZ=Europe/Paris date +%F)" >> "$GITHUB_OUTPUT"
           echo "Décalage Paris : $OFFSET, déclencheur : ${SCHEDULE:-manuel}, on lance : $RUN"
 
+      # Pas de jeton GitHub laissé dans le clone pendant que Claude lit des pages web :
+      # il n'est fourni qu'à l'étape "Pousser sur GitHub".
       - uses: actions/checkout@v7
         if: steps.heure.outputs.run == 'true'
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-node@v7
         if: steps.heure.outputs.run == 'true'
@@ -50,87 +55,95 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Interroge directement les sites carrières listés dans sources.json (Workday,
-      # SmartRecruiters, GlobalSportsJobs...) et garde les offres qui ne sont ni sur le
-      # site de la veille ni déjà livrées. Claude relit ensuite cette liste.
       - name: Moissonner les sites carrières
         if: steps.heure.outputs.run == 'true'
         env:
           DATE: ${{ steps.heure.outputs.date }}
         run: |
           S=skills/veille-ssb
-          mkdir -p out
+          mkdir -p out/candidats "out/lots/$DATE" out/sources-proposees out/logs
           python3 "$S/scripts/harvest.py" --sources "$S/references/sources.json" \
             --board data/offres.json --history "$S/references/historique.md" \
-            --date "$DATE" --out out/candidats.json
+            --date "$DATE" --out "out/candidats/$DATE-api.json"
 
       - name: Installer Claude Code
         if: steps.heure.outputs.run == 'true'
         run: npm install -g @anthropic-ai/claude-code
 
-      # Une recherche par ligne de la section "Sources à couvrir" de consigne.md :
-      # un seul appel s'arrêtait après deux ou trois sources.
-      - name: Chercher source par source
+      # Une session Claude par ligne de la section "Familles de recherche" de consigne.md,
+      # toutes en même temps, comme les sous-agents de la tâche du Mac.
+      - name: Chercher (familles en parallèle)
         if: steps.heure.outputs.run == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           DATE: ${{ steps.heure.outputs.date }}
         run: |
-          # Relancée le même jour, la veille repart de zéro au lieu de se croire déjà faite.
-          rm -f "veille/$DATE.md"
-          touch out/trouvailles.md
-          awk '/^## /{on=($0 ~ /^## Sources à couvrir/)} on && /^- /{sub(/^- /,""); print}' consigne.md > out/sources.txt
-          echo "Sources : $(wc -l < out/sources.txt)"
-          while IFS= read -r SOURCE; do
-            echo "::group::$SOURCE"
-            claude -p "$(cat consigne.md)
+          CONSIGNE="$(sed "s/AAAA-MM-JJ/$DATE/g" consigne.md)"
+          awk '/^## /{on=($0 ~ /^## Familles de recherche/)} on && /^- [a-z-]+ : /{sub(/^- /,""); print}' consigne.md > out/familles.txt
+          echo "Familles : $(cut -d' ' -f1 out/familles.txt | tr '\n' ' ')"
+          while IFS= read -r LIGNE; do
+            FAMILLE="${LIGNE%% : *}"
+            timeout 100m claude -p "$CONSIGNE
 
           ---
           Date du jour : $DATE.
-          TA TÂCHE : cherche les offres correspondant aux critères sur cette source uniquement : $SOURCE.
-          Ouvre chaque annonce pour vérifier qu'elle est en ligne et récente.
-          Écarte les offres déjà connues, et celles déjà dans out/trouvailles.md.
-          Ajoute chaque offre retenue à la fin de out/trouvailles.md, au format d'une offre (sans numéro).
-          Termine en ajoutant une ligne « Source : $SOURCE, N offres retenues » et une phrase sur ce que tu as pu consulter ou non.
-          N'écris aucun autre fichier." \
-              --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep" \
-              --permission-mode dontAsk < /dev/null || echo "::warning::Recherche échouée : $SOURCE"
+          TA FAMILLE : $LIGNE
+          Fais uniquement cette famille, en suivant les règles communes, puis écris out/lots/$DATE/$FAMILLE.json.
+          Termine par un bilan en deux lignes : nombre d'offres retenues, sources consultées ou bloquées." \
+              --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep Bash" \
+              --permission-mode dontAsk < /dev/null > "out/logs/$FAMILLE.log" 2>&1 &
+            sleep 5
+          done < out/familles.txt
+          wait
+          while IFS= read -r LIGNE; do
+            FAMILLE="${LIGNE%% : *}"
+            echo "::group::$FAMILLE"
+            cat "out/logs/$FAMILLE.log"
             echo "::endgroup::"
-          done < out/sources.txt
+            python3 -c "import json,sys; print(len(json.load(open(sys.argv[1]))['offres']), 'offres')" "out/lots/$DATE/$FAMILLE.json" \
+              || echo "::warning::Famille $FAMILLE : pas de fichier d'offres valide"
+          done < out/familles.txt
 
-      - name: Écrire le récapitulatif
+      - name: Fusionner
+        if: steps.heure.outputs.run == 'true'
+        env:
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          S=skills/veille-ssb
+          VALIDES=()
+          for F in out/lots/"$DATE"/*.json; do
+            python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$F" 2>/dev/null && VALIDES+=("$F")
+          done
+          if [ ${#VALIDES[@]} -eq 0 ]; then
+            echo '{"offres": [], "bilan": {}}' > out/nouvelles.json
+          else
+            python3 "$S/scripts/merge_lots.py" "${VALIDES[@]}" --board data/offres.json \
+              --history "$S/references/historique.md" --out out/nouvelles.json
+          fi
+
+      - name: Références et récapitulatif
         if: steps.heure.outputs.run == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           DATE: ${{ steps.heure.outputs.date }}
         run: |
-          claude -p "$(cat consigne.md)
+          # Relancée le même jour, la veille réécrit son récapitulatif.
+          rm -f "veille/$DATE.md"
+          timeout 40m claude -p "$(sed "s/AAAA-MM-JJ/$DATE/g" consigne.md)
 
           ---
           Date du jour : $DATE.
-          TA TÂCHE : écrire le récapitulatif de la semaine dans veille/$DATE.md, puis les mêmes offres pour le site dans out/nouvelles.json (et aucun autre fichier).
-          Tu as deux listes de départ :
-          1. out/trouvailles.md : les offres trouvées source par source, déjà vérifiées, avec une ligne de bilan par source.
-          2. out/candidats.json : des offres récentes relevées directement sur les sites carrières de 80 employeurs du sport.
-             Relis chacune (champ _extrait, ouvre le lien en cas de doute) et garde celles qui correspondent aux critères.
-          Écarte les offres déjà connues et les doublons entre les deux listes.
-          Garde les 15 plus pertinentes au maximum, classées, au format du fichier de la semaine.
-          Dans « Sources consultées », reprends les bilans de out/trouvailles.md et ajoute le moissonnage des sites carrières.
+          TA TÂCHE : les recherches sont faites et fusionnées dans out/nouvelles.json.
+          Fais les trois points de la section « Après les recherches », puis termine par un résumé court." \
+            --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep Bash" \
+            --permission-mode dontAsk < /dev/null
 
-          Ensuite, écris out/nouvelles.json : toutes les offres retenues cette semaine (même au-delà des 15 du récapitulatif),
-          au format décrit dans skills/veille-ssb/SKILL.md (cherche « où offres.json est un fichier que tu écris toi-même ») :
-          {\"offres\": [{\"titre\", \"entreprise\", \"categorie\", \"secteur\", \"localisation\", \"pays\", \"contrat\", \"date_iso\", \"date_pub\", \"lien\", \"source\", \"infos\"}], \"bilan\": {\"total_testees_ecartees\": 0, \"detail_ecartees\": [], \"portails_steriles\": [], \"nouveaux_portails\": []}}.
-          contrat vaut Stage, Alternance, CDI, CDD ou Freelance (un VIE = CDD). categorie prend une des valeurs listées dans SKILL.md.
-          date_iso est la date de publication AAAA-MM-JJ, ou null si elle est inconnue. Le JSON doit être valide." \
-            --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep" \
-            --permission-mode dontAsk
-
-      - name: Vérifier que le fichier existe
+      - name: Vérifier le récapitulatif
         if: steps.heure.outputs.run == 'true'
         env:
           DATE: ${{ steps.heure.outputs.date }}
         run: |
-          test -s "veille/$DATE.md" || { echo "Claude n'a pas écrit veille/$DATE.md"; exit 1; }
+          test -s "veille/$DATE.md" || { echo "::error::Claude n'a pas écrit veille/$DATE.md"; exit 1; }
           cat "veille/$DATE.md"
 
       - name: Enregistrer le récapitulatif
@@ -141,10 +154,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add veille/
-          git commit -m "Veille hebdo du $DATE" || echo "Rien de nouveau"
+          git commit -m "Veille du $DATE (récapitulatif)" || echo "Rien de nouveau"
 
       # Ajoute les offres au tableau du site, retire les offres closes, régénère la page,
-      # l'Excel et le CSV, et met en ligne veille.sorbonnesportbusiness.com (site/publish.sh).
+      # l'Excel et le CSV, met en ligne veille.sorbonnesportbusiness.com, et committe
+      # data/ et les références (site/publish.sh).
       - name: Mettre le site à jour
         if: steps.heure.outputs.run == 'true'
         env:
@@ -156,12 +170,21 @@ jobs:
             echo "::warning::Secrets CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID absents : site non mis à jour."
             exit 0
           fi
-          python3 -c "import json; json.load(open('out/nouvelles.json'))" \
-            || { echo "::error::out/nouvelles.json absent ou invalide"; exit 1; }
           bash site/publish.sh out/nouvelles.json "$DATE"
 
       - name: Pousser sur GitHub
         if: steps.heure.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Vérifier le site
+        if: steps.heure.outputs.run == 'true'
+        env:
+          DATE: ${{ steps.heure.outputs.date }}
+        run: |
+          curl -fsS https://veille.sorbonnesportbusiness.com/offres.json \
+            | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['date_maj'], len(d['offres']), 'offres'); sys.exit(d['date_maj'] != sys.argv[1])" "$DATE"

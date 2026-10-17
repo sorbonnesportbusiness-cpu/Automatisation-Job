@@ -24,10 +24,11 @@ Pour envoyer les offres aux adhérents : cocher les offres voulues dans le table
 « Message adhérents ». La page prépare le message WhatsApp (modifiable), à copier ou à
 ouvrir directement dans WhatsApp. La sélection reste mémorisée dans le navigateur.
 
-La veille est relancée automatiquement le lundi et le jeudi à 8 h par une tâche planifiée
-Claude sur le Mac de Tom (qui doit être allumé, avec l'app Claude ouverte). Chaque passage
-retire les offres closes, ajoute les nouvelles, remet la page en ligne et pousse les données
-dans `data/offres.json`.
+La veille est relancée automatiquement le lundi et le jeudi à 3 h (heure de Paris) par
+GitHub Actions (`.github/workflows/veille-hebdo.yml`), avec Claude Code en mode headless,
+sans ordinateur allumé. La méthode et les familles de recherche sont dans `consigne.md`.
+Chaque passage retire les offres closes, ajoute les nouvelles, remet la page en ligne,
+pousse les données dans `data/offres.json` et écrit un récapitulatif dans `veille/`.
 
 ## Ce qu'il y a dans ce repo
 

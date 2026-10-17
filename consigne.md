@@ -1,84 +1,102 @@
-# Consigne de la veille hebdomadaire
+# Consigne de la veille
 
-Tu fais la veille des offres d'emploi et de stage dans le sport business pour
-Sorbonne Sport Business (association d'étudiants en Master). Modifie ce fichier pour
-changer les critères ou les sources : le workflow le relit à chaque lancement.
+Veille des offres de stage, d'alternance et de premier emploi dans l'industrie du sport
+pour Sorbonne Sport Business (SSB). Elle tourne sur GitHub Actions le lundi et le jeudi
+à 3 h (heure de Paris), alimente https://veille.sorbonnesportbusiness.com et écrit un
+récapitulatif dans `veille/`.
 
-## Critères de recherche
+Ce fichier est relu à chaque lancement : modifier la cible ou une famille de recherche
+suffit, sans toucher au workflow.
 
-- **Secteur** : sport business (clubs, ligues, fédérations, équipementiers,
-  agences de marketing sportif, organisateurs d'événements, médias sportifs).
-- **Types de contrat** : stage, alternance, CDI junior, VIE.
-- **Métiers** : marketing, partenariats, communication, événementiel, développement
-  commercial.
-- **Localisation** : Paris et Île-de-France en priorité, puis France entière.
-  Le télétravail complet est accepté.
-- **Niveau** : Bac+5, jeune diplômé.
+## Cible
 
-## Sources à couvrir
+SPORT BUSINESS uniquement : marketing, partenariats et sponsoring, commercial,
+communication, contenus, événementiel, billetterie et hospitalités, fan experience,
+merchandising, juridique, finance, stratégie. Stages, alternances et premiers emplois
+jusqu'à 3 ans d'expérience.
 
-Chaque ligne ci-dessous donne lieu à une recherche séparée. Ajouter ou retirer une
-ligne suffit (garder le tiret en début de ligne).
+En France, et à l'étranger en Europe (grands clubs, UEFA, FIFA, CIO, ligues, marques,
+agences) pour les stages, graduate programmes et postes juniors. Hors d'Europe : écarter,
+sauf programme ouvert aux étudiants étrangers.
 
-- Welcome to the Jungle
-- JobTeaser (offres publiques)
-- HelloWork
-- Indeed France
-- France Travail
-- LinkedIn (offres publiques)
-- Sport Stratégies, Jobs in Sports, GlobalSportsJobs
-- Sites carrières des ligues et fédérations : LFP, FFF, FFR, FFT, FFBB, FFHandball, CNOSF
-- Sites carrières des clubs : PSG, OM, OL, LOSC, Paris FC, Stade Toulousain, Racing 92
-- Équipementiers et marques : Decathlon, adidas, Nike, Puma, Lacoste, Salomon
-- Médias et agences : beIN Sports, Canal+, L'Équipe, Sportfive, Infront, Havas Play, Lagardère
-- Événements : ASO, Alpes 2030, Roland-Garros, Paris La Défense Arena, GL events
+Langue : l'intitulé ET le contenu de l'offre doivent être en français ou en anglais,
+sinon l'offre est écartée (une annonce en allemand, espagnol, néerlandais... n'est pas
+accessible aux étudiants).
 
-Le fichier `skills/veille-ssb/references/portails.md` dit quels portails ont déjà
-donné des résultats et lesquels ne marchent pas : consulte-le pour ta source.
+## Règles communes à toutes les recherches
 
-## Ce qui est déjà connu (à ne pas reprendre)
+- Lis d'abord `skills/veille-ssb/SKILL.md` (règles, filtres, méthode, format d'une offre)
+  et `skills/veille-ssb/references/portails.md` (où chercher, portails stériles).
+  `skills/veille-ssb/references/sources.json` liste les sources déjà moissonnées par
+  script : inutile de les refaire à la main.
+- Une offre retenue a une page individuelle que tu as ouverte, elle est encore ouverte,
+  publiée depuis moins de 2 mois, avec une `date_iso` précise. Lien employeur de préférence
+  à un agrégateur. N'invente jamais d'offre.
+- Aucun lien déjà présent dans `data/offres.json`, `skills/veille-ssb/references/historique.md`
+  ou `out/candidats/AAAA-MM-JJ-api.json`. Ces fichiers sont gros : cherche-y le lien avec
+  Grep, ne les lis pas en entier. Pas de plafond par employeur.
+- Format de chaque offre : `titre`, `entreprise`, `categorie`, `secteur`, `localisation`
+  (à l'étranger « Ville (Pays) »), `pays` (« France » ou le pays en français), `contrat`,
+  `date_iso`, `date_pub` (avec « clôture JJ/MM/AAAA » quand elle est connue), `infos`
+  (langue, droit de travail exigé), `lien`, `source`. Plus un `bilan` avec
+  `detail_ecartees`, `portails_steriles` et `nouveaux_portails`.
+- Écris tes offres dans `out/lots/AAAA-MM-JJ/<famille>.json` (même vide :
+  `{"offres": [], "bilan": {...}}`), puis valide-le avec
+  `python3 -c "import json;json.load(open('out/lots/AAAA-MM-JJ/<famille>.json'))"`.
+- Toute nouvelle source qui répond en JSON ou en RSS avec des offres (types gérés par
+  `skills/veille-ssb/scripts/harvest.py`, voir son en-tête) est à proposer dans
+  `out/sources-proposees/AAAA-MM-JJ-<famille>.json`, au format de `sources.json`.
+- N'écris aucun autre fichier.
 
-Une offre est déjà connue si son lien figure dans l'un de ces fichiers, ou si le
-**même intitulé chez la même entreprise** y figure :
-- les fichiers du dossier `veille/` (les semaines précédentes) ;
-- `data/offres.json` (les offres déjà sur le site veille.sorbonnesportbusiness.com) ;
-- `skills/veille-ssb/references/historique.md` (les liens déjà livrés).
+## Familles de recherche
 
-Ces fichiers sont gros : ne les lis pas en entier, cherche-y le lien (ou un morceau
-de l'intitulé) avec Grep. Une entreprise déjà présente pour **une autre** offre ne
-rend pas l'offre connue.
+Chaque ligne lance une recherche séparée, en parallèle des autres. Le nom avant « : »
+sert de nom de fichier.
 
-## Règles
+- api : relecture des candidates du moissonneur (`out/candidats/AAAA-MM-JJ-api.json`). Garder seulement le sport business junior (intitulé + champ `_extrait`), écarter vente en magasin, logistique, IT, RH, santé, encadrement sportif, postes senior, début ou clôture déjà passés, hors Europe ; relever la date sur la fiche quand `date_iso` est vide (Pinpoint : JSON-LD datePosted), sinon écarter ; corriger `contrat` et `categorie` ; écrire `out/lots/AAAA-MM-JJ/api.json` sans les champs commençant par « _ ». Ajouter chaque candidate refusée en fin de `skills/veille-ssb/references/ecartees.txt` (une ligne « - AAAA-MM-JJ | employeur | intitulé | lien ») pour que le moissonneur ne la repropose plus (seule famille autorisée à écrire ce fichier).
+- employeurs : portails employeurs de `portails.md` qui ne sont PAS dans `sources.json` (FFR Flatchr, Taleez CNOSF/FFF/OM, DigitalRecruiters Decathlon/Lacoste, Welcome Kit, softy.pro, GL events, careers.ol.fr, FDJ United, lemans.org...).
+- linkedin : recherche LinkedIn sans connexion en France (25 requêtes et plus, 14 derniers jours, 5 à 9 s entre deux requêtes avec `sleep`), retracée vers la source employeur quand elle existe.
+- agregateurs : HelloWork trié par date, et HelloWork par NOM DE CLUB seul (les clubs de Ligue 1, Ligue 2 et Top 14 y publient par lots), Sport Stratégies, Ecofoot, La Bonne Alternance, Meent, Wizbii, lesportrecrute.fr, talent.com.
+- startups : startups, sportstech, esport, fitness, outdoor : nouveaux slugs d'ATS à tester (ceux de `sources.json` sont déjà moissonnés).
+- federations : fédérations, ligues régionales, CROS.
+- public : choisirleservicepublic.gouv.fr, emploi-territorial.fr, Ville de Paris.
+- agences : agences, médias, sponsors, stades et événements en France.
+- droit-finance : droit et finance du sport (Village de la Justice, Law Profiler, opérateurs de paris).
+- annonceurs : sponsoring chez les grands annonceurs (banques, assurances, énergie, télécoms, automobile, distribution ; ex. Crédit Agricole « Stage - Chargé(e) de communication sponsoring »). Sites carrières des groupes + LinkedIn sans connexion (« stage sponsoring », « chargé de sponsoring », « partenariats sportifs », « parrainage sportif »).
+- etranger : sources HTML de `portails.md` (Eintracht Frankfurt, Atlético, Club Brugge, Everton, UK Sport, adidas Herzogenaurach...), LinkedIn sans connexion par pays européen avec f_E=1 (« sports marketing intern », « football club internship », « sponsorship internship », « Praktikum Sportmarketing », « prácticas marketing deportivo »), et 5 grands clubs ou instances européens pas encore couverts (identifier leur ATS).
 
-- N'invente jamais d'offre. Garde uniquement les annonces trouvées en ligne, avec
-  un lien direct vers l'annonce que tu as ouvert et qui fonctionne.
-- Écarte les offres expirées ou pourvues.
-- Classe les offres de la plus pertinente à la moins pertinente.
-- **15 offres au maximum.** S'il y en a moins, n'en mets pas plus pour remplir.
-- S'il n'y a aucune nouvelle offre, écris-le simplement dans le fichier.
+## Après les recherches
 
-## Format d'une offre
+Le workflow fusionne les fichiers des familles dans `out/nouvelles.json` (doublons et
+liens déjà livrés retirés par `merge_lots.py`). Ensuite :
+
+1. Ajoute à `skills/veille-ssb/references/sources.json` les sources proposées dans
+   `out/sources-proposees/` qui marchent vraiment : teste chacune avec
+   `python3 skills/veille-ssb/scripts/harvest.py --sources skills/veille-ssb/references/sources.json --board data/offres.json --date AAAA-MM-JJ --out /tmp/test.json --only "<nom>"`.
+2. Mets à jour `skills/veille-ssb/references/portails.md` : nouveaux portails, sources
+   devenues stériles (voir les `bilan` des fichiers de `out/lots/AAAA-MM-JJ/`).
+3. Écris le récapitulatif `veille/AAAA-MM-JJ.md` à partir de `out/nouvelles.json` :
+   les 15 offres les plus intéressantes pour des étudiants de Master en sport business,
+   classées par pertinence (Paris et Île-de-France d'abord). Format ci-dessous.
+
+## Format du récapitulatif
 
 ```markdown
+# Veille sport business du AAAA-MM-JJ
+
+N nouvelles offres sur le site ce jour, dont les 15 plus pertinentes ci-dessous.
+Toutes les offres : https://veille.sorbonnesportbusiness.com
+
 ## 1. Intitulé du poste, Entreprise
 
-- **Contrat** : stage / alternance / CDI junior / VIE
+- **Contrat** : stage / alternance / CDI / CDD
 - **Lieu** : ville (ou télétravail)
-- **Publiée le** : JJ/MM/AAAA (ou « non indiquée »)
+- **Publiée le** : JJ/MM/AAAA
 - **Lien** : https://...
-- **Pourquoi** : une phrase sur ce qui correspond aux critères.
-```
+- **Pourquoi** : une phrase sur ce qui la rend intéressante.
 
-## Format du fichier de la semaine
+## Sources
 
-```markdown
-# Veille sport business, semaine du AAAA-MM-JJ
-
-N nouvelles offres, classées par pertinence.
-
-(les offres, au format ci-dessus)
-
-## Sources consultées
-
-Une ligne par source, avec le nombre d'offres retenues (0 compris).
+Une ligne par famille de recherche, avec le nombre d'offres retenues (0 compris) et les
+sources bloquées.
 ```
