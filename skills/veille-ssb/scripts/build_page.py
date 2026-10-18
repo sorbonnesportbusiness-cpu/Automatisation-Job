@@ -170,6 +170,25 @@ dialog::backdrop { background: rgba(2, 16, 31, .55); }
 .dlg .foot .actions { justify-content: flex-end; }
 .hint { color: var(--muted); font-size: 12.5px; }
 
+/* Visuel logos (1080 x 1080 pour WhatsApp) */
+#vis { width: min(980px, calc(100vw - 32px)); }
+.vis-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 18px; align-items: start; }
+.vis-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; }
+.slot { position: relative; display: grid; place-items: center; aspect-ratio: 304 / 184; border: 1.5px dashed var(--line); border-radius: 12px;
+  background: var(--surface); cursor: pointer; overflow: hidden; text-align: center; padding: 6px; }
+.slot.over { border-color: var(--accent); background: var(--accent-soft); }
+.slot.full { border-style: solid; background: #ffffff; }
+.slot img { position: absolute; left: 11%; top: 14%; width: 78%; height: 72%; object-fit: contain; }
+.slot .ph { font-size: 12px; color: var(--muted); line-height: 1.3; }
+.slot .ph b { display: block; color: var(--ink); font-weight: 600; font-size: 12.5px; overflow-wrap: anywhere; }
+.slot .num { position: absolute; left: 7px; top: 5px; font: 600 11px/1 var(--mono); color: var(--muted); }
+.slot.full .num { color: #6b7a8c; }
+.slot .del { position: absolute; right: 4px; top: 4px; width: 24px; height: 24px; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgba(4, 26, 53, .75); color: #fff; font: 600 14px/24px var(--font); padding: 0; }
+.slot input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+#vis-canvas { width: 100%; height: auto; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); display: block; }
+@media (max-width: 760px) { .vis-body { grid-template-columns: 1fr; } }
+
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: grid; gap: 8px; max-width: 80ch; }
 
 /* Téléphone : chaque ligne devient une fiche. */
@@ -197,6 +216,7 @@ footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
       <div class="actions">
 __DOWNLOADS__
+        <button class="btn" id="vis-open" type="button">Visuel logos</button>
         <button class="btn primary" id="msg-open" type="button" disabled>Message adhérents <span class="count-pill" id="msg-count">0</span></button>
       </div>
     </div>
@@ -249,6 +269,7 @@ __GSHELP__
 <div class="selbar" id="selbar" hidden>
   <span id="sel-text"></span>
   <button class="btn wa" id="msg-open-2" type="button">Préparer le message WhatsApp</button>
+  <button class="btn" id="vis-open-2" type="button">Visuel logos</button>
   <button class="linkbtn" id="sel-clear" type="button">Tout désélectionner</button>
 </div>
 
@@ -272,6 +293,31 @@ __GSHELP__
         <button class="btn" id="msg-close" type="button">Fermer</button>
         <button class="btn" id="msg-copy" type="button">Copier le message</button>
         <a class="btn wa" id="msg-wa" href="#" target="_blank" rel="noopener">Ouvrir dans WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="vis" aria-labelledby="vis-title">
+  <div class="dlg">
+    <h2 id="vis-title">Visuel logos pour WhatsApp</h2>
+    <p>Choisissez le nombre de logos, puis déposez un fichier dans chaque case (ou plusieurs fichiers d'un coup sur la grille). Le visuel carré se met à jour en direct, prêt à télécharger.</p>
+    <div class="opts">
+      <label for="vis-n">Nombre de logos</label>
+      <select id="vis-n"></select>
+      <span class="hint" id="vis-hint"></span>
+    </div>
+    <div class="vis-body">
+      <div class="vis-slots" id="vis-slots"></div>
+      <canvas id="vis-canvas" width="1080" height="1080" aria-label="Aperçu du visuel"></canvas>
+    </div>
+    <div class="foot">
+      <span class="hint" id="vis-status"></span>
+      <div class="actions">
+        <button class="btn" id="vis-close" type="button">Fermer</button>
+        <button class="btn" id="vis-reset" type="button">Vider les cases</button>
+        <button class="btn" id="vis-copy" type="button">Copier l'image</button>
+        <button class="btn primary" id="vis-dl" type="button">Télécharger le visuel</button>
       </div>
     </div>
   </div>
@@ -467,6 +513,128 @@ __GSHELP__
     try { await navigator.clipboard.writeText($("msg-text").value); e.currentTarget.textContent = "Message copié"; }
     catch { $("msg-text").select(); e.currentTarget.textContent = "Texte sélectionné : Cmd+C"; }
   });
+
+  // Visuel logos : carré 1080 x 1080, fond navy, logo SSB, trait or, logos sur cartes blanches.
+  const VIS = { n: 7, logos: [], ssb: null };
+  const LAYOUTS = { 1: [1], 2: [2], 3: [3], 4: [2, 2], 5: [2, 3], 6: [3, 3], 7: [2, 3, 2], 8: [3, 2, 3],
+                    9: [3, 3, 3], 10: [3, 4, 3], 11: [4, 3, 4], 12: [4, 4, 4] };
+  for (let i = 1; i <= 12; i++) $("vis-n").insertAdjacentHTML("beforeend", `<option value="${i}">${i}</option>`);
+  const ssbImg = new Image();
+  ssbImg.onload = () => { VIS.ssb = ssbImg; drawVis(); };
+  ssbImg.src = "ssb-logo-complet.png";
+  const pickedEmployers = () => [...new Set(offers.filter(o => selected.has(o.lien)).map(o => o.entreprise))];
+
+  function rrect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
+  function drawVis(preview = true) {
+    const cv = $("vis-canvas"), ctx = cv.getContext("2d"), W = 1080;
+    const bg = ctx.createLinearGradient(0, 0, 0, W);
+    bg.addColorStop(0, "#1a3a64"); bg.addColorStop(1, "#0b2342");
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, W);
+    const glow = ctx.createRadialGradient(540, 230, 0, 540, 230, 620);
+    glow.addColorStop(0, "rgba(255,255,255,0.07)"); glow.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, W, W);
+    if (VIS.ssb) {
+      const w = 430, h = w * VIS.ssb.naturalHeight / VIS.ssb.naturalWidth;
+      ctx.drawImage(VIS.ssb, (W - w) / 2, 125, w, h);
+    } else {
+      ctx.fillStyle = "#ffffff"; ctx.font = "700 64px Hanken Grotesk, Helvetica, Arial, sans-serif"; ctx.textAlign = "center";
+      ctx.fillText("Sorbonne Sport Business", 540, 230);
+    }
+    ctx.fillStyle = "#E1B03A"; rrect(ctx, 494, 316, 92, 5, 3); ctx.fill();
+    const rows = LAYOUTS[VIS.n], maxRow = Math.max(...rows), gap = 22;
+    const cw = Math.min(304, (W - 120 - (maxRow - 1) * gap) / maxRow), ch = Math.round(cw * 0.605);
+    const blockH = rows.length * ch + (rows.length - 1) * gap;
+    let y = Math.max(350, 350 + (616 - blockH) / 2), k = 0;
+    rows.forEach(c => {
+      let x = (W - (c * cw + (c - 1) * gap)) / 2;
+      for (let j = 0; j < c; j++, k++) {
+        ctx.save(); ctx.shadowColor = "rgba(0,0,0,0.22)"; ctx.shadowBlur = 22; ctx.shadowOffsetY = 8;
+        ctx.fillStyle = "#ffffff"; rrect(ctx, x, y, cw, ch, 26); ctx.fill(); ctx.restore();
+        const img = VIS.logos[k];
+        if (img) {
+          const s = Math.min(cw * 0.72 / img.naturalWidth, ch * 0.66 / img.naturalHeight);
+          const iw = img.naturalWidth * s, ih = img.naturalHeight * s;
+          ctx.drawImage(img, x + (cw - iw) / 2, y + (ch - ih) / 2, iw, ih);
+        } else if (preview) {
+          ctx.fillStyle = "#b3bfcc"; ctx.font = "600 26px Hanken Grotesk, Helvetica, Arial, sans-serif"; ctx.textAlign = "center";
+          ctx.fillText(`Logo ${k + 1}`, x + cw / 2, y + ch / 2 + 9);
+        }
+        x += cw + gap;
+      }
+      y += ch + gap;
+    });
+  }
+
+  function loadLogo(file, i) {
+    if (!file || !file.type.startsWith("image/")) return Promise.resolve();
+    return new Promise(res => {
+      const img = new Image();
+      img.onload = () => { VIS.logos[i] = img; res(); };
+      img.onerror = () => res();
+      img.src = URL.createObjectURL(file);
+    });
+  }
+  async function fillFrom(files, start) {
+    let i = start;
+    for (const f of files) {
+      while (i < VIS.n && VIS.logos[i] && files.length > 1) i++;
+      if (i >= VIS.n) break;
+      await loadLogo(f, i); i++;
+    }
+    renderSlots(); drawVis();
+  }
+  function renderSlots() {
+    const names = pickedEmployers();
+    $("vis-slots").innerHTML = Array.from({ length: VIS.n }, (_, i) => {
+      const img = VIS.logos[i];
+      return `<div class="slot${img ? " full" : ""}" data-i="${i}">
+        <span class="num">${i + 1}</span>
+        ${img ? `<img src="${img.src}" alt=""><button class="del" type="button" aria-label="Retirer le logo ${i + 1}">×</button>`
+              : `<span class="ph">${names[i] ? `<b>${esc(names[i])}</b>` : ""}Déposez un logo<br>ou cliquez</span><input type="file" accept="image/*" multiple aria-label="Logo ${i + 1}">`}
+      </div>`;
+    }).join("");
+    const filled = VIS.logos.slice(0, VIS.n).filter(Boolean).length;
+    $("vis-status").textContent = `${filled} logo${filled > 1 ? "s" : ""} sur ${VIS.n}`;
+    $("vis-hint").textContent = names.length ? `${names.length} employeur${names.length > 1 ? "s" : ""} dans les offres cochées : leurs noms s'affichent dans les cases.` : "Astuce : cochez des offres pour voir le nom des employeurs dans les cases.";
+  }
+  const slots = $("vis-slots");
+  slots.addEventListener("change", e => { const s = e.target.closest(".slot"); if (s && e.target.files.length) fillFrom([...e.target.files], Number(s.dataset.i)); });
+  slots.addEventListener("click", e => {
+    if (!e.target.classList.contains("del")) return;
+    VIS.logos[Number(e.target.closest(".slot").dataset.i)] = null; renderSlots(); drawVis();
+  });
+  slots.addEventListener("dragover", e => { e.preventDefault(); const s = e.target.closest(".slot"); slots.querySelectorAll(".over").forEach(x => x.classList.remove("over")); if (s) s.classList.add("over"); });
+  slots.addEventListener("dragleave", e => { if (!slots.contains(e.relatedTarget)) slots.querySelectorAll(".over").forEach(x => x.classList.remove("over")); });
+  slots.addEventListener("drop", e => {
+    e.preventDefault();
+    const s = e.target.closest(".slot"), files = [...e.dataTransfer.files];
+    if (!files.length) return;
+    // Un fichier sur une case : il la remplace. Plusieurs fichiers : ils remplissent les cases vides dans l'ordre.
+    if (s && files.length === 1) VIS.logos[Number(s.dataset.i)] = null;
+    fillFrom(files, s ? Number(s.dataset.i) : 0);
+  });
+  $("vis-n").addEventListener("change", e => { VIS.n = Number(e.target.value); renderSlots(); drawVis(); });
+  $("vis-reset").addEventListener("click", () => { VIS.logos = []; renderSlots(); drawVis(); });
+  const visBlob = () => { drawVis(false); return new Promise(r => $("vis-canvas").toBlob(b => { drawVis(); r(b); }, "image/png")); };
+  $("vis-dl").addEventListener("click", async () => {
+    const url = URL.createObjectURL(await visBlob()), a = document.createElement("a");
+    a.href = url; a.download = `visuel-offres-ssb-${RUN}.png`; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+  $("vis-copy").addEventListener("click", async e => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.write([new ClipboardItem({ "image/png": visBlob() })]); btn.textContent = "Image copiée"; }
+    catch { btn.textContent = "Copie impossible ici : téléchargez"; }
+    setTimeout(() => { btn.textContent = "Copier l'image"; }, 2200);
+  });
+  const openVis = () => {
+    const n = pickedEmployers().length;
+    if (n && !VIS.logos.some(Boolean)) VIS.n = Math.min(12, n);
+    $("vis-n").value = VIS.n; renderSlots(); drawVis(); $("vis").showModal();
+  };
+  $("vis-open").addEventListener("click", openVis);
+  $("vis-open-2").addEventListener("click", openVis);
+  $("vis-close").addEventListener("click", () => $("vis").close());
 
   // Google Sheets (formule de secours quand aucune feuille n'est configurée)
   const gsBtn = $("gs");

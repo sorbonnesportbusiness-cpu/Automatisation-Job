@@ -33,6 +33,7 @@ $PY "$SK/scripts/build_page.py" data/offres.json --date "$DATE" --out site/publi
 cp "out/veille-ssb-$DATE.xlsx" site/public/veille-ssb.xlsx
 cp "out/offres-$DATE.csv" site/public/offres.csv
 cp data/offres.json site/public/offres.json
+cp -R site/static/. site/public/   # logo SSB du visuel WhatsApp, et tout fichier fixe de la page
 
 (cd site && npx --yes wrangler@4 deploy)
 
