@@ -285,3 +285,13 @@ Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezeve
   wearemeent.com ; careers.accorarena.com/jobs.rss ; fff.taleez.com (vide) ; ffvolley.org/la-ffvb/emploi ; LinkedIn Suisse (429) ;
   FFBaD career API (encadrement seulement) ; Lawprofiler et Lefebvre Dalloz (seniors ou hors sport) ; Greenhouse gymshark, zwift,
   peloton, hudl, twitch (sans offre utile) ; choisirleservicepublic et emploi-territorial (rien de junior).
+
+## Ajouts du 2026-10-19
+- **Nouveaux portails** : aucun ; aucune source proposée en JSON ou RSS ce jour.
+- **Stériles ou bloqués ce jour** : careers.accorarena.com (domaine introuvable), careers.lagardere.com/jobs.rss (pas de sport),
+  careers.fdjunited.com (déjà connus), softy.pro Compagnie des Alpes ; sportbuzzbusiness.fr (annonces de 2013-2015), jobteaser (403),
+  WTTJ (recherche illisible) ; sportstrategies.com et joinus.canalplus.com (WebFetch refusé) ; talent.com (États-Unis seulement),
+  lesportrecrute.fr et wearemeent.com (pas de lien individuel), La Bonne Alternance API (404) ; ffbad.org, fftt.com, ffhandball.fr (404),
+  ffa.fr, cnosf.org (DNS), franceolympique.com (certificat) ; choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport) ;
+  Village de la Justice (404) ; UK Sport (coaching) ; Greenhouse/Lever/Ashby/Recruitee des startups testées (404 ou vides ; SmartRecruiters
+  répond 200 vide pour tout slug inconnu) ; LinkedIn guest : 429 sous 6 s entre deux requêtes, les mots-clés avec OR donnent du bruit.

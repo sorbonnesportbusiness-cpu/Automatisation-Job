@@ -3,6 +3,16 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-19 (7 offres)
+
+- 2026-10-17 | CDI | SPORTFIVE | Attaché.e Commercial.e F/H (AJ Auxerre) | https://fr.linkedin.com/jobs/view/attach%C3%A9-e-commercial-e-f-h-at-sportfive-4479340559
+- 2026-10-16 | CDI | SPORTFIVE | Attaché Commercial Le Havre Athletic Club (F/H) | https://fr.linkedin.com/jobs/view/attach%C3%A9-commercial-le-havre-athletic-club-f-h-at-sportfive-4446409011
+- 2026-10-15 | Stage | OMR Rugby Lille | Stage - Production de Contenus Médias & Réseaux Sociaux | https://www.hellowork.com/fr-fr/emplois/83328005.html
+- 2026-10-12 | Stage | Campeón Gaming | CRM Sports Intern (sportsbook) | https://gr.linkedin.com/jobs/view/crm-sports-intern-at-campe%C3%B3n-gaming-4450069747
+- 2026-10-06 | Stage | Sport & Co (Hopscotch Sport) | Stage - Assistant Business Developer & Servicing H/F (6 mois) | https://hopscotch-recrute.talent-soft.com/offre-de-emploi/emploi-assistant-business-developer-servicing-h-f_630.aspx
+- 2026-09-21 | CDI | Agen Rugby - SUA LG | Chargé de Gestion Administrative & Commerciale | https://www.hellowork.com/fr-fr/emplois/83576815.html
+- 2026-08-25 | CDI | Fédération Française de Football (FFF) | Juriste droit du sport (H/F) - procédures disciplinaires, contentieux administratif (2 ans min.) | https://www.lawprofiler.com/offres-emploi-juridique-federation-francaise-de-football-cdi-juriste-droit-du-sport-hf-2-ans-min-d-exp-procedures-disciplinaires-procedure-adm-contentieuse-14830.html
+
 ## Veille du 2026-10-17 (24 offres)
 
 - 2026-10-16 | Stage | SPORTFIVE | Stage - Assistant.e Chef.ffe de Projet Social Media & Contenus F/H | https://fr.linkedin.com/jobs/view/4479392128
