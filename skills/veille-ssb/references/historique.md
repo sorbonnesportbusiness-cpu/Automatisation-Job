@@ -3,6 +3,23 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-20 (14 offres)
+
+- 2026-10-19 | Alternance | SCHOOL OF SPORTS | Apprenti Marketing & Partenariats - Alternance Bac+3 à 5 H/F | https://www.hellowork.com/fr-fr/emplois/78106609.html
+- 2026-10-19 | Stage | Paris Saint-Germain | Assistant Chef de Projet Sponsoring H/F (stage 6 mois, janvier 2027) | https://www.hellowork.com/fr-fr/emplois/84564851.html
+- 2026-10-19 | Stage | Havas (Havas Play) | CHEF DE PROJET GAMING & ESPORT (H/F/X) | https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/Puteaux/CHEF-DE-PROJET-GAMING---ESPORT--H-F-X-_JR0100807-3
+- 2026-10-19 | Stage | Havas (Havas Play) | ANALYST - SPORT & ENTERTAINMENT SPONSORSHIP (F/H/X) | https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/Puteaux/ANALYST---SPORT---ENTERTAINMENT-SPONSORSHIP--F-H-X-_JR0100811-2
+- 2026-10-19 | Stage | Red Bull | Internship Global Brand Marketing | https://jobs.smartrecruiters.com/RedBull/744000156318715
+- 2026-10-19 | Stage | Red Bull | Internship Student & Field Marketing | https://jobs.smartrecruiters.com/RedBull/744000156290829
+- 2026-10-19 | Stage | SPORTFIVE (club de rugby, Bayonne) | Stage - Chargé.e de missions Billetterie & Hospitalités F/H | https://fr.linkedin.com/jobs/view/stage-charg%C3%A9-e-de-missions-billetterie-hospitalit%C3%A9s-f-h-at-sportfive-4480238306
+- 2026-10-19 | Stage | SPORTFIVE | Stage - Assistant.e Market Intelligence & Etudes F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-market-intelligence-etudes-f-h-at-sportfive-4479966817
+- 2026-10-19 | Stage | Stellantis Motorsport | Stage : Chargé de Communication et Marketing Sport Automobile | https://fr.linkedin.com/jobs/view/stage-charg%C3%A9-de-communication-et-marketing-sport-automobile-at-stellantis-4470821480
+- 2026-10-16 | Stage | The Walt Disney Company (ESPN) | ESPN Content Sales Internship (placement year, juin 2027) | https://uk.linkedin.com/jobs/view/espn-content-sales-internship-at-targetjobs-uk-4479188873
+- 2026-10-16 | Stage | Decathlon France | Stage - Organisation du Vitalsport (événement sportif) | https://fr.linkedin.com/jobs/view/rejoins-nous-en-stage-pour-l-organisation-du-vitalsport-%21-at-decathlon-france-4479116940
+- 2026-10-14 | Stage | Paris Saint-Germain | Stagiaire Assistant Chef de Projet Sponsoring - Janvier 2027 H/F | https://www.hellowork.com/fr-fr/emplois/84407243.html
+- 2026-10-08 | Stage | Lacoste | Stage - Assistant Chef de Produit Opérations Spéciales Sport H/F | https://www.hellowork.com/fr-fr/emplois/84234355.html
+- 2026-09-29 | Stage | Lacoste | Stage - Assistant Chef de Produit Sport Performance H/F | https://www.hellowork.com/fr-fr/emplois/83897999.html
+
 ## Veille du 2026-10-19 (7 offres)
 
 - 2026-10-17 | CDI | SPORTFIVE | Attaché.e Commercial.e F/H (AJ Auxerre) | https://fr.linkedin.com/jobs/view/attach%C3%A9-e-commercial-e-f-h-at-sportfive-4479340559

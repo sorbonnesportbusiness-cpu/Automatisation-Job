@@ -295,3 +295,13 @@ Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezeve
   ffa.fr, cnosf.org (DNS), franceolympique.com (certificat) ; choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport) ;
   Village de la Justice (404) ; UK Sport (coaching) ; Greenhouse/Lever/Ashby/Recruitee des startups testées (404 ou vides ; SmartRecruiters
   répond 200 vide pour tout slug inconnu) ; LinkedIn guest : 429 sous 6 s entre deux requêtes, les mots-clés avec OR donnent du bruit.
+
+## Ajouts du 2026-10-20
+- **Nouveaux portails** : aucun ; aucune source proposée en JSON ou RSS ce jour.
+- **Stériles ou bloqués ce jour** : OM Taleez (liste vide), GL events get_hr_data (rien de junior sport), Club Brugge (aucune offre),
+  Celtic FC (JS), Liverpool FC et Newcastle United (404), UK Sport (Head of Commercial senior), careers.havas.com et beIN (DNS),
+  sportfive.com/careers (403), aso.fr et lequipe.fr (WebFetch refusé), sportstrategies.com, Meent (pas de lien individuel),
+  La Bonne Alternance API (404), recrutement.credit-agricole.com (DNS), Village de la Justice (404), ffbad.org et ffgolf.org (404),
+  jobteaser FFBaD (403), ffnatation.fr (encadrement), emploi-territorial, choisirleservicepublic, Ville de Paris (rien de sport) ;
+  Greenhouse, Ashby, Lever, Recruitee, Personio, Workable des startups sportstech testées (404) ; career.hyrox.com (DNS) ;
+  LinkedIn guest : 429 après environ 8 requêtes (pause de 20 s nécessaire), Pays-Bas en 429.
