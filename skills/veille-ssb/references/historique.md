@@ -3,6 +3,41 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-22 (32 offres)
+
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Chargé.e de Gestion ADV | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Charg%C3%A9_e-de-Gestion-ADV-FH-92100/1373103355/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Market Intelligence & Etudes | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Market-Intelligence-&-Etudes-FH-92100/1373290555/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Marketing Partenariats & Marques | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Marketing-Partenariats-&-Marques-FH-92100/1372986255/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Chargé.e de missions Billetterie & Hospitalités | https://jobs.sportfive.com/job/BAYONNE-Stage-Charg%C3%A9_e-de-missions-Billetterie-&-Hospitalit%C3%A9s-FH-64100/1373343355/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Junior Project Manager | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Junior-Project-Manager-FH-92100/1372745455/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Chef.ffe de Projet Digital & Contenus Marques | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Chef_ffe-de-Projet-Digital-&-Contenus-Marques-FH-92100/1373097155/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Marketing Omnisports | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Marketing-Omnisports-FH-92100/1373124355/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Chef.ffe de Projet Social Media & Contenus | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Chef_ffe-de-Projet-Social-Media-&-Contenus-FH-92100/1373108855/
+- 2026-10-22 | Stage | SPORTFIVE | Stage - Assistant.e Business Développement Olympisme | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Assistant_e-Business-D%C3%A9veloppement-Olympisme-FH-92100/1372658455/
+- 2026-10-21 | Stage | Automobile Club de l'Ouest (ACO) | Stage Chargé Administration Billetterie | https://www.hellowork.com/fr-fr/emplois/84657378.html
+- 2026-10-21 | Stage | Automobile Club de l'Ouest (ACO) | Stage Assistant Karting (commercial et opérations) | https://www.hellowork.com/fr-fr/emplois/84657360.html
+- 2026-10-21 | Stage | Paris Saint-Germain | STAGIAIRE CHEF DE PROJET SPONSORING (F/H) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-CHEF-DE-PROJET-SPONSORING--F-H----JANVIER-2027_014988
+- 2026-10-21 | Stage | Red Bull | Partnership Intern | https://jobs.smartrecruiters.com/RedBull/744000156845179
+- 2026-10-21 | Stage | Red Bull | Internship Global Brand Projects - Activation | https://jobs.smartrecruiters.com/RedBull/744000156804049
+- 2026-10-21 | Stage | Red Bull | Internship Global Internal Events | https://jobs.smartrecruiters.com/RedBull/744000156732989
+- 2026-10-21 | Stage | Red Bull | Internship Global Brand Projects - Partnerships | https://jobs.smartrecruiters.com/RedBull/744000156724069
+- 2026-10-21 | Stage | Red Bull | Internship Global Field Marketing | https://jobs.smartrecruiters.com/RedBull/744000156721609
+- 2026-10-21 | Stage | Salomon | STAGE - Merchandising Tools & Data Coordinator (M/F/X) | https://jobs.smartrecruiters.com/Salomon/744000156838904
+- 2026-10-21 | Stage | Betclic Group | Internship - Sponsoring Assistant F/M | https://betclic-group.breezy.hr/p/a7b73d41f12601-internship-sponsoring-assistant-f-m
+- 2026-10-21 | Stage | Betclic Group | Stage - Growth Marketing & Operations F/M | https://betclic-group.breezy.hr/p/c104941c7b5d01-stage-growth-marketing-operations-f-m
+- 2026-10-21 | Stage | McLaren Racing  | Experiential and Partnerships Intern | https://racingcareers.mclaren.com/job/experiential-and-partnerships-intern-in--jid-108
+- 2026-10-21 | Stage | PUMA | Internship Sales | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Central-Europe/Internship-Sales_R44030-1
+- 2026-10-21 | Stage | UEFA | Accommodation Intern | https://emp.jobylon.com/jobs/391351-uefa-accommodation-intern/
+- 2026-10-21 | Stage | Publicis Media (Publicis Sport) | Stage Janvier 2027 - Assistant Concepteur Rédacteur - PUBLICIS SPORT (H/F) | https://fr.linkedin.com/jobs/view/stage-janvier-2027-assistant-concepteur-r%C3%A9dacteur-publicis-sport-h-f-at-publicis-media-4481109020
+- 2026-10-20 | Stage | Publicis Media (Publicis Sport) | Stage Janvier 2027 - Assistant Chef de projet - PUBLICIS SPORT (H/F) | https://fr.linkedin.com/jobs/view/stage-janvier-2027-assistant-chef-de-projet-publicis-sport-h-f-at-publicis-media-4480247187
+- 2026-10-20 | Stage | Publicis Media (Publicis Sport) | Stage Janvier 2027 - Assistant Social Media Manager - PUBLICIS SPORT (H/F) | https://fr.linkedin.com/jobs/view/stage-janvier-2027-assistant-social-media-manager-publicis-sport-h-f-at-publicis-media-4480239404
+- 2026-10-20 | Stage | Publicis Media (Publicis Sport) | Stage Janvier 2027 - Assistant Directeur Artistique - PUBLICIS SPORT (H/F) | https://fr.linkedin.com/jobs/view/stage-janvier-2027-assistant-directeur-artistique-publicis-sport-h-f-at-publicis-media-4480228866
+- 2026-10-20 | Stage | Havas Play | Stage - Analyst - Sport & Entertainment Sponsorship (F/H/X) | https://fr.linkedin.com/jobs/view/stage-analyst-sport-entertainment-sponsorship-f-h-x-at-havas-play-%F0%9F%87%AB%F0%9F%87%B7-4480247702
+- 2026-10-19 | Stage | Paris Saint-Germain | Stage - Assistant Brand Retail | https://www.hellowork.com/fr-fr/emplois/84564852.html
+- 2026-10-15 | Stage | Creative Artists Agency (CAA Brand Consulting) | Brand Consulting Intern (CAA Sports), février-avril 2027 | https://uk.linkedin.com/jobs/view/brand-consulting-intern-at-creative-artists-agency-4479550383
+- 2026-10-15 | Stage | PUMA Group | Internship Sports Marketing Running (6 mois, février 2027) | https://de.linkedin.com/jobs/view/4477847311
+- 2026-10-11 | Stage | International Olympic Committee (IOC) | Promotion Events Trainee | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Promotion-Events-Trainee-VD/6888-en_GB/
+
 ## Veille du 2026-10-20 (14 offres)
 
 - 2026-10-19 | Alternance | SCHOOL OF SPORTS | Apprenti Marketing & Partenariats - Alternance Bac+3 à 5 H/F | https://www.hellowork.com/fr-fr/emplois/78106609.html

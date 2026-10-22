@@ -305,3 +305,15 @@ Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezeve
   jobteaser FFBaD (403), ffnatation.fr (encadrement), emploi-territorial, choisirleservicepublic, Ville de Paris (rien de sport) ;
   Greenhouse, Ashby, Lever, Recruitee, Personio, Workable des startups sportstech testées (404) ; career.hyrox.com (DNS) ;
   LinkedIn guest : 429 après environ 8 requêtes (pause de 20 s nécessaire), Pays-Bas en 429.
+
+## Ajouts du 2026-10-22
+- **Nouveaux portails** : aucun en JSON ou RSS ; pages HelloWork `/stage/mot-cle_<mot>.html` et `/alternance/mot-cle_<mot>.html`
+  (evenementiel-sportif, marketing-sportif) lisibles avec date relative ; LinkedIn par nom d'agence (« Publicis Sport stage »,
+  « Havas Play stage ») productif pour les agences sport des grands groupes.
+- **Stériles ou bloqués ce jour** : LinkedIn jobs-guest API (404, utiliser linkedin.com/jobs/search?...&f_E=1&f_TPR=r1209600),
+  sportbuzzbusiness.fr/emploi (404), join.com Paris La Défense Arena (404), careers.lagardere.com RSS (édition seulement),
+  sportstrategies.com et joinus.canalplus.com (WebFetch refusé), welcometothejungle LFP (403), PSG Workday fiche 014988 (page vide),
+  group.bnpparibas (403), careers.fdjunited.com (rien de sport junior), careers.ol.fr, lemans.org, softy.pro, Welcome Kit (déjà vus),
+  Eintracht Frankfurt (allemand seul), ffr.fr/emploi (vide), cros-idf.fr (DNS), ffgolf.org (404), Law Profiler, Village de la Justice (404),
+  choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport), Greenhouse, Lever, Ashby, Recruitee des startups (404).
+- **Non consultés ce jour** : Wizbii, La Bonne Alternance, Meent, lesportrecrute.fr, talent.com.
