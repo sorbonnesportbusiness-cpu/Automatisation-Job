@@ -921,6 +921,127 @@
    "categorie": "Sportstech",
    "secteur": "Fitness",
    "filtre": "tout"
+  },
+  {
+   "nom": "Olympique Lyonnais / Eagle Football Group (OL, OL Lyonnes)",
+   "ats": "successfactors_rss",
+   "url": "https://careers.ol.fr/services/rss/job/?locale=fr_FR&keywords=",
+   "pays": "France",
+   "ville": "Décines-Charpieu (69)",
+   "categorie": "Club",
+   "secteur": "Football",
+   "filtre": "tout",
+   "exclure": "\\b(surveillant\\w*|agent\\w* d.entretien)\\b",
+   "note": "Flux RSS SuccessFactors de careers.ol.fr, connu de portails.md mais absent de sources.json. Le 2026-10-23 : 9 offres (OL, OL Lyonnes, Eagle Football Group), 5 retenues après exclusion du poste de surveillant : stages OL Lyonnes rédaction digitale et relations presse, Chef de projet grands événements, Chargé Food & Beverage, juriste en CDD. Aucune alternance ouverte ce jour (keywords=alternance renvoie 0), mais l'OL en publie (Alternance Cadreur/Monteur OLPLAY au tableau le 24/09)."
+  },
+  {
+   "nom": "Hopscotch Groupe (Hopscotch Sport)",
+   "ats": "rss",
+   "url": "https://hopscotch-recrute.talent-soft.com/handlers/offerRss.ashx?LCID=1036",
+   "pays": "France",
+   "ville": "Paris (75)",
+   "categorie": "Agence",
+   "secteur": "Marketing sportif et événementiel",
+   "filtre": "sport",
+   "note": "Flux RSS Talentsoft du groupe (10 offres les plus récentes, toutes agences : Sagarmatha, Hopscotch Luxe, Le Public Système, Hopscotch Sport). Le filtre « sport » ne garde que la verticale Hopscotch Sport (sponsoring sportif, activations, right holders). Le 2026-10-23 : 10 offres lues, 2 retenues, Stage Assistant(e) marketing (publié le 14/10) et Assistant business developer & servicing (stage, 06/10). Liens hopscotchgroupe.com/offre.php ; le contrat est en tête de l'extrait (« Contrat : Stage »)."
+  },
+  {
+   "nom": "adidas France",
+   "ats": "successfactors_rss",
+   "url": "https://jobs.adidas-group.com/services/rss/job/?locale=fr_FR&keywords=France",
+   "pays": "France",
+   "pays_filtre": "France",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Équipement sportif",
+   "filtre": "tout",
+   "note": "Le flux mondial proposé le 15/10 (locale=en_US&keywords=intern) ignorait le mot-clé ; avec locale=fr_FR&keywords=France il renvoie les 20 offres françaises les plus récentes (du 09/10 au 23/10 le 2026-10-23), soit environ deux semaines, assez pour deux passages par semaine. Le 2026-10-23 : 20 lues, 2 retenues (Stage Assistant chef de projet campagne marketing Fashion à Paris, Représentant commercial Marseille) ; le reste est du magasin, déjà écarté par les filtres. adidas publie des « ALTERNANCE - ... » (vendeur ce jour, d'où l'intérêt de surveiller les postes siège).",
+   "exclure": "\\((?![^()]*\\bfr\\))[^()]*\\)\\s*$|vendeu|floor manager|directeur adjoint|store|visual"
+  },
+  {
+   "nom": "Sport Stratégies (offres d'emploi sport business)",
+   "ats": "wordpress",
+   "url": "https://www.sportstrategies.com/wp-json/wp/v2/offre-emploi",
+   "pays": "France",
+   "categorie": "Média",
+   "secteur": "Sport business",
+   "filtre": "tout",
+   "note": "API WordPress du type offre-emploi : répond en curl alors que WebFetch est refusé sur ce domaine. Le 2026-10-23 : 13 offres sur 60 jours, 6 déjà au tableau, 5 nouvelles retenues (stage communication Ultra Marin, Assistant(e) commission d'arbitrage FFVoile, juriste FF Motocyclisme, stage Sport et Citoyenneté, Titleist Digital Marketing Specialist). L'API ne donne ni employeur ni contrat : la fiche les affiche avec le statut « Recrutement en cours / terminé » (à vérifier à la relecture, l'entreprise livrée par le moissonneur est Sport Stratégies). Taxonomie type-contrat : Alternance (id 31285, 318 offres), Apprentissage/Alternance (31305, 93), Contrat de professionnalisation (28136, 72). Ces alternances sont publiées surtout de juin à août : 0 ouverte ce jour (dernières le 03/08)."
+  },
+  {
+   "nom": "Paris Entertainment Company (Accor Arena, adidas arena)",
+   "ats": "teamtailor",
+   "url": "https://emplois.parisentertainmentcompany.com",
+   "pays": "France",
+   "ville": "Paris (75)",
+   "categorie": "Stade / Arène",
+   "secteur": "Salles et arènes",
+   "filtre": "tout",
+   "exclure": "regisseur|gtc|administrateur",
+   "note": "Vu le 2026-10-23 : flux /jobs.rss (Teamtailor, aussi accorarena.teamtailor.com), 4 offres, aucune retenue : Directeur/Directrice Adjointe Billetterie Groupe (CDI, senior), Administrateur IT, Opérateur GTC, Régisseur audiovisuel. Source gardée car c'est le seul canal public de l'Accor Arena et de l'adidas arena (billetterie, hospitalités, partenariats) ; peu d'offres, sans bruit."
+  },
+  {
+   "nom": "On Air Fitness (siège)",
+   "ats": "wordpress",
+   "url": "https://recrutement.onair-fitness.fr/wp-json/wp/v2/arx-onair-offre",
+   "pays": "France",
+   "ville": "Corbeil-Essonnes (91)",
+   "categorie": "Loisirs sportifs",
+   "secteur": "Fitness",
+   "filtre": "tout",
+   "exclure": "conseiller commercial|formateur|support logiciel|coach|administration de la formation",
+   "note": "Vu le 2026-10-23 : type WordPress arx-onair-offre, 9 offres datées, 8 lues par le moissonneur (fenêtre de 62 jours). Surtout des conseillers commerciaux en club (exclus par la regex) ; aucune offre retenue ce jour. Intérêt : postes du siège (marketing, réseau). L'« Animateur réseau » du 29/09, déjà au tableau, serait écarté par OFF_TARGET (animat\\w*) : relire à la main si la source ne donne jamais rien."
+  },
+  {
+   "nom": "Groupe TF1 (Direction des sports, Téléfoot, juridique antenne)",
+   "ats": "successfactors_rss",
+   "url": "https://carrieres.groupe-tf1.fr/services/rss/job/?locale=fr_FR&keywords=sport",
+   "pays": "France",
+   "categorie": "Média",
+   "secteur": "Télévision / droits sportifs",
+   "filtre": "sport",
+   "note": "Vu le 2026-10-23 : site carrières SAP SuccessFactors (carrieres.groupe-tf1.fr), flux RSS avec pubDate. Le paramètre keywords filtre bien (20 offres sans mot-clé, 16 avec keywords=sport, 9 avec keywords=juriste). Testé au moissonneur : 16 lues, 2 retenues (Stage - Juriste contenus et direction des sports, publiée le 20/10, et Stage - Chargé.e d'études marketing multiscreen Info & Sport, 16/10). Livrer le lien sans les paramètres utm_*."
+  },
+  {
+   "nom": "Lefebvre Dalloz (éditeur juridique, stages PPI droit du sport)",
+   "ats": "teamtailor",
+   "url": "https://carrieres.lefebvre-dalloz.fr",
+   "pays": "France",
+   "categorie": "Droit",
+   "secteur": "Édition juridique",
+   "filtre": "sport",
+   "note": "Vu le 2026-10-23 : flux /jobs.rss de 48 offres, aucune en sport ce jour (stages PPI en droit pénal et civil, rédacteurs, commerciaux). L'éditeur publie à chaque semestre un stage PPI élève-avocat pour le Dictionnaire permanent Droit du sport (offre du 07/09/2026 déjà au tableau). Le filtre « sport » est nécessaire."
+  },
+  {
+   "nom": "De Gaulle Fleurance (cabinet d'avocats, pratique droit du sport)",
+   "ats": "rss",
+   "url": "https://www.degaullefleurance.com/offres-emploi/feed/",
+   "pays": "France",
+   "categorie": "Droit",
+   "secteur": "Cabinet d'avocats",
+   "filtre": "sport",
+   "note": "Vu le 2026-10-23 : flux WordPress du type d'offre « offres-emploi », 2 offres (Avocat fiscaliste du 10/07, Chargé(e) de marketing et communication du 03/08), aucune en sport. Le cabinet a une pratique droit du sport (filtre « Droit du sport » sur sa page d'offres) : le flux remontera un stage ou une collaboration sport le jour où il en publie."
+  },
+  {
+   "nom": "Bignon Lebray (cabinet d'avocats, secteur Sport)",
+   "ats": "teamtailor",
+   "url": "https://talents.bignonlebray.com",
+   "pays": "France",
+   "categorie": "Droit",
+   "secteur": "Cabinet d'avocats",
+   "filtre": "sport",
+   "note": "Vu le 2026-10-23 : Teamtailor (slug bignonlebray), flux /jobs.rss de 12 offres (stages S1 et S2 2027 à Paris et Lyon, collaborations 0 à 5 ans), aucune en sport ce jour. Le cabinet affiche Sport parmi ses secteurs."
+  },
+  {
+   "nom": "AFLD (Agence française de lutte contre le dopage)",
+   "ats": "wordpress",
+   "url": "https://www.afld.fr/wp-json/wp/v2/media?search=poste",
+   "ville": "Paris (75)",
+   "pays": "France",
+   "categorie": "Institution",
+   "secteur": "Antidopage",
+   "filtre": "tout",
+   "exclure": "poster|postedecontrole|^afp$",
+   "note": "Vu le 2026-10-23 : l'AFLD publie ses offres en PDF « Profil de poste » dans la médiathèque WordPress, listés sur afld.fr/recrutement/travailler-a-lafld/. 13 profils depuis août 2025 (dont un juriste en août 2025, coordonnateurs antidopage, enquêteur), aucun dans la fenêtre de 60 jours ce jour (0 lue par le moissonneur). Le lien livré est la page de la pièce jointe : le relecteur doit ouvrir le PDF pour le contrat et l'expérience. Un intitulé avec « DER » (département des enquêtes) est pris pour de l'allemand par langue.py."
   }
  ]
 }

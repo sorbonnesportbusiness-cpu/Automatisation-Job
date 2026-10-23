@@ -44,6 +44,7 @@ CLOSED_MARKERS = (
     "n'est plus en ligne", "n’est plus en ligne", "recrutement est fermé", "poste pourvu",
     "no longer accepting applications", "n'accepte plus de candidatures",
     "n’accepte plus de candidatures", "this job is no longer available",
+    "recrutement terminé",  # Sport Stratégies
 )
 CLOSING_RE = re.compile(r"(cl[ôo]ture|jusqu'au)\s*(?:le\s*)?(\d{2})/(\d{2})(?:/(\d{4}))?", re.I)
 # Identifiant d'offre dans le chemin d'une URL : un UUID, ou un mot qui contient au moins

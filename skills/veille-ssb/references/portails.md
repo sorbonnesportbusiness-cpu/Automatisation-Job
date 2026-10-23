@@ -328,3 +328,21 @@ Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezeve
   Village de la Justice (404), Law Profiler (rien de junior), choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport),
   Greenhouse, Ashby, Lever, Recruitee, Personio, Teamtailor des startups sportstech (404 ou sans offre), career.zwift.com et
   karriere.rb-leipzig.com (DNS), recherches annonceurs (banques, assureurs) sans résultat exploitable.
+
+## Ajouts du 2026-10-23 : alternance, droit du sport, CDI en Île-de-France
+
+Ajoutées au moissonneur (sources.json) :
+- Olympique Lyonnais / Eagle Football Group (careers.ol.fr, RSS SuccessFactors), Hopscotch Groupe (RSS Talentsoft, filtre sport), adidas France (RSS SuccessFactors `locale=fr_FR&keywords=France`), Sport Stratégies (WordPress `offre-emploi`, l'employeur et le contrat sont sur la fiche, « Recrutement terminé » = close).
+- Paris Entertainment Company (Accor Arena, adidas arena, Teamtailor), On Air Fitness siège (WordPress).
+- Droit : Groupe TF1 (RSS `keywords=sport`), Lefebvre Dalloz (Teamtailor, stage « droit du sport » chaque semestre), De Gaulle Fleurance et Bignon Lebray (cabinets à pratique sport, filtre sport), AFLD (PDF d'offres via WordPress media).
+
+Portails à lire à la main (pas d'API exploitable) :
+- Droit : Village de la Justice `browse.php?cat=20&offset=0..1940`, pas de recherche par mot-clé, filtrer « sport » soi-même ; Law Profiler `?page=offres&keyword=sport` ; cabinets Racine, Joffe & Associés, LPA-CGR (simply-jobs), SAJET Avocats (pratique Sports et Médias). August Debouzy et FTPA en 403 le 23/10. TAS : aucun poste. Carrières-Juridiques : 0 offre en droit du sport.
+- CDI Île-de-France : join.com/companies/parisladefense-arena (Plenitude Arena, Racing 92, datePosted sur la fiche) ; GL events `webgl_gl/get_hr_data` (JSON de 69 offres avec years_of_experience, dont la société d'exploitation du Stade de France) ; Paris FC renvoie vers LinkedIn ; Paris Basketball (Lucca, JavaScript) ; Viparis sur WTTJ (bloqué) ; Fitness Park et Neoness hébergés par HelloWork.
+- Alternance : La Bonne Alternance, fiches lisibles sans compte, mais l'API officielle demande une clé et l'API du site refuse la pagination (pas de lecteur) ; la date de publication est remise à zéro à chaque import. HelloWork `c=Alternance` : environ 75 % d'offres d'écoles.
+
+Règles apprises :
+- Une offre d'école (WIN Sport School, School of Sports, ECS...) pour une « entreprise partenaire » anonyme est écartée : postuler revient à s'inscrire dans l'école.
+- LinkedIn affiche les republications avec une date récente : contrôler la date d'origine chez l'employeur. Le filtre f_E (niveau d'expérience) ne filtre pas.
+- Le moissonneur garde désormais les « Account / Community / Event / Brand... Manager » et « Business Developer » en France (premiers CDI fréquents), et les intitulés juridiques qui contiennent IT, RH, construction, fraude. La relecture lit l'expérience demandée.
+- Faux homonymes d'ATS : Greenhouse `psg` (société indienne), Breezy `hopscotch` (Afrique du Sud), SmartRecruiters `asics` (Australie), Teamtailor `fitnesspark` (Espagne), Recruitee `lecoq` (garage).

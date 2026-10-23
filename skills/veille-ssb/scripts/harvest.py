@@ -53,18 +53,25 @@ def norm(text):
 JUNIOR = re.compile(r"\b(stage|stagiaire|intern|interns|internship|placement|alternan\w*|apprenti\w*|"
                     r"graduate|trainee|junior|working student|werkstudent\w*|praktik\w*|practicas|"
                     r"becari\w*|stagista|tirocin\w*|entry[- ]level|v\.?i\.?e\.?|work[- ]study|"
-                    r"contrat pro\w*|year in industry)\b")
+                    r"contrat pro\w*|year in industry|law clerk|paralegal|legal assistant)\b")
 SENIOR = re.compile(r"\b(head|director|directeu\w*|directrice|direction|vp|vice[- ]president|chief|cfo|cmo|"
                     r"ceo|coo|senior|sr|lead|principal|responsable|manager|managing|expert|confirme|"
                     r"experimente|partner|associate director)\b")
+# En France, ces « manager » sont souvent des premiers postes (CDI 0-3 ans) : ils ne suffisent
+# pas à écarter l'offre, la relecture lit l'expérience demandée sur la fiche.
+MANAGER_FR = re.compile(r"\bdirection (des?|du|de la|marketing|commerciale|juridique|financiere)\b|\b(account|community|social media|brand|event|events|evenementiel|partnerships?|"
+                        r"partenariats?|project|projet|crm|marketing|digital|content|contenus?|ticketing|"
+                        r"billetterie|hospitality|hospitalites|sales|activation|communication|trade marketing|"
+                        r"e-?commerce|growth|influence|media|sponsoring|sponsorship)\s+manager\b")
+LEGAL = re.compile(r"\b(juriste|juridique|legal|lawyer|avocat\w*|droit|counsel|paralegal|law clerk)\b")
 # Métiers hors cible, sur l'intitulé.
 OFF_TARGET = re.compile(
     r"\b(coach\w*|entraineu\w*|educateur|educatrice|kine\w*|physio\w*|medecin|doctor|nurse|infirmi\w*|"
     r"osteo\w*|scout\w*|video analyst|analyste video|performance analyst|sport scien\w*|sports scien\w*|"
     r"preparat\w*|strength|groundsman|grounds\w*|pitch|jardinier|greenkeeper|cuisin\w*|chef de partie|"
     r"commis|serveu\w*|barista|waiter|waitress|kitchen|bartender|steward\w*|securite|security|"
-    r"maintenance|technicien\w*|technician|electric\w*|plomb\w*|engineer\w*|ingenieu\w*|developer|"
-    r"developpeu\w*|devops|software|fullstack|full stack|frontend|backend|sre|helpdesk|it support|"
+    r"maintenance|technicien\w*|technician|electric\w*|plomb\w*|engineer\w*|ingenieu\w*|(?<!business )developer|"
+    r"(?<!business )developpeu\w*(?! commercial)|devops|software|fullstack|full stack|frontend|backend|sre|helpdesk|it support|"
     r"warehouse|entrepot|magasinier|driver|chauffeur|cashier|caissi\w*|vendeu\w*|sales associate|"
     r"store|magasin|boutique|retail assistant|conseiller de vente|cleaner|nettoy\w*|entretien|lifeguard|"
     r"maitre[- ]nageur|animat\w*|instructor|instructeur|moniteu\w*|personal trainer|coach sportif|"
@@ -75,7 +82,7 @@ OFF_TARGET = re.compile(
     r"systemes? d.information|design\w*|architecte|ux|ui|education|cyber\w*|cloud|sysadmin|qa|"
     r"acheteu\w*|achats?|logisti\w*|supply chain|transport\w*|ambassador|ambassadeu\w*|"
     r"fraud\w*|releaser|nutrition\w*|hris|payroll|paie|recrut\w*|recruit\w*|people ops|ressources humaines|"
-    r"rh|hr|office management|empfang|reception\w*|plm|planner|planning|merchandiser|equipment|construction|"
+    r"rh|hr|office management|empfang|reception\w*|plm|(?<!media )planner|(?<!media )planning|merchandiser|equipment|construction|"
     r"knowledge management|accountant|comptable|schulerpraktikum|fachlager\w*|schuhfertig\w*|"
     r"(footwear|apparel|material) development|product testing|quality|workplace management|trainer\w*|"
     r"sicherheit|anwendersupport|information technology|customer service|allocator|music|marketeer|"
@@ -156,7 +163,8 @@ def contract_of(title, hint=""):
 def keep(job, src):
     """Renvoie (garder, raison)."""
     t = norm(job["titre"])
-    if OFF_TARGET.search(t):
+    # Un intitulé juridique garde ses mots de matière (IP/IT, RH, construction, fraude, transport...).
+    if OFF_TARGET.search(t) and not LEGAL.search(t):
         return False, "métier hors cible"
     ok, why = offre_ok(job["titre"], job.get("_extrait", ""))
     if not ok:
@@ -170,9 +178,11 @@ def keep(job, src):
         return False, "étranger : pas un poste junior"
     if job["pays"] not in ("France", "?") and job["pays"] not in EUROPE and not src.get("hors_europe"):
         return False, f"hors Europe ({job['pays']})"
-    if SENIOR.search(t) and not JUNIOR.search(t):
+    if SENIOR.search(MANAGER_FR.sub(" ", t) if job["pays"] == "France" else t) and not JUNIOR.search(t):
         return False, "poste senior"
-    if job.get("_niveau") in ("mid_senior_level", "director", "executive"):
+    # SmartRecruiters marque « mid_senior_level » la plupart des CDI français, même débutants.
+    if job.get("_niveau") in ("director", "executive") or (
+            job.get("_niveau") == "mid_senior_level" and job["pays"] != "France"):
         return False, "poste senior (niveau ATS)"
     if job["pays"] == "?" and src.get("pays") == "Monde":
         return False, "pays inconnu (ATS mondial)"
@@ -588,6 +598,8 @@ def run_source(s, run, max_age, seen_links):
         return s, [], [], f"{type(exc).__name__}: {exc}"[:160], 0
     oldest = (run - timedelta(days=max_age)).isoformat()
     for j in jobs:
+        # Flux SuccessFactors : « ?feedId=null&utm_... » change d'un flux à l'autre, l'offre non.
+        j["lien"] = re.sub(r"\?feedId=.*$", "", j["lien"] or "")
         if not j["titre"] or not j["lien"] or j["lien"] in seen_links:
             continue
         j["pays"] = j["pays"] or s.get("pays") if s.get("pays") not in (None, "Monde") else j["pays"]
@@ -596,6 +608,10 @@ def run_source(s, run, max_age, seen_links):
         if s.get("pays_filtre") and j["pays"] and j["pays"] != s["pays_filtre"]:
             continue
         if j["pays"] is None:
+            # Lieu donné mais pays inconnu (« Brazil (Belo Horizonte) », « Budapest ») : hors du pays
+            # filtré. Workday relit le pays sur la fiche plus bas.
+            if s.get("pays_filtre") and s["ats"] != "workday" and j["localisation"].strip():
+                continue
             j["pays"] = s.get("pays_filtre") or "?"
         ok, why = keep(j, s)
         if ok and s["ats"] == "globalsportsjobs":
