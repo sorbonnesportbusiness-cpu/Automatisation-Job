@@ -317,3 +317,14 @@ Testés le 2026-10-09 sans portail lisible : FFBB, Karmine Corp, Solary, Weezeve
   Eintracht Frankfurt (allemand seul), ffr.fr/emploi (vide), cros-idf.fr (DNS), ffgolf.org (404), Law Profiler, Village de la Justice (404),
   choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport), Greenhouse, Lever, Ashby, Recruitee des startups (404).
 - **Non consultés ce jour** : Wizbii, La Bonne Alternance, Meent, lesportrecrute.fr, talent.com.
+
+## Ajouts du 2026-10-23
+- **Nouveaux portails** : aucun en JSON ou RSS ; frontwebservice.ffbad.org/api/career?page=2 (86 offres, dernières en page 2) et
+  ffnatation.fr/la-ffn/on-recrute (HTML, surtout encadrement) à examiner ; Personio sportec-solutions valide mais sans offre utile ;
+  LinkedIn jobs-guest seeMoreJobPostings répond de nouveau via WebFetch (28 requêtes sans 429, 6 à 8 s d'écart).
+- **Stériles ou bloqués ce jour** : sportstrategies.com et joinus.canalplus.com (WebFetch refusé), welcometothejungle (403),
+  careers.fdjunited.com, ffr Flatchr, GL events get_hr_data, careers.danone.com (sitemap trop gros), Club Brugge (aucune offre),
+  UK Sport (postes seniors), LinkedIn Allemagne (429), ffgolf.org (404), ffvoile.fr (erreur serveur), fftt.com (404),
+  Village de la Justice (404), Law Profiler (rien de junior), choisirleservicepublic, emploi-territorial, Ville de Paris (rien de sport),
+  Greenhouse, Ashby, Lever, Recruitee, Personio, Teamtailor des startups sportstech (404 ou sans offre), career.zwift.com et
+  karriere.rb-leipzig.com (DNS), recherches annonceurs (banques, assureurs) sans résultat exploitable.

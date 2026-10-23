@@ -3,6 +3,37 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-23 (28 offres)
+
+- 2026-10-23 | Stage | Betclic Group | Stage - Assistant Sponsoring F/H | https://fr.linkedin.com/jobs/view/stage-assistant-sponsoring-f-h-at-betclic-group-4482766617
+- 2026-10-23 | Stage | Betclic Group | Stage - Financial Controller Assistant / Contrôleur de Gestion Junior F/H | https://betclic-group.breezy.hr/p/16f1af55af1101-stage-financial-controller-assistant-controleur-de-gestion-junior-f-h
+- 2026-10-23 | Stage | Betclic Group | Stage - Juriste Contentieux Clients F/H | https://betclic-group.breezy.hr/p/220aa5fe0e7901-stage-juriste-contentieux-clients-f-h
+- 2026-10-23 | Stage | Betclic Group | Stage - Marketing CRM Assistant F/H | https://betclic-group.breezy.hr/p/6d569f73213301-stage-marketing-crm-assistant-f-h
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage - Assistant Billetterie H/F | https://www.hellowork.com/fr-fr/emplois/84689140.html
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage - Assistant Coordination Événements H/F | https://www.hellowork.com/fr-fr/emplois/84686846.html
+- 2026-10-22 | Stage | Groupe EBRA (agence LÉO) | Stage - Assistant Chargé de Projets Événementiels Sportifs H/F - LEO | https://fr.linkedin.com/jobs/view/4474327550
+- 2026-10-22 | Stage | Double A Sports Events | Stagiaire événementiel | https://fr.linkedin.com/jobs/view/4481547561
+- 2026-10-22 | Stage | Betclic Group | Stage - Assistant Concepteur Rédacteur F/H | https://betclic-group.breezy.hr/p/9671fa1af03201-stage-assistant-concepteur-redacteur-f-h
+- 2026-10-22 | Stage | Betclic Group | Stage - Assistant Juriste F/H | https://betclic-group.breezy.hr/p/128781acf0cb01-stage-assistant-juriste-f-h
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Développement Partenariats (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtY2ZEVEY0
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Dispositif Hospitalités RP/Invitations (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtZVJxcGk0
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Chargé(e) Administration Billetterie (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtZklwYlBE
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Expérience Spectateurs (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtT3diSEN0
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Production Hospitalités (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtVThvTkhN
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Pôle Événement Club (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMta1VRTnhv
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Billetterie (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtNGNVQ2gy
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Coordination Événements (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtVWNGWXp2
+- 2026-10-22 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Chargé(e) de projets RSE (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtYlEybkRX
+- 2026-10-22 | Stage | UrbanSoccer | Stage assistant opérationnel (H/F) | https://urbansoccer.softy.pro/offers/225911
+- 2026-10-22 | Stage | Agence Epic | Stage - Assistant attaché de presse | https://fr.linkedin.com/jobs/view/4482705675
+- 2026-10-21 | Stage | OuiSportSpirit (OSS Barcelone) | Stage 3 mois et plus - Marketing, management, audiovisuel (tennis, padel) | https://es.linkedin.com/jobs/view/barcelone-sports-tennis-padel-etudiants-stage-%2B3-mois-marketing-management-audiovisuel-at-ouisportspirit-4478955424
+- 2026-10-20 | Stage | Havas Play | Stage - Chef de projet activations junior (F/H/X) | https://fr.linkedin.com/jobs/view/4480249523
+- 2026-10-20 | Stage | Havas Play | Stage - Chef de projet Gaming & Esport (H/F/X) | https://fr.linkedin.com/jobs/view/4480253387
+- 2026-10-20 | Stage | Havas Play | Stage - Chef de projet PR & E-RP junior (H/F/X) | https://fr.linkedin.com/jobs/view/4480245717
+- 2026-10-20 | Stage | Havas Play | Stage - Chef de projet social media junior (H/F/X) | https://fr.linkedin.com/jobs/view/4480242750
+- 2026-10-06 | CDI | BOOST | Saucony | Retail Marketing Rep EMEA | https://boost-1743083678.teamtailor.com/jobs/8504097-saucony-retail-marketing-rep-emea
+- 2026-09-26 | Stage | Canal Plus | Stage - Assistant·e Partenariats Sports Rugby & Omni H/F | https://www.hellowork.com/fr-fr/emplois/83794296.html
+
 ## Veille du 2026-10-22 (32 offres)
 
 - 2026-10-22 | Stage | SPORTFIVE | Stage - Chargé.e de Gestion ADV | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Charg%C3%A9_e-de-Gestion-ADV-FH-92100/1373103355/
