@@ -9,6 +9,8 @@ et y ajoute les nouvelles. À chaque passage :
     a été publiée il y a plus de --max-age jours, ou si son lien est mort (404/410,
     page « offre expirée / plus disponible », ou redirection vers une page qui ne
     porte plus l'identifiant de l'offre, typiquement la liste des offres) ;
+  - une offre en double (même poste sous deux liens) n'est gardée qu'une fois,
+    avec le lien employeur de préférence (voir doublons.py) ;
   - les nouvelles offres sont ajoutées avec ajoutee_le = date de la veille ;
   - leurs liens sont ajoutés en tête de references/historique.md.
 
@@ -26,10 +28,14 @@ import concurrent.futures as cf
 import datetime
 import json
 import re
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from doublons import dedupe  # noqa: E402
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
@@ -148,7 +154,9 @@ def main():
             for o, status in zip(to_check, ex.map(lambda o: link_status(o["lien"]), to_check)):
                 (removed.append((o, "lien mort ou offre fermée")) if status == "mort" else kept.append(o))
 
-    offers = new_offers + kept
+    # Même poste sous deux liens (employeur + LinkedIn, variante d'URL) : on n'en garde qu'un.
+    offers, doubles = dedupe(new_offers + kept)
+    removed += [(o, f"doublon de {k['lien']}") for o, k in doubles]
     offers.sort(key=lambda o: o.get("date_iso") or "", reverse=True)
 
     bilan = new.get("bilan", {})

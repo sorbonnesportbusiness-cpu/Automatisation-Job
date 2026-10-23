@@ -27,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from langue import offre_ok, page_text  # noqa: E402
+from doublons import link_key, same_offer, title_key  # noqa: E402
 
 
 def key(text):
@@ -54,6 +55,10 @@ def main():
     if args.history and Path(args.history).exists():
         seen_links |= set(re.findall(r"https?://\S+", Path(args.history).read_text(encoding="utf-8")))
     seen_pairs = {(employer(o), key(o["titre"])) for o in board["offres"]}
+    seen_keys = {link_key(o["lien"]) for o in board["offres"]}
+    by_title = {}
+    for o in board["offres"]:
+        by_title.setdefault(title_key(o["titre"]), []).append(o)
     per_employer = Counter(employer(o) for o in board["offres"])
 
     offers, bilan, dropped = [], {"total_testees_ecartees": 0, "detail_ecartees": [], "portails_steriles": [], "nouveaux_portails": []}, []
@@ -81,13 +86,15 @@ def main():
             dropped.append(f"Langue : {o['titre']} - {o.get('entreprise')} ({why})")
             continue
         pair = (employer(o), key(o["titre"]))
-        if o["lien"] in seen_links or pair in seen_pairs:
+        if (o["lien"] in seen_links or pair in seen_pairs or link_key(o["lien"]) in seen_keys
+                or any(same_offer(o, x) for x in by_title.get(title_key(o["titre"]), []))):
             dropped.append(f"Doublon : {o['titre']} - {o.get('entreprise')}")
             continue
         if args.cap and per_employer[pair[0]] >= args.cap:
             dropped.append(f"Plafond de {args.cap} atteint : {o['titre']} - {o.get('entreprise')}")
             continue
         seen_links.add(o["lien"]); seen_pairs.add(pair); per_employer[pair[0]] += 1
+        seen_keys.add(link_key(o["lien"])); by_title.setdefault(title_key(o["titre"]), []).append(o)
         offers.append({k: v for k, v in o.items() if not k.startswith("_")})
     for _, lot in lots:
         b = {"ecartees": lot.get("ecartees", []), "portails_steriles": lot.get("portails_steriles", []),
