@@ -3,6 +3,23 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-23 (14 offres)
+
+- 2026-10-23 | Stage | adidas France | Stage - Assistant Chef de Projet campagne marketing Fashion (H/F/D) | https://jobs.adidas-group.com/job/Paris-Stage-Assistant-Chef-de-Projet-campagne-marketing-Fashion-%28HFD%29/1434782133/
+- 2026-10-22 | CDI | Plenitude Arena (Paris La Défense Arena, Racing 92) | Gestionnaire billetterie Racing 92 | https://join.com/companies/parisladefense-arena/16861792-gestionnaire-billetterie-racing-92
+- 2026-10-22 | CDI | Red Bull | Legal Assistant | https://jobs.smartrecruiters.com/RedBull/744000157062429
+- 2026-10-22 | CDD | L'Ultra Marin Organisation | Assistant(e) chargé(e) de projet - pôle communication (18 janvier - 16 juillet 2027) | https://www.sportstrategies.com/offre-emploi/assistant-chargee-de-projet-pole-communication-2/
+- 2026-10-20 | Alternance | HELMETT Assurances | Alternance Chargé(e) de projets Événementiel & Partenariats | https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6ada8926d61b4915a03de341/alternance-charge-e-de-projets-evenementiel-partenariats-h-f
+- 2026-10-20 | Stage | Groupe TF1 | Stage - Juriste contenus et direction des sports | https://carrieres.groupe-tf1.fr/TalentDating/job/Boulogne-Billancourt-Stage-Juriste-contenus-et-direction-des-sports-FH/1449450033/
+- 2026-10-20 | CDD | Olympique Lyonnais / Eagle Football Group (OL, OL Lyonnes) | Chef de Projet Grands Événements (H/F) | https://careers.ol.fr/job/DECINES-Chef-de-Projet-Grands-Ev%C3%A9nements-%28HF%29-69-69150/1372043157/
+- 2026-10-19 | Stage | Trainsweateat | Stage - Business Developer | https://jobs.lever.co/trainsweateat/f98252ed-eb60-4d95-b5a8-694fda2504b7
+- 2026-10-16 | Stage | Groupe TF1 (Direction des sports, Téléfoot, juridique antenne) | Stage - Chargé.e d'études marketing multiscreen Info & Sport (H/F) | https://carrieres.groupe-tf1.fr/TalentDating/job/Boulogne-Billancourt-Stage-Charg%C3%A9_e-d'%C3%A9tudes-marketing-multiscreen-Info-&-Sport-HF/1448631733/
+- 2026-10-14 | Stage | Olympique Lyonnais / Eagle Football Group (OL, OL Lyonnes) | OL Lyonnes - Stage - Assistant relations presse (H/F) | https://careers.ol.fr/job/OL-Lyonnes-Stage-Assistant-relations-presse-%28HF%29/1374815557/
+- 2026-10-12 | CDI | STRADA Marketing (pour adidas) | Commercial clubs et sports collectifs (H/F) - adidas (Île-de-France, Nord) | https://fr.linkedin.com/jobs/view/commercial-clubs-et-sports-collectifs-h-f-adidas-at-strada-marketing-4476038219
+- 2026-10-07 | Alternance | Sports Solutions Makers | Alternant·e Assistant·e planification évènementielle et administratif | https://labonnealternance.apprentissage.beta.gouv.fr/emploi/offres_emploi_partenaires/6ac816e79b5d06564c46a979/alternant-e-assistant-e-planification-evenementielle-et-administratif-h-f
+- 2026-10-06 | Stage | Hopscotch Sport (Groupe Hopscotch) | Stage - Assistant Business Developer & Servicing (H/F) | http://hopscotchgroupe.com/offre.php?idOffre=630&idOrigine=502&LCID=1036
+- 2026-08-31 | Stage | SAJET Avocats (pratique Sports et Médias) | Stage IP/IT | https://www.village-justice.com/annonces/stage-ip-it/offres/426892
+
 ## Veille du 2026-10-23 (28 offres)
 
 - 2026-10-23 | Stage | Betclic Group | Stage - Assistant Sponsoring F/H | https://fr.linkedin.com/jobs/view/stage-assistant-sponsoring-f-h-at-betclic-group-4482766617
