@@ -3,6 +3,24 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-26 (15 offres)
+
+- 2026-10-25 | Stage | MonClub (SportinTech) | Assistant Business Developer (Stage ou Alternance) | https://fr.linkedin.com/jobs/view/assistant-business-developer-h-f-stage-ou-alternance-at-monclub-4483337519
+- 2026-10-24 | Stage | CEVA Logistics (Sport Events) | Stage - Project Manager (Sport Events) - Lead Logistics | https://fr.linkedin.com/jobs/view/4480655573
+- 2026-10-23 | Stage | Société d'exploitation du Stade de France (GL events) | Assistant contrôle de gestion (Stage) | https://inrecruitingfr.intervieweb.it/glevents/jobs/assistant-controle-de-gestion-stage-146163/fr/
+- 2026-10-23 | Alternance | Fédération Nationale Profession Sport & Loisirs (CDOS 95) | Chargé de développement mécénat (H/F) | https://fr.linkedin.com/jobs/view/4481613339
+- 2026-10-20 | Stage | Paris Saint-Germain | Stage - Compliance Officer | https://www.hellowork.com/fr-fr/emplois/81244517.html
+- 2026-10-20 | CDI | Fédération Française de Football | Juriste Droit du sport | https://taleez.com/apply/juriste-droit-du-sport-h-f-paris-federation-francaise-de-football-cdi-1
+- 2026-10-20 | CDI | THE·TEAM | Marketing and Events Assistant (Triathlon & Half Marathon Events) | https://uk.linkedin.com/jobs/view/marketing-and-events-assistant-triathlon-half-marathon-events-at-the-team-4480965135
+- 2026-10-19 | CDI | Grenoble Foot 38 | Chargé de Développement Billetterie | https://www.hellowork.com/fr-fr/emplois/84564847.html
+- 2026-10-19 | Stage | INTERSPORT Group | Intern Sportstyle & Young Athletes Category Management | https://ch.linkedin.com/jobs/view/intern-sportstyle-young-athletes-category-management-at-intersport-group-4479334539
+- 2026-10-19 | Stage | Scott Sports | Marketing Trainee - Equipment | https://ch.linkedin.com/jobs/view/marketing-trainee-equipment-at-scott-sports-4480384945
+- 2026-10-18 | CDI | Ligue de Football Professionnel | Juriste | https://www.hellowork.com/fr-fr/emplois/83495790.html
+- 2026-10-14 | CDD | Fédération Française de Tennis | Chargé de Merchandising & Identité Visuelle | https://www.hellowork.com/fr-fr/emplois/84442573.html
+- 2026-10-10 | Stage | Toulouse FC | Stage - Assistant Chef de Produit | https://www.hellowork.com/fr-fr/emplois/84309134.html
+- 2026-09-30 | Stage | Plenitude Arena (Paris La Défense Arena) | Stage - Assistant(e) Planning Stratégique & Brand Recommandation - Stratégie | https://join.com/companies/parisladefense-arena/16825735-stage-assistant-e-planning-strategique-et-brand-recommandation-strategie
+- 2026-09-29 | Stage | Ligue de Football Professionnel (LFP Media) | Stage - Assistant Chef de Projet Évènements & Droits Médias Internationaux | https://www.hellowork.com/fr-fr/emplois/83878651.html
+
 ## Veille du 2026-10-23 (14 offres)
 
 - 2026-10-23 | Stage | adidas France | Stage - Assistant Chef de Projet campagne marketing Fashion (H/F/D) | https://jobs.adidas-group.com/job/Paris-Stage-Assistant-Chef-de-Projet-campagne-marketing-Fashion-%28HFD%29/1434782133/

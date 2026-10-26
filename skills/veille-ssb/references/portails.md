@@ -346,3 +346,10 @@ Règles apprises :
 - LinkedIn affiche les republications avec une date récente : contrôler la date d'origine chez l'employeur. Le filtre f_E (niveau d'expérience) ne filtre pas.
 - Le moissonneur garde désormais les « Account / Community / Event / Brand... Manager » et « Business Developer » en France (premiers CDI fréquents), et les intitulés juridiques qui contiennent IT, RH, construction, fraude. La relecture lit l'expérience demandée.
 - Faux homonymes d'ATS : Greenhouse `psg` (société indienne), Breezy `hopscotch` (Afrique du Sud), SmartRecruiters `asics` (Australie), Teamtailor `fitnesspark` (Espagne), Recruitee `lecoq` (garage).
+
+## Ajouts du 2026-10-26
+
+Aucune source JSON ou RSS proposée ce jour : `sources.json` inchangé.
+
+- **Utiles** : Ecofoot lisible en WebFetch (liens employeurs et LinkedIn, déjà couvert en majorité) ; HelloWork en requêtes thématiques (stage hospitalités, stage rugby, stage football) pour ACO, Canal+, TF1 ; ffhockey.org `emploi-formation/bourse-a-l-emploi.html` (10 offres lisibles, sans date de publication) ; ffnatation.fr `la-ffn/on-recrute` (daté, surtout encadrement).
+- **Stériles ou bloqués ce jour** : La Bonne Alternance (API 404, page vide sans JavaScript), lesportrecrute.fr (aucun lien individuel), talent.com (éducateurs et écoles), Wizbii (404), sportstrategies.com (WebFetch bloqué), HelloWork par nom de club (Stade Français, Stade Toulousain, LOSC, Reims, Strasbourg, Racing 92, Pau, UBB, USAP, Bayonne : 0 offre), careers.flatchr.io FFR (308), OM Taleez (vide), fff.taleez.com (2 offres seniors), Club Brugge (aucune offre), ffgolf.org, fftt.com, ffjudo.com, sports.gouv.fr (404), ffhockey.org (403 en curl), choisirleservicepublic.gouv.fr (listes vides au fetch), Lever (sorare, spartner, gotenna, sportsmanagement), Greenhouse (ticketmaster, dazn, matchroomsport, sportsbet), Ashby (sportradar, hudl, onefootball), SmartRecruiters Decathlon1 : 404 ou vides. LinkedIn : recherches sponsoring, finance, fan expérience et UK « sports marketing intern » très bruyantes.
