@@ -3,6 +3,35 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-10-29 (26 offres)
+
+- 2026-10-29 | Alternance | Decathlon | Alternant Chef de Projet Événementiel Sportif & Communication H/F | https://www.hellowork.com/fr-fr/emplois/84923720.html
+- 2026-10-29 | Stage | SPORTFIVE | Stage - Chef.fe de Projets Travel & Hospitality | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Chef_fe-de-Projets-Travel-&-Hospitality-FH-92100/1374726155/
+- 2026-10-28 | Stage | SPORTFIVE | Stage - Chargé.e de mission Hospitalité Arena F/H | https://fr.linkedin.com/jobs/view/stage-charg%C3%A9-e-de-mission-hospitalit%C3%A9-arena-f-h-at-sportfive-4483679052
+- 2026-10-28 | Stage | 187 COM | Stage Assistant(e) Attaché(e) de Presse Sport/Outdoor | https://fr.linkedin.com/jobs/view/stage-assistant-e-attach%C3%A9-e-de-presse-sport-outdoor-at-187-com-4482520424
+- 2026-10-28 | CDI | Fédération Française de Rugby (FFR) | Chargé de Projet Merchandising H/F | https://www.hellowork.com/fr-fr/emplois/84888316.html
+- 2026-10-28 | Stage | Decathlon | Rejoins-nous en stage pour l'organisation du Vitalsport ! | https://joinus.decathlon.fr/fr/annonce/4668071-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-10000-troyes
+- 2026-10-28 | Stage | Olympique Lyonnais / Eagle Football Group (OL, OL Lyonnes) | Stage - Assistant Chef de projet Sponsoring (DECINES, 69, FR, 69150) | https://careers.ol.fr/job/DECINES-Stage-Assistant-Chef-de-projet-Sponsoring-69-69150/1376044257/
+- 2026-10-28 | Stage | Threshold Sports | Work Placement (12 mois, marketing, business development, event operations, client management) | https://uk.linkedin.com/jobs/view/work-placement-threshold-sports-m-f-d-80%25-at-threshold-sports-4481859574
+- 2026-10-28 | Stage | Plenitude Arena (Paris La Défense Arena, Racing 92) | Stage de 6 mois - Assistant(e) chargé(e) de partenariats - janvier 2027 | https://fr.linkedin.com/jobs/view/stage-de-6-mois-assistant-e-charg%C3%A9-e-de-partenariats-janvier-2027-at-plenitude-arena-4482207554
+- 2026-10-28 | Stage | Sorare | Marketing Intern | https://fr.linkedin.com/jobs/view/marketing-intern-at-sorare-4484081835
+- 2026-10-28 | CDI | SPORTFIVE (Groupama Stadium, OL) | Responsable de Compte F/H | https://fr.linkedin.com/jobs/view/responsable-de-compte-f-h-at-sportfive-4483893631
+- 2026-10-27 | Stage | Two Circles | Junior Content Producer - Internship | https://fr.linkedin.com/jobs/view/junior-content-producer-internship-at-two-circles-4483566883
+- 2026-10-27 | Stage | Odaje (ACT Running) | Stage - Communication & Événementiel / ACT Running | https://fr.linkedin.com/jobs/view/stage-%E2%80%93-communication-%C3%A9v%C3%A9nementiel-act-running-at-odaje-ex-m-moustache-4483737426
+- 2026-10-27 | Stage | Adecco France | Stage Assistant(e) Partenariats Sportifs & Événementiel (H/F) | https://fr.linkedin.com/jobs/view/stage-assistant-e-partenariats-sportifs-%C3%A9v%C3%A9nementiel-h-f-at-adecco-4481441010
+- 2026-10-27 | Stage | Red Bull | Social Media Intern | https://jobs.smartrecruiters.com/RedBull/744000158105959
+- 2026-10-27 | Stage | Red Bull | Gaming & Esports Intern | https://jobs.smartrecruiters.com/RedBull/744000158025990
+- 2026-10-27 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage | Affaires publiques et Coordination interne (F/H) | https://carrieres.alpes2030.org/jobs/8621480-stage-affaires-publiques-et-coordination-interne-f-h
+- 2026-10-27 | Stage | LFP - Ligue de Football Professionnel (LFP Media) | LFP Media - Offre de stage (Assistant(e) Service Marketing aux Clubs) | https://fr.linkedin.com/jobs/view/lfp-media-offre-de-stage-at-lfp-ligue-de-football-professionnel-4483284851
+- 2026-10-26 | Stage | Paris Saint-Germain | BUSINESS ANALYST INTERN - JANUARY 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/BUSINESS-ANALYST-INTERN---JANUARY-2027_015046
+- 2026-10-26 | Stage | LFP Media | LFP Media - Offre de stage | https://carrieres.lfp.fr/jobs/8620199-lfp-media-offre-de-stage
+- 2026-10-26 | Stage | Excel Sports Management | Spring 2027 - Intern, Brand Marketing (London) | https://job-boards.greenhouse.io/excelsportsmanagement/jobs/4747629005
+- 2026-10-23 | CDD | Mairie de Metz (Pôle des Sports) | Gestionnaire Événementiel Sportif (H/F) | https://www.emploi-territorial.fr/offre/o057261023001378-gestionnaire-evenementiel-sportif
+- 2026-10-22 | Stage | Kantar Media | Chargé d'études Sport – Stage | https://fr.linkedin.com/jobs/view/charg%C3%A9-d-%C3%A9tudes-sport-%E2%80%93-stage-at-kantar-media-fr-4478865241
+- 2026-10-22 | Stage | Havas Play | STAGE - CONSULTANT NEW BUSINESS JUNIOR (H/F/X) | https://fr.linkedin.com/jobs/view/stage-consultant-new-business-junior-h-f-x-at-havas-play-%F0%9F%87%AB%F0%9F%87%B7-4480248652
+- 2026-10-22 | Stage | Infront Sports & Media | Undergraduate Work Placement - Threshold Sports 80% | https://infrontsportsmediaag.teamtailor.com/jobs/8591467-undergraduate-work-placement-threshold-sports-m-f-d-80
+- 2026-10-21 | Stage | Automobile Club de l'Ouest (ACO) | Stage Assistant Sport et Licence H/F | https://www.hellowork.com/fr-fr/emplois/84657339.html
+
 ## Veille du 2026-10-26 (15 offres)
 
 - 2026-10-25 | Stage | MonClub (SportinTech) | Assistant Business Developer (Stage ou Alternance) | https://fr.linkedin.com/jobs/view/assistant-business-developer-h-f-stage-ou-alternance-at-monclub-4483337519
