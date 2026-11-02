@@ -3,6 +3,27 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-02 (18 offres)
+
+- 2026-10-31 | Stage | OGC Nice | Stagiaire Administrateur des ventes et Chargé(e) de clientèle H/F | https://fr.linkedin.com/jobs/view/4485353402
+- 2026-10-31 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Communication Expérience Clients Billetterie - Janvier 2027 | https://jobs.fft.fr/jobs/8644387-stage-communication-experience-clients-billetterie-janvier-2027
+- 2026-10-30 | Stage | Haute-Savoie Mont-Blanc 2027 (Championnats du monde de cyclisme UCI) | Stage - Communication digitale (H/F) | https://fr.linkedin.com/jobs/view/4484940865
+- 2026-10-30 | Stage | UrbanSoccer (UrbanEvent) | Chef de projet Communication & Évènementiel (H/F) | https://fr.linkedin.com/jobs/view/4483403291
+- 2026-10-30 | Stage | Underrated Sport | Stage ou Service Civique 6 mois (Communication, Événementiel & Engagement sportif) | https://fr.linkedin.com/jobs/view/4483076931
+- 2026-10-30 | CDI | Fédération Française de Rugby | Chargé de Mission - Écoles de Rugby | https://www.hellowork.com/fr-fr/emplois/83878657.html
+- 2026-10-30 | Stage | LFP Media | Stage - Assistant(e) chargé(e) de projets RSE (H/F) | https://carrieres.lfp.fr/jobs/8642476-stage-assistant-e-charge-e-de-projets-rse-h-f
+- 2026-10-30 | Stage | CIO (Comité international olympique) | Olympic Values Advancement (OVA) Trainee (Lausanne, VD, CH) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Olympic-Values-Advancement-%28OVA%29-Trainee-VD/1452810133/
+- 2026-10-30 | Stage | CIO (Comité international olympique) | Olympic Values Advancement Trainee 1 (Lausanne, VD, CH) | https://ioc.jobs.hr.cloud.sap/job/Lausanne-Olympic-Values-Advancement-Trainee-1-VD/1452810233/
+- 2026-10-30 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Expérience clients Hospitalités - Janvier 2027 | https://jobs.fft.fr/jobs/8634523-stage-experience-clients-hospitalites-janvier-2027
+- 2026-10-30 | Stage | FFR - Fédération Française de Rugby | Stage 6 mois - Assistant community manager (H/F) | https://fr.linkedin.com/jobs/view/4484940852
+- 2026-10-29 | Stage | Paris Saint-Germain | STAGIAIRE BUSINESS DEVELOPPER - FEVRIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-BUSINESS-DEVELOPPER---FEVRIER-2027_015091
+- 2026-10-29 | Stage | Paris Saint-Germain | STAGIAIRE ACCOUNT MANAGER (H/F) - FEVRIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ACCOUNT-MANAGER--H-F----FEVRIER-2027_015090
+- 2026-10-29 | Stage | Decathlon | Stage - Assistant.e Community Manager & Content Creator (H/F) | https://joinus.decathlon.fr/fr/annonce/4670123-stage-assistant-e-community-manager-content-creator-hf-74940-annecy
+- 2026-10-26 | Stage | LFP Media | Stage - Assistant(e) Service Marketing aux Clubs | https://carrieres.lfp.fr/jobs/8620199-stage-assistant-e-service-marketing-aux-clubs
+- 2026-10-26 | Stage | Red Bull | Athletes Trainee | https://jobs.redbull.com/int-en/athletes-trainee-prv-ref35048v
+- 2026-10-25 | CDI | Paris Saint-Germain | Chargé de Développement Handball (hospitalités) | https://www.hellowork.com/fr-fr/emplois/69276320.html
+- 2026-10-22 | Stage | TF1 | Stage - Juriste Contenus et Direction des Sports (janvier 2027) | https://www.hellowork.com/fr-fr/emplois/84712787.html
+
 ## Veille du 2026-10-29 (26 offres)
 
 - 2026-10-29 | Alternance | Decathlon | Alternant Chef de Projet Événementiel Sportif & Communication H/F | https://www.hellowork.com/fr-fr/emplois/84923720.html
