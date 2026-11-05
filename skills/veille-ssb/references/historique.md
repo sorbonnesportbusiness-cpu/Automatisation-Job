@@ -3,6 +3,26 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-05 (17 offres)
+
+- 2026-11-05 | Stage | Paris Saint-Germain | Stagiaire Assistant Production Evenementielle - Sponsoring - Janvier 2027 (H/F) | https://www.hellowork.com/fr-fr/emplois/85172546.html
+- 2026-11-04 | Stage | Golazo Events France (Golazo Group) | Attaché(e) Commercial & Chargé(e) de Projet (stage) | https://fr.linkedin.com/jobs/view/attach%C3%A9-e-commercial-charg%C3%A9-e-de-projet-at-golazo-group-4487236347
+- 2026-11-04 | Stage | Decathlon France | Stage - Business Developer BtoB - clubs de Tennis de Table | https://fr.linkedin.com/jobs/view/stage-business-developer-btob-%E2%80%93-clubs-de-tennis-de-table-at-decathlon-france-4486026926
+- 2026-11-04 | Stage | Paris Saint-Germain | STAGIAIRE REDACTEUR / EDITEUR (H/F) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-REDACTEUR---EDITEUR--H-F----JANVIER-2027_015128
+- 2026-11-04 | Stage | Paris Saint-Germain | STAGIAIRE CHEF DE PROJET ACTIVATION JUNIOR CLUB (H/F) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-CHEF-DE-PROJET-ACTIVATION-JUNIOR-CLUB--H-F----JANVIER-2027_015127
+- 2026-11-04 | Stage | Paris Entertainment Company (Accor Arena, adidas arena) | Assistant(e) Community Manager H/F - stage | https://emplois.parisentertainmentcompany.com/jobs/8664262-assistant-e-community-manager-h-f-stage
+- 2026-11-04 | Stage | Paris Entertainment Company (Accor Arena, adidas arena) | Assistant(e) Chef de Projets Marketing H/F - stage | https://emplois.parisentertainmentcompany.com/jobs/8664246-assistant-e-chef-de-projets-marketing-h-f-stage
+- 2026-11-04 | Stage | Alpes 2030 (COJOP) | Stage | Engagement des territoires (F/H) | https://fr.linkedin.com/jobs/view/stage-engagement-des-territoires-f-h-at-alpes-2030-4486396493
+- 2026-11-03 | Stage | Paris Saint-Germain | STAGIAIRE ASSISTANT(E) DEVELOPPEMENT COMMERCIAL - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-E--DEVELOPPEMENT-COMMERCIAL---JANVIER-2027_015118
+- 2026-11-03 | CDD | FFT (Roland-Garros) | Chargé de communication fédérale F/H | https://jobs.fft.fr/jobs/8658678-charge-de-communication-federale-f-h
+- 2026-11-03 | CDD | A.S.O. (Amaury Sport Organisation) | CDD - Assistant de Gestion - Cyclisme H/F | https://carrieres.aso.fr/jobs/8655220-cdd-assistant-de-gestion-cyclisme-h-f
+- 2026-11-03 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Activations & Servicing Partenariats Fédéraux - Mars 2027 | https://jobs.fft.fr/jobs/8653031-stage-activations-servicing-partenariats-federaux-mars-2027
+- 2026-11-03 | Stage | Events Arena (distributeur B2B de packages hospitalités sport et culture) | Internship - Ticketing Assistant | https://es.linkedin.com/jobs/view/internship-ticketing-assistant-at-events-arena-4384171347
+- 2026-11-03 | Stage | PMU | Stage – Chargé de promotion à l'international HF | https://fr.linkedin.com/jobs/view/stage-%E2%80%93-charg%C3%A9-de-promotion-%C3%A0-l-international-hf-at-pmu-4486465186
+- 2026-11-02 | Stage | Shimano Europe Group | Marketing Trainee (stage marketing et commercial, cyclisme) | https://it.linkedin.com/jobs/view/marketing-trainee-at-shimano-europe-group-4486134445
+- 2026-10-31 | Alternance | Intersport France | Juriste Droit Économique (alternance) | https://www.hellowork.com/fr-fr/emplois/83921728.html
+- 2026-10-05 | Stage | Decathlon (Decathlon Pulse) | Élève-Avocat(e) ou Master 2 – Stagiaire Juriste M&A / Corporate | https://fr.linkedin.com/jobs/view/4471392917
+
 ## Veille du 2026-11-02 (18 offres)
 
 - 2026-10-31 | Stage | OGC Nice | Stagiaire Administrateur des ventes et Chargé(e) de clientèle H/F | https://fr.linkedin.com/jobs/view/4485353402
