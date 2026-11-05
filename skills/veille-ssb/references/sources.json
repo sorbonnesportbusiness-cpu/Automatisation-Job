@@ -1042,6 +1042,39 @@
    "filtre": "tout",
    "exclure": "poster|postedecontrole|^afp$",
    "note": "Vu le 2026-10-23 : l'AFLD publie ses offres en PDF « Profil de poste » dans la médiathèque WordPress, listés sur afld.fr/recrutement/travailler-a-lafld/. 13 profils depuis août 2025 (dont un juriste en août 2025, coordonnateurs antidopage, enquêteur), aucun dans la fenêtre de 60 jours ce jour (0 lue par le moissonneur). Le lien livré est la page de la pièce jointe : le relecteur doit ouvrir le PDF pour le contrat et l'expérience. Un intitulé avec « DER » (département des enquêtes) est pris pour de l'allemand par langue.py."
+  },
+  {
+   "nom": "Sportfive (site carrières)",
+   "ats": "firecrawl",
+   "url": "https://jobs.sportfive.com/",
+   "lien_motif": "^https://jobs\\.sportfive\\.com/job/",
+   "pays": "Monde",
+   "categorie": "Agence",
+   "secteur": "Marketing sportif",
+   "filtre": "tout",
+   "note": "jobs.sportfive.com (SuccessFactors) répond 403 à curl et WebFetch ; lu par Firecrawl (1 crédit) depuis le 2026-11-05, 68 offres datées sur la page d'accueil, dont une vingtaine en France. Avant, Sportfive n'était détecté que via GlobalSportsJobs."
+  },
+  {
+   "nom": "Indeed (recherche marketing sportif, Île-de-France)",
+   "ats": "firecrawl",
+   "urls": [
+    "https://fr.indeed.com/jobs?q=marketing+sportif&l=%C3%8Ele-de-France&sort=date",
+    "https://fr.indeed.com/jobs?q=stage+sport+business&l=%C3%8Ele-de-France&sort=date"
+   ],
+   "lien_motif": "[?&]jk=([0-9a-f]{16})",
+   "lien_forme": "https://fr.indeed.com/viewjob?jk={1}",
+   "ville": "Île-de-France",
+   "pays": "France",
+   "categorie": "",
+   "secteur": "",
+   "filtre": "sport",
+   "junior_obligatoire": true,
+   "note": "fr.indeed.com répond 403 à curl ; lu par Firecrawl (2 crédits, deux recherches triées par date) depuis le 2026-11-05. Beaucoup de bruit : filtre sport + junior obligatoire. La liste ne donne pas la date de publication : le relecteur la lit sur la fiche. Le lien livré est la fiche /viewjob?jk=<id>, lisible sans compte ; employeur et lieu viennent de la carte (champs_br). Les annonces sponsorisées (pagead/clk sans jk) sont ignorées.",
+   "champs_br": [
+    "entreprise",
+    "lieu",
+    "contrat"
+   ]
   }
  ]
 }

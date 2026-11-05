@@ -80,7 +80,9 @@ quand c'est possible.
 
 **D'abord le moissonneur d'API.** `scripts/harvest.py` interroge en une minute toutes les
 sources de `references/sources.json` (Workday, SmartRecruiters, Lever, Greenhouse, Ashby,
-Teamtailor, Workable, Breezy, Recruitee, Personio, flux RSS) et écrit les offres candidates
+Teamtailor, Workable, Breezy, Recruitee, Personio, flux RSS, et depuis le 2026-11-05 des pages
+rendues par Firecrawl pour les sites en 403 comme Sportfive et Indeed, clé dans
+`~/.config/firecrawl/api_key`, voir `references/portails.md`) et écrit les offres candidates
 déjà triées (moins de 60 jours, niveau junior, métiers sport business, Europe seulement hors
 de France, liens pas encore livrés). Un sous-agent relit ensuite chaque candidate avant
 qu'elle n'entre au tableau. Toute nouvelle source à API trouvée pendant une veille s'ajoute

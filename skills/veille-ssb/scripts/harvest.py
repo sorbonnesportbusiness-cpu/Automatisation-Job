@@ -3,7 +3,8 @@
 """
 Moissonne les API publiques des sites carrières listés dans references/sources.json
 (Workday, SmartRecruiters, Lever, Greenhouse, Ashby, Teamtailor, Workable, Breezy,
-Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, DigitalRecruiters, Taleez, Flatchr, WordPress, flux RSS, agrégateur GlobalSportsJobs) et écrit les offres candidates au format du skill.
+Recruitee, Personio, Pinpoint, Jobylon, flux schema.org de softgarden, DigitalRecruiters, Taleez, Flatchr, WordPress, flux RSS, agrégateur GlobalSportsJobs, pages lues par Firecrawl pour les sites en 403 ou en
+JavaScript : clé dans ~/.config/firecrawl/api_key, 1 crédit par page) et écrit les offres candidates au format du skill.
 
 Le script ne fait que le gros du tri : offres de moins de 60 jours, niveau junior,
 métiers sport business, intitulé et extrait en français ou en anglais, pas déjà au
@@ -581,12 +582,118 @@ def detail_gsj(j):
     return True
 
 
+# --- Firecrawl (pages rendues par un navigateur distant, pour les sites en 403 ou en JS) -------
+
+FIRECRAWL_KEY_FILE = Path.home() / ".config" / "firecrawl" / "api_key"
+FIRECRAWL_MAX_PAGES = 5  # par source et par veille : chaque page coûte 1 crédit (1 000 gratuits par mois)
+MD_LINK = re.compile(r"\[([^\]]*?)\]\((https?://[^)\s]+)\)")
+DATE_FR_EN = re.compile(r"\b(\d{1,2})(?:er)?\s+([a-zéû]{3,5})\.?\s+(20\d\d)\b|\b([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+(20\d\d)\b|"
+                        r"\b(\d{2})/(\d{2})/(20\d\d)\b|\b(20\d\d-\d{2}-\d{2})\b", re.I)
+AGE = re.compile(r"il y a (\d+)\s*(jour|heure|minute)|(\d+)\s*(day|hour|minute)s? ago|\b(aujourd.hui|today|a l.instant|just posted|hier|yesterday)\b", re.I)
+
+
+def firecrawl_key():
+    key = (FIRECRAWL_KEY_FILE.read_text(encoding="utf-8").strip() if FIRECRAWL_KEY_FILE.exists()
+           else __import__("os").environ.get("FIRECRAWL_API_KEY", ""))
+    if not key:
+        raise RuntimeError(f"clé Firecrawl absente : la coller dans {FIRECRAWL_KEY_FILE} (ou FIRECRAWL_API_KEY)")
+    return key
+
+
+def firecrawl_markdown(url, s):
+    """Une page rendue en Markdown par l'API Firecrawl (1 crédit)."""
+    body = {"url": url, "formats": [{"type": "markdown"}], "onlyMainContent": s.get("contenu_principal", True),
+            "location": {"country": "FR", "languages": ["fr-FR", "fr", "en"]}, "timeout": 60000}
+    if s.get("attendre_ms"):
+        body["waitFor"] = int(s["attendre_ms"])
+    try:
+        d = json.loads(fetch("https://api.firecrawl.dev/v2/scrape", body, {"Authorization": f"Bearer {firecrawl_key()}"}, timeout=150))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:160]
+        if exc.code == 402:
+            raise RuntimeError("Firecrawl : crédits épuisés (402)") from exc
+        raise RuntimeError(f"Firecrawl HTTP {exc.code} : {detail}") from exc
+    data = d.get("data") or {}
+    code = (data.get("metadata") or {}).get("statusCode")
+    if code and code >= 400:
+        raise RuntimeError(f"Firecrawl : le site répond {code}")
+    md = data.get("markdown") or ""
+    dump = __import__("os").environ.get("FIRECRAWL_DUMP")
+    if dump:
+        Path(dump).mkdir(parents=True, exist_ok=True)
+        (Path(dump) / (re.sub(r"\W+", "-", url)[:80] + ".md")).write_text(md, encoding="utf-8")
+    return md
+
+
+def date_in(text, run):
+    """Date ISO trouvée dans une ligne de liste : « 5 nov. 2026 », « Nov 5, 2026 », « 05/11/2026 », « il y a 3 jours »."""
+    t = norm(text)
+    m = DATE_FR_EN.search(t)
+    if m:
+        try:
+            if m.group(1):
+                return date(int(m.group(3)), month_num(m.group(2)), int(m.group(1))).isoformat()
+            if m.group(4):
+                return date(int(m.group(6)), month_num(m.group(4).lower()), int(m.group(5))).isoformat()
+            if m.group(7):
+                return date(int(m.group(9)), int(m.group(8)), int(m.group(7))).isoformat()
+            return m.group(10)
+        except (StopIteration, ValueError):
+            pass
+    m = AGE.search(t)
+    if m:
+        if m.group(5):
+            return (run - timedelta(days=1 if m.group(5) in ("hier", "yesterday") else 0)).isoformat()
+        n, unit = int(m.group(1) or m.group(3)), (m.group(2) or m.group(4))
+        return (run - timedelta(days=n if unit.startswith(("jour", "day")) else 0)).isoformat()
+    return None
+
+
+def read_firecrawl(s, run):
+    """Liste d'offres lue dans le Markdown d'une page : chaque lien dont l'URL vérifie `lien_motif`
+    est une offre, l'intitulé est le texte du lien, la date et le lieu sont cherchés sur la ligne
+    du lien puis sur les lignes voisines. `lien_forme` ({1} = premier groupe du motif) réécrit le
+    lien livré (Indeed : /viewjob?jk=<id> plutôt que le lien de clic). `urls` liste plusieurs pages."""
+    urls = s.get("urls") or [s["url"]]
+    if len(urls) > FIRECRAWL_MAX_PAGES:
+        raise RuntimeError(f"Firecrawl : {len(urls)} pages demandées, plafond {FIRECRAWL_MAX_PAGES}")
+    motif = re.compile(s["lien_motif"])
+    out, seen = [], set()
+    for url in urls:
+        lines = firecrawl_markdown(url, s).splitlines()
+        for i, line in enumerate(lines):
+            for m in MD_LINK.finditer(line):
+                text, link = m.group(1), m.group(2)
+                mm = motif.search(link)
+                title = re.sub(r"!\[[^\]]*\]\([^)]*\)|[*_`#]+", " ", text).strip()
+                if not mm or not title or len(title) < 4 or re.fullmatch(r"(voir|postuler|apply|lire la suite|en savoir plus)\b.*", norm(title)):
+                    continue
+                if s.get("lien_forme"):
+                    link = s["lien_forme"].format(*([link] + list(mm.groups())))
+                if link in seen:
+                    continue
+                seen.add(link)
+                ctx = " ".join(lines[i:i + 4])
+                cells = [c.strip() for c in line.split("|") if c.strip()]
+                mine = next((k for k, c in enumerate(cells) if m.group(0) in c), None)
+                after = cells[mine + 1:] if mine is not None else []
+                # Carte Indeed : « ### [Titre](url)<br>Employeur<br>Lieu<br>  - Stage », ordre donné par `champs_br`.
+                parts = [strip_tags(x).strip(" -") for x in re.split(r"<br\s*/?>", cells[mine] if mine is not None else line)[1:]]
+                champs = dict(zip(s.get("champs_br", []), parts))
+                loc = champs.get("lieu") or next((c for c in after if not DATE_FR_EN.search(norm(c)) and not AGE.search(c) and len(c) < 60), "")
+                j = job(title, link, date_in(ctx, run), loc, country_of(loc) if loc else None, champs.get("contrat", ""), extrait=ctx)
+                if champs.get("entreprise"):
+                    j["_entreprise"] = champs["entreprise"]
+                out.append(j)
+    return out
+
+
 READERS = {"workday": read_workday, "smartrecruiters": read_smartrecruiters, "lever": read_lever,
            "greenhouse": read_greenhouse, "ashby": read_ashby, "teamtailor": read_rss, "rss": read_rss,
            "successfactors_rss": read_rss, "workable": read_workable, "breezy": read_breezy,
            "recruitee": read_recruitee, "personio": read_personio, "pinpoint": read_pinpoint, "jobylon": read_jobylon, "schema_feed": read_schema_feed,
            "digitalrecruiters": read_digitalrecruiters, "wordpress": read_wordpress, "taleez": read_taleez, "flatchr": read_flatchr,
-           "globalsportsjobs": read_globalsportsjobs}
+           "globalsportsjobs": read_globalsportsjobs, "firecrawl": read_firecrawl}
 
 # --- Programme ----------------------------------------------------------------
 

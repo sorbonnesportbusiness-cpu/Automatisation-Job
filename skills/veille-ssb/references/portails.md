@@ -374,3 +374,27 @@ Aucune source JSON ou RSS proposée ce jour : `sources.json` inchangé.
 
 - **Utiles** : Events Arena (distributeur B2B d'hospitalités sport, Barcelone) publie ses stages sur LinkedIn ; jobs.fft.fr/jobs/<id> se lit sans compte mais n'affiche pas de datePosted ; Greenhouse `classpass`, `peloton`, `zwift` et Ashby `fnatic` répondent en JSON, sans offre utile.
 - **Stériles ou bloqués ce jour** : sportstrategies.com (WebFetch refusé), La Bonne Alternance, Wizbii, lesportrecrute.fr, talent.com (non consultés ou illisibles), PSG Workday en WebFetch (page vide), carrieres.aso.fr (WebFetch bloqué), cnosf.taleez.com (fiche 404), careers.flatchr.io FFR (fiche 404), careers.fdjunited.com (sans date ni sport), careers.ol.fr et fff.taleez.com (seniors), GL events intervieweb (403 sur les fiches), Club Brugge, UK Sport, Everton (JS, page vide), premierleague.com/careers (404), adidas Herzogenaurach, ffhandball.fr/emploi (404), ffvolley.org (aucune offre), choisirleservicepublic.gouv.fr, emploi-territorial.fr, Ville de Paris, Village de la Justice (offset 0-80 sans sport), racine.eu (connexion refusée). Ashby playtomic, hyrox, onefootball, oura, kinexon, sportmonks ; Greenhouse playtomic, onefootball, blast, urbansportsclub ; Lever onefootball, vitality, kiplin ; Recruitee karminecorp, teamvitality, playtomic ; Personio eversports, onefootball : 404. LinkedIn guest : 429 dès la première requête ou après 3 à 8 requêtes malgré 8 à 9 s d'écart (pause longue nécessaire).
+
+## Ajouts du 2026-11-05 : Firecrawl pour les sites en 403 ou en JavaScript
+
+Le moissonneur sait lire une page rendue par un navigateur distant via l'API Firecrawl
+(`"ats": "firecrawl"` dans `sources.json`). Chaque page coûte 1 crédit, le palier gratuit en
+donne 1 000 par mois ; la clé est dans `~/.config/firecrawl/api_key` (hors dépôt, à créer sur
+firecrawl.dev/app/api-keys ; sans clé la source est marquée en erreur et les autres continuent).
+Champs : `url` ou `urls` (5 pages au plus), `lien_motif` (regex sur l'URL des liens qui sont des
+offres), `lien_forme` (réécriture du lien livré, `{1}` = premier groupe), `champs_br` (morceaux
+séparés par `<br>` après le titre, dans l'ordre), `contenu_principal`, `attendre_ms`.
+`FIRECRAWL_DUMP=<dossier>` garde le Markdown brut pour régler une source.
+
+- **jobs.sportfive.com** (SuccessFactors, 403 à curl et WebFetch) : la page d'accueil liste 68
+  offres datées avec lieu, 10 retenues le 2026-11-05 (stages hospitalité, social media, sponsoring
+  à Boulogne, Décines, Camphin-en-Pévèle, Auxerre, Le Havre). Sportfive n'était jusque-là détecté
+  que via GlobalSportsJobs.
+- **fr.indeed.com** (403 à curl) : deux recherches Île-de-France triées par date (« marketing
+  sportif », « stage sport business »), 28 cartes lues, 2 retenues (stage partenariats sportifs
+  via Hellowork, stage développement commercial PSG). La liste ne donne pas la date : le relecteur
+  la lit sur la fiche `/viewjob?jk=<id>`, lisible sans compte. Indeed peut répéter une offre déjà
+  trouvée chez l'employeur (PSG) : dédoublonner à la relecture.
+- Testés sans résultat : Welcome to the Jungle (la recherche renvoie vers la création de compte,
+  même rendue), JobTeaser (cartes sans intitulé ni lien), lesportrecrute.fr (liste sur `/jobs`,
+  pas encore essayée). Une page en 403/404 chez Firecrawl coûte quand même 1 crédit.
