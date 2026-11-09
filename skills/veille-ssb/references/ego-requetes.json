@@ -2,18 +2,141 @@
  "_doc": "Requêtes de la passe LinkedIn connectée (scripts/ego_linkedin.py, navigateur Ego Lite du Mac de Tom). Budget par passage : 25 recherches d'offres (les 'larges' puis les familles à tour de rôle) et 15 recherches de posts. Une recherche = une page de résultats chargée. 'location' : lieu LinkedIn imposé à la famille (sinon Paris et périphérie, le lieu par défaut du compte).",
  "budget_offres": 25,
  "budget_posts": 15,
- "larges": ["sports industry", "sport business", "industrie du sport"],
+ "larges": [
+  "sports industry",
+  "sport business",
+  "industrie du sport"
+ ],
  "familles": {
-  "linkedin": {"requetes": ["stage marketing sportif", "stage partenariats sport", "stage communication sport", "stage événementiel sportif", "chef de projet sponsoring", "stage billetterie sport", "stage hospitalités sport", "fan experience", "stage brand marketing sport", "stage contenus sport", "assistant marketing club", "stage commercial sport"]},
-  "cdi-idf": {"requetes": ["chargé de partenariats sport", "account manager sport", "chef de projet événementiel sportif", "chargé de billetterie", "chargé de communication club", "business developer sport", "chargé de marketing sportif", "coordinateur sponsoring", "Paris FC", "Racing 92", "Stade Français Paris", "Paris Basketball", "FDJ United", "Betclic", "Winamax", "SPORTFIVE", "Havas Play", "KENEO"]},
-  "alternance": {"requetes": ["alternance marketing sportif", "alternance partenariats sport", "alternance communication sport", "alternance événementiel sportif", "alternance billetterie", "alternance club football", "alternance commercial sport", "apprentissage sport business"]},
-  "annonceurs": {"requetes": ["stage sponsoring", "chargé de sponsoring", "partenariats sportifs", "parrainage sportif", "stage sponsoring banque", "stage sponsoring assurance"]},
-  "finance": {"requetes": ["stage contrôle de gestion sport", "analyste financier sport", "stage finance club", "M&A sport", "stage audit sport"]},
-  "droit": {"requetes": ["juriste sport", "droit du sport", "élève avocat sport", "juriste paris sportifs", "stage juridique sport", "juriste club football"]},
-  "etranger": {"location": "Union européenne", "geoId": "91000000", "requetes": ["sports marketing intern", "football club internship", "sponsorship internship", "sports partnerships intern", "graduate programme sport", "esports internship", "sports business internship"]},
-  "agences": {"requetes": ["agence marketing sportif", "stage activation sponsoring", "stage agence événementiel sport", "Infront Sports & Media", "Two Circles", "Hopscotch Sport", "Lagardère sport", "Sport Market"]},
-  "federations": {"requetes": ["fédération française stage communication", "ligue stage marketing", "Fédération Française de Football", "Fédération Française de Rugby", "Fédération Française de Tennis", "Ligue Nationale de Rugby", "Ligue Nationale de Basket", "CNOSF"]},
-  "startups": {"requetes": ["startup sport stage", "sportstech", "esport stage marketing", "fitness stage marketing", "outdoor stage marketing", "Sorare", "Basic-Fit stage"]}
+  "linkedin": {
+   "requetes": [
+    "stage marketing sportif",
+    "stage partenariats sport",
+    "stage communication sport",
+    "stage événementiel sportif",
+    "chef de projet sponsoring",
+    "stage billetterie sport",
+    "stage hospitalités sport",
+    "fan experience",
+    "stage brand marketing sport",
+    "stage contenus sport",
+    "assistant marketing club",
+    "stage commercial sport"
+   ]
+  },
+  "cdi-idf": {
+   "requetes": [
+    "chargé de partenariats sport",
+    "account manager sport",
+    "chef de projet événementiel sportif",
+    "chargé de billetterie",
+    "chargé de communication club",
+    "business developer sport",
+    "chargé de marketing sportif",
+    "coordinateur sponsoring",
+    "Paris FC",
+    "Racing 92",
+    "Stade Français Paris",
+    "Paris Basketball",
+    "FDJ United",
+    "Betclic",
+    "Winamax",
+    "SPORTFIVE",
+    "Havas Play",
+    "KENEO"
+   ]
+  },
+  "alternance": {
+   "requetes": [
+    "alternance marketing sportif",
+    "alternance partenariats club",
+    "alternance communication club sportif",
+    "alternance événementiel sportif",
+    "alternance billetterie club",
+    "alternance club football",
+    "alternance commercial sport",
+    "alternance fédération sportive"
+   ]
+  },
+  "annonceurs": {
+   "requetes": [
+    "stage sponsoring",
+    "chargé de sponsoring",
+    "partenariats sportifs",
+    "parrainage sportif",
+    "stage sponsoring banque",
+    "stage sponsoring assurance"
+   ]
+  },
+  "finance": {
+   "requetes": [
+    "stage finance club sport",
+    "contrôle de gestion club football",
+    "analyste financier sport",
+    "stage finance fédération sportive",
+    "M&A sport",
+    "stage audit club sportif"
+   ]
+  },
+  "droit": {
+   "requetes": [
+    "juriste sport",
+    "droit du sport",
+    "élève avocat sport",
+    "juriste paris sportifs",
+    "stage juridique sport",
+    "juriste club football"
+   ]
+  },
+  "etranger": {
+   "location": "Union européenne",
+   "geoId": "91000000",
+   "requetes": [
+    "sports marketing intern",
+    "football club internship",
+    "sponsorship internship",
+    "sports partnerships intern",
+    "graduate programme sport",
+    "esports internship",
+    "sports business internship"
+   ]
+  },
+  "agences": {
+   "requetes": [
+    "agence marketing sportif",
+    "stage activation sponsoring",
+    "stage agence événementiel sport",
+    "Infront Sports & Media",
+    "Two Circles",
+    "Hopscotch Sport",
+    "Lagardère sport",
+    "Sport Market"
+   ]
+  },
+  "federations": {
+   "requetes": [
+    "stage communication fédération sportive",
+    "stage marketing ligue sport",
+    "Fédération Française de Football",
+    "Fédération Française de Rugby",
+    "Fédération Française de Tennis",
+    "Ligue Nationale de Rugby",
+    "Ligue Nationale de Basket",
+    "CNOSF",
+    "comité olympique stage"
+   ]
+  },
+  "startups": {
+   "requetes": [
+    "startup sport stage",
+    "sportstech",
+    "esport stage marketing",
+    "fitness stage marketing",
+    "outdoor stage marketing",
+    "Sorare",
+    "Basic-Fit stage"
+   ]
+  }
  },
  "posts": [
   "\"recherche un stagiaire\" sport",
