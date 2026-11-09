@@ -25,6 +25,8 @@ jobs:
     # Version de Linux fixée : celle des tests du 17/10 (ubuntu-latest passe à Ubuntu 26 le 19/10).
     runs-on: ubuntu-24.04
     timeout-minutes: 150
+    outputs:
+      run: ${{ steps.heure.outputs.run }}
     steps:
       - name: Heure de Paris
         id: heure
@@ -189,3 +191,106 @@ jobs:
         run: |
           curl -fsS https://veille.sorbonnesportbusiness.com/offres.json \
             | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['date_maj'], len(d['offres']), 'offres'); sys.exit(d['date_maj'] != sys.argv[1])" "$DATE"
+
+  # Passe LinkedIn connectée : sur le Mac de Tom (runner auto-hébergé, étiquette « ego »),
+  # dans le navigateur Ego Lite où son compte LinkedIn est ouvert. Elle démarre après la
+  # veille ; si le Mac est éteint ou en veille, GitHub la garde en attente (24 h au plus) et
+  # elle part dès qu'il se rallume. Détails : section « Passe LinkedIn connectée » de consigne.md.
+  linkedin:
+    needs: veille
+    if: ${{ !cancelled() && needs.veille.outputs.run == 'true' }}
+    runs-on: [self-hosted, macOS, ego]
+    timeout-minutes: 120
+    env:
+      PATH: /Users/tom/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Date
+        id: d
+        run: echo "date=$(TZ=Europe/Paris date +%F)" >> "$GITHUB_OUTPUT"
+
+      # Lecture seule, 25 recherches d'offres + 15 de posts au plus, arrêt sur vérification.
+      - name: Chercher sur LinkedIn (Ego Lite)
+        env:
+          DATE: ${{ steps.d.outputs.date }}
+        run: |
+          S=skills/veille-ssb
+          mkdir -p out/candidats "out/lots/$DATE"
+          python3 "$S/scripts/ego_linkedin.py" --requetes "$S/references/ego-requetes.json" \
+            --board data/offres.json --history "$S/references/historique.md" \
+            --date "$DATE" --out "out/candidats/$DATE-ego.json"
+
+      - name: Relire les candidates
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          DATE: ${{ steps.d.outputs.date }}
+        run: |
+          claude -p "$(sed "s/AAAA-MM-JJ/$DATE/g" consigne.md)
+
+          ---
+          Date du jour : $DATE.
+          TA TÂCHE : la relecture de la section « Passe LinkedIn connectée », sur out/candidats/$DATE-ego.json.
+          Termine par un bilan en deux lignes." \
+            --allowedTools "WebSearch WebFetch Read Write Edit Glob Grep Bash" \
+            --disallowedTools "Bash(ego-browser:*)" "Bash(/Users/tom/.local/bin/ego-browser:*)" \
+            --permission-mode dontAsk < /dev/null
+
+      - name: Fusionner
+        env:
+          DATE: ${{ steps.d.outputs.date }}
+        run: |
+          S=skills/veille-ssb
+          VALIDES=()
+          for F in out/lots/"$DATE"/ego-*.json; do
+            [ -f "$F" ] && python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$F" 2>/dev/null && VALIDES+=("$F")
+          done
+          if [ ${#VALIDES[@]} -eq 0 ]; then
+            echo '{"offres": [], "bilan": {}}' > out/nouvelles-ego.json
+          else
+            python3 "$S/scripts/merge_lots.py" "${VALIDES[@]}" --board data/offres.json \
+              --history "$S/references/historique.md" --out out/nouvelles-ego.json
+          fi
+
+      - name: Mettre le site à jour
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DATE: ${{ steps.d.outputs.date }}
+        run: bash site/publish.sh out/nouvelles-ego.json "$DATE"
+
+      - name: Compléter le récapitulatif
+        env:
+          DATE: ${{ steps.d.outputs.date }}
+        run: |
+          python3 - "$DATE" <<'PY'
+          import json, sys
+          from pathlib import Path
+          date = sys.argv[1]
+          c = json.load(open(f"out/candidats/{date}-ego.json"))
+          n = json.load(open("out/nouvelles-ego.json"))["offres"]
+          lines = ["", "## Passe LinkedIn connectée (Mac, Ego Lite)", "",
+                   f"- {len(c['recherches'])} recherches, {len(c['offres'])} candidates, {len(n)} nouvelles offres au tableau."]
+          if c.get("bloque"):
+              lines.append(f"- Passe arrêtée : {c['bloque']}.")
+          lines += [f"- {o['titre']}, {o['entreprise']} : {o['lien']}" for o in n]
+          recap = Path(f"veille/{date}.md")
+          recap.parent.mkdir(exist_ok=True)
+          text = recap.read_text(encoding="utf-8") if recap.exists() else f"# Veille sport business du {date}\n"
+          recap.write_text(text.rstrip("\n") + "\n" + "\n".join(lines) + "\n", encoding="utf-8")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add veille/
+          git commit -m "Veille du $DATE (passe LinkedIn connectée)" || echo "Rien de nouveau"
+
+      - name: Pousser sur GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git pull --rebase origin main
+          git push origin HEAD:main

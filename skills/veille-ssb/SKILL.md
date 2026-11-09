@@ -272,6 +272,24 @@ sont ouvertes. Une veille automatique se déroule ainsi :
 Zéro nouvelle offre est un résultat valable : lancer quand même `publish.sh` avec un
 fichier `{"offres": [], "bilan": {...}}` pour que les offres closes soient retirées.
 
+### Passe LinkedIn connectée (Mac de Tom)
+
+Le workflow GitHub a un second job, `linkedin`, qui tourne sur le Mac de Tom (runner
+auto-hébergé `~/actions-runner-veille`, étiquette `ego`) après la veille de 3 h. Il cherche
+offres et posts dans LinkedIn avec le compte de Tom, via le navigateur Ego Lite
+(`scripts/ego_linkedin.py`, requêtes et budget dans `references/ego-requetes.json`), puis une
+session Claude relit les candidates et le job publie. Mode d'emploi et règles : section
+« Passe LinkedIn connectée » de `consigne.md`.
+
+Garde-fous du compte : lecture seule (le script ne clique jamais), 25 recherches d'offres et
+15 de posts au plus par passage, 5 à 9 s d'écart, une seule TaskSpace, arrêt et lot vide sur
+une vérification ou une déconnexion. Les fiches sont lues sans le compte (jobs-guest).
+Lancer à la main sur le Mac :
+
+    .venv/bin/python skills/veille-ssb/scripts/ego_linkedin.py --requetes skills/veille-ssb/references/ego-requetes.json \
+        --board data/offres.json --history skills/veille-ssb/references/historique.md \
+        --date AAAA-MM-JJ --out out/candidats/AAAA-MM-JJ-ego.json
+
 ## Point d'intégration CRM (à venir)
 
 Le CRM de l'association n'existe pas encore. Le script accepte dès maintenant une variable

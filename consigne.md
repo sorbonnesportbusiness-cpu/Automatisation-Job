@@ -74,6 +74,47 @@ sert de nom de fichier.
 - annonceurs : sponsoring chez les grands annonceurs (banques, assurances, énergie, télécoms, automobile, distribution ; ex. Crédit Agricole « Stage - Chargé(e) de communication sponsoring »). Sites carrières des groupes + LinkedIn sans connexion (« stage sponsoring », « chargé de sponsoring », « partenariats sportifs », « parrainage sportif »).
 - etranger : sources HTML de `portails.md` (Eintracht Frankfurt, Atlético, Club Brugge, Everton, UK Sport, adidas Herzogenaurach...), LinkedIn sans connexion par pays européen avec f_E=1 (« sports marketing intern », « football club internship », « sponsorship internship », « Praktikum Sportmarketing », « prácticas marketing deportivo »), et 5 grands clubs ou instances européens pas encore couverts (identifier leur ATS).
 
+## Passe LinkedIn connectée (Mac)
+
+En plus des familles ci-dessus, et sans les remplacer. Après la veille, le job `linkedin` du
+workflow tourne sur le Mac de Tom (runner auto-hébergé, étiquette `ego`), dans le navigateur
+Ego Lite où son compte LinkedIn est ouvert. Si le Mac est éteint, GitHub garde le job en
+attente (24 h au plus) et il part dès que le Mac se rallume.
+
+1. `skills/veille-ssb/scripts/ego_linkedin.py` fait les recherches, seul, en lecture seule :
+   les requêtes larges (« sports industry », « sport business », « industrie du sport »), puis
+   celles des familles linkedin, cdi-idf, alternance, annonceurs, finance, droit, etranger,
+   agences, federations et startups à tour de rôle, et des recherches de posts
+   (`skills/veille-ssb/references/ego-requetes.json`). Budget par passage : 25 recherches
+   d'offres et 15 de posts, une page de résultats chacune, 5 à 9 s d'écart. Il lit ensuite
+   chaque fiche par la version publique de LinkedIn, sans le compte, et écrit
+   `out/candidats/AAAA-MM-JJ-ego.json` (`_famille`, `_type` offre ou post, `_extrait`,
+   `_criteres`, `_lien_employeur`). Sur une vérification, un CAPTCHA ou une déconnexion, il
+   s'arrête et le note dans `bloque`.
+2. Relecture (une session Claude) : applique les règles communes et la cible à chaque
+   candidate, comme la famille api, puis écris un lot par famille,
+   `out/lots/AAAA-MM-JJ/ego-<famille>.json` (`ego-posts.json` pour les posts), même vide.
+   - Offre : lis `_extrait` et `_criteres`. Écarte ce qui demande plus de 3 ans d'expérience
+     ou n'est pas du sport business. Lien livré : `_lien_employeur` ou l'offre retrouvée chez
+     l'employeur quand elle existe (vérifie-la), sinon `https://www.linkedin.com/jobs/view/<id>`.
+     LinkedIn affiche les republications : quand l'offre existe chez l'employeur, prends sa
+     date d'origine.
+   - Post : garde seulement un vrai poste proposé par l'auteur ou sa structure (pas un
+     étudiant qui cherche un stage, pas une formation, pas une école pour une « entreprise
+     partenaire » anonyme). Si le post renvoie vers une offre (`_liens`), vérifie cette offre
+     et livre son lien. Si le post est lui-même l'annonce, livre le lien du post
+     (`linkedin.com/posts/...` dans `_liens`) ; sans lien vérifiable, écarte. `date_iso` = date
+     du post ou de l'offre.
+   - N'utilise jamais ego-browser ni le compte LinkedIn : lis les pages avec WebFetch ou curl.
+   - Ajoute les candidates refusées à `skills/veille-ssb/references/ecartees.txt`, comme la
+     famille api.
+3. Le job fusionne les lots `ego-*`, lance `site/publish.sh`, ajoute une section « Passe
+   LinkedIn connectée » au récapitulatif `veille/AAAA-MM-JJ.md` et pousse sur main.
+
+Le compte est le vrai profil de Tom : lecture seule (jamais de candidature, de message,
+d'alerte ni de réglage), budget fixe, arrêt sur toute vérification. Ne relève pas le budget
+sans son accord.
+
 ## Après les recherches
 
 Le workflow fusionne les fichiers des familles dans `out/nouvelles.json` (doublons et
