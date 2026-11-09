@@ -3,6 +3,12 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-10 (3 offres)
+
+- 2026-11-06 | Stage | BernasCOM (Communication Sport) | Stage assistant.e de communication RP Sport | https://www.bernascom.com/integrer-l-equipe-bernascom
+- 2026-11-04 | CDI | CDOS Mayenne (Comité départemental olympique et sportif) | Chargé(e) de mission | https://mayenne.franceolympique.com/offre-demploi-le-cdos-53-recrute-un-charge-de-mission
+- 2026-10-30 | Stage | Ville de Lausanne (Service des sports) | Stagiaire en gestion de projets - développement et promotion du sport | https://www.lausanne.ch/officiel/travailler-a-la-ville/nous-rejoindre/places-stage/detail-offre-stage/pj19841.html
+
 ## Veille du 2026-11-10 (8 offres)
 
 - 2026-11-10 | Stage | Goxoa Sports Beer | Stage Chargé(e) événementiel - Dry Barathon Tour 2027 | https://www.linkedin.com/jobs/view/4488887822
