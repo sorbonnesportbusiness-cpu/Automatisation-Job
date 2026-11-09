@@ -398,3 +398,10 @@ séparés par `<br>` après le titre, dans l'ordre), `contenu_principal`, `atten
 - Testés sans résultat : Welcome to the Jungle (la recherche renvoie vers la création de compte,
   même rendue), JobTeaser (cartes sans intitulé ni lien), lesportrecrute.fr (liste sur `/jobs`,
   pas encore essayée). Une page en 403/404 chez Firecrawl coûte quand même 1 crédit.
+
+## Ajouts du 2026-11-09
+
+Aucune source JSON ou RSS proposée ce jour : `sources.json` inchangé.
+
+- **Utiles** : HelloWork `k=fédération+française&st=date` : la FFR y publie ses stages annoncés « CDI » alors que le texte décrit un stage conventionné (lire la fiche) ; LinkedIn `/jobs/search` redirige (301) vers `fr.linkedin.com/jobs/<mot>-emplois-île-de-france`, lisible sans connexion ; carrieres.lfp.fr et carrieres.aso.fr (fiches `/jobs/<id>`) répondent ; Greenhouse `kinexon` et `hudl` répondent en JSON (annonces en allemand ou aux États-Unis, rien de retenu).
+- **Stériles ou bloqués ce jour** : sportstrategies.com (WebFetch refusé), Wizbii, La Bonne Alternance, Meent, lesportrecrute.fr, talent.com (non consultés), cnosf.taleez.com (liens 404 pour les candidates, fiches directes lisibles), OM Taleez (vide), fff.taleez.com (1 poste senior), GL events intervieweb (403), careers.fdjunited.com, Decathlon DigitalRecruiters (magasin), group.bnpparibas (403), careers.sncf.com (DNS), groupecreditagricole.jobs (aucun sponsoring sport), Village de la Justice page 1 (0 annonce sport), Law Profiler (masqué sans connexion), PMU et JobTeaser (403), choisirleservicepublic.gouv.fr, emploi-territorial.fr, Ville de Paris, GlobalSportsJobs careerStage 1 et 2 (rien d'IDF junior), adidas Herzogenaurach, Red Bull (allemand). Plus de 100 slugs Greenhouse, Ashby, Lever, Recruitee, Personio et Teamtailor (sportstech, esport, fitness, outdoor) : 404, vides ou sans offre junior en Europe. LinkedIn guest : 429 après 3 à 4 requêtes malgré 7 à 9 s d'écart (pause de 9 à 20 s nécessaire).

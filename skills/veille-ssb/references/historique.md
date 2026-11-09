@@ -3,6 +3,32 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-09 (23 offres)
+
+- 2026-11-09 | Stage | act for sport | Stage / Alternance - Social Média & Communication | https://fr.linkedin.com/jobs/view/social-m%C3%A9dia-communication-at-act-for-sport-4488835485
+- 2026-11-09 | CDD | Amaury Sport Organisation (ASO) | Chargé de Projet - Marketing Digital (CDD 12 mois, janvier à décembre 2027) | https://www.hellowork.com/fr-fr/emplois/85292474.html
+- 2026-11-09 | Stage | Fédération Française de Rugby (FFR) | Stage - Assistant Développement Sociétal (6 mois, février 2027) | https://www.hellowork.com/fr-fr/emplois/85292450.html
+- 2026-11-09 | Stage | Fédération Française de Rugby (FFR) | Stage - Assistant Community Manager (6 mois) | https://www.hellowork.com/fr-fr/emplois/85292455.html
+- 2026-11-09 | Stage | Fédération Française de Rugby (FFR) | Assistant Développement des Pratiques Rugby (stage conventionné 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292451.html
+- 2026-11-09 | Stage | Fédération Française de Rugby (FFR) | Assistant Administratif Suivi des Centres de Formation (stage conventionné 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292477.html
+- 2026-11-07 | Stage | Alpes 2030 (COJOP) | Stage - Assistant(e) création de contenus internes | https://fr.linkedin.com/jobs/view/stage-assistant-e-cr%C3%A9ation-de-contenus-internes-at-alpes-2030-4487381412
+- 2026-11-07 | Stage | Decathlon | Stage en évènementiel pour le Vitalsport - Decathlon YUTZ | https://joinus.decathlon.fr/fr/annonce/4684253-stage-en-evenementiel-pour-le-vitalsport-decathlon-yutz-57970-yutz
+- 2026-11-07 | CDD | A.S.O. - Amaury Sport Organisation | CDD – Chargé de Projet – Marketing Digital 01-27 | https://fr.linkedin.com/jobs/view/4487361160
+- 2026-11-07 | CDI | Fédération Française de BasketBall (FFBB) | Chargé(e) de mission : Maillage et dynamiques territoriales | https://fr.linkedin.com/jobs/view/4488146118
+- 2026-11-07 | Stage | LFP - Ligue de Football Professionnel | Stage - Assistant Pôle Stades (H/F) | https://fr.linkedin.com/jobs/view/stage-assistant-p%C3%B4le-stades-h-f-at-lfp-ligue-de-football-professionnel-4487366064
+- 2026-11-07 | CDI | OGC Nice | Campaign Manager Junior | https://fr.linkedin.com/jobs/view/campaign-manager-junior-at-ogc-nice-4488156998
+- 2026-11-06 | Stage | LFP Media | Stage - Assistant Pôle Stades (H/F) | https://carrieres.lfp.fr/jobs/8682440-stage-assistant-pole-stades-h-f
+- 2026-11-06 | CDD | A.S.O. (Amaury Sport Organisation) | CDD – Chargé de Projet – Marketing Digital 01-27 | https://carrieres.aso.fr/jobs/8678410-cdd-charge-de-projet-marketing-digital-01-27
+- 2026-11-06 | Stage | International Paralympic Committee (IPC) | Website Content Internship | https://www.paralympic.org/sites/default/files/2026-11/2026_07%20Website%20Content%20Internship%20Ad.pdf
+- 2026-11-06 | CDI | Paris Saint-Germain | Compliance Officer F/H (entry level, Direction de la Conformité et de la RSE) | https://fr.linkedin.com/jobs/view/compliance-officer-f-h-at-paris-saint-germain-4485816466
+- 2026-11-06 | Stage | Comité National Olympique et Sportif Français (CNOSF) | Stagiaire pôle Relations extérieures | https://taleez.com/apply/stagiaire-pole-relations-exterieures-paris-comite-national-olympique-et-sportif-francais-cnosf
+- 2026-11-06 | Stage | Comité National Olympique et Sportif Français (CNOSF) | Stagiaire pôle Finances | https://taleez.com/apply/stagiaire-pole-finances-paris-comite-national-olympique-et-sportif-francais-cnosf
+- 2026-11-06 | Stage | Bluegreen (UGOLF) | Stage Assistant(e) Communication – Siège Bluegreen UGOLF | https://fr.linkedin.com/jobs/view/stage-assistant-e-communication-%E2%80%93-si%C3%A8ge-bluegreen-ugolf-at-bluegreen-4487743433
+- 2026-11-05 | Stage | PUMA | Intern Trade Marketing & Marketing Activation | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/Utrecht/Intern-Trade-Marketing---Marketing-Activation_R44286
+- 2026-11-05 | Stage | Fédération Française de Rugby | Stage 6 mois - Assistant développement sociétal (H/F) | https://careers.flatchr.io/fr/company/ffr/vacancy/xzbpjpoz7j39y51y-stage-6-mois-assistant-developpement-societal-h-f/
+- 2026-11-05 | Stage | INTERSPORT France | Stage - Assistant Contrôleur de Gestion Extra Financier H/F | https://fr.linkedin.com/jobs/view/4487557802
+- 2026-10-23 | CDI | Comité National Olympique et Sportif Français (CNOSF) | Juriste (CDI) | https://taleez.com/apply/juriste-paris-comite-national-olympique-et-sportif-francais-cnosf-cdi
+
 ## Veille du 2026-11-05 (17 offres)
 
 - 2026-11-05 | Stage | Paris Saint-Germain | Stagiaire Assistant Production Evenementielle - Sponsoring - Janvier 2027 (H/F) | https://www.hellowork.com/fr-fr/emplois/85172546.html
