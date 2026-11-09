@@ -3,6 +3,23 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-09 (14 offres)
+
+- 2026-11-09 | CDI | SPORTFIVE | Advisory Analyst F/H | https://fr.linkedin.com/jobs/view/advisory-analyst-f-h-at-sportfive-4487917962
+- 2026-11-09 | Stage | CNOSF (Comité National Olympique et Sportif Français) | Stagiaire Parité H/F | https://www.hellowork.com/fr-fr/emplois/85292463.html
+- 2026-11-09 | Stage | Fédération Française de Football | Assistant Événementiel et Partenariats H.F | https://fff.taleez.com/jobs/assistant-evenementiel-et-partenariats-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | Stage | Fédération Française de Football | Assistant d’Etudes Marketing H.F | https://fff.taleez.com/jobs/assistant-d-etudes-marketing-h-f-paris-federation-francaise-de-football-1
+- 2026-11-09 | Stage | Fédération Française de Football | Assistant community manager H.F | https://fff.taleez.com/jobs/assistant-community-manager-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | Stage | Fédération Française de Football | Assistant Stratégie Innovation & Diversification H.F | https://fff.taleez.com/jobs/assistant-strategie-innovation-diversification-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | CDD | adidas | Brand Marketing Graduates 2027 (Manchester & London) | https://uk.linkedin.com/jobs/view/brand-marketing-graduates-2027-manchester-london-at-adidas-4487168981
+- 2026-11-09 | CDD | adidas | Social & PR Graduate 2027 (London) | https://uk.linkedin.com/jobs/view/social-pr-graduate-2027-london-at-adidas-4487181425
+- 2026-11-09 | Stage | Fédération Française de Natation (FFN) | Stagiaire RSO (responsabilité sociétale des organisations) | https://www.ffnatation.fr/la-ffn/on-recrute/stagiaire-rso
+- 2026-11-04 | Stage | GL events (Stade de France) | Assistant(e) Relations clients (stage) | https://fr.linkedin.com/jobs/view/assistant-e-relations-clients-stage-at-gl-events-4487537979
+- 2026-11-04 | Stage | ORECA Events | Stage Assistant(e) chef de projet événementiel H/F | https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-de-projet-%C3%A9v%C3%A9nementiel-h-f-at-oreca-events-4485069756
+- 2026-11-02 | Stage | Hurricane Group (Groupe ABEO) | Stagiaire évènementiel (H/F) - FISE Montpellier | https://fr.linkedin.com/jobs/view/stagiaire-%C3%A9v%C3%A8nementiel-h-f-at-hurricane-group-4482507716
+- 2026-10-22 | CDI | Racing 92 / Paris La Défense Arena | Gestionnaire billetterie Racing 92 | https://join.com/companies/parisladefense-arena/16906342-gestionnaire-billetterie-racing-92
+- 2026-09-30 | Stage | SPORTFIVE | Stage Assistant.e Marketing de l'offre / Servicing (F/H) | https://fr.linkedin.com/jobs/view/stage-assistant-e-marketing-de-l-offre-servicing-f-h-at-sportfive-4472357117
+
 ## Veille du 2026-11-09 (23 offres)
 
 - 2026-11-09 | Stage | act for sport | Stage / Alternance - Social Média & Communication | https://fr.linkedin.com/jobs/view/social-m%C3%A9dia-communication-at-act-for-sport-4488835485
