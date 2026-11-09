@@ -3,6 +3,17 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-10 (8 offres)
+
+- 2026-11-10 | Stage | Goxoa Sports Beer | Stage Chargé(e) événementiel - Dry Barathon Tour 2027 | https://www.linkedin.com/jobs/view/4488887822
+- 2026-11-06 | Stage | Sopra Steria | Stage – Chargé/Chargée de projets événementiels (dont activation du sponsoring voile) | https://jobs.smartrecruiters.com/SopraSteria1/744000160202564-stage-charge-chargee-de-projets-evenementiels
+- 2026-11-06 | Stage | ANJ (Autorité Nationale des Jeux) | Stage - Chargé(e) des affaires européennes et institutionnelles | https://www.linkedin.com/jobs/view/4486583876
+- 2026-11-06 | Stage | Tecnifibre | Stage Community Manager H/F | https://careers.tecnifibre.com/fr/annonce/4683889-stage-community-manager-hf-78810-feucherolles
+- 2026-11-05 | Stage | REV'IT! Sport International | Event Management Intern | https://revitsport.com/pages/event-management-intern
+- 2026-11-05 | Stage | Salomon (Amer Sports) | Stage - Collaboration Assistant M/F/X | https://jobs.smartrecruiters.com/Salomon/744000159875151-stage-collaboration-assistant-m-f-x
+- 2026-11-04 | Stage | Alpine Racing (Alpine F1 Team) | CS27 - Bac +5 - Stage Coordinateur Business Développement (H/F) | https://alliancewd.wd3.myworkdayjobs.com/alpine-racing-careers/job/Viry-Chatillon/CS27---Bac--5---Stage-Coordinateur-Business-Dveloppement--H-F-_JOBREQ_50286394
+- 2026-11-03 | Stage | CANAL+ Group (CANAL+ Business) | Stage - Assistant(e) Chef de produit B2B Lieux Publics (offres sport bars et restaurants) | https://joinus.canalplus.com/job/Issy-les-Moulineaux-STAGE-ASSISTANT-ASSISTANTE-CHEF-CHEFFE-DE-PRODUIT-B2B-LIEUX-PUBLICS-%28FHX%29/1376577957/
+
 ## Veille du 2026-11-09 (14 offres)
 
 - 2026-11-09 | CDI | SPORTFIVE | Advisory Analyst F/H | https://fr.linkedin.com/jobs/view/advisory-analyst-f-h-at-sportfive-4487917962
