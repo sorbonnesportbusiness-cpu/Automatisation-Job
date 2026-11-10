@@ -190,35 +190,40 @@ dialog::backdrop { background: rgba(2, 16, 31, .55); }
 @media (max-width: 760px) { .vis-body { grid-template-columns: 1fr; } }
 
 /* Visuel Insta (1080 x 1350, 5 offres) */
-#insta { width: min(1040px, calc(100vw - 32px)); }
+#insta { width: min(1120px, calc(100vw - 32px)); }
 .insta-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 18px; align-items: start; }
 .insta-rows { display: grid; gap: 8px; }
-.irow { display: grid; grid-template-columns: 22px 132px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+.irow { display: grid; grid-template-columns: 22px 132px minmax(0, 1fr) auto; gap: 10px; align-items: start;
   border: 1px solid var(--line); border-radius: 12px; padding: 8px; background: var(--surface); }
-.irow .num { font: 600 12px/1 var(--mono); color: var(--muted); text-align: center; }
+.irow .num { font: 600 12px/1 var(--mono); color: var(--muted); text-align: center; padding-top: 26px; }
 .ilogo { position: relative; height: 64px; border: 1.5px dashed var(--line); border-radius: 10px; background: #e6e1d6;
   display: grid; place-items: center; cursor: pointer; overflow: hidden; }
 .ilogo.over { border-color: var(--accent); }
 .ilogo img { max-width: 112px; max-height: 50px; object-fit: contain; }
 .ilogo .ph { font-size: 11.5px; color: #5a5f6b; text-align: center; line-height: 1.25; padding: 4px; }
 .ilogo input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
-.ilogo .del { position: absolute; right: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 0; z-index: 2;
-  background: rgba(4, 26, 53, .75); color: #fff; font: 600 12px/20px var(--font); padding: 0; cursor: pointer; }
-.irow .txt { min-width: 0; font-size: 13px; line-height: 1.35; }
-.irow .txt b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.irow .txt span { color: var(--muted); }
-.irow .txt .warn { color: var(--warn); }
+.ilogo-actions { display: flex; flex-wrap: wrap; gap: 2px 8px; margin-top: 5px; }
+.ilogo-actions button { background: none; border: 0; padding: 0; font: 500 11.5px/1.3 var(--font); color: var(--accent); cursor: pointer; text-decoration: underline; }
+.ilogo-actions .warn { font-size: 11.5px; color: var(--warn); line-height: 1.3; }
+.ifields { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 5px; min-width: 0; }
+.ifields textarea, .ifields input { width: 100%; font: 500 13px/1.35 var(--font); color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 7px; padding: 5px 7px; min-width: 0; }
+.ifields textarea { grid-column: 1 / -1; resize: vertical; min-height: 44px; font-weight: 600; }
+.ifields .lieu { grid-column: 1 / -1; }
+.ifields .edited { border-color: var(--accent); }
 .irow .move { display: grid; gap: 4px; }
 .irow .move button { width: 30px; height: 26px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink);
   cursor: pointer; font: 600 13px/1 var(--font); padding: 0; }
 .irow .move button:disabled { opacity: .35; cursor: default; }
+.insta-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 16px; }
+.insta-opts label { display: grid; gap: 4px; font-size: 12.5px; }
 #insta-canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1350; border-radius: 12px; border: 1px solid var(--line); display: block; }
 .istories { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .istory { display: grid; gap: 6px; }
 .istory canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1920; border-radius: 10px; border: 1px solid var(--line); display: block; }
 .istory .row2 { display: flex; gap: 6px; }
 .istory .row2 button { flex: 1; font: 600 12px/1 var(--font); padding: 7px 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); cursor: pointer; }
-@media (max-width: 760px) { .insta-body { grid-template-columns: 1fr; } .irow { grid-template-columns: 18px 104px minmax(0, 1fr) auto; } }
+@media (max-width: 760px) { .insta-body { grid-template-columns: 1fr; } .irow { grid-template-columns: 104px minmax(0, 1fr) auto; } .irow .num { display: none; } .ifields { grid-template-columns: minmax(0, 1fr) 90px; } }
 
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: grid; gap: 8px; max-width: 80ch; }
 
@@ -359,7 +364,20 @@ __GSHELP__
 <dialog id="insta" aria-labelledby="insta-title">
   <div class="dlg">
     <h2 id="insta-title">Visuel Insta « Offres sport business »</h2>
-    <p>Les 5 offres cochées, dans l'ordre du tableau. Changez l'ordre avec les flèches. Si un logo manque ou ne convient pas, déposez un fichier sur sa case (ou cliquez dessus).</p>
+    <p>Les 5 offres cochées, dans l'ordre du tableau. Tout se modifie ici : l'ordre (flèches), les textes de chaque carte, et le logo (déposez un fichier sur sa case ou cliquez dessus). Vos changements sont gardés dans ce navigateur.</p>
+    <div class="insta-opts">
+      <label>Sous-titre sous « Offres sport business » (facultatif)
+        <input type="text" id="insta-sous" list="insta-sous-list" maxlength="60" placeholder="ex. Droit du sport, Finance in sport, Spécial clubs">
+      </label>
+      <label>Phrase sous le bandeau des stories
+        <input type="text" id="insta-phrase" maxlength="60">
+      </label>
+    </div>
+    <datalist id="insta-sous-list">
+      <option value="Droit du sport"><option value="Finance in sport"><option value="Spécial clubs"><option value="Spécial alternance">
+      <option value="Spécial CDI"><option value="Spécial stages"><option value="Marketing &amp; sponsoring"><option value="Événementiel sportif">
+      <option value="Stages à l'étranger"><option value="Fédérations &amp; ligues"><option value="Médias &amp; contenus">
+    </datalist>
     <div class="opts" role="radiogroup" aria-label="Format">
       <label><input type="radio" name="insta-format" value="post" checked> Post (1080 x 1350, les 5 offres)</label>
       <label><input type="radio" name="insta-format" value="story"> Stories (1080 x 1920, une par offre)</label>
@@ -727,42 +745,76 @@ __GSHELP__
     }
     return null;
   }
-  const INSTA = { order: [], custom: new Map(), auto: new Map() };
+  // Modifications gardées dans le navigateur : textes par offre, logo choisi par employeur
+  // (« aucun » = le nom à la place du logo), sous-titre et phrase du bas des stories.
+  const store = {
+    get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } },
+  };
+  const PHRASE = "Toutes les offres : lien en bio";
+  const INSTA = {
+    order: [], auto: new Map(), loaded: new Map(),
+    edits: store.get("ssb-insta-textes", {}), logos: store.get("ssb-insta-logos", {}),
+  };
+  $("insta-sous").value = store.get("ssb-insta-sous-titre", "");
+  $("insta-phrase").value = store.get("ssb-insta-phrase", PHRASE);
+  const empKey = o => cle(o.entreprise);
   const autoLogo = entry => {
     if (!INSTA.auto.has(entry.fichier)) INSTA.auto.set(entry.fichier, SSBInsta.loadLogo("logos/" + entry.fichier).catch(() => null));
     return INSTA.auto.get(entry.fichier);
   };
+  const customLogo = k => {
+    const src = INSTA.logos[k];
+    if (!src || src === "aucun") return Promise.resolve(null);
+    if (!INSTA.loaded.has(k)) INSTA.loaded.set(k, SSBInsta.loadLogo(src).catch(() => null));
+    return INSTA.loaded.get(k);
+  };
+  const FIELDS = [["titre", "titre"], ["entreprise", "entreprise"], ["contrat", "contrat"], ["lieu", "localisation"]];
+  const value = (o, f) => { const e = INSTA.edits[o.lien] || {}; const src = FIELDS.find(x => x[0] === f)[1]; return e[f] ?? o[src] ?? ""; };
   async function instaCards() {
     return Promise.all(INSTA.order.map(async lien => {
-      const o = offers.find(x => x.lien === lien), entry = logoEntry(o.entreprise), mine = INSTA.custom.get(lien);
-      const logo = mine || (entry ? await autoLogo(entry) : null);
-      return { o, entry, mine, logo, card: { titre: o.titre, entreprise: o.entreprise, contrat: o.contrat, lieu: o.localisation, logo, logoH: mine ? null : entry && entry.h } };
+      const o = offers.find(x => x.lien === lien), k = empKey(o), choix = INSTA.logos[k];
+      const entry = logoEntry(value(o, "entreprise")) || logoEntry(o.entreprise);
+      const mine = choix && choix !== "aucun";
+      const logo = choix === "aucun" ? null : mine ? await customLogo(k) : entry ? await autoLogo(entry) : null;
+      return { o, entry, choix, logo, card: { titre: value(o, "titre"), entreprise: value(o, "entreprise"), contrat: value(o, "contrat"),
+        lieu: value(o, "lieu"), logo, logoH: mine ? null : entry && entry.h } };
     }));
   }
   const instaMode = () => document.querySelector('input[name="insta-format"]:checked').value;
   const storyName = i => `story-insta-offre-${i + 1}-ssb-${RUN}.png`;
-  async function drawInsta() {
-    const cards = await instaCards(), story = instaMode() === "story";
-    $("insta-canvas").hidden = story; $("insta-stories").hidden = !story;
-    $("insta-copy").hidden = story;
-    $("insta-dl").textContent = story ? `Télécharger les ${cards.length} stories` : "Télécharger";
-    if (!story) { await SSBInsta.render($("insta-canvas"), cards.map(c => c.card)); return cards; }
-    const box = $("insta-stories");
-    if (box.children.length !== cards.length) {
-      box.innerHTML = cards.map((_, i) => `<div class="istory" data-i="${i}"><canvas width="1080" height="1920" aria-label="Story ${i + 1}"></canvas>
-        <div class="row2"><button type="button" data-a="dl">Télécharger</button><button type="button" data-a="copy">Copier</button></div></div>`).join("");
-    }
-    const canvases = box.querySelectorAll("canvas");
-    for (let i = 0; i < cards.length; i++) await SSBInsta.renderStory(canvases[i], cards[i].card, i, cards.length);
-    return cards;
+  const opts = () => ({ sousTitre: $("insta-sous").value, phraseBas: $("insta-phrase").value });
+  let drawing = Promise.resolve();
+  function drawInsta() {
+    // Un dessin à la fois : une frappe rapide ne mélange pas deux rendus.
+    drawing = drawing.then(async () => {
+      const cards = await instaCards(), story = instaMode() === "story";
+      $("insta-canvas").hidden = story; $("insta-stories").hidden = !story;
+      $("insta-copy").hidden = story;
+      $("insta-dl").textContent = story ? `Télécharger les ${cards.length} stories` : "Télécharger";
+      if (!story) { await SSBInsta.render($("insta-canvas"), cards.map(c => c.card), opts()); return cards; }
+      const box = $("insta-stories");
+      if (box.children.length !== cards.length) {
+        box.innerHTML = cards.map((_, i) => `<div class="istory" data-i="${i}"><canvas width="1080" height="1920" aria-label="Story ${i + 1}"></canvas>
+          <div class="row2"><button type="button" data-a="dl">Télécharger</button><button type="button" data-a="copy">Copier</button></div></div>`).join("");
+      }
+      const canvases = box.querySelectorAll("canvas");
+      for (let i = 0; i < cards.length; i++) await SSBInsta.renderStory(canvases[i], cards[i].card, i, cards.length, opts());
+      return cards;
+    }).catch(err => { $("insta-status").textContent = "Le visuel n'a pas pu se dessiner : " + err.message; });
+    return drawing;
   }
+  let timer = null;
+  const redrawSoon = () => { clearTimeout(timer); timer = setTimeout(drawInsta, 180); };
   const blobOf = cv => new Promise(r => cv.toBlob(r, "image/png"));
   function saveBlob(blob, name) {
     const url = URL.createObjectURL(blob), a = document.createElement("a");
     a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 2000);
   }
-  document.querySelectorAll('input[name="insta-format"]').forEach(r => r.addEventListener("change", () => renderInsta()));
+  document.querySelectorAll('input[name="insta-format"]').forEach(r => r.addEventListener("change", () => drawInsta()));
+  $("insta-sous").addEventListener("input", () => { store.set("ssb-insta-sous-titre", $("insta-sous").value); redrawSoon(); });
+  $("insta-phrase").addEventListener("input", () => { store.set("ssb-insta-phrase", $("insta-phrase").value); redrawSoon(); });
   $("insta-stories").addEventListener("click", async e => {
     const btn = e.target.closest("button"); if (!btn) return;
     const i = Number(btn.closest(".istory").dataset.i), cv = btn.closest(".istory").querySelector("canvas");
@@ -773,35 +825,68 @@ __GSHELP__
   });
   async function renderInsta() {
     const cards = await drawInsta();
-    $("insta-rows").innerHTML = cards.map(({ o, logo, mine }, i) => `<div class="irow" data-i="${i}">
-      <span class="num">${i + 1}</span>
-      <div class="ilogo">${logo ? `<img src="${logo.img.toDataURL ? logo.img.toDataURL() : logo.img.src}" alt="">` : `<span class="ph">Pas de logo<br>déposez un fichier</span>`}
-        ${mine ? `<button class="del" type="button" aria-label="Revenir au logo trouvé">×</button>` : ""}
-        <input type="file" accept="image/*" aria-label="Logo de ${esc(o.entreprise)}"></div>
-      <div class="txt"><b title="${esc(o.titre)}">${esc(o.titre)}</b><span>${esc(o.entreprise)} · ${esc(o.contrat)}</span>${logo ? "" : `<br><span class="warn">Logo introuvable : le nom s'affiche à sa place.</span>`}</div>
-      <div class="move"><button type="button" data-d="-1" ${i === 0 ? "disabled" : ""} aria-label="Monter">↑</button><button type="button" data-d="1" ${i === cards.length - 1 ? "disabled" : ""} aria-label="Descendre">↓</button></div>
-    </div>`).join("");
-    const missing = cards.filter(c => !c.logo).length;
-    $("insta-status").textContent = missing ? `${missing} logo${missing > 1 ? "s" : ""} manquant${missing > 1 ? "s" : ""} : déposez un fichier sur la case.` : "Les 5 logos sont en place.";
+    if (!cards) return;
+    $("insta-rows").innerHTML = cards.map(({ o, logo, choix }, i) => {
+      const ed = INSTA.edits[o.lien] || {}, cls = f => ed[f] !== undefined ? "edited" : "";
+      const thumb = logo ? `<img src="${logo.img.toDataURL ? logo.img.toDataURL() : logo.img.src}" alt="">`
+        : `<span class="ph">${choix === "aucun" ? "Nom à la place<br>du logo" : "Pas de logo<br>déposez un fichier"}</span>`;
+      const acts = [`<button type="button" data-a="pick">Changer le logo</button>`];
+      if (choix) acts.push(`<button type="button" data-a="reset-logo">Logo d'origine</button>`);
+      if (choix !== "aucun" && logo) acts.push(`<button type="button" data-a="no-logo">Mettre le nom</button>`);
+      if (!logo && choix !== "aucun") acts.push(`<span class="warn">Logo introuvable</span>`);
+      return `<div class="irow" data-i="${i}">
+        <span class="num">${i + 1}</span>
+        <div><div class="ilogo">${thumb}<input type="file" accept="image/*" aria-label="Logo de ${esc(o.entreprise)}"></div>
+          <div class="ilogo-actions">${acts.join("")}</div></div>
+        <div class="ifields">
+          <textarea data-f="titre" rows="2" class="${cls("titre")}" aria-label="Titre">${esc(value(o, "titre"))}</textarea>
+          <input data-f="entreprise" class="${cls("entreprise")}" value="${esc(value(o, "entreprise"))}" aria-label="Entreprise">
+          <input data-f="contrat" class="${cls("contrat")}" value="${esc(value(o, "contrat"))}" aria-label="Contrat">
+          <input data-f="lieu" class="lieu ${cls("lieu")}" value="${esc(value(o, "lieu"))}" aria-label="Lieu (stories)" placeholder="Lieu (stories)">
+        </div>
+        <div class="move"><button type="button" data-d="-1" ${i === 0 ? "disabled" : ""} aria-label="Monter">↑</button><button type="button" data-d="1" ${i === cards.length - 1 ? "disabled" : ""} aria-label="Descendre">↓</button>
+          <button type="button" data-a="reset-text" title="Remettre les textes d'origine" aria-label="Remettre les textes d'origine">↺</button></div>
+      </div>`;
+    }).join("");
+    const missing = cards.filter(c => !c.logo && c.choix !== "aucun").length;
+    $("insta-status").textContent = missing ? `${missing} logo${missing > 1 ? "s" : ""} manquant${missing > 1 ? "s" : ""} : déposez un fichier sur la case.` : "";
   }
   const irows = $("insta-rows");
+  const rowOffer = el => { const row = el.closest(".irow"); return row ? { i: Number(row.dataset.i), o: offers.find(x => x.lien === INSTA.order[Number(row.dataset.i)]) } : null; };
+  function setLogoChoice(o, v) {
+    const k = empKey(o);
+    if (v === undefined) delete INSTA.logos[k]; else INSTA.logos[k] = v;
+    INSTA.loaded.delete(k);
+    if (!store.set("ssb-insta-logos", INSTA.logos)) $("insta-status").textContent = "Logo utilisé, mais trop lourd pour être gardé dans le navigateur.";
+  }
   irows.addEventListener("click", e => {
-    const row = e.target.closest(".irow"); if (!row) return;
-    const i = Number(row.dataset.i);
+    const r = rowOffer(e.target); if (!r) return;
+    const a = e.target.dataset.a;
     if (e.target.dataset.d) {
-      const j = i + Number(e.target.dataset.d);
-      [INSTA.order[i], INSTA.order[j]] = [INSTA.order[j], INSTA.order[i]]; renderInsta();
-    } else if (e.target.classList.contains("del")) { INSTA.custom.delete(INSTA.order[i]); renderInsta(); }
+      const j = r.i + Number(e.target.dataset.d);
+      [INSTA.order[r.i], INSTA.order[j]] = [INSTA.order[j], INSTA.order[r.i]]; renderInsta();
+    } else if (a === "pick") { e.target.closest(".irow").querySelector(".ilogo input").click(); }
+    else if (a === "reset-logo") { setLogoChoice(r.o, undefined); renderInsta(); }
+    else if (a === "no-logo") { setLogoChoice(r.o, "aucun"); renderInsta(); }
+    else if (a === "reset-text") { delete INSTA.edits[r.o.lien]; store.set("ssb-insta-textes", INSTA.edits); renderInsta(); }
+  });
+  irows.addEventListener("input", e => {
+    const f = e.target.dataset.f, r = rowOffer(e.target); if (!f || !r) return;
+    const ed = INSTA.edits[r.o.lien] = INSTA.edits[r.o.lien] || {};
+    ed[f] = e.target.value; e.target.classList.add("edited");
+    store.set("ssb-insta-textes", INSTA.edits); redrawSoon();
   });
   async function setCustom(i, file) {
     if (!file || !file.type.startsWith("image/")) return;
-    try { INSTA.custom.set(INSTA.order[i], await SSBInsta.loadLogo(file)); } catch { $("insta-status").textContent = "Ce fichier ne s'ouvre pas comme une image."; return; }
+    const o = offers.find(x => x.lien === INSTA.order[i]);
+    try { setLogoChoice(o, SSBInsta.logoDataURL(await SSBInsta.loadLogo(file))); }
+    catch { $("insta-status").textContent = "Ce fichier ne s'ouvre pas comme une image."; return; }
     renderInsta();
   }
-  irows.addEventListener("change", e => { const row = e.target.closest(".irow"); if (row && e.target.files.length) setCustom(Number(row.dataset.i), e.target.files[0]); });
+  irows.addEventListener("change", e => { const r = rowOffer(e.target); if (r && e.target.type === "file" && e.target.files.length) setCustom(r.i, e.target.files[0]); });
   irows.addEventListener("dragover", e => { e.preventDefault(); irows.querySelectorAll(".over").forEach(x => x.classList.remove("over")); const z = e.target.closest(".ilogo"); if (z) z.classList.add("over"); });
   irows.addEventListener("dragleave", e => { if (!irows.contains(e.relatedTarget)) irows.querySelectorAll(".over").forEach(x => x.classList.remove("over")); });
-  irows.addEventListener("drop", e => { e.preventDefault(); const row = e.target.closest(".irow"); if (row && e.dataTransfer.files.length) setCustom(Number(row.dataset.i), e.dataTransfer.files[0]); });
+  irows.addEventListener("drop", e => { e.preventDefault(); const r = rowOffer(e.target); if (r && e.dataTransfer.files.length) setCustom(r.i, e.dataTransfer.files[0]); });
   const openInsta = async () => {
     const picks = sorted(offers.filter(o => selected.has(o.lien)));
     if (picks.length !== 5) return;
@@ -809,14 +894,15 @@ __GSHELP__
     if (!same) INSTA.order = picks.map(o => o.lien);
     $("insta").showModal();
     $("insta-status").textContent = "Préparation du visuel…";
-    try { await renderInsta(); } catch (err) { $("insta-status").textContent = "Le visuel n'a pas pu se dessiner : " + err.message; }
+    await renderInsta();
   };
   $("insta-open").addEventListener("click", openInsta);
   $("insta-open-2").addEventListener("click", openInsta);
   $("insta-close").addEventListener("click", () => $("insta").close());
   const instaBlob = async () => { await drawInsta(); return blobOf($("insta-canvas")); };
   $("insta-dl").addEventListener("click", async () => {
-    if (instaMode() === "post") { saveBlob(await instaBlob(), `visuel-insta-offres-ssb-${RUN}.png`); return; }
+    await drawInsta();
+    if (instaMode() === "post") { saveBlob(await blobOf($("insta-canvas")), `visuel-insta-offres-ssb-${RUN}.png`); return; }
     // Stories : une image par offre, téléchargées l'une après l'autre.
     const canvases = [...$("insta-stories").querySelectorAll("canvas")];
     for (let i = 0; i < canvases.length; i++) {

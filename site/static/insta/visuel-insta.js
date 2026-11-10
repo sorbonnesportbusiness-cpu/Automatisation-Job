@@ -159,12 +159,24 @@
     if (hasLS) ctx.letterSpacing = "0px";
   }
 
-  async function render(canvas, cards) {
+  // Sous-titre libre sous « OFFRES SPORT BUSINESS » (« Droit du sport », « Spécial clubs »...) :
+  // Geist Mono doré en capitales espacées, comme les pastilles.
+  function subtitle(ctx, text, cx, y, size, ls, maxW) {
+    const t = (text || "").trim().toUpperCase();
+    if (!t) return;
+    ctx.font = `500 ${size}px ${GM}`; setLS(ctx, ls); ctx.fillStyle = PILL_TX;
+    const line = ellipsis(ctx, t, maxW, ls), w = width(ctx, line, ls);
+    fill(ctx, line, cx - w / 2 + (hasLS ? ls / 2 : 0), y, ls);
+    if (hasLS) ctx.letterSpacing = "0px";
+  }
+
+  async function render(canvas, cards, opts = {}) {
     const { bg } = await ready();
     canvas.width = W; canvas.height = H;
     const ctx = canvas.getContext("2d");
     ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
     ctx.drawImage(bg, 0, 0, W, H);
+    subtitle(ctx, opts.sousTitre, W / 2, 238, 25, 5, 760);
     cards.slice(0, 5).forEach((c, i) => { if (c) drawCard(ctx, c, CY[i]); });
   }
 
@@ -173,7 +185,8 @@
   // sombre) est recoloré en encre, et un fond blanc opaque est rendu transparent.
   async function loadLogo(source) {
     let url = typeof source === "string" ? source : URL.createObjectURL(source);
-    const isSvg = typeof source === "string" ? /\.svg(\?|$)/i.test(source) : source.type === "image/svg+xml";
+    const isSvg = typeof source === "string" ? /\.svg(\?|$)/i.test(source) || source.startsWith("data:image/svg")
+      : source.type === "image/svg+xml";
     if (isSvg) {
       const text = typeof source === "string" ? await (await fetch(url)).text() : await source.text();
       const doc = new DOMParser().parseFromString(text, "image/svg+xml"), svg = doc.documentElement;
@@ -328,7 +341,7 @@
     fill(ctx, text, cx - w / 2 + (hasLS ? ls / 2 : 0), y, ls);
   }
 
-  async function renderStory(canvas, c, index, total) {
+  async function renderStory(canvas, c, index, total, opts = {}) {
     const { bg } = await ready();
     canvas.width = SW; canvas.height = SH;
     const ctx = canvas.getContext("2d");
@@ -340,7 +353,9 @@
     ctx.drawImage(piece(bg, "icone"), SW - 58 - 34 - 68 * 1.25, 92, 68 * 1.25, 67 * 1.25);
     const tk = 1.18, tw = PIECES.titre[2] * tk, th = PIECES.titre[3] * tk;
     ctx.drawImage(piece(bg, "titre"), cx - tw / 2, 262, tw, th);
-    if (total > 1) {
+    const sous = (opts.sousTitre || "").trim();
+    if (sous) subtitle(ctx, sous, cx, 390, 30, 5, 860);
+    else if (total > 1) {
       ctx.font = `500 26px ${GM}`; setLS(ctx, 4); ctx.fillStyle = PILL_TX;
       centered(ctx, `OFFRE ${index + 1} / ${total}`, cx, 388, 4);
     }
@@ -356,6 +371,12 @@
     for (let x = X + 0.5; x < X + CWs; x += 22) { ctx.moveTo(x, Y); ctx.lineTo(x, Y + CHs); }
     for (let y = Y + 0.5; y < Y + CHs; y += 22) { ctx.moveTo(X, y); ctx.lineTo(X + CWs, y); }
     ctx.stroke(); ctx.restore();
+    if (sous && total > 1) {
+      // Avec un sous-titre, le numéro de l'offre passe dans le coin de la carte.
+      ctx.font = `500 24px ${GM}`; setLS(ctx, 3); ctx.fillStyle = "rgba(11, 20, 40, 0.45)";
+      const lab = `${index + 1} / ${total}`;
+      fill(ctx, lab, X + CWs - 44 - width(ctx, lab, 3), Y + 62, 3);
+    }
 
     // Contenu de la carte, centré verticalement : logo (ou nom), trait, titre, entreprise et
     // lieu, pastille du contrat.
@@ -412,11 +433,20 @@
     const ck = 1.3, cw = PIECES.cta[2] * ck, ch = PIECES.cta[3] * ck;
     ctx.drawImage(piece(bg, "cta"), cx - cw / 2, 1528, cw, ch);
     ctx.font = `500 26px ${GS}`; setLS(ctx, 1.5); ctx.fillStyle = "rgba(255, 255, 255, 0.82)";
-    centered(ctx, "TOUTES LES OFFRES : LIEN EN BIO", cx, 1640, 1.5);
+    centered(ctx, ellipsis(ctx, (opts.phraseBas ?? "TOUTES LES OFFRES : LIEN EN BIO").toUpperCase(), 820, 1.5), cx, 1640, 1.5);
     const sk = 1.15;
     ctx.drawImage(piece(bg, "ssb"), 96, 1742, PIECES.ssb[2] * sk, PIECES.ssb[3] * sk);
     if (hasLS) ctx.letterSpacing = "0px";
   }
 
-  g.SSBInsta = { ready, render, renderStory, loadLogo, autoHeight, W, H, SW, SH };
+  // Logo en PNG (600 px au plus) pour le garder dans le navigateur d'une fois sur l'autre.
+  function logoDataURL(logo) {
+    const k = Math.min(1, 600 / Math.max(logo.w, logo.h));
+    const cv = document.createElement("canvas");
+    cv.width = Math.max(1, Math.round(logo.w * k)); cv.height = Math.max(1, Math.round(logo.h * k));
+    cv.getContext("2d").drawImage(logo.img, 0, 0, cv.width, cv.height);
+    return cv.toDataURL("image/png");
+  }
+
+  g.SSBInsta = { ready, render, renderStory, loadLogo, logoDataURL, autoHeight, W, H, SW, SH };
 })(window);
