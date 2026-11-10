@@ -213,6 +213,11 @@ dialog::backdrop { background: rgba(2, 16, 31, .55); }
   cursor: pointer; font: 600 13px/1 var(--font); padding: 0; }
 .irow .move button:disabled { opacity: .35; cursor: default; }
 #insta-canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1350; border-radius: 12px; border: 1px solid var(--line); display: block; }
+.istories { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.istory { display: grid; gap: 6px; }
+.istory canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1920; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.istory .row2 { display: flex; gap: 6px; }
+.istory .row2 button { flex: 1; font: 600 12px/1 var(--font); padding: 7px 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); cursor: pointer; }
 @media (max-width: 760px) { .insta-body { grid-template-columns: 1fr; } .irow { grid-template-columns: 18px 104px minmax(0, 1fr) auto; } }
 
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: grid; gap: 8px; max-width: 80ch; }
@@ -355,9 +360,16 @@ __GSHELP__
   <div class="dlg">
     <h2 id="insta-title">Visuel Insta « Offres sport business »</h2>
     <p>Les 5 offres cochées, dans l'ordre du tableau. Changez l'ordre avec les flèches. Si un logo manque ou ne convient pas, déposez un fichier sur sa case (ou cliquez dessus).</p>
+    <div class="opts" role="radiogroup" aria-label="Format">
+      <label><input type="radio" name="insta-format" value="post" checked> Post (1080 x 1350, les 5 offres)</label>
+      <label><input type="radio" name="insta-format" value="story"> Stories (1080 x 1920, une par offre)</label>
+    </div>
     <div class="insta-body">
       <div class="insta-rows" id="insta-rows"></div>
-      <canvas id="insta-canvas" width="1080" height="1350" aria-label="Aperçu du visuel Insta"></canvas>
+      <div>
+        <canvas id="insta-canvas" width="1080" height="1350" aria-label="Aperçu du visuel Insta"></canvas>
+        <div class="istories" id="insta-stories" hidden></div>
+      </div>
     </div>
     <div class="foot">
       <span class="hint" id="insta-status"></span>
@@ -724,14 +736,41 @@ __GSHELP__
     return Promise.all(INSTA.order.map(async lien => {
       const o = offers.find(x => x.lien === lien), entry = logoEntry(o.entreprise), mine = INSTA.custom.get(lien);
       const logo = mine || (entry ? await autoLogo(entry) : null);
-      return { o, entry, mine, logo, card: { titre: o.titre, entreprise: o.entreprise, contrat: o.contrat, logo, logoH: mine ? null : entry && entry.h } };
+      return { o, entry, mine, logo, card: { titre: o.titre, entreprise: o.entreprise, contrat: o.contrat, lieu: o.localisation, logo, logoH: mine ? null : entry && entry.h } };
     }));
   }
+  const instaMode = () => document.querySelector('input[name="insta-format"]:checked').value;
+  const storyName = i => `story-insta-offre-${i + 1}-ssb-${RUN}.png`;
   async function drawInsta() {
-    const cards = await instaCards();
-    await SSBInsta.render($("insta-canvas"), cards.map(c => c.card));
+    const cards = await instaCards(), story = instaMode() === "story";
+    $("insta-canvas").hidden = story; $("insta-stories").hidden = !story;
+    $("insta-copy").hidden = story;
+    $("insta-dl").textContent = story ? `Télécharger les ${cards.length} stories` : "Télécharger";
+    if (!story) { await SSBInsta.render($("insta-canvas"), cards.map(c => c.card)); return cards; }
+    const box = $("insta-stories");
+    if (box.children.length !== cards.length) {
+      box.innerHTML = cards.map((_, i) => `<div class="istory" data-i="${i}"><canvas width="1080" height="1920" aria-label="Story ${i + 1}"></canvas>
+        <div class="row2"><button type="button" data-a="dl">Télécharger</button><button type="button" data-a="copy">Copier</button></div></div>`).join("");
+    }
+    const canvases = box.querySelectorAll("canvas");
+    for (let i = 0; i < cards.length; i++) await SSBInsta.renderStory(canvases[i], cards[i].card, i, cards.length);
     return cards;
   }
+  const blobOf = cv => new Promise(r => cv.toBlob(r, "image/png"));
+  function saveBlob(blob, name) {
+    const url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+  document.querySelectorAll('input[name="insta-format"]').forEach(r => r.addEventListener("change", () => renderInsta()));
+  $("insta-stories").addEventListener("click", async e => {
+    const btn = e.target.closest("button"); if (!btn) return;
+    const i = Number(btn.closest(".istory").dataset.i), cv = btn.closest(".istory").querySelector("canvas");
+    if (btn.dataset.a === "dl") { saveBlob(await blobOf(cv), storyName(i)); return; }
+    try { await navigator.clipboard.write([new ClipboardItem({ "image/png": blobOf(cv) })]); btn.textContent = "Copiée"; }
+    catch { btn.textContent = "Impossible"; }
+    setTimeout(() => { btn.textContent = "Copier"; }, 2000);
+  });
   async function renderInsta() {
     const cards = await drawInsta();
     $("insta-rows").innerHTML = cards.map(({ o, logo, mine }, i) => `<div class="irow" data-i="${i}">
@@ -775,11 +814,15 @@ __GSHELP__
   $("insta-open").addEventListener("click", openInsta);
   $("insta-open-2").addEventListener("click", openInsta);
   $("insta-close").addEventListener("click", () => $("insta").close());
-  const instaBlob = async () => { await drawInsta(); return new Promise(r => $("insta-canvas").toBlob(r, "image/png")); };
+  const instaBlob = async () => { await drawInsta(); return blobOf($("insta-canvas")); };
   $("insta-dl").addEventListener("click", async () => {
-    const url = URL.createObjectURL(await instaBlob()), a = document.createElement("a");
-    a.href = url; a.download = `visuel-insta-offres-ssb-${RUN}.png`; document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    if (instaMode() === "post") { saveBlob(await instaBlob(), `visuel-insta-offres-ssb-${RUN}.png`); return; }
+    // Stories : une image par offre, téléchargées l'une après l'autre.
+    const canvases = [...$("insta-stories").querySelectorAll("canvas")];
+    for (let i = 0; i < canvases.length; i++) {
+      saveBlob(await blobOf(canvases[i]), storyName(i));
+      await new Promise(r => setTimeout(r, 450));
+    }
   });
   $("insta-copy").addEventListener("click", async e => {
     const btn = e.currentTarget;
