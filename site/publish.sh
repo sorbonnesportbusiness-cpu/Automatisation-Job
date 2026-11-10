@@ -26,6 +26,9 @@ fi
 
 $PY "$SK/scripts/update_board.py" "$NEW" --date "$DATE" --board data/offres.json --history "$SK/references/historique.md"
 $PY "$SK/scripts/build_outputs.py" data/offres.json --date "$DATE" --out-dir out
+# Logos des nouveaux employeurs pour le visuel Insta (Wikimedia, puis leur site). Non bloquant.
+$PY "$SK/scripts/logos.py" --board data/offres.json --table "$SK/references/logos.json" --dir site/static/logos \
+  || echo "Logos : recherche en échec, la page garde les logos déjà connus."
 $PY "$SK/scripts/build_page.py" data/offres.json --date "$DATE" --out site/public/index.html \
     --standalone --downloads --schedule "le lundi et le jeudi à 3 h" \
     --site-url "https://veille.sorbonnesportbusiness.com/" \
@@ -33,11 +36,11 @@ $PY "$SK/scripts/build_page.py" data/offres.json --date "$DATE" --out site/publi
 cp "out/veille-ssb-$DATE.xlsx" site/public/veille-ssb.xlsx
 cp "out/offres-$DATE.csv" site/public/offres.csv
 cp data/offres.json site/public/offres.json
-cp -R site/static/. site/public/   # logo SSB du visuel WhatsApp, et tout fichier fixe de la page
+cp -R site/static/. site/public/   # logo SSB, modèle et polices du visuel Insta, logos des employeurs
 
 (cd site && npx --yes wrangler@4 deploy)
 
-git add data "$SK/references"
+git add data "$SK/references" site/static/logos
 git commit -q -m "Veille du $DATE" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || echo "Rien à committer"
 if [ "${GITHUB_ACTIONS:-}" != true ]; then
   "${GIT[@]}" pull -q --rebase --autostash origin main

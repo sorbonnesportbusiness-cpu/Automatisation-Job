@@ -1,0 +1,623 @@
+{
+ "_doc": "Logos des employeurs pour le visuel Insta de la page (fichiers dans site/static/logos/). 'logos' : clé = nom normalisé (scripts/logos.py, cle()), 'fichier', 'h' = hauteur maximale en px sur la carte (sans 'h' : calculée d'après les proportions), 'source'. 'alias' : autre nom normalisé -> clé. 'introuvables' : nom normalisé -> date de la dernière recherche ratée (réessayée après 30 jours). logos.py complète ce fichier à chaque publication.",
+ "logos": {
+  "paris saint germain": {
+   "fichier": "psg.svg",
+   "h": 104,
+   "source": "visuel Insta de référence"
+  },
+  "adidas": {
+   "fichier": "adidas.svg",
+   "h": 92,
+   "source": "visuel Insta de référence"
+  },
+  "tf1": {
+   "fichier": "tf1.svg",
+   "h": 58,
+   "source": "visuel Insta de référence"
+  },
+  "havas play": {
+   "fichier": "havasplay.png",
+   "h": 70,
+   "source": "visuel Insta de référence (jaune sur noir à l'origine, passé en rouge #FA0A00 sur fond transparent)"
+  },
+  "canal": {
+   "fichier": "canalplus.svg",
+   "h": 40,
+   "source": "visuel Insta de référence"
+  },
+  "sportfive": {
+   "fichier": "sportfive.svg",
+   "source": "Wikimedia Commons, File:Sportfive-logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Sportfive-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "cnosf comite national olympique et sportif francais": {
+   "fichier": "cnosf-comite-national-olympique-et-sportif-francais.svg",
+   "source": "Wikimedia Commons, File:Comité National Olympique et Sportif Français logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Comit%C3%A9_National_Olympique_et_Sportif_Fran%C3%A7ais_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise de natation ffn": {
+   "fichier": "federation-francaise-de-natation-ffn.svg",
+   "source": "Wikipédia en français, page Fédération française de natation, File:Logo_Fédération_Française_Natation_-_2012.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/4/45/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Natation_-_2012.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "amaury sport organisation aso": {
+   "fichier": "amaury-sport-organisation-aso.svg",
+   "source": "Wikimedia Commons, File:Amaury Sport Organisation logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Amaury_Sport_Organisation_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise de rugby ffr": {
+   "fichier": "federation-francaise-de-rugby-ffr.svg",
+   "source": "Wikipédia en français, page Fédération française de rugby, File:Logo_Institutionnel_FFR_2019.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/0/06/Logo_Institutionnel_FFR_2019.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "alpes 2030 cojop": {
+   "fichier": "alpes-2030-cojop.png",
+   "source": "Wikimedia Commons, File:Alpes françaises 2030-Logo provisoire.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Alpes_fran%C3%A7aises_2030-Logo_provisoire.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "decathlon": {
+   "fichier": "decathlon.png",
+   "source": "Wikimedia Commons, File:Decathlon Logo.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Decathlon_Logo.png/960px-Decathlon_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "a s o amaury sport organisation": {
+   "fichier": "a-s-o-amaury-sport-organisation.svg",
+   "source": "Wikipédia en anglais, page Amaury Sport Organisation, File:Amaury Sport Organisation logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Amaury_Sport_Organisation_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise de basketball ffbb": {
+   "fichier": "federation-francaise-de-basketball-ffbb.gif",
+   "source": "Wikimedia Commons, File:LOGO-FFBB.gif, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/LOGO-FFBB.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "lfp ligue de football professionnel": {
+   "fichier": "lfp-ligue-de-football-professionnel.jpg",
+   "source": "Wikimedia Commons, File:LFP logo 2019.jpg, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/LFP_logo_2019.jpg/960px-LFP_logo_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "ogc nice": {
+   "fichier": "ogc-nice.svg",
+   "source": "Wikimedia Commons, File:OGC Nice (simplified logo).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/OGC_Nice_%28simplified_logo%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "bernascom communication sport": {
+   "fichier": "bernascom-communication-sport.png",
+   "source": "site de l'employeur (bernascom.com), 2026-11-10",
+   "url": "https://irp.cdn-website.com/6610eda2/dms3rep/multi/opt/BernasCOM-logo-header-1920w.png?jxl&v=jxl"
+  },
+  "sopra steria": {
+   "fichier": "sopra-steria.svg",
+   "source": "Wikimedia Commons, File:Sopra Steria logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Sopra_Steria_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "anj autorite nationale des jeux": {
+   "fichier": "anj-autorite-nationale-des-jeux.svg",
+   "source": "Wikimedia Commons, File:ANJ logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/ANJ_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "tecnifibre": {
+   "fichier": "tecnifibre.svg",
+   "source": "Wikimedia Commons, File:Tecnifibre logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tecnifibre_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "international paralympic committee ipc": {
+   "fichier": "international-paralympic-committee-ipc.svg",
+   "source": "Wikipédia en anglais, page International Paralympic Committee, File:Logo of the International Paralympic Committee 2019.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/IPC_logo_%282019%29.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "rev it sport international": {
+   "fichier": "rev-it-sport-international.svg",
+   "source": "site de l'employeur (revitsport.com), 2026-11-10",
+   "url": "https://revitsport.com/cdn/shop/files/Revit_Logo_Zwart.svg?v=1722445022&width=260"
+  },
+  "salomon amer sports": {
+   "fichier": "salomon-amer-sports.svg",
+   "source": "Wikimedia Commons, File:Salomon logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Salomon_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "puma": {
+   "fichier": "puma.svg",
+   "source": "Wikimedia Commons, File:Puma-logo-(text).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Puma-logo-%28text%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "alpine racing alpine f1 team": {
+   "fichier": "alpine-racing-alpine-f1-team.svg",
+   "source": "Wikimedia Commons, File:Alpine F1 Team Logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Alpine_F1_Team_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "gl events stade de france": {
+   "fichier": "gl-events-stade-de-france.svg",
+   "source": "Wikimedia Commons, File:Logo GL events.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo_GL_events.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "decathlon france": {
+   "fichier": "decathlon-france.svg",
+   "source": "Wikimedia Commons, File:Decathlon - logo (France, 2024).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Decathlon_-_logo_%28France%2C_2024%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "paris entertainment company accor arena adidas arena": {
+   "fichier": "paris-entertainment-company-accor-arena-adidas-arena.png",
+   "source": "site de l'employeur (parisentertainmentcompany.com), 2026-11-10",
+   "url": "https://images.prismic.io/parisentertainmentcompany/1382c3b4-393f-404d-862f-e2423f0bc7c8_accor-arena-logo.png?auto=compress,format"
+  },
+  "fft roland garros": {
+   "fichier": "fft-roland-garros.jpg",
+   "source": "Wikimedia Commons, File:Roland Garros 2012 - Roland Garros logo (8754295763).jpg, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Roland_Garros_2012_-_Roland_Garros_logo_%288754295763%29.jpg/960px-Roland_Garros_2012_-_Roland_Garros_logo_%288754295763%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "federation francaise de tennis roland garros": {
+   "fichier": "federation-francaise-de-tennis-roland-garros.png",
+   "source": "Wikimedia Commons, File:Logo Fédération Française de Tennis (2015 - Présent).png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_de_Tennis_%282015_-_Pr%C3%A9sent%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "pmu": {
+   "fichier": "pmu.png",
+   "source": "Wikimedia Commons, File:Logo PMU.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Logo_PMU.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "cio comite international olympique": {
+   "fichier": "cio-comite-international-olympique.svg",
+   "source": "Wikimedia Commons, File:Logo du Comitè International Olympique.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Logo_du_Comit%C3%A8_International_Olympique.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "olympique lyonnais eagle football group ol ol lyonnes": {
+   "fichier": "olympique-lyonnais-eagle-football-group-ol-ol-lyonnes.svg",
+   "source": "Wikipédia en français, page OL Lyonnes, File:Logo_OL_Lyonnes_(2025).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/6/6e/Logo_OL_Lyonnes_%282025%29.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "plenitude arena paris la defense arena racing 92": {
+   "fichier": "plenitude-arena-paris-la-defense-arena-racing-92.png",
+   "source": "Wikimedia Commons, File:Plenitude Arena logo.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Plenitude_Arena_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "sorare": {
+   "fichier": "sorare.png",
+   "source": "Wikimedia Commons, File:Logo de Sorare.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_de_Sorare.png/960px-Logo_de_Sorare.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "red bull": {
+   "fichier": "red-bull.svg",
+   "source": "Wikimedia Commons, File:Logo of Red bull.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_of_Red_bull.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "infront sports media": {
+   "fichier": "infront-sports-media.svg",
+   "source": "Wikipédia en anglais, page Infront Sports & Media, File:Infront Sports and Media logo NEW.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/c/c4/Infront_Sports_and_Media_logo_NEW.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "groupe ebra agence leo": {
+   "fichier": "groupe-ebra-agence-leo.svg",
+   "source": "Wikipédia en français, page Groupe EBRA, File:Logo_EBRA_Group.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Logo_EBRA_Group.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "automobile club de l ouest 24 heures du mans": {
+   "fichier": "automobile-club-de-l-ouest-24-heures-du-mans.svg",
+   "source": "Wikimedia Commons, File:Logo 24 heures du mans.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Logo_24_heures_du_mans.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "automobile club de l ouest aco": {
+   "fichier": "automobile-club-de-l-ouest-aco.png",
+   "source": "Wikipédia en anglais, page Automobile Club de l'Ouest, File:L'Automobile Club de l'Ouest logo.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/e/e5/L%27Automobile_Club_de_l%27Ouest_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "mclaren racing": {
+   "fichier": "mclaren-racing.png",
+   "source": "Wikimedia Commons, File:McLaren Racing logo.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/McLaren_Racing_logo.png/960px-McLaren_Racing_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "federation francaise de football": {
+   "fichier": "federation-francaise-de-football.svg",
+   "source": "Wikipédia en français, page Fédération française de football, File:Logo_Fédération_Française_Football_2022.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/a/ab/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Football_2022.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "scott sports": {
+   "fichier": "scott-sports.svg",
+   "source": "Wikimedia Commons, File:Scott Sports logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Scott_Sports_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "rmc bfm ads rmc sport": {
+   "fichier": "rmc-bfm-ads-rmc-sport.svg",
+   "source": "Wikimedia Commons, File:Logo RMC Sport 2018.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Logo_RMC_Sport_2018.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise de cyclisme ffc": {
+   "fichier": "federation-francaise-de-cyclisme-ffc.svg",
+   "source": "Wikipédia en français, page Fédération française de cyclisme, File:Logo_FFC.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/9/91/Logo_FFC.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "creative artists agency caa brand consulting": {
+   "fichier": "creative-artists-agency-caa-brand-consulting.svg",
+   "source": "Wikimedia Commons, File:Creative Artists Agency logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Creative_Artists_Agency_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "jacobs douwe egberts": {
+   "fichier": "jacobs-douwe-egberts.svg",
+   "source": "Wikimedia Commons, File:Logo Jacobs Douwe Egberts.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Logo_Jacobs_Douwe_Egberts.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "stade rennais fc": {
+   "fichier": "stade-rennais-fc.svg",
+   "source": "Wikimedia Commons, File:Stade Rennais (logo 1960).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Stade_Rennais_%28logo_1960%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "sportradar": {
+   "fichier": "sportradar.svg",
+   "source": "Wikimedia Commons, File:Sportradar logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Sportradar_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "city football group": {
+   "fichier": "city-football-group.jpg",
+   "source": "Wikimedia Commons, File:City Football Group 2014 logo.jpg, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/City_Football_Group_2014_logo.jpg/960px-City_Football_Group_2014_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "uefa": {
+   "fichier": "uefa.svg",
+   "source": "Wikimedia Commons, File:Uefa logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Uefa_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "haras national du pin": {
+   "fichier": "haras-national-du-pin.svg",
+   "source": "Wikipédia en français, page Haras national du Pin, File:Logo_Haras_national_du_Pin.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/f/f1/Logo_Haras_national_du_Pin.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "gaming innovation group gig": {
+   "fichier": "gaming-innovation-group-gig.svg",
+   "source": "Wikipédia en anglais, page Gaming Innovation Group, File:Gaming_Innovation_Group_logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/6/6f/Gaming_Innovation_Group_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "paris basketball": {
+   "fichier": "paris-basketball.svg",
+   "source": "Wikipédia en anglais, page Paris Basketball, File:Logo Paris Basketball.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/8/86/Logo_Paris_Basketball.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "fdj united": {
+   "fichier": "fdj-united.svg",
+   "source": "Wikipédia en anglais, page FDJ United, File:Logo_FDJ.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Logo_FDJ.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "amiens sc": {
+   "fichier": "amiens-sc.svg",
+   "source": "Wikipédia en anglais, page Amiens SC, File:Amiens SC logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/2/25/Amiens_SC_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "danone": {
+   "fichier": "danone.png",
+   "source": "Wikimedia Commons, File:Danone Logo.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Danone_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "angers loire metropole": {
+   "fichier": "angers-loire-metropole.svg",
+   "source": "Wikimedia Commons, File:Angers Loire Métropole (logo-2).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Angers_Loire_M%C3%A9tropole_%28logo-2%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "clermont auvergne metropole direction des sports": {
+   "fichier": "clermont-auvergne-metropole-direction-des-sports.svg",
+   "source": "Wikimedia Commons, File:Logo Clermont Auvergne Métropole.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Logo_Clermont_Auvergne_M%C3%A9tropole.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "newcastle united football club": {
+   "fichier": "newcastle-united-football-club.svg",
+   "source": "Wikipédia en français, page Newcastle United Football Club, File:Logo_Newcastle_United_FC_2026.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/e/ed/Logo_Newcastle_United_FC_2026.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "the all england lawn tennis club wimbledon": {
+   "fichier": "the-all-england-lawn-tennis-club-wimbledon.png",
+   "source": "Wikipédia en anglais, page All England Lawn Tennis and Croquet Club, File:All England Lawn Tennis and Croquet Club logo.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/e/e3/All_England_Lawn_Tennis_and_Croquet_Club_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "aroma zone": {
+   "fichier": "aroma-zone.png",
+   "source": "Wikimedia Commons, File:Logo-aroma-zone.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Logo-aroma-zone.png/960px-Logo-aroma-zone.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "international olympic committee ioc": {
+   "fichier": "international-olympic-committee-ioc.svg",
+   "source": "Wikimedia Commons, File:International Olympic Committee logo 2021.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/International_Olympic_Committee_logo_2021.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "guingamp paimpol agglomeration": {
+   "fichier": "guingamp-paimpol-agglomeration.svg",
+   "source": "Wikipédia en français, page Guingamp-Paimpol Agglomération, Fichier:Guingamp-Paimpol Agglomération logo 2019.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/c/c1/Guingamp-Paimpol_Agglom%C3%A9ration_logo_2019.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "lacoste": {
+   "fichier": "lacoste.svg",
+   "source": "Wikimedia Commons, File:Logo Lacoste 2026.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Logo_Lacoste_2026.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "nike": {
+   "fichier": "nike.svg",
+   "source": "Wikimedia Commons, File:Logo NIKE.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "alltricks": {
+   "fichier": "alltricks.svg",
+   "source": "Wikimedia Commons, File:Logo Alltricks.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Logo_Alltricks.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "union bordeaux begles ubb": {
+   "fichier": "union-bordeaux-begles-ubb.svg",
+   "source": "Wikipédia en français, page Union Bordeaux Bègles, File:Logo_Union_Bordeaux_Bègles_-_2026.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/e/e2/Logo_Union_Bordeaux_B%C3%A8gles_-_2026.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "wellhub": {
+   "fichier": "wellhub.png",
+   "source": "Wikimedia Commons, File:Logo wellhub.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_wellhub.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "essilorluxottica": {
+   "fichier": "essilorluxottica.svg",
+   "source": "Wikimedia Commons, File:Logo EssilorLuxottica.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_EssilorLuxottica.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "crux nutrition": {
+   "fichier": "crux-nutrition.webp",
+   "source": "site de l'employeur (crux-nutrition.fr), 2026-11-10",
+   "url": "https://www.crux-nutrition.fr/web/image/website/1/logo/CRUX%2C%20une%20nutrition%20sportive%20saine%2C%20naturelle%20et%20engag%C3%A9e.?unique=18ff278"
+  },
+  "olympique de marseille": {
+   "fichier": "olympique-de-marseille.svg",
+   "source": "Wikimedia Commons, File:Olympique Marseille logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Olympique_Marseille_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "fia world endurance championship": {
+   "fichier": "fia-world-endurance-championship.png",
+   "source": "site de l'employeur (wearemeent.com), 2026-11-10",
+   "url": "https://www.wearemeent.com/assets/images/logo/logo-white.png"
+  },
+  "winamax": {
+   "fichier": "winamax.svg",
+   "source": "Wikimedia Commons, File:Winamax Logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Winamax_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise de tir": {
+   "fichier": "federation-francaise-de-tir.svg",
+   "source": "Wikipédia en français, page Fédération française de tir, File:FFTir_Logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/c/cd/FFTir_Logo.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "stellantis peugeot": {
+   "fichier": "stellantis-peugeot.png",
+   "source": "Wikimedia Commons, File:Stellantis logo.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Stellantis_logo.png/960px-Stellantis_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "intersport samoens": {
+   "fichier": "intersport-samoens.svg",
+   "source": "Wikimedia Commons, File:Intersport logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Intersport_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "courir": {
+   "fichier": "courir.svg",
+   "source": "Wikimedia Commons, File:Courir (logo).svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Courir_%28logo%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "fanzo": {
+   "fichier": "fanzo.jpg",
+   "source": "Wikimedia Commons, File:FANZO - Logo.jpg, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/FANZO_-_Logo.jpg/960px-FANZO_-_Logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "esl faceit group": {
+   "fichier": "esl-faceit-group.png",
+   "source": "site de l'employeur (eslfaceitgroup.com), 2026-11-10",
+   "url": "https://eslfaceitgroup.com/wp-content/uploads/2021/11/ESL_Logo_Horizontal_RGB_NEG-768x235.png"
+  },
+  "compagnie des alpes domaines skiables parcs": {
+   "fichier": "compagnie-des-alpes-domaines-skiables-parcs.png",
+   "source": "Wikipédia en anglais, page Compagnie des Alpes, File:CDA_LOGO_SUR_FOND_CLAIR-P.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/CDA_LOGO_SUR_FOND_CLAIR-P.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "federation francaise de volley": {
+   "fichier": "federation-francaise-de-volley.svg",
+   "source": "Wikipédia en français, page Fédération française de volley, File:Fédération_française_de_Volley_logo_2017.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/0/00/F%C3%A9d%C3%A9ration_fran%C3%A7aise_de_Volley_logo_2017.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "olympique lyonnais": {
+   "fichier": "olympique-lyonnais.svg",
+   "source": "Wikipédia en français, page Olympique lyonnais, File:Logo_Olympique_Lyonnais_-_2022.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/a/a5/Logo_Olympique_Lyonnais_-_2022.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "vmatch": {
+   "fichier": "vmatch.png",
+   "source": "site de l'employeur (vmatch.fr), 2026-11-10",
+   "url": "https://www.vmatch.fr/wp-content/uploads/thegem/logos/logo_fb864f239514c15389f645865ee3362a_1x.png"
+  },
+  "l equipe groupe amaury": {
+   "fichier": "l-equipe-groupe-amaury.svg",
+   "source": "Wikimedia Commons, File:Amaury groupe logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Amaury_groupe_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "on air fitness": {
+   "fichier": "on-air-fitness.svg",
+   "source": "Wikimedia Commons, File:LOGO ON AIR Fitness.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/LOGO_ON_AIR_Fitness.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "intermarche groupement mousquetaires": {
+   "fichier": "intermarche-groupement-mousquetaires.svg",
+   "source": "Wikimedia Commons, File:Intermarché 2009 logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Intermarch%C3%A9_2009_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "bnp paribas": {
+   "fichier": "bnp-paribas.svg",
+   "source": "Wikimedia Commons, File:BNP Paribas logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/BNP_Paribas_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "biarritz olympique pays basque": {
+   "fichier": "biarritz-olympique-pays-basque.svg",
+   "source": "Wikimedia Commons, File:Logo Biarritz Olympique Pays Basque - 2016.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Biarritz_Olympique_Pays_Basque_-_2016.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "babolat": {
+   "fichier": "babolat.svg",
+   "source": "Wikimedia Commons, File:Babolat logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Babolat_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "ligue nationale de basket via mba esg galileo": {
+   "fichier": "ligue-nationale-de-basket-via-mba-esg-galileo.svg",
+   "source": "Wikipédia en anglais, page Ligue nationale de basket, File:Ligue Nationale de Basket logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/Ligue_Nationale_de_Basket_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "the north face": {
+   "fichier": "the-north-face.svg",
+   "source": "Wikimedia Commons, File:The North Face logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/The_North_Face_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "ville de paris": {
+   "fichier": "ville-de-paris.svg",
+   "source": "Wikimedia Commons, File:Ville de Paris logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Ville_de_Paris_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "ea pharma": {
+   "fichier": "ea-pharma.png",
+   "source": "Wikimedia Commons, File:Logo ea pharma.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Logo_ea_pharma.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "julbo": {
+   "fichier": "julbo.svg",
+   "source": "Wikipédia en français, page Julbo, File:Logo_Julbo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/3/31/Logo_Julbo.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "european football clubs efc ex eca": {
+   "fichier": "european-football-clubs-efc-ex-eca.png",
+   "source": "Wikipédia en anglais, page European Football Clubs, File:European Football Clubs-logo.png, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/European_Football_Clubs-logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "e leclerc galec": {
+   "fichier": "e-leclerc-galec.svg",
+   "source": "Wikimedia Commons, File:E.Leclerc logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/E.Leclerc_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "marathon des sables mds": {
+   "fichier": "marathon-des-sables-mds.png",
+   "source": "Wikimedia Commons, File:MARATHON DES SABLES logo.png, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/MARATHON_DES_SABLES_logo.png/960px-MARATHON_DES_SABLES_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "adversport foot mercato": {
+   "fichier": "adversport-foot-mercato.svg",
+   "source": "Wikipédia en français, page Foot Mercato, Fichier:Logo Foot Mercato 2024.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/5/58/Logo_Foot_Mercato_2024.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "federation francaise handisport": {
+   "fichier": "federation-francaise-handisport.svg",
+   "source": "Wikipédia en français, page Fédération française handisport, File:Fédération_française_handisport_logo_2009.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/fr/0/06/F%C3%A9d%C3%A9ration_fran%C3%A7aise_handisport_logo_2009.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "jde peet s": {
+   "fichier": "jde-peet-s.svg",
+   "source": "Wikimedia Commons, File:JDE Peet's box logo.svg, 2026-11-10",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/JDE_Peet%27s_box_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "picture organic clothing": {
+   "fichier": "picture-organic-clothing.jpg",
+   "source": "Wikipédia en français, page Picture Organic Clothing, File:Logo_Pictures_Organic_Clothing.jpg, 2026-11-10",
+   "url": "https://thumb.wikimedia.org/wikipedia/fr/thumb/6/64/Logo_Pictures_Organic_Clothing.jpg/960px-Logo_Pictures_Organic_Clothing.jpg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+ },
+ "alias": {
+  "psg": "paris saint germain",
+  "havas": "havas play",
+  "canal group": "canal",
+  "groupe tf1": "tf1",
+  "a s o amaury sport organisation": "amaury sport organisation aso",
+  "comite national olympique et sportif francais cnosf": "cnosf comite national olympique et sportif francais",
+  "federation francaise de rugby": "federation francaise de rugby ffr",
+  "ffr federation francaise de rugby": "federation francaise de rugby ffr",
+  "sportfive groupama stadium ol": "sportfive",
+  "alpes 2030 cojop jeux d hiver": "alpes 2030 cojop",
+  "lfp ligue de football professionnel lfp media": "lfp ligue de football professionnel",
+  "societe d exploitation du stade de france gl events": "gl events stade de france",
+  "ol lyonnes eagle football group": "olympique lyonnais eagle football group ol ol lyonnes",
+  "creative artists agency caa": "creative artists agency caa brand consulting",
+  "fdj united parionssport": "fdj united",
+  "agence profil plany gl events": "gl events stade de france",
+  "decathlon decathlon pulse": "decathlon",
+  "sportfive": "sportfive",
+  "manchester city city football group": "city football group",
+  "groupe ebra leo": "groupe ebra agence leo",
+  "plenitude arena paris la defense arena": "plenitude arena paris la defense arena racing 92",
+  "compagnie des alpes domaines skiables parcs de loisirs": "compagnie des alpes domaines skiables parcs",
+  "amaury media groupe amaury": "l equipe groupe amaury",
+  "groupe amaury amaury media l equipe": "l equipe groupe amaury",
+  "sportfive le havre ac": "sportfive",
+  "essilorluxottica oakley": "essilorluxottica"
+ },
+ "introuvables": {
+  "goxoa sports beer": "2026-11-10",
+  "act for sport": "2026-11-10",
+  "lfp media": "2026-11-10",
+  "bluegreen ugolf": "2026-11-10",
+  "intersport france": "2026-11-10",
+  "cdos mayenne comite departemental olympique et sportif": "2026-11-10",
+  "oreca events": "2026-11-10",
+  "golazo events france golazo group": "2026-11-10",
+  "events arena distributeur b2b de packages hospitalites sport et culture": "2026-11-10",
+  "hurricane group groupe abeo": "2026-11-10",
+  "shimano europe group": "2026-11-10",
+  "ville de lausanne service des sports": "2026-11-10",
+  "haute savoie mont blanc 2027 championnats du monde de cyclisme uci": "2026-11-10",
+  "urbansoccer urbanevent": "2026-11-10",
+  "underrated sport": "2026-11-10",
+  "187 com": "2026-11-10",
+  "threshold sports": "2026-11-10",
+  "two circles": "2026-11-10",
+  "odaje act running": "2026-11-10",
+  "adecco france": "2026-11-10",
+  "excel sports management": "2026-11-10",
+  "mairie de metz pole des sports": "2026-11-10",
+  "federation nationale profession sport loisirs cdos 95": "2026-11-10",
+  "betclic group": "2026-11-10",
+  "racing 92 paris la defense arena": "2026-11-10",
+  "kantar media": "2026-11-10",
+  "l ultra marin organisation": "2026-11-10",
+  "urbansoccer": "2026-11-10",
+  "agence epic": "2026-11-10",
+  "ouisportspirit oss barcelone": "2026-11-10",
+  "publicis media publicis sport": "2026-11-10",
+  "theteam": "2026-11-10",
+  "intersport group": "2026-11-10",
+  "trainsweateat": "2026-11-10",
+  "stellantis motorsport": "2026-11-10",
+  "r ocean developpement": "2026-11-10",
+  "prematch": "2026-11-10",
+  "puma group": "2026-11-10",
+  "headline events": "2026-11-10",
+  "smartworkout equipement de fitness groupe luni": "2026-11-10",
+  "association du sport et plus": "2026-11-10",
+  "keneo eventeam group": "2026-11-10",
+  "hopscotch sport groupe hopscotch": "2026-11-10",
+  "eventeam group keneo": "2026-11-10",
+  "ligue grand est de tennis fft": "2026-11-10",
+  "uefa events sa": "2026-11-10",
+  "accrocamp parcs accrobranche": "2026-11-10",
+  "aono offre relayee par profession sport loisirs": "2026-11-10",
+  "mouratoglou academy": "2026-11-10",
+  "ville d auxerre": "2026-11-10",
+  "strada marketing pour adidas": "2026-11-10",
+  "campeon gaming": "2026-11-10",
+  "spartner event consulting": "2026-11-10",
+  "kco event groupe pelham media": "2026-11-10",
+  "playfly sports playfly international": "2026-11-10",
+  "spartner travel groupe ssm": "2026-11-10",
+  "ville d angers": "2026-11-10",
+  "extraterrien media et podcast sport": "2026-11-10",
+  "nutripure": "2026-11-10",
+  "eventeam group eventeam live": "2026-11-10",
+  "puma france": "2026-11-10",
+  "boost": "2026-11-10",
+  "sport co hopscotch sport": "2026-11-10",
+  "egym wellpass ex gymlib": "2026-11-10",
+  "sports carbone": "2026-11-10",
+  "departement des hauts de seine": "2026-11-10",
+  "babasport": "2026-11-10",
+  "handball club valreas": "2026-11-10",
+  "honore gaming": "2026-11-10",
+  "potel et chabot": "2026-11-10",
+  "arenametrix": "2026-11-10",
+  "paris la defense arena": "2026-11-10",
+  "cnosf": "2026-11-10",
+  "implus sklz triggerpoint rocktape": "2026-11-10",
+  "havea impulse nutrition": "2026-11-10",
+  "sport 2000 chambery groupe frasteya": "2026-11-10",
+  "commune de baie mahault": "2026-11-10",
+  "campsider": "2026-11-10"
+ }
+}

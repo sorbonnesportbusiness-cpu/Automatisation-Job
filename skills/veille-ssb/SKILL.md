@@ -290,6 +290,16 @@ Lancer à la main sur le Mac :
         --board data/offres.json --history skills/veille-ssb/references/historique.md \
         --date AAAA-MM-JJ --out out/candidats/AAAA-MM-JJ-ego.json
 
+### Visuel Insta de la page
+
+La page a un bouton « Visuel Insta », actif avec exactement 5 offres cochées : il dessine en
+canvas le visuel 1080 x 1350 « OFFRES SPORT BUSINESS » (`site/static/insta/visuel-insta.js`,
+modèle `modele-vierge.webp`, General Sans et Geist Mono), réplique de
+`~/ssb-insta/offres/build.py`. Logos : `references/logos.json` + `site/static/logos/`,
+complétés à chaque publication par `scripts/logos.py` (Wikimedia Commons, Wikipédia en
+anglais puis en français, site de l'employeur ; introuvable = noté, réessayé après 30 jours).
+Un logo faux se corrige en remplaçant le fichier ou en retirant l'entrée de la table.
+
 ## Point d'intégration CRM (à venir)
 
 Le CRM de l'association n'existe pas encore. Le script accepte dès maintenant une variable

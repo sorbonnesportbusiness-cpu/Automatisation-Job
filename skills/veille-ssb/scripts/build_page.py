@@ -189,6 +189,32 @@ dialog::backdrop { background: rgba(2, 16, 31, .55); }
 #vis-canvas { width: 100%; height: auto; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); display: block; }
 @media (max-width: 760px) { .vis-body { grid-template-columns: 1fr; } }
 
+/* Visuel Insta (1080 x 1350, 5 offres) */
+#insta { width: min(1040px, calc(100vw - 32px)); }
+.insta-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 18px; align-items: start; }
+.insta-rows { display: grid; gap: 8px; }
+.irow { display: grid; grid-template-columns: 22px 132px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  border: 1px solid var(--line); border-radius: 12px; padding: 8px; background: var(--surface); }
+.irow .num { font: 600 12px/1 var(--mono); color: var(--muted); text-align: center; }
+.ilogo { position: relative; height: 64px; border: 1.5px dashed var(--line); border-radius: 10px; background: #e6e1d6;
+  display: grid; place-items: center; cursor: pointer; overflow: hidden; }
+.ilogo.over { border-color: var(--accent); }
+.ilogo img { max-width: 112px; max-height: 50px; object-fit: contain; }
+.ilogo .ph { font-size: 11.5px; color: #5a5f6b; text-align: center; line-height: 1.25; padding: 4px; }
+.ilogo input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.ilogo .del { position: absolute; right: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; border: 0; z-index: 2;
+  background: rgba(4, 26, 53, .75); color: #fff; font: 600 12px/20px var(--font); padding: 0; cursor: pointer; }
+.irow .txt { min-width: 0; font-size: 13px; line-height: 1.35; }
+.irow .txt b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.irow .txt span { color: var(--muted); }
+.irow .txt .warn { color: var(--warn); }
+.irow .move { display: grid; gap: 4px; }
+.irow .move button { width: 30px; height: 26px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink);
+  cursor: pointer; font: 600 13px/1 var(--font); padding: 0; }
+.irow .move button:disabled { opacity: .35; cursor: default; }
+#insta-canvas { width: 100%; height: auto; aspect-ratio: 1080 / 1350; border-radius: 12px; border: 1px solid var(--line); display: block; }
+@media (max-width: 760px) { .insta-body { grid-template-columns: 1fr; } .irow { grid-template-columns: 18px 104px minmax(0, 1fr) auto; } }
+
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; display: grid; gap: 8px; max-width: 80ch; }
 
 /* Téléphone : chaque ligne devient une fiche. */
@@ -217,6 +243,7 @@ footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="actions">
 __DOWNLOADS__
         <button class="btn" id="vis-open" type="button">Visuel logos</button>
+        <button class="btn" id="insta-open" type="button" disabled>Cochez 5 offres (0 cochées)</button>
         <button class="btn primary" id="msg-open" type="button" disabled>Message adhérents <span class="count-pill" id="msg-count">0</span></button>
       </div>
     </div>
@@ -270,6 +297,7 @@ __GSHELP__
   <span id="sel-text"></span>
   <button class="btn wa" id="msg-open-2" type="button">Préparer le message WhatsApp</button>
   <button class="btn" id="vis-open-2" type="button">Visuel logos</button>
+  <button class="btn" id="insta-open-2" type="button" disabled>Cochez 5 offres (0 cochées)</button>
   <button class="linkbtn" id="sel-clear" type="button">Tout désélectionner</button>
 </div>
 
@@ -323,7 +351,28 @@ __GSHELP__
   </div>
 </dialog>
 
+<dialog id="insta" aria-labelledby="insta-title">
+  <div class="dlg">
+    <h2 id="insta-title">Visuel Insta « Offres sport business »</h2>
+    <p>Les 5 offres cochées, dans l'ordre du tableau. Changez l'ordre avec les flèches. Si un logo manque ou ne convient pas, déposez un fichier sur sa case (ou cliquez dessus).</p>
+    <div class="insta-body">
+      <div class="insta-rows" id="insta-rows"></div>
+      <canvas id="insta-canvas" width="1080" height="1350" aria-label="Aperçu du visuel Insta"></canvas>
+    </div>
+    <div class="foot">
+      <span class="hint" id="insta-status"></span>
+      <div class="actions">
+        <button class="btn" id="insta-close" type="button">Fermer</button>
+        <button class="btn" id="insta-copy" type="button">Copier</button>
+        <button class="btn primary" id="insta-dl" type="button">Télécharger</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
 <script type="application/json" id="data">__DATA__</script>
+<script type="application/json" id="logos">__LOGOS__</script>
+<script src="insta/visuel-insta.js"></script>
 <script>
 (function () {
   const RUN = "__RUN__";
@@ -461,6 +510,10 @@ __GSHELP__
     $("msg-open").disabled = n === 0;
     $("selbar").hidden = n === 0;
     $("sel-text").textContent = `${n} offre${n > 1 ? "s" : ""} sélectionnée${n > 1 ? "s" : ""}`;
+    ["insta-open", "insta-open-2"].forEach(id => {
+      $(id).disabled = n !== 5;
+      $(id).textContent = n === 5 ? "Visuel Insta" : `Cochez 5 offres (${n} cochée${n > 1 ? "s" : ""})`;
+    });
     const vis = shown.filter(o => selected.has(o.lien)).length;
     $("all").checked = shown.length > 0 && vis === shown.length;
     $("all").indeterminate = vis > 0 && vis < shown.length;
@@ -636,6 +689,105 @@ __GSHELP__
   $("vis-open-2").addEventListener("click", openVis);
   $("vis-close").addEventListener("click", () => $("vis").close());
 
+  // Visuel Insta : 1080 x 1350, 5 cartes (site/static/insta/visuel-insta.js dessine).
+  // Logos : table references/logos.json, cherchée avec les mêmes variantes de nom que logos.py.
+  const LOGOS = JSON.parse(document.getElementById("logos").textContent || "{}");
+  const STOPW = new Set(["groupe", "group", "sa", "sas", "france", "fr", "the", "inc", "ltd", "gmbh", "se", "holding"]);
+  const cle = t => (t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+  function variantes(nom) {
+    const entre = [...(nom || "").matchAll(/\(([^)]*)\)/g)].map(m => m[1]);
+    const base = [cle(nom), ...entre.map(cle), cle((nom || "").replace(/\([^)]*\)/g, " "))];
+    const out = [];
+    for (const v of base) for (const w of [v, v.split(" ").filter(x => !STOPW.has(x)).join(" ")]) if (w && !out.includes(w)) out.push(w);
+    for (const v of out.slice()) {
+      const mots = v.split(" ");
+      for (let k = mots.length - 1; k > 0; k--) {
+        const p = mots.slice(0, k).join(" ");
+        if ((k > 1 || mots[0].length >= 4) && !out.includes(p) && !STOPW.has(p)) out.push(p);
+      }
+    }
+    return out;
+  }
+  function logoEntry(nom) {
+    for (const v of variantes(nom)) {
+      const k = (LOGOS.logos || {})[v] ? v : (LOGOS.alias || {})[v];
+      if (k && LOGOS.logos[k]) return LOGOS.logos[k];
+    }
+    return null;
+  }
+  const INSTA = { order: [], custom: new Map(), auto: new Map() };
+  const autoLogo = entry => {
+    if (!INSTA.auto.has(entry.fichier)) INSTA.auto.set(entry.fichier, SSBInsta.loadLogo("logos/" + entry.fichier).catch(() => null));
+    return INSTA.auto.get(entry.fichier);
+  };
+  async function instaCards() {
+    return Promise.all(INSTA.order.map(async lien => {
+      const o = offers.find(x => x.lien === lien), entry = logoEntry(o.entreprise), mine = INSTA.custom.get(lien);
+      const logo = mine || (entry ? await autoLogo(entry) : null);
+      return { o, entry, mine, logo, card: { titre: o.titre, entreprise: o.entreprise, contrat: o.contrat, logo, logoH: mine ? null : entry && entry.h } };
+    }));
+  }
+  async function drawInsta() {
+    const cards = await instaCards();
+    await SSBInsta.render($("insta-canvas"), cards.map(c => c.card));
+    return cards;
+  }
+  async function renderInsta() {
+    const cards = await drawInsta();
+    $("insta-rows").innerHTML = cards.map(({ o, logo, mine }, i) => `<div class="irow" data-i="${i}">
+      <span class="num">${i + 1}</span>
+      <div class="ilogo">${logo ? `<img src="${logo.img.toDataURL ? logo.img.toDataURL() : logo.img.src}" alt="">` : `<span class="ph">Pas de logo<br>déposez un fichier</span>`}
+        ${mine ? `<button class="del" type="button" aria-label="Revenir au logo trouvé">×</button>` : ""}
+        <input type="file" accept="image/*" aria-label="Logo de ${esc(o.entreprise)}"></div>
+      <div class="txt"><b title="${esc(o.titre)}">${esc(o.titre)}</b><span>${esc(o.entreprise)} · ${esc(o.contrat)}</span>${logo ? "" : `<br><span class="warn">Logo introuvable : le nom s'affiche à sa place.</span>`}</div>
+      <div class="move"><button type="button" data-d="-1" ${i === 0 ? "disabled" : ""} aria-label="Monter">↑</button><button type="button" data-d="1" ${i === cards.length - 1 ? "disabled" : ""} aria-label="Descendre">↓</button></div>
+    </div>`).join("");
+    const missing = cards.filter(c => !c.logo).length;
+    $("insta-status").textContent = missing ? `${missing} logo${missing > 1 ? "s" : ""} manquant${missing > 1 ? "s" : ""} : déposez un fichier sur la case.` : "Les 5 logos sont en place.";
+  }
+  const irows = $("insta-rows");
+  irows.addEventListener("click", e => {
+    const row = e.target.closest(".irow"); if (!row) return;
+    const i = Number(row.dataset.i);
+    if (e.target.dataset.d) {
+      const j = i + Number(e.target.dataset.d);
+      [INSTA.order[i], INSTA.order[j]] = [INSTA.order[j], INSTA.order[i]]; renderInsta();
+    } else if (e.target.classList.contains("del")) { INSTA.custom.delete(INSTA.order[i]); renderInsta(); }
+  });
+  async function setCustom(i, file) {
+    if (!file || !file.type.startsWith("image/")) return;
+    try { INSTA.custom.set(INSTA.order[i], await SSBInsta.loadLogo(file)); } catch { $("insta-status").textContent = "Ce fichier ne s'ouvre pas comme une image."; return; }
+    renderInsta();
+  }
+  irows.addEventListener("change", e => { const row = e.target.closest(".irow"); if (row && e.target.files.length) setCustom(Number(row.dataset.i), e.target.files[0]); });
+  irows.addEventListener("dragover", e => { e.preventDefault(); irows.querySelectorAll(".over").forEach(x => x.classList.remove("over")); const z = e.target.closest(".ilogo"); if (z) z.classList.add("over"); });
+  irows.addEventListener("dragleave", e => { if (!irows.contains(e.relatedTarget)) irows.querySelectorAll(".over").forEach(x => x.classList.remove("over")); });
+  irows.addEventListener("drop", e => { e.preventDefault(); const row = e.target.closest(".irow"); if (row && e.dataTransfer.files.length) setCustom(Number(row.dataset.i), e.dataTransfer.files[0]); });
+  const openInsta = async () => {
+    const picks = sorted(offers.filter(o => selected.has(o.lien)));
+    if (picks.length !== 5) return;
+    const same = picks.every(o => INSTA.order.includes(o.lien));
+    if (!same) INSTA.order = picks.map(o => o.lien);
+    $("insta").showModal();
+    $("insta-status").textContent = "Préparation du visuel…";
+    try { await renderInsta(); } catch (err) { $("insta-status").textContent = "Le visuel n'a pas pu se dessiner : " + err.message; }
+  };
+  $("insta-open").addEventListener("click", openInsta);
+  $("insta-open-2").addEventListener("click", openInsta);
+  $("insta-close").addEventListener("click", () => $("insta").close());
+  const instaBlob = async () => { await drawInsta(); return new Promise(r => $("insta-canvas").toBlob(r, "image/png")); };
+  $("insta-dl").addEventListener("click", async () => {
+    const url = URL.createObjectURL(await instaBlob()), a = document.createElement("a");
+    a.href = url; a.download = `visuel-insta-offres-ssb-${RUN}.png`; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+  $("insta-copy").addEventListener("click", async e => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.write([new ClipboardItem({ "image/png": instaBlob() })]); btn.textContent = "Image copiée"; }
+    catch { btn.textContent = "Copie impossible ici : téléchargez"; }
+    setTimeout(() => { btn.textContent = "Copier"; }, 2200);
+  });
+
   // Google Sheets (formule de secours quand aucune feuille n'est configurée)
   const gsBtn = $("gs");
   if (gsBtn && $("gs-help")) {
@@ -702,6 +854,8 @@ def main():
     parser.add_argument("--schedule", help="Rythme affiché en pied de page, ex. « le lundi et le jeudi à 8 h »")
     parser.add_argument("--sheet-url", help="Google Sheet partagé (sinon le bouton explique la formule IMPORTDATA)")
     parser.add_argument("--site-url", help="Adresse publique de la page, reprise dans le message WhatsApp")
+    parser.add_argument("--logos", default=str(Path(__file__).resolve().parent.parent / "references" / "logos.json"),
+                        help="Table des logos des employeurs (visuel Insta)")
     args = parser.parse_args()
 
     data = json.load(open(args.input_json, encoding="utf-8"))
@@ -719,8 +873,14 @@ def main():
         downloads = DOWNLOADS.replace("__GSBUTTON__", gs_button).replace("__RUN__", html.escape(run))
 
     payload = json.dumps(offers, ensure_ascii=False).replace("</", "<\\/")
+    logos = {"logos": {}, "alias": {}}
+    if Path(args.logos).exists():
+        table = json.load(open(args.logos, encoding="utf-8"))
+        logos = {"logos": {k: {x: v[x] for x in ("fichier", "h") if x in v} for k, v in table.get("logos", {}).items()},
+                 "alias": table.get("alias", {})}
+    logos_payload = json.dumps(logos, ensure_ascii=False).replace("</", "<\\/")
     page = (PAGE.replace("__DOWNLOADS__", downloads).replace("__GSHELP__", gshelp)
-            .replace("__DATA__", payload).replace("__RUN__", html.escape(run))
+            .replace("__DATA__", payload).replace("__LOGOS__", logos_payload).replace("__RUN__", html.escape(run))
             .replace("__SCHEDULE__", html.escape(args.schedule or ""))
             .replace("__SITE__", html.escape(args.site_url or "")))
     if args.standalone:
