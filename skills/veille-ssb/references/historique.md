@@ -3,6 +3,40 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-12 (31 offres)
+
+- 2026-11-11 | Stage | Racing Club de Strasbourg Alsace | Chargé de servicing (H/F) | https://fr.linkedin.com/jobs/view/charg%C3%A9-de-servicing-h-f-at-racing-club-de-strasbourg-alsace-4488313158
+- 2026-11-11 | Stage | PUMA | Internship Sports Marketing Teamsport | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/PUMA-Way-Headquarters/Internship-Sports-Marketing-Teamsport_R44412
+- 2026-11-11 | Stage | Audi Revolut F1 Team | Intern Commercial Strategy | https://ch.linkedin.com/jobs/view/intern-commercial-strategy-at-audi-revolut-f1-team-4488322490
+- 2026-11-11 | Stage | Audi Revolut F1 Team | Intern Merchandising & Licensing | https://ch.linkedin.com/jobs/view/intern-merchandising-licensing-at-audi-revolut-f1-team-4488307795
+- 2026-11-11 | Stage | Audi Revolut F1 Team | Intern Press Officer | https://ch.linkedin.com/jobs/view/intern-press-officer-at-audi-revolut-f1-team-4489022560
+- 2026-11-10 | Stage | Paris Saint-Germain | STAGIAIRE ASSISTANT FAN ENGAGEMENT (F/H) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-FAN-ENGAGEMENT--F-H----JANVIER-2027_015172
+- 2026-11-10 | Stage | A.S.O. (Amaury Sport Organisation) | STAGE - Attaché Commercial - Hospitalités 02-27 | https://carrieres.aso.fr/jobs/8700294-stage-attache-commercial-hospitalites-02-27
+- 2026-11-10 | CDD | A.S.O. (Amaury Sport Organisation) | CDD - Chargé de Projet - Relations Participants 01-27 | https://carrieres.aso.fr/jobs/8700159-cdd-charge-de-projet-relations-participants-01-27
+- 2026-11-10 | Stage | Fédération Française de Football | Assistant Retail H.F | https://fff.taleez.com/jobs/assistant-retail-h-f-paris-federation-francaise-de-football
+- 2026-11-10 | Stage | Fédération Française de Football | Assistant CRM H.F | https://fff.taleez.com/jobs/assistant-crm-h-f-paris-federation-francaise-de-football
+- 2026-11-10 | Stage | UEFA | Media Rights and Broadcaster Services Intern | https://emp.jobylon.com/jobs/396274-uefa-media-rights-and-broadcaster-services-intern/
+- 2026-11-10 | CDI | Olympique Lyonnais / Eagle Football Group (OL, OL Lyonnes) | OL Lyonnes - Juriste (H/F) (FR) | https://careers.ol.fr/job/OL-Lyonnes-Juriste-%28HF%29/1329807857/
+- 2026-11-10 | Stage | Faculté des sciences du sport de Strasbourg (offres de stages et d'emplois) | Stagiaire Commercial/évènementiel | https://f3s.unistra.fr/actualites/stagiaire-commercial-evenementiel/
+- 2026-11-10 | Stage | ASICS EMEA | Marketing Intern (Performance Footwear, Core Performance Sports) | https://nl.linkedin.com/jobs/view/marketing-intern-at-asics-emea-4488837680
+- 2026-11-10 | Stage | Fédération Française de Tennis (Roland-Garros) | Stage - Coordination logistique BtoB - Janvier 2027 | https://jobs.fft.fr/jobs/8662801-stage-coordination-logistique-btob-janvier-2027
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Chef de Projet Activation Junior Club (janvier 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292483.html
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Assistant Développement Commercial (6 mois) | https://www.hellowork.com/fr-fr/emplois/85292454.html
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Assistant Production Évènementielle (janvier 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292457.html
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Account Manager Billetterie corporate (février 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292476.html
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Business Developer Stadium Revenues (février 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292449.html
+- 2026-11-09 | Stage | Paris Saint-Germain | Stage - Rédacteur - Éditeur contenus digitaux (janvier 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/85292482.html
+- 2026-11-09 | Stage | Fédération Française de Football (FFF) | Assistant Événementiel et Partenariats H.F | https://taleez.com/apply/assistant-evenementiel-et-partenariats-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | Stage | Fédération Française de Football (FFF) | Assistant d’Etudes Marketing H.F | https://taleez.com/apply/assistant-d-etudes-marketing-h-f-paris-federation-francaise-de-football-1
+- 2026-11-09 | Stage | Fédération Française de Football (FFF) | Assistant Stratégie Innovation & Diversification H.F | https://taleez.com/apply/assistant-strategie-innovation-diversification-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | Stage | Fédération Française de Football (FFF) | Assistant community manager H.F | https://taleez.com/apply/assistant-community-manager-h-f-paris-federation-francaise-de-football
+- 2026-11-09 | Stage | Asics | Marketing Intern | https://www.asics.com/gb/en-gb/mk/careers/search-jobs/1426
+- 2026-11-09 | Stage | Asics | Digital Marketing Intern | https://www.asics.com/gb/en-gb/mk/careers/search-jobs/1428
+- 2026-11-05 | Stage | Paris Saint-Germain | Stagiaire Assistant(e) Production Événementielle F/H – Sponsoring – Janvier 2027 | https://fr.linkedin.com/jobs/view/stagiaire-assistant-e-production-evenementielle-f-h-%E2%80%93-sponsoring-janvier-2027-at-paris-saint-germain-4485099242
+- 2026-10-30 | Stage | SPI Avocats | Stage élève-avocat(e) - Droit public, infrastructures, sport | https://www.village-justice.com/annonces/offre-de-stage-eleve-avocat-e-droit-public-infrastructures-sport/offres/430213
+- 2026-10-29 | Stage | Betclic Group | Stage - Financial Controller Assistant / Contrôleur de Gestion Junior F/H (FP&A Marketing) | https://fr.linkedin.com/jobs/view/4482864026
+- 2026-10-26 | Stage | Paris Saint-Germain | Stage - Chef de Projet Sponsoring (janvier 2027, 6 mois) | https://www.hellowork.com/fr-fr/emplois/84799595.html
+
 ## Veille du 2026-11-10 (3 offres)
 
 - 2026-11-06 | Stage | BernasCOM (Communication Sport) | Stage assistant.e de communication RP Sport | https://www.bernascom.com/integrer-l-equipe-bernascom
