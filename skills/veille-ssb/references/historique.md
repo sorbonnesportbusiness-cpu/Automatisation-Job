@@ -3,6 +3,18 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-12 (9 offres)
+
+- 2026-11-12 | Stage | Département du Calvados | Stage - Sport et Vie Associative (H/F) | https://offres-emploi.calvados.fr/2206/1/stage-sport-et-vie-associative-h-f
+- 2026-11-10 | CDI | SPORTFIVE | Junior Manager Sales (m/f/d) - Barcelona | https://www.linkedin.com/jobs/view/4479349150
+- 2026-11-10 | Stage | Atomic | Brand Marketing Trainee (m/f/d) | https://www.linkedin.com/jobs/view/4487150843
+- 2026-11-05 | Stage | Alpine Racing SAS | STAGE - Coordinateur Business Développement (H/F) | https://www.linkedin.com/jobs/view/4487294115
+- 2026-11-05 | Stage | MatchWornShirt | Creative Photo/Videography Internship | https://www.linkedin.com/jobs/view/4487235198
+- 2026-11-05 | CDI | EBRO | Sponsoring Junior | https://www.linkedin.com/jobs/view/4483455126
+- 2026-11-05 | Stage | Century 21 France | Stage - Assistant événementiel (F/H) Tour de France & Convention Nationale 2027 | https://www.linkedin.com/jobs/view/4487775191
+- 2026-11-05 | Stage | stichd | Intern Go to Market Fanwear | https://www.linkedin.com/jobs/view/4486833290
+- 2026-10-28 | Stage | Fédération Française de Ski | Stage - Chargé(e) de projet Développement du Biathlon Running | https://www.linkedin.com/posts/f-d-ration-fran-aise-de-ski_la-f%C3%A9d%C3%A9ration-fran%C3%A7aise-de-ski-recherche-activity-7521198332728336385-bccI
+
 ## Veille du 2026-11-12 (31 offres)
 
 - 2026-11-11 | Stage | Racing Club de Strasbourg Alsace | Chargé de servicing (H/F) | https://fr.linkedin.com/jobs/view/charg%C3%A9-de-servicing-h-f-at-racing-club-de-strasbourg-alsace-4488313158
