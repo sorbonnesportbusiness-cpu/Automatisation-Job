@@ -545,6 +545,16 @@
    "fichier": "federation-francaise-de-ski.svg",
    "source": "Wikipédia en français, page Fédération française de ski, File:Logo_Fédération_Française_Ski.svg, 2026-11-12",
    "url": "https://upload.wikimedia.org/wikipedia/fr/8/81/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Ski.svg?utm_source=fr.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "campsider station f": {
+   "fichier": "campsider-station-f.svg",
+   "source": "Wikimedia Commons, File:Logo STATION F.svg, 2026-11-16",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Logo_STATION_F.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  "world athletics": {
+   "fichier": "world-athletics.svg",
+   "source": "Wikimedia Commons, File:World Athletics logo.svg, 2026-11-16",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/World_Athletics_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
   }
  },
  "alias": {
@@ -573,7 +583,9 @@
   "amaury media groupe amaury": "l equipe groupe amaury",
   "groupe amaury amaury media l equipe": "l equipe groupe amaury",
   "sportfive le havre ac": "sportfive",
-  "essilorluxottica oakley": "essilorluxottica"
+  "essilorluxottica oakley": "essilorluxottica",
+  "federation francaise de natation": "federation francaise de natation ffn",
+  "federation francaise de cyclisme": "federation francaise de cyclisme ffc"
  },
  "introuvables": {
   "goxoa sports beer": "2026-11-10",
@@ -660,6 +672,10 @@
   "spi avocats": "2026-11-12",
   "alpine racing sas": "2026-11-12",
   "matchwornshirt": "2026-11-12",
-  "stichd": "2026-11-12"
+  "stichd": "2026-11-12",
+  "abeille assurances": "2026-11-16",
+  "boardriders quiksilver": "2026-11-16",
+  "teneo": "2026-11-16",
+  "client audiovisuel via defi rh": "2026-11-16"
  }
 }

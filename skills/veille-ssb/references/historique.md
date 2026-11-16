@@ -3,6 +3,36 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-16 (27 offres)
+
+- 2026-11-14 | Stage | A.S.O. - Amaury Sport Organisation | STAGE - Assistant Accréditations Presse - Running & Cycling 02-27 | https://fr.linkedin.com/jobs/view/4489595178
+- 2026-11-14 | CDI | Alpes 2030 (COJOP) | Chef(fe) de projet marketing et partenariats | https://www.linkedin.com/jobs/view/4489869100
+- 2026-11-13 | Stage | A.S.O. - Amaury Sport Organisation | STAGE - Attaché Commercial - Hospitalités H/F | https://fr.linkedin.com/jobs/view/4489266382
+- 2026-11-13 | Stage | Abeille Assurances | Assistant Stratégie de Marque et Sponsoring - Stage | https://www.hellowork.com/fr-fr/emplois/85500287.html
+- 2026-11-13 | Stage | Racing Club de Strasbourg Alsace | Assistant(e) Juridique (stage ou alternance 6 à 8 mois, Master 2 droit du sport) | https://www.linkedin.com/jobs/view/4489546651
+- 2026-11-13 | Stage | UrbanSoccer (UrbanEvent) | Chef de projet Communication & Événementiel (stage janvier à juillet 2027) | https://www.linkedin.com/jobs/view/4488548410
+- 2026-11-13 | CDI | Alpes 2030 (COJOP Jeux d'hiver) | Chef(fe) de projet marketing et partenariats (F/H) | CDI | https://carrieres.alpes2030.org/jobs/8743790-chef-fe-de-projet-marketing-et-partenariats-f-h-cdi
+- 2026-11-13 | Stage | A.S.O. (Amaury Sport Organisation) | STAGE - Assistant Accréditations Presse - Running & Cycling 02-27 | https://carrieres.aso.fr/jobs/8724707-stage-assistant-accreditations-presse-running-cycling-02-27
+- 2026-11-13 | Stage | Fédération Française de Football (FFF) | Stage - Assistant Retail (e-commerce & merchandising) | https://www.linkedin.com/jobs/view/4489270561
+- 2026-11-13 | Stage | Campsider (Station F) | Stage - Sport Account Manager (Campsider) | https://www.linkedin.com/jobs/view/4489576420
+- 2026-11-13 | Stage | Boardriders (Quiksilver) | Stage - Assistant(e) Marketing Quiksilver | https://www.linkedin.com/jobs/view/4490749667
+- 2026-11-12 | Stage | FFT (Roland-Garros) | Stage - Servicing Commercial Hospitalités - Mars 2027 | https://jobs.fft.fr/jobs/8708276-stage-servicing-commercial-hospitalites-mars-2027
+- 2026-11-12 | Stage | Fédération Française de Football (FFF) | Assistant Projets Influence H.F | https://taleez.com/apply/assistant-projets-influence-h-f-paris-federation-francaise-de-football
+- 2026-11-12 | Stage | Fédération Française de Football (FFF) | Assistant événementiel | https://taleez.com/apply/assistant-evenementiel-paris-federation-francaise-de-football
+- 2026-11-12 | CDI | Teneo | Associate Consultant, Sports Advisory | https://www.linkedin.com/jobs/view/4490528444
+- 2026-11-12 | Stage | Fédération Française de Football (FFF) | Stage - Assistant(e) études marketing | https://www.linkedin.com/jobs/view/4489255908
+- 2026-11-10 | Stage | A.S.O. (Amaury Sport Organisation) | STAGE - Attaché Commercial - Hospitalités H/F | https://carrieres.aso.fr/jobs/8700294-stage-attache-commercial-hospitalites-h-f
+- 2026-11-10 | Stage | Fédération Française de Football (FFF) | Assistant Retail H.F | https://taleez.com/apply/assistant-retail-h-f-paris-federation-francaise-de-football
+- 2026-11-10 | Stage | Fédération Française de Football (FFF) | Assistant CRM H.F | https://taleez.com/apply/assistant-crm-h-f-paris-federation-francaise-de-football
+- 2026-11-10 | Stage | Fédération Française de Natation | Stagiaire RSO | https://www.linkedin.com/jobs/view/4487915776
+- 2026-11-09 | Stage | ASICS EMEA | FP&A Intern | https://nl.linkedin.com/jobs/view/fp-a-intern-at-asics-emea-4486443625
+- 2026-11-06 | Stage | Fédération Française de Cyclisme | Stagiaire événementiel VTT Saison 2027 | https://federation-francaise-de-cyclisme.welcomekit.co/jobs/stagiaire-evenementiel-vtt-saison-2027_montigny-le-bretonneux
+- 2026-11-03 | Stage | World Athletics | Stage de 6 mois en comptabilité | https://careers.flatchr.io/fr/company/worldathletics/vacancy/qgylqn181j7dme0y-stage-de-6-mois-en-comptabilite/
+- 2026-11-03 | Stage | World Athletics | Stage 6 mois - Assistant(e) relation avec les membres de fédérations internationales d'athlétisme / Athletics Member Relations Internship | https://careers.flatchr.io/fr/company/worldathletics/vacancy/r8q3bp4oggq90rmg-stage-de-6-mois-comme-assistante-stagiaire-en-relation-avec-nos-membres-des-feferations-internationales-dathletisme/
+- 2026-10-28 | Stage | Client audiovisuel via Défi RH | Stagiaire Chargé de Partenariats Sportifs | https://www.hellowork.com/fr-fr/emplois/84910177.html
+- 2026-10-21 | Stage | Automobile Club de l'Ouest (24 Heures du Mans) | Stage Assistant(e) Traffic Manager (F/H) | https://recrutement.lemans.org/offer/11284-NDQ0NTMtM2xrbW9z
+- 2026-09-21 | Stage | FFT (Roland-Garros) | Stage - Relations Internationales & Evènementiel - Mars 2027 | https://jobs.fft.fr/jobs/8427824-stage-relations-internationales-evenementiel-mars-2027
+
 ## Veille du 2026-11-12 (9 offres)
 
 - 2026-11-12 | Stage | Département du Calvados | Stage - Sport et Vie Associative (H/F) | https://offres-emploi.calvados.fr/2206/1/stage-sport-et-vie-associative-h-f
