@@ -3,6 +3,29 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-19 (20 offres)
+
+- 2026-11-19 | CDD | Ville de Bagnolet | Chargé des sports et de l'évènementiel (axe jeunesse et sports) (h/f) | https://www.emploi-territorial.fr/offre/o093261118001364-charge-sports-evenementiel-axe-jeunesse-sports
+- 2026-11-18 | Stage | A.S.O. - Amaury Sport Organisation | STAGE - Assistant Chef de Projet – Activations évènementielles H/F | https://fr.linkedin.com/jobs/view/4491437289
+- 2026-11-18 | Stage | Kantar Media FR | Chargé d'études Sport – Stage (janvier-juin 2027) | https://fr.linkedin.com/jobs/view/4491195309
+- 2026-11-18 | Stage | AS Monaco | Stagiaire Hospitalités Sales & Event | https://mc.linkedin.com/jobs/view/stagiaire-hospitalit%C3%A9s-sales-event-at-as-monaco-4491134510
+- 2026-11-18 | CDI | Lagardère Paris Racing | Chargé de Communication H/F | https://www.linkedin.com/jobs/view/4491832230
+- 2026-11-18 | Stage | FFT (Roland-Garros) | Stage - Commercial BtoB - Janvier 2027 | https://jobs.fft.fr/jobs/8763599-stage-commercial-btob-janvier-2027
+- 2026-11-18 | Stage | FFT (Roland-Garros) | Stage - Service Clients - Janvier 2027 | https://jobs.fft.fr/jobs/8759886-stage-service-clients-janvier-2027
+- 2026-11-18 | CDI | Fédération Française de BasketBall | Chargé(e) de mission - Service Contrôle de la Pratique (Commission de Contrôle de Gestion) | https://fr.linkedin.com/jobs/view/4492038750
+- 2026-11-18 | Stage | Lagardère Paris Racing (Racing Club de France, Croix-Catelan) | Stage - Juriste généraliste H/F | https://www.linkedin.com/jobs/view/4491822640
+- 2026-11-17 | Stage | LFP Media | Stage - Un(e) Assistant(e) Chef de projet Football Data (H/F) | https://carrieres.lfp.fr/jobs/8755332-stage-un-e-assistant-e-chef-de-projet-football-data-h-f
+- 2026-11-17 | Stage | A.S.O. (Amaury Sport Organisation) | STAGE - Assistant Chef de Projet – Activations évènementielles H/F | https://carrieres.aso.fr/jobs/8753022-stage-assistant-chef-de-projet-activations-evenementielles-h-f
+- 2026-11-17 | Stage | Decathlon | Tu recherches un stage en événementiel? Rejoins-nous vite! | https://joinus.decathlon.fr/fr/annonce/4697119-tu-recherches-un-stage-en-evenementiel-rejoins-nous-vite-30000-nimes
+- 2026-11-17 | Stage | Eventeam Group (KENEO, Eventeam Live, hospitalités) | STAGE - Hospitality Sales Executive | https://recrutement.eventeam-group.com/jobs/8757347-stage-hospitality-sales-executive
+- 2026-11-17 | Stage | Adobe | 2027 Intern - International Sports Partnerships Intern (placement 13 mois, Premier League et Real Madrid) | https://uk.linkedin.com/jobs/view/2027-intern-international-sports-partnerships-intern-at-adobe-4491409094
+- 2026-11-17 | Stage | adidas | Internship Global Sports Marketing Football (FIFA, UEFA) | https://ch.linkedin.com/jobs/view/internship-global-sports-marketing-football-fifa-uefa-m-w-d-adidas-at-adidas-4490450709
+- 2026-11-17 | Stage | GL events (Stade de France) | Assistant(e) RSE Stagiaire Stade de France (début 4 janvier 2027) | https://www.linkedin.com/jobs/view/4491759061
+- 2026-11-16 | Stage | Accor | Sponsorship Assistant (stage) - M/F/X (SailGP) | https://www.linkedin.com/jobs/view/4489718908
+- 2026-11-16 | Stage | Fédération Française de Badminton | Stage - Chargé(e) de mission Relations Internationales | https://www.linkedin.com/jobs/view/4490666019
+- 2026-11-12 | Stage | Volkswagen Group France | Stage - Chargé des Évènements, Sponsoring et communication locale (H/F) - Volkswagen (partenariat FFF) | https://www.linkedin.com/jobs/view/4489288791
+- 2026-10-31 | Stage | Ligue de Football Professionnel (LFP) | Stage - Assistant(e) chargé(e) de projets RSE | https://www.welcometothejungle.com/fr/companies/ligue-de-football-professionnel/jobs/lfp-offre-de-stage_paris
+
 ## Veille du 2026-11-16 (27 offres)
 
 - 2026-11-14 | Stage | A.S.O. - Amaury Sport Organisation | STAGE - Assistant Accréditations Presse - Running & Cycling 02-27 | https://fr.linkedin.com/jobs/view/4489595178
