@@ -1075,6 +1075,16 @@
     "lieu",
     "contrat"
    ]
+  },
+  {
+   "nom": "Gymshark",
+   "ats": "greenhouse",
+   "board": "gymshark",
+   "pays": "Royaume-Uni",
+   "categorie": "Marque / Sponsor",
+   "secteur": "Fitness",
+   "filtre": "sport",
+   "note": "Ajouté le 2026-11-23 (partenariats, marketing)."
   }
  ]
 }

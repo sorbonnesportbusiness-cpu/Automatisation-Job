@@ -3,6 +3,37 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-23 (28 offres)
+
+- 2026-11-23 | Stage | Fédération Française de Football | Assistant journaliste reporter d’image H.F | https://fff.taleez.com/jobs/stagiaire-jri-journaliste-reporter-d-images-paris-federation-francaise-de-football
+- 2026-11-23 | Stage | Fédération Française de Bridge | Stage - Assistant(e) Communication (H/F) | https://fr.linkedin.com/jobs/view/4493618584
+- 2026-11-22 | Stage | Decathlon | Chef de Projet – Expérience & Communauté Running (H/F) - STAGE | https://joinus.decathlon.fr/fr/annonce/4703829-chef-de-projet-experience-communaute-running-hf-stage-69003-lyon
+- 2026-11-21 | Stage | SPORTFIVE | Stage - Assistant.e Marketing B2B F/H | https://fr.linkedin.com/jobs/view/stage-assistant-e-marketing-b2b-f-h-at-sportfive-4492857944
+- 2026-11-20 | Stage | ASICS EMEA | Stagiaire Marketing Activation (F/H) | https://fr.linkedin.com/jobs/view/stagiaire-marketing-activation-f-h-at-asics-emea-4492945704
+- 2026-11-20 | Stage | Paris Saint-Germain | STAGIAIRE ASSISTANT(E) SOCIAL MEDIA (H/F) - JANVIER 2027 | https://parissaintgermain.wd3.myworkdayjobs.com/fr-FR/rejoigneznous/job/BOULOGNE-BILLANCOURT/STAGIAIRE-ASSISTANT-E--SOCIAL-MEDIA--H-F----JANVIER-2027_015249
+- 2026-11-20 | Stage | Groupe Amaury (L'Équipe) | Stage 6 mois - Assistant(e) Chef(fe) de produit digital | https://carrieres.amaury.com/jobs/8772833-stage-6-mois-assistant-e-chef-fe-de-produit-digital
+- 2026-11-20 | CDI | Chelsea Football Club | Partnership Executive | https://www.linkedin.com/jobs/view/4491901828
+- 2026-11-20 | Stage | PREMATCH | Internship Creator Marketing & Partnerships (all genders) | https://www.linkedin.com/jobs/view/4492820076
+- 2026-11-20 | Stage | PREMATCH | Creator Growth Intern – Football (all genders) | https://www.linkedin.com/jobs/view/4492821060
+- 2026-11-20 | Stage | Fédération Française de la Montagne et de l'Escalade (FFME) | Stage - Chargé(e) de missions juridiques (droit du sport et droit associatif) | https://www.ffme.fr/wp-content/uploads/2026/11/Fiche-de-poste-Charge.e-de-missions-juridiques.pdf
+- 2026-11-20 | Stage | Haute-Savoie Mont-Blanc 2027 (Championnats du monde de cyclisme UCI) | STAGE - Pôle Route (H/F) | https://fr.linkedin.com/jobs/view/4492702329
+- 2026-11-20 | Stage | Haute-Savoie Mont-Blanc 2027 (Championnats du monde de cyclisme UCI) | STAGE - Coordination générale et projets transverses (H/F) | https://fr.linkedin.com/jobs/view/4492702324
+- 2026-11-20 | CDD | Gymshark | Partnerships Coordinator (12-month FTC) | https://job-boards.eu.greenhouse.io/gymshark/jobs/5043202101
+- 2026-11-19 | Stage | SODIKART (3MK Events) | Stage - Assistant(e) événementiel (ROTAX Racing, 3MK Events) | https://www.sportstrategies.com/offre-emploi/stage-assistante-evenementiel-7/
+- 2026-11-19 | Stage | FFT (Roland-Garros) | Stage - Gestion administrative & accompagnement territoires - Janvier 2027 | https://jobs.fft.fr/jobs/8770491-stage-gestion-administrative-accompagnement-territoires-janvier-2027
+- 2026-11-19 | Stage | Decathlon | Rejoins-nous en stage pour l'organisation du Vitalsport ! MI MARS A MI SEPTEMBRE | https://joinus.decathlon.fr/fr/annonce/4700481-rejoins-nous-en-stage-pour-lorganisation-du-vitalsport-mi-mars-a-mi-septembre-22950-tregueux
+- 2026-11-18 | CDI | DP World Tour (European Tour Group) | Partnerships Insights Executive | https://www.linkedin.com/jobs/view/4491871030
+- 2026-11-18 | Stage | Fanatics | Summer 2027 Intern - Marketing Intern | https://www.linkedin.com/jobs/view/4492019377
+- 2026-11-18 | Stage | Decathlon (Vitalsport) | Stage événementiel - Chargé-e de projet Vitalsport (mi-mars / mi-septembre 2027) | https://fr.linkedin.com/jobs/view/4492102329
+- 2026-11-17 | Stage | PUMA | Stage - Assistant Commercial Grands Comptes Lifestyle | https://puma.wd502.myworkdayjobs.com/Jobs_at_Puma/job/Strasbourg/STAGE---ASSISTANT-COMMERCIAL-GRANDS-COMPTES-LIFESTYLE-H-F_R44486-1
+- 2026-11-17 | Stage | Nike | INC. Internship, School TO Swoosh, Brand Creative Narrative | https://nike.wd1.myworkdayjobs.com/nke/job/Hilversum-Netherlands/NIKE--INC-INTERNSHIP--SCHOOL-TO-SWOOSH--BRAND-CREATIVE-NARRATIVE_R-97533
+- 2026-11-17 | Stage | Nike | INC. Internship, School TO Swoosh, Brand Creative Production | https://nike.wd1.myworkdayjobs.com/nke/job/Hilversum-Netherlands/NIKE--INC-INTERNSHIP--SCHOOL-TO-SWOOSH--BRAND-CREATIVE-PRODUCTION_R-97534
+- 2026-11-17 | Stage | ASICS EMEA | Marketing Intern - Running | https://www.linkedin.com/jobs/view/4491581385
+- 2026-11-15 | Stage | Plenitude Arena (ex-Paris La Défense Arena) | Stage - Assistant(e) Expérience Spectateur | https://fr.linkedin.com/jobs/view/stage-assistant-e-exp%C3%A9rience-spectateur-at-plenitude-arena-4489705348
+- 2026-11-13 | Stage | EGYM | Working Student (m/f/d) - Event Management | https://jobs.ashbyhq.com/egym/2d981dca-0659-4f2f-9e37-753eb2f8e71a
+- 2026-11-11 | Stage | Brooks Running | Marketing Intern, FR | https://fr.linkedin.com/jobs/view/4488228022
+- 2026-10-12 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage | Appui aux Opérations Territoriales - Pôle Briançonnais (F/H) | https://carrieres.alpes2030.org/jobs/8529884-stage-appui-aux-operations-territoriales-pole-brianconnais-f-h
+
 ## Veille du 2026-11-19 (20 offres)
 
 - 2026-11-19 | CDD | Ville de Bagnolet | Chargé des sports et de l'évènementiel (axe jeunesse et sports) (h/f) | https://www.emploi-territorial.fr/offre/o093261118001364-charge-sports-evenementiel-axe-jeunesse-sports
