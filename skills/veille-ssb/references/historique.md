@@ -3,6 +3,36 @@
 Liste des liens déjà envoyés à l'association, la plus récente en premier. La veille
 suivante ne doit pas les reproposer. Ajouter un bloc par veille.
 
+## Veille du 2026-11-26 (27 offres)
+
+- 2026-11-26 | Stage | Salomon (Amer Sports) | Stage - Wintersports Content Marketing | https://fr.linkedin.com/jobs/view/stage-wintersports-content-marketing-at-salomon-4495259922
+- 2026-11-26 | Stage | Fédération Française de Football | Assistant Déploiement des Pratiques H.F | https://fff.taleez.com/jobs/assistant-deploiement-des-pratiques-h-f-paris-federation-francaise-de-football
+- 2026-11-26 | Stage | A.S.O. - Amaury Sport Organisation | STAGE - Assistant Développement International H/F | https://www.linkedin.com/jobs/view/4494983503
+- 2026-11-25 | CDD | Stade Rennais Football Club | Créateur de Contenus - Derby Reporter | https://www.hellowork.com/fr-fr/emplois/85860342.html
+- 2026-11-25 | CDI | Red Bull | Brand Marketing Graduate | https://jobs.smartrecruiters.com/RedBull/744000163704980
+- 2026-11-25 | Stage | Red Bull | Motorsports Intern | https://jobs.smartrecruiters.com/RedBull/744000163650813
+- 2026-11-25 | Stage | Red Bull | Internship Motorsport Network - Media Channels | https://jobs.smartrecruiters.com/RedBull/744000163648069
+- 2026-11-25 | Stage | A.S.O. (Amaury Sport Organisation) | STAGE - Assistant Développement International H/F | https://carrieres.aso.fr/jobs/8796170-stage-assistant-developpement-international-h-f
+- 2026-11-25 | CDD | Groupe Amaury (L'Équipe) | CDD - Chargé(e) de Développement Commercial B2B | https://carrieres.amaury.com/jobs/8795359-cdd-charge-e-de-developpement-commercial-b2b
+- 2026-11-25 | Stage | Groupe Amaury (L'Équipe) | Stage - Chargé(e) de Projet Digital et Marketing - Ballondor.com | https://carrieres.amaury.com/jobs/8793160-stage-charge-e-de-projet-digital-et-marketing-ballondor-com
+- 2026-11-25 | Stage | Decathlon | Marketing Project Leader Assistant - Decathlon Kids | https://joinus.decathlon.fr/fr/annonce/4708455-marketing-project-leader-assistant-decathlon-kids-marcq-en-barœul
+- 2026-11-25 | Stage | ORECA Events | Stage Assistant(e) de production événementielle H/F | https://www.linkedin.com/jobs/view/4493095643
+- 2026-11-24 | Stage | CNOSF | Stagiaire Assistant.e marketing relationnel et marque | https://cnosf.taleez.com/jobs/stagiaire-assistant-e-marketing-relationnel-et-marque-paris-comite-national-olympique-et-sportif-francais-cnosf
+- 2026-11-24 | Stage | CNOSF | Stagiaire Community Manager | https://cnosf.taleez.com/jobs/stagiaire-community-manager-paris-comite-national-olympique-et-sportif-francais-cnosf
+- 2026-11-24 | CDI | Nike | Associate, Marketing Operations, France (football) | https://nike.wd1.myworkdayjobs.com/nke/job/Paris-France/Associate--Marketing-Operations--France_R-97365
+- 2026-11-24 | Stage | Société d'exploitation du Stade de France (GL events) | Stage - Assistant(e) Administration des Ventes (billetterie packages VIP, loges et salons) | https://inrecruitingfr.intervieweb.it/glevents/jobs/assistante-administration-des-ventes-hf-147338/fr/
+- 2026-11-24 | Stage | Mercedes-AMG PETRONAS Formula One Team | Commercial Strategy Industrial Placement | https://uk.linkedin.com/jobs/view/commercial-strategy-industrial-placement-at-mercedes-amg-petronas-formula-one-team-4494391615
+- 2026-11-24 | Stage | Mercedes-AMG PETRONAS Formula One Team | Marketing Operations Industrial Placement | https://uk.linkedin.com/jobs/view/marketing-operations-industrial-placement-at-mercedes-amg-petronas-formula-one-team-4494732883
+- 2026-11-23 | Stage | Alpes 2030 (COJOP Jeux d'hiver) | Stage | Assistant Livraison des Compétitions - Sports de Neige (F/H) | https://carrieres.alpes2030.org/jobs/8785099-stage-assistant-livraison-des-competitions-sports-de-neige-f-h
+- 2026-11-23 | Stage | Fédération Française de Football (FFF) | Assistant Administratif Sélections Nationales | https://taleez.com/apply/assistant-administratif-selections-nationales-h-f-paris-federation-francaise-de-football
+- 2026-11-23 | Stage | Decathlon | Stage - Chef de projet événementiel (H/F) - VITALSPORT | https://joinus.decathlon.fr/fr/annonce/4704395-stage-chef-de-projet-evenementiel-hf-vitalsport-79000-niort
+- 2026-11-23 | Stage | Tata Consultancy Services (London Marathon, Tottenham, Jaguar TCS Racing) | Sports Sponsorship Intern | https://uk.linkedin.com/jobs/view/sports-sponsorship-intern-at-tata-consultancy-services-4493791258
+- 2026-11-18 | Stage | Klox | Stage - Assistant Account Manager Sport | https://www.hellowork.com/fr-fr/emplois/83980874.html
+- 2026-11-17 | Stage | LFP - Ligue de Football Professionnel (LFP Media) | Stage - Un(e) Assistant(e) Chef de projet Football Data (H/F), 6 mois | https://www.linkedin.com/jobs/view/4491428674
+- 2026-11-06 | Alternance | Babolat VS | Alternant Assistant Trade Marketing Tennis H/F | https://bloom-alternance.fr/plateforme-alternance/offers/74332
+- 2026-11-04 | Stage | Société d'exploitation du Stade de France (GL events) | Stage - Assistant(e) Relations clients (Stade de France) | https://inrecruitingfr.intervieweb.it/glevents/jobs/assistante-relations-clients-stage-146636/fr/
+- 2026-10-03 | Stage | SPORTFIVE | Stage Chargé.e de Communication | https://jobs.sportfive.com/job/Boulogne-Billancourt-Stage-Charg%C3%A9_e-de-Communication-%28FH%29-92100/1370323355/
+
 ## Veille du 2026-11-23 (28 offres)
 
 - 2026-11-23 | Stage | Fédération Française de Football | Assistant journaliste reporter d’image H.F | https://fff.taleez.com/jobs/stagiaire-jri-journaliste-reporter-d-images-paris-federation-francaise-de-football
